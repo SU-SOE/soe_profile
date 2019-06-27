@@ -1,0 +1,8 @@
+{
+  "name": "su-sws/jack_soe_profile",
+  "description": "Installation Profile for the Stanford Webservice's SOE Jumpstart Product.",
+  "type": "drupal-custom-profile",
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+}
