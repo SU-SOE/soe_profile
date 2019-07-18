@@ -15,4 +15,3 @@ exclude:
 dependencies:
 
   # contrib
-  - panels
