@@ -1,4 +1,0 @@
-tmp_upload_scheme: temporary
-dependencies:
-  module:
-    - dropzonejs

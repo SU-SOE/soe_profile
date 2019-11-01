@@ -1,4 +1,0 @@
-show_unpublished: true
-dependencies:
-  module:
-    - paragraphs
