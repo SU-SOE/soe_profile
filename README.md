@@ -1,2 +1,2 @@
-# jack_soe_profile
+# soe_profile
 Sub Profile for SOE development
