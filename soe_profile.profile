@@ -6,6 +6,7 @@
  */
 
 use Drupal\menu_link_content\MenuLinkContentInterface;
+use Drupal\block\Entity\Block;
 
 /**
  * Implements hook_install_tasks().
@@ -14,8 +15,22 @@ function soe_profile_install_tasks(&$install_state) {
   return ['soe_profile_final_task' => []];
 }
 
-function soe_profile_final_task(&$install_state) {
-
+/**
+ * Install task that executes at the end of the installation.
+ *
+ * @param array $install_state
+ *   Current install state.
+ *
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function soe_profile_final_task(array &$install_state) {
+  // Delete duplicate blocks.
+  if ($block_config = Block::load('stanford_basic_main_menu')) {
+    $block_config->delete();
+  }
+  if ($block_config = Block::load('stanford_basic_footer_menu')) {
+    $block_config->delete();
+  }
 }
 
 /**
