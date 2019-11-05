@@ -1,0 +1,20 @@
+uuid: 25051ebe-a680-435f-b69d-68d92eca0dba
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - media
+id: child_para.soe_text_cta_image
+field_name: soe_text_cta_image
+entity_type: child_para
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

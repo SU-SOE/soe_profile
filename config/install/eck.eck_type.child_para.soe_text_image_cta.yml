@@ -1,0 +1,9 @@
+uuid: 543c7201-6e14-4f3a-acea-7e0d73d0d5bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.child_para
+name: 'Text Image CTA'
+type: soe_text_image_cta
+description: 'Nested paragraphs on the "Text with Image CTA"'

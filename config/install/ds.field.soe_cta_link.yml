@@ -1,0 +1,9 @@
+id: soe_cta_link
+label: 'CTA Link'
+ui_limit: 'soe_text_image_cta|*'
+properties:
+  field_id: child_para.soe_text_image_cta.soe_text_cta_link
+type: display_field_copy
+type_label: 'Copy field'
+entities:
+  child_para: child_para

@@ -6,3 +6,6 @@ type: profile
 project: Jumpstart
 
 base profile: stanford_profile
+
+dependencies:
+  - eck/eck

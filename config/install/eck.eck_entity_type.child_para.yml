@@ -1,0 +1,10 @@
+uuid: ed445b2a-4306-42ce-b9f6-987a7c471c94
+langcode: en
+status: true
+dependencies: {  }
+id: child_para
+label: 'Nested Paragraphs'
+created: true
+changed: true
+uid: true
+title: false

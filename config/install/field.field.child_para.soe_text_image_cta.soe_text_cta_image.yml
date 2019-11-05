@@ -1,0 +1,28 @@
+uuid: 40f7c5b8-e972-4670-bc45-4be85427d17a
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.child_para.soe_text_image_cta
+    - field.storage.child_para.soe_text_cta_image
+    - media.type.image
+id: child_para.soe_text_image_cta.soe_text_cta_image
+field_name: soe_text_cta_image
+entity_type: child_para
+bundle: soe_text_image_cta
+label: Image
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
