@@ -12,7 +12,7 @@
         }
     ],
     "require": {
-        "drupal/eck": "^1.0@alpha",
+        "drupal/eck": "dev-1.x#4a7630854aed01db41c8b13466d0694ed43521e8",
         "su-sws/stanford_profile": "dev-soe-prep"
     }
 }

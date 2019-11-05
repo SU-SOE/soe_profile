@@ -22,6 +22,11 @@
   max-width: 33%;
 }
 
+.soe-text-cta-cards > div:nth-last-child(2),
+.soe-text-cta-cards > div:nth-last-child(2) ~ div {
+  max-width: calc(50% - 40px);
+}
+
 .soe-text-cta-cards > div:nth-last-child(3),
 .soe-text-cta-cards > div:nth-last-child(3) ~ div {
   max-width: calc(33% - 40px);
