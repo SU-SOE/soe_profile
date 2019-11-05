@@ -1,0 +1,35 @@
+.soe-text-cta-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.soe-text-cta-cards > div {
+  margin-bottom: 20px;
+}
+
+.soe-text-cta-cards > div:nth-last-child(1) {
+  max-width: 33%;
+}
+
+.soe-text-cta-cards > div:nth-last-child(2),
+.soe-text-cta-cards > div:nth-last-child(2) ~ div {
+  max-width: calc(50% - 10px);
+}
+
+.soe-text-cta-cards > div:nth-last-child(3),
+.soe-text-cta-cards > div:nth-last-child(3) ~ div {
+  max-width: calc(33% - 10px);
+}
+
+
+.soe-text-cta-cards > div:nth-last-child(4),
+.soe-text-cta-cards > div:nth-last-child(4) ~ div {
+  max-width: calc(50% - 10px);
+}
+
+
+.soe-text-cta-cards > div:nth-last-child(5),
+.soe-text-cta-cards > div:nth-last-child(5) ~ div {
+  max-width: calc(33% - 10px);
+}
