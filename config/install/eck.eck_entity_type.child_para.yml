@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: child_para
-label: 'Nested Paragraphs'
-created: true
-changed: true
-uid: true
-title: false

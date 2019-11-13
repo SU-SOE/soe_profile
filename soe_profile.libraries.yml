@@ -1,5 +1,0 @@
-text_cta_cards:
-  version: VERSION
-  css:
-    component:
-      css/soe_profile.text_cta_cards.css: {  }

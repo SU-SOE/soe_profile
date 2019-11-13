@@ -7,8 +7,6 @@
 
 use Drupal\menu_link_content\MenuLinkContentInterface;
 use Drupal\block\Entity\Block;
-use Drupal\Core\Entity\EntityInterface;
-use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 
 /**
  * Implements hook_install_tasks().
@@ -43,14 +41,5 @@ function soe_profile_menu_link_content_presave(MenuLinkContentInterface $entity)
   // attribute so all menu items are expanded by default.
   if ($entity->isNew()) {
     $entity->set('expanded', TRUE);
-  }
-}
-
-/**
- * Implements hook_ENTITY_TYPE_view().
- */
-function soe_profile_paragraph_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
-  if ($entity->bundle() == 'soe_text_image_cta') {
-    $build['#attached']['library'][] = 'soe_profile/text_cta_cards';
   }
 }

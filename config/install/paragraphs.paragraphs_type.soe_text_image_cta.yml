@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: soe_text_image_cta
-label: 'Text With Image Link'
-icon_uuid: null
-description: 'A text area followed by a list of linked image cards.'
-behavior_plugins: {  }

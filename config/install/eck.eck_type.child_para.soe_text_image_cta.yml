@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  config:
-    - eck.eck_entity_type.child_para
-name: 'Text Image CTA'
-type: soe_text_image_cta
-description: 'Nested paragraphs on the "Text with Image CTA"'
