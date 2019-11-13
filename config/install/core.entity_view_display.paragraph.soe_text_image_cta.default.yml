@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.soe_text_image_cta.soe_text_cta_body
+    - field.field.paragraph.soe_text_image_cta.soe_text_cta_cards
+    - field.field.paragraph.soe_text_image_cta.soe_text_cta_heading
+    - paragraphs.paragraphs_type.soe_text_image_cta
+  module:
+    - stanford_fields
+    - text
+id: paragraph.soe_text_image_cta.default
+targetEntityType: paragraph
+bundle: soe_text_image_cta
+mode: default
+content:
+  soe_text_cta_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  soe_text_cta_cards:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  soe_text_cta_heading:
+    weight: 0
+    label: hidden
+    settings:
+      tag: h2
+      linked: false
+    third_party_settings: {  }
+    type: entity_title_heading
+    region: content
+hidden: {  }

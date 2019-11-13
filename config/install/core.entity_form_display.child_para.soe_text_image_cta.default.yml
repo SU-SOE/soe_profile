@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.child_para.soe_text_image_cta
+    - field.field.child_para.soe_text_image_cta.soe_text_cta_image
+    - field.field.child_para.soe_text_image_cta.soe_text_cta_link
+  module:
+    - link
+    - media_library
+id: child_para.soe_text_image_cta.default
+targetEntityType: child_para
+bundle: soe_text_image_cta
+mode: default
+content:
+  soe_text_cta_image:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  soe_text_cta_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  uid: true

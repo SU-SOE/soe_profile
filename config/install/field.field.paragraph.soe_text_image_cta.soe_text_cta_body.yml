@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.soe_text_cta_body
+    - paragraphs.paragraphs_type.soe_text_image_cta
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    stanford_html: '0'
+    stanford_minimal_html: '0'
+    plain_text: '0'
+id: paragraph.soe_text_image_cta.soe_text_cta_body
+field_name: soe_text_cta_body
+entity_type: paragraph
+bundle: soe_text_image_cta
+label: 'Body (above cards)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

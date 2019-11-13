@@ -1,8 +1,18 @@
 {
-  "name": "su-soe/soe_profile",
-  "description": "Installation Profile for the Stanford Webservice's SOE Jumpstart Product.",
-  "type": "drupal-custom-profile",
-  "license": "GPL-2.0+",
-  "minimum-stability": "dev",
-  "prefer-stable": true
+    "name": "su-soe/soe_profile",
+    "description": "Installation Profile for the Stanford Webservice's SOE Jumpstart Product.",
+    "type": "drupal-custom-profile",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "drupal/eck": "dev-1.x#4a7630854aed01db41c8b13466d0694ed43521e8",
+        "su-sws/stanford_profile": "dev-soe-prep"
+    }
 }
