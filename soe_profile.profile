@@ -24,6 +24,7 @@ function soe_profile_install_tasks(&$install_state) {
  * @throws \Drupal\Core\Entity\EntityStorageException
  */
 function soe_profile_final_task(array &$install_state) {
+  drupal_flush_all_caches();
   // Delete duplicate blocks.
   if ($block_config = Block::load('stanford_basic_main_menu')) {
     $block_config->delete();
@@ -33,6 +34,7 @@ function soe_profile_final_task(array &$install_state) {
   }
   \Drupal::service('theme_installer')->install(['stanford_basic']);
   $modules = [
+    'layout_builder_restrictions',
     'stanford_news'
   ];
   foreach ($modules as $module) {
