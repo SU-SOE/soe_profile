@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.su_card_link_display
+field_name: su_card_link_display
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: button
+      label: Button
+    -
+      value: action
+      label: 'Action Link'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

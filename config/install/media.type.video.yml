@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {  }
+id: video
+label: Video
+description: 'Use Video urls from YouTube for reusable media.'
+source: 'oembed:video'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers:
+    - YouTube
+    - Vimeo
+  source_field: field_media_oembed_video
+field_map: {  }

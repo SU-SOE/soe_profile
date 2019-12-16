@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.stanford_image_stanford_circle
+label: Circle
+targetEntityType: media
+cache: true

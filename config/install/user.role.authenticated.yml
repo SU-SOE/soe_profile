@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies: {  }
+id: authenticated
+label: 'Authenticated user'
+weight: -8
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access patterns page'
+  - 'access shortcuts'
+  - 'access toolbar'
+  - 'search content'
+  - 'use text format stanford_html'
+  - 'use text format stanford_minimal_html'
+  - 'view media'
+  - 'view the administration theme'

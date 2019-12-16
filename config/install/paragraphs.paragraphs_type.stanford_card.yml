@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: stanford_card
+label: Card
+icon_uuid: null
+description: 'A single card'
+behavior_plugins: {  }

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.stanford_image_medium
+label: 'Medium (220×220)'
+targetEntityType: media
+cache: true
