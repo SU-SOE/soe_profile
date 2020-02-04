@@ -90,6 +90,7 @@
         "drupal/webform": "^5.4",
         "drupal/xmlsitemap": "~1.0@alpha",
         "ext-imagick": "*",
+        "su-soe/soe_basic": "dev-8.1.x",
         "su-sws/jumpstart_ui": "^8.1.0@alpha",
         "su-sws/nobots": "^8.1.0",
         "su-sws/stanford_basic": "^8.4.0@alpha",

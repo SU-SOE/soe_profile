@@ -124,6 +124,7 @@ themes:
   - classy
   - seven
   - stanford_basic
+  - soe_basic
 
 default_content:
   file:
