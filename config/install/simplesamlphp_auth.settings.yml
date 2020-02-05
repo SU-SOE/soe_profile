@@ -25,3 +25,6 @@ autoenablesaml: true
 debug: false
 secure: true
 httponly: false
+_core:
+  default_config_hash: BuLah1nwoT5oUjn6XIuKnXkjcvdt5tDIGQ6gAflOY0s
+login_link_show: true

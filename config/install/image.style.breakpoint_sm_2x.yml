@@ -1,6 +1,9 @@
+uuid: 1caa1d94-9775-41b8-8508-b7414bda0fbb
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: jR527GaKk-Mxem_ZnKUgnnXSaqpURbAxzC9WajqFb40
 name: breakpoint_sm_2x
 label: 'Breakpoint - SM - 2x'
 effects:

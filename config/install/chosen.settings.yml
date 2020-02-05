@@ -12,3 +12,5 @@ placeholder_text_single: 'Choose an option'
 no_results_text: 'No results match'
 disabled_themes: {  }
 chosen_include: 2
+_core:
+  default_config_hash: YWbqKPHA3djohSgnBRKhK0NUjnO1dL1XmIo3yBw3oFo

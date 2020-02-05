@@ -1,3 +1,4 @@
+uuid: fdbe5b0f-c6d6-4d9e-b2f5-5e55b661416b
 langcode: en
 status: true
 dependencies:
@@ -31,4 +32,4 @@ settings:
       stanford_wysiwyg:
         weight: 6
         enabled: false
-field_type: entity_reference_revisions
+field_type: react_paragraphs

@@ -1,3 +1,4 @@
+uuid: 6684dcab-3476-4388-af34-40809aa1983c
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - search
   theme:
     - stanford_basic
+_core:
+  default_config_hash: vhPsMWd6yz_azjomNpjIHdEceN_vufyctZrYrZ4bSQw
 id: stanford_basic_search
 theme: stanford_basic
 region: search

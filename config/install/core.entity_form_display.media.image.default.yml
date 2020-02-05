@@ -1,3 +1,4 @@
+uuid: 0ddaf67c-4da6-4877-81d8-5f8ee8449dd1
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
     - media.type.image
   module:
     - focal_point
+_core:
+  default_config_hash: VlvGpKQnaptFys0SJOZOeTnEs8B561SwPjIy-uFSiJE
 id: media.image.default
 targetEntityType: media
 bundle: image

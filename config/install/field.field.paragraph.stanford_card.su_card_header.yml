@@ -1,3 +1,4 @@
+uuid: a7dfc9d8-a62a-403b-a63e-c390dba39bea
 langcode: en
 status: true
 dependencies:
@@ -9,7 +10,7 @@ field_name: su_card_header
 entity_type: paragraph
 bundle: stanford_card
 label: Headline
-description: 'This is the mean headline of the card type. '
+description: 'This is the main headline of the card type. '
 required: false
 translatable: false
 default_value: {  }

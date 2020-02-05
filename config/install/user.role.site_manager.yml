@@ -1,3 +1,4 @@
+uuid: 5fc23439-44fa-4a42-be92-2cf1cf53748b
 langcode: en
 status: true
 dependencies: {  }
@@ -9,7 +10,6 @@ permissions:
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
-  - 'access environment indicator'
   - 'access file_browser entity browser pages'
   - 'access image_browser entity browser pages'
   - 'access media overview'
@@ -34,6 +34,7 @@ permissions:
   - 'assign stanford_student role'
   - 'cancel account'
   - 'change own username'
+  - 'choose layout for node stanford_page'
   - 'configure editable stanford_page node layout overrides'
   - 'create and edit custom blocks'
   - 'create file media'
@@ -64,6 +65,7 @@ permissions:
   - 'edit own stanford_page content'
   - 'edit own video media'
   - 'edit stanford_basic_site_settings config page entity'
+  - 'edit stanford_local_footer config page entity'
   - 'revert stanford_page revisions'
   - 'update any media'
   - 'update media'

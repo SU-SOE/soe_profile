@@ -1,3 +1,4 @@
+uuid: 2e16f98b-7dfc-4ded-90c7-2f4324e90370
 langcode: en
 status: true
 dependencies:
@@ -14,6 +15,8 @@ dependencies:
     - image.style.breakpoint_xl_2x
   module:
     - stanford_image_styles
+_core:
+  default_config_hash: B0tXkjUZrA5gFY6X39MInsKCbjqw1oZHH9cYDwyQkhI
 id: stanford_hero_block_wide
 label: 'Stanford Hero Block - Wide'
 image_style_mappings:
