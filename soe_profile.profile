@@ -31,6 +31,13 @@ function soe_profile_final_task(array &$install_state) {
   if ($block_config = Block::load('stanford_basic_footer_menu')) {
     $block_config->delete();
   }
+  \Drupal::service('theme_installer')->install(['stanford_basic']);
+  $modules = [
+    'stanford_news'
+  ];
+  foreach ($modules as $module) {
+    \Drupal::service('module_installer')->install([$module]);
+  }
 }
 
 /**

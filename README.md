@@ -1,2 +1,2 @@
 # soe_profile
-Sub Profile for SOE development
+Profile for SOE development
