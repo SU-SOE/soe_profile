@@ -10,6 +10,10 @@
             "url": "https://packages.drupal.org/8"
         },
         {
+            "type": "vcs",
+            "url": "git@github.com:SU-SOE/soe_basic.git"
+        },
+        {
             "type": "package",
             "package": {
                 "name": "ckeditor-plugin/link",
@@ -87,11 +91,10 @@
         "drupal/view_unpublished": "^1.0@alpha",
         "drupal/views_block_filter_block": "^1.0@beta",
         "drupal/views_bulk_operations": "^3.2",
-        "drupal/viewfield": "^3.0@beta",
         "drupal/webform": "^5.4",
         "drupal/xmlsitemap": "~1.0@alpha",
         "ext-imagick": "*",
-        "su-soe/soe_basic": "dev-8.1.x",
+        "su-soe/soe_basic": "dev-8.x-1.x",
         "su-sws/jumpstart_ui": "^8.1.0@alpha",
         "su-sws/nobots": "^8.1.0",
         "su-sws/react_paragraphs": "dev-8.x-1.x#f283efd5079639425c3d0fa1ef58b4d5e49e5a53",
