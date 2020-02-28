@@ -10,10 +10,6 @@
             "url": "https://packages.drupal.org/8"
         },
         {
-            "type": "vcs",
-            "url": "git@github.com:SU-SOE/soe_basic.git"
-        },
-        {
             "type": "package",
             "package": {
                 "name": "ckeditor-plugin/link",
