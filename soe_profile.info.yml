@@ -6,6 +6,7 @@ type: profile
 project: Jumpstart
 
 dependencies:
+  - address
   - admin_toolbar:admin_toolbar
   - admin_toolbar:admin_toolbar_links_access_filter
   - admin_toolbar:admin_toolbar_tools
@@ -41,6 +42,7 @@ dependencies:
   - drupal:dynamic_page_cache
   - drupal:editor
   - drupal:field
+  - drupal:field_group
   - drupal:field_ui
   - drupal:file
   - drupal:filter
@@ -79,6 +81,7 @@ dependencies:
   - environment_indicator:environment_indicator
   - externalauth:externalauth
   - fakeobjects:fakeobjects
+  - field_formatter_class:field_formatter_class
   - field_validation:field_validation
   - file_mdm:file_mdm
   - file_mdm:file_mdm_exif
@@ -99,7 +102,9 @@ dependencies:
   - nobots:nobots
   - paragraphs:paragraphs
   - pathauto:pathauto
+  - react_paragraphs:react_paragraphs
   - redirect:redirect
+  - response_code_condition:response_code_condition
   - role_delegation:role_delegation
   - simplesamlphp_auth:simplesamlphp_auth
   - stanford_date_formats:stanford_date_formats

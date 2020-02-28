@@ -11,6 +11,7 @@ dependencies:
     - editor
     - linkit
     - media
+    - stanford_media
 name: HTML
 format: stanford_html
 weight: 0
@@ -52,7 +53,7 @@ filters:
     status: true
     weight: -50
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <a class href hreflang data-entity-substitution data-entity-type data-entity-uuid title name> <div class> <p class> <table> <caption> <tbody class> <thead> <tfoot> <th scope class> <td class> <tr> <sup> <sub> <i class> <hr> <drupal-media data-entity-type data-entity-uuid data-align data-caption data-* alt>'
+      allowed_html: '<br> <em> <strong> <cite> <blockquote cite> <code> <ul type class> <ol start type class> <li class> <dl class> <dt> <dd class> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <a class href hreflang data-entity-substitution data-entity-type data-entity-uuid title name> <div class> <p class> <table> <caption> <tbody class> <thead> <tfoot> <th scope class> <td class> <tr> <sup> <sub> <i class> <hr> <drupal-media data-entity-type data-entity-uuid data-align data-caption data-* alt>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_htmlcorrector:
@@ -94,3 +95,9 @@ filters:
         stanford_image_medium: stanford_image_medium
         stanford_image_stanford_circle: stanford_image_stanford_circle
         thumbnail: thumbnail
+  stanford_media_embed_markup:
+    id: stanford_media_embed_markup
+    provider: stanford_media
+    status: true
+    weight: 0
+    settings: {  }
