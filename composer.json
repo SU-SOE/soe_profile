@@ -11,7 +11,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/SU-SOE/soe_basic"
+            "url": "git@github.com:SU-SOE/soe_basic.git"
         },
         {
             "type": "package",
