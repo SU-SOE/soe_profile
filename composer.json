@@ -95,6 +95,7 @@
         "drupal/xmlsitemap": "~1.0@alpha",
         "ext-imagick": "*",
         "su-soe/soe_basic": "dev-8.x-1.x",
+        "su-soe/stanford_news": "dev-8.x-1.x",
         "su-sws/jumpstart_ui": "^8.1.0@alpha",
         "su-sws/nobots": "^8.1.0",
         "su-sws/react_paragraphs": "dev-8.x-1.x#c56bf42b41ec8874e2abe691ab40d4819e0b4687",
