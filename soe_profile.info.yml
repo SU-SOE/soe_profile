@@ -102,7 +102,6 @@ dependencies:
   - metatag:metatag
   - nobots:nobots
   - paragraphs:paragraphs
-  - seckit:seckit
   - pathauto:pathauto
   - react_paragraphs:react_paragraphs
   - redirect:redirect
