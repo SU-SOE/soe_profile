@@ -1,3 +1,4 @@
+uuid: 4474db4b-ead3-432b-85eb-d15c1a6c7474
 langcode: en
 status: true
 dependencies:
@@ -11,7 +12,7 @@ field_name: su_card_link
 entity_type: paragraph
 bundle: stanford_card
 label: Link
-description: ''
+description: 'This is the text that will display on the site'
 required: false
 translatable: false
 default_value: {  }

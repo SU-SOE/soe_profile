@@ -1,6 +1,9 @@
+uuid: 4f868cd9-73c5-47a8-80a7-ad42394ff666
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: TJO8X5EvB-f6_JLymfBhl0dJ2bP0rbm94sJLiSDGkGk
 name: breakpoint_md_2x
 label: 'Breakpoint - MD - 2x'
 effects:

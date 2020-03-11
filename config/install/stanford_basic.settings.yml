@@ -7,6 +7,8 @@ features:
   favicon: true
 favicon:
   use_default: true
+_core:
+  default_config_hash: xlsR92AeFAiypan1iI5dNo3zdutIU3No20qwKwqiDag
 logo:
   use_default: true
 brand_bar_variant: default

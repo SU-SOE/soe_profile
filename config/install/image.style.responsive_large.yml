@@ -1,6 +1,9 @@
+uuid: d07f8a9d-ccbe-4e57-b48d-66ae907ef5d1
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: 3stx2zSyJCeZOYn0MOEnytcQ3-8lpkV_S4MPSi0EF2s
 name: responsive_large
 label: 'Responsive Large (2000)'
 effects:

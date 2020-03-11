@@ -1,3 +1,4 @@
+uuid: ef5ef5fb-d757-455e-a4ca-740b00383102
 langcode: en
 status: true
 dependencies: {  }
@@ -8,7 +9,6 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access content overview'
-  - 'access contextual links'
   - 'access file_browser entity browser pages'
   - 'access image_browser entity browser pages'
   - 'access media overview'

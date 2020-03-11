@@ -1,6 +1,9 @@
+uuid: 3ce2239f-952e-443f-9e0b-49b39fbf86d3
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: Vh36ZWh1RSikZ0pbEJjgQa4UPqirYo__IZ1NsmQwTPA
 name: breakpoint_xl_2x
 label: 'Breakpoint - XL - 2x'
 effects:

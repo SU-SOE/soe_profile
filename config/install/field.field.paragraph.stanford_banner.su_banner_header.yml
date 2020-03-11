@@ -1,3 +1,4 @@
+uuid: 4e834957-5648-4378-a13d-c5d464371d5c
 langcode: en
 status: true
 dependencies:
@@ -9,7 +10,7 @@ field_name: su_banner_header
 entity_type: paragraph
 bundle: stanford_banner
 label: Headline
-description: 'The main headline. Show up large.'
+description: 'The main headline. This shows up large.'
 required: false
 translatable: false
 default_value: {  }

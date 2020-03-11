@@ -6,6 +6,7 @@ type: profile
 project: Jumpstart
 
 dependencies:
+  - address
   - admin_toolbar:admin_toolbar
   - admin_toolbar:admin_toolbar_links_access_filter
   - admin_toolbar:admin_toolbar_tools
@@ -41,6 +42,7 @@ dependencies:
   - drupal:dynamic_page_cache
   - drupal:editor
   - drupal:field
+  - drupal:field_group
   - drupal:field_ui
   - drupal:file
   - drupal:filter
@@ -79,6 +81,7 @@ dependencies:
   - environment_indicator:environment_indicator
   - externalauth:externalauth
   - fakeobjects:fakeobjects
+  - field_formatter_class:field_formatter_class
   - field_validation:field_validation
   - file_mdm:file_mdm
   - file_mdm:file_mdm_exif
@@ -96,10 +99,13 @@ dependencies:
   - menu_admin_per_menu:menu_admin_per_menu
   - menu_block:menu_block
   - menu_link_weight:menu_link_weight
+  - metatag:metatag
   - nobots:nobots
   - paragraphs:paragraphs
   - pathauto:pathauto
+  - react_paragraphs:react_paragraphs
   - redirect:redirect
+  - response_code_condition:response_code_condition
   - role_delegation:role_delegation
   - seckit:seckit
   - simplesamlphp_auth:simplesamlphp_auth
@@ -108,6 +114,7 @@ dependencies:
   - stanford_image_styles:stanford_image_styles
   - stanford_media:media_duplicate_validation
   - stanford_media:stanford_media
+  - stanford_news:stanford_news
   - stanford_profile:stanford_paragraph_card
   - stanford_profile:stanford_profile_install
   - stanford_profile:stanford_profile_styles
@@ -120,11 +127,13 @@ dependencies:
   - ui_patterns:ui_patterns_library
   - ui_patterns:ui_patterns_views
   - views_bulk_operations:views_bulk_operations
+  - xmlsitemap:xmlsitemap
 themes:
   - stable
   - classy
   - seven
   - stanford_basic
+  - soe_basic
 
 default_content:
   file:

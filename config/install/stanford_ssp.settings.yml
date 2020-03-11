@@ -7,3 +7,5 @@ workgroup_api_key: ''
 restriction: all
 whitelist_groups: {  }
 whitelist_users: {  }
+_core:
+  default_config_hash: Xm4MNDvuD7BJ089bXHgqkS7_mOjVgGxnekzaeYLwW7k

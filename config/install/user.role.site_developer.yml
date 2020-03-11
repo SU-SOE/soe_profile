@@ -1,3 +1,4 @@
+uuid: d7aedf9d-28c2-4f44-86ff-4f15ea6b8a39
 langcode: en
 status: true
 dependencies: {  }
@@ -56,6 +57,7 @@ permissions:
   - 'administer media fields'
   - 'administer media form display'
   - 'administer menu'
+  - 'administer meta tags'
   - 'administer modules'
   - 'administer node display'
   - 'administer node fields'
@@ -85,6 +87,7 @@ permissions:
   - 'administer user form display'
   - 'administer users'
   - 'administer views'
+  - 'administer xmlsitemap'
   - 'assign contributor role'
   - 'assign site_builder role'
   - 'assign site_developer role'
@@ -97,6 +100,7 @@ permissions:
   - 'bypass node access'
   - 'cancel account'
   - 'change own username'
+  - 'choose layout for node stanford_page'
   - 'configure all stanford_page node layout overrides'
   - 'configure any layout'
   - 'configure editable stanford_page node layout overrides'
@@ -135,6 +139,8 @@ permissions:
   - 'edit own video media'
   - 'edit stanford_basic_site_settings config page entity'
   - 'edit stanford_branding_options config page entity'
+  - 'edit stanford_local_footer config page entity'
+  - 'edit stanford_saml config page entity'
   - 'link to any page'
   - 'revert all revisions'
   - 'revert stanford_page revisions'
@@ -145,6 +151,8 @@ permissions:
   - 'use advanced search'
   - 'view all media revisions'
   - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view any unpublished stanford_page content'
   - 'view config_pages entity'
   - 'view own unpublished content'
   - 'view own unpublished media'
