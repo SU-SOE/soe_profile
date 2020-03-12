@@ -1,5 +1,0 @@
-entity_type_groups:
-  node:
-    stanford_page:
-      basic: basic
-      open_graph: open_graph
