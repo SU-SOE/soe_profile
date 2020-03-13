@@ -99,7 +99,7 @@
         "su-soe/stanford_news": "dev-8.x-1.x",
         "su-sws/jumpstart_ui": "^8.1.0@alpha",
         "su-sws/nobots": "^8.1.0",
-        "su-sws/react_paragraphs": "dev-8.x-1.x#c56bf42b41ec8874e2abe691ab40d4819e0b4687",
+        "su-sws/react_paragraphs": "^8.1.3",
         "su-sws/stanford_basic": "^8.4.0@alpha",
         "su-sws/stanford_date_formats": "^8.1.0",
         "su-sws/stanford_fields": "^8.1.0",
