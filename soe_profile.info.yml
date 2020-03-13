@@ -107,6 +107,7 @@ dependencies:
   - redirect:redirect
   - response_code_condition:response_code_condition
   - role_delegation:role_delegation
+  - seckit:seckit
   - simplesamlphp_auth:simplesamlphp_auth
   - stanford_date_formats:stanford_date_formats
   - stanford_fields:stanford_fields
@@ -181,4 +182,3 @@ default_content:
     - 0ee1bcb8-f26c-4809-8f58-3efb932dbe35
     - 63513feb-0de2-4fea-b950-19e4b15d6d37
     - ff94794d-c4e0-4999-be85-1cfc6e4a97c9
-
