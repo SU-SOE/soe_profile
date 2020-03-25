@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: stanford_news_banner
+label: 'News Banner'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

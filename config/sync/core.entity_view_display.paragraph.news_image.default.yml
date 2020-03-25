@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_image.su_news_image
+    - paragraphs.paragraphs_type.news_image
+id: paragraph.news_image.default
+targetEntityType: paragraph
+bundle: news_image
+mode: default
+content:
+  su_news_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_news_components
+    - node.type.stanford_news
+    - paragraphs.paragraphs_type.news_image
+    - paragraphs.paragraphs_type.stanford_wysiwyg
+  module:
+    - entity_reference_revisions
+id: node.stanford_news.su_news_components
+field_name: su_news_components
+entity_type: node
+bundle: stanford_news
+label: Components
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      stanford_wysiwyg: stanford_wysiwyg
+      news_image: news_image
+    target_bundles_drag_drop:
+      stanford_wysiwyg:
+        enabled: true
+        weight: -7
+      news_image:
+        enabled: true
+        weight: -6
+      stanford_news_banner:
+        weight: -5
+        enabled: false
+field_type: entity_reference_revisions

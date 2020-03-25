@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.su_news_banner_topic
+    - paragraphs.paragraphs_type.stanford_news_banner
+id: paragraph.stanford_news_banner.su_news_banner_topic
+field_name: su_news_banner_topic
+entity_type: paragraph
+bundle: stanford_news_banner
+label: 'Banner Topic'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

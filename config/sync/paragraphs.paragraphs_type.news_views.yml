@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: news_views
+label: 'News Views'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

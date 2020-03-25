@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stanford_news_banner.su_news_banner_image
+    - field.field.paragraph.stanford_news_banner.su_news_banner_title
+    - field.field.paragraph.stanford_news_banner.su_news_banner_topic
+    - paragraphs.paragraphs_type.stanford_news_banner
+  module:
+    - ds
+    - image
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_news-banner
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+          variant: default
+    regions:
+      news_banner_image:
+        - su_news_banner_image
+      news_banner_title:
+        - su_news_banner_title
+      news_banner_topic:
+        - su_news_banner_topic
+id: paragraph.stanford_news_banner.default
+targetEntityType: paragraph
+bundle: stanford_news_banner
+mode: default
+content:
+  su_news_banner_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: news_banner_image
+  su_news_banner_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: news_banner_title
+  su_news_banner_topic:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: news_banner_topic
+hidden: {  }

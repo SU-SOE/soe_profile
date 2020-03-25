@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_news_source
+    - node.type.stanford_news
+  module:
+    - link
+id: node.stanford_news.su_news_source
+field_name: su_news_source
+entity_type: node
+bundle: stanford_news
+label: Source
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
