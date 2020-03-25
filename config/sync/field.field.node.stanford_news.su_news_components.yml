@@ -1,3 +1,4 @@
+uuid: 5d049e7f-697f-4a37-8b8c-c345b4b1fd8b
 langcode: en
 status: true
 dependencies:
@@ -26,13 +27,13 @@ settings:
       stanford_wysiwyg: stanford_wysiwyg
       news_image: news_image
     target_bundles_drag_drop:
-      stanford_wysiwyg:
-        enabled: true
-        weight: -7
       news_image:
         enabled: true
         weight: -6
       stanford_news_banner:
         weight: -5
         enabled: false
+      stanford_wysiwyg:
+        enabled: true
+        weight: -7
 field_type: entity_reference_revisions

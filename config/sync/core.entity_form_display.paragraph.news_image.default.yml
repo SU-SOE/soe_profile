@@ -1,3 +1,4 @@
+uuid: bc46ae10-5af0-427a-8f6e-be43229621f4
 langcode: en
 status: true
 dependencies:
@@ -15,6 +16,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
