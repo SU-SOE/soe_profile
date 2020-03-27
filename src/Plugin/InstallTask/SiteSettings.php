@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\stanford_profile\Plugin\InstallTask;
+namespace Drupal\soe_profile\Plugin\InstallTask;
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
@@ -9,7 +9,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Site\Settings;
 use Drupal\Core\State\StateInterface;
 use Drupal\externalauth\AuthmapInterface;
-use Drupal\stanford_profile\InstallTaskBase;
+use Drupal\soe_profile\InstallTaskBase;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -18,7 +18,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * SNOW site settings installation.
  *
  * @InstallTask(
- *   id="stanford_profile_site_settings"
+ *   id="soe_profile_site_settings"
  * )
  */
 class SiteSettings extends InstallTaskBase implements ContainerFactoryPluginInterface {
@@ -86,7 +86,7 @@ class SiteSettings extends InstallTaskBase implements ContainerFactoryPluginInte
     $this->client = $client;
     $this->authmap = $authmap;
     $this->state = $state;
-    $this->logger = $logger_factory->get('stanford_profile');
+    $this->logger = $logger_factory->get('soe_profile');
   }
 
   /**
