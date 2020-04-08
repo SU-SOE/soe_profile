@@ -1,8 +1,10 @@
-admin:
+node_form:
   version: VERSION
   css:
     theme:
-      dist/css/stanford_profile_styles.admin.css: {}
+      dist/css/stanford_profile_styles.admin.node_form.css: {}
+  dependencies:
+    - stanford_media/admin
 
 field_widgets:
   version: VERSION
@@ -14,7 +16,13 @@ stanford_page:
   version: VERSION
   css:
     component:
-      dist/css/stanford_profile_styles.node.stanford_page.css: {}
+      dist/css/stanford_profile_styles.node.stanford_page.css: { weight: 1 }
+
+stanford_page_layout_full:
+  version: VERSION
+  css:
+    component:
+      dist/css/stanford_profile_styles.layout.stanford_page.full.css: { weight: 10 }
 
 stanford_paragraph_wysiwyg:
   version: VERSION
