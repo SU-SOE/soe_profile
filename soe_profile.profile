@@ -7,6 +7,7 @@
 
 use Drupal\menu_link_content\MenuLinkContentInterface;
 use Drupal\block\Entity\Block;
+use Drupal\Core\Cache\Cache;
 
 /**
  * Implements hook_install_tasks().
