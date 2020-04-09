@@ -8,6 +8,7 @@
 use Drupal\menu_link_content\MenuLinkContentInterface;
 use Drupal\block\Entity\Block;
 use Drupal\Core\Cache\Cache;
+use Drupal\Core\Access\AccessResult;
 
 /**
  * Implements hook_install_tasks().
@@ -53,4 +54,18 @@ function soe_profile_menu_link_content_presave(MenuLinkContentInterface $entity)
       }
     }
   }
+}
+
+/**
+ * Implements hook_entity_field_access().
+ */
+function soe_profile_entity_field_access($operation, FieldDefinitionInterface $field_definition, AccountInterface $account, FieldItemListInterface $items = NULL) {
+  if ($field_definition->getType() == 'entity_reference' && $field_definition->getSetting('handler') == 'layout_library') {
+    $entity_type = $field_definition->getTargetEntityTypeId();
+    $bundle = $field_definition->getTargetBundle();
+    if (!$account->hasPermission("choose layout for $entity_type $bundle")) {
+      return AccessResult::forbidden();
+    }
+  }
+  return AccessResult::neutral();
 }
