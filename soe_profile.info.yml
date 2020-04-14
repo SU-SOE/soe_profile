@@ -15,6 +15,8 @@ dependencies:
   - better_normalizers:better_normalizers
   - chosen:chosen
   - chosen:chosen_lib
+  - ckeditor_a11ychecker:ckeditor_a11ychecker
+  - ckeditor_a11ychecker:ckeditor_balloonpanel
   - components:components
   - config_distro:config_distro
   - config_filter:config_filter
@@ -116,7 +118,6 @@ dependencies:
   - stanford_media:stanford_media
   - stanford_news:stanford_news
   - stanford_profile:stanford_paragraph_card
-  - stanford_profile:stanford_profile_install
   - stanford_profile:stanford_profile_styles
   - stanford_ssp:stanford_ssp
   - stanford_text_editor:stanford_text_editor

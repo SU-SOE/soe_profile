@@ -1,55 +1,43 @@
 version: "2"
+checks:
+  argument-count:
+    enabled: false
+  method-complexity:
+    config:
+      threshold: 10
+
 plugins:
   # https://docs.codeclimate.com/docs/eslint
   # ES Linting requires an .eslintrc file to tweak checks.
   eslint:
     enabled: false
+  # We can ignore css since we compile all css from scss files.
   csslint:
     enabled: false
   # We don't lint our coffee. Eew.
   coffeelint:
     enabled: false
+  # SASS Lint requires a .sass-lint.yml file in the repo in order to tweak settings.
+  # Withouth the .sass-lint.yml file it will run with the defaults.
+  # Defaults file: https://github.com/sasstools/sass-lint/blob/master/lib/config/sass-lint.yml
+  sass-lint:
+    enabled: true
   # SCSS Lint requires a .scss-lint.yml file in the repo in order to tweak settings.
   # Withouth the .scss-lint.yml file it will run with the defaults.
   # Defaults file: https://github.com/brigade/scss-lint/blob/master/config/default.yml
   scss-lint:
-    enabled: true
-    checks:
-      IdSelector:
-        enabled: false
-      SelectorFormat:
-        enabled: false
-      NestingDepth:
-        enabled: false
-      MergeableSelector:
-        enabled: false
-      ColorVariable:
-        enabled: false
-      PropertySortOrder:
-        enabled: false
-      SelectorDepth:
-        enabled: false
-      QualifyingElement:
-        enabled: false
-      VendorPrefix:
-        enabled: false
-      LeadingZero:
-        enabled: false
-      HexLength:
-        enabled: false
-      PseudoElement:
-        enabled: false
+    enabled: false
   phpcodesniffer:
     enabled: true
     checks:
       Drupal Commenting FunctionComment TypeHintMissing:
-        enabled: false
+        enabled: true
       Drupal Commenting FunctionComment IncorrectTypeHint:
-        enabled: false
+        enabled: true
       DrupalPractice Commenting CommentEmptyLine SpacingAfter:
-        enabled: false
+        enabled: true
       Drupal NamingConventions ValidFunctionName ScopeNotCamelCaps:
-        enabled: false
+        enabled: true
       Drupal NamingConventions ValidClassName StartWithCaptial:
         enabled: false
       Drupal NamingConventions ValidFunctionName NotCamelCaps:
@@ -57,7 +45,7 @@ plugins:
       DrupalPractice General ClassName ClassPrefix:
         enabled: false
       Drupal NamingConventions ValidClassName NoUnderscores:
-        enabled: false
+        enabled: true
     config:
       file_extensions: "php,inc,install,module,profile"
       standard: "Drupal,DrupalPractice"
@@ -72,11 +60,9 @@ plugins:
         enabled: false
       CleanCode/BooleanArgumentFlag:
         enabled: false
-      CyclomaticComplexity:
-        enabled: false
-      Design/NpathComplexity:
-        enabled: false
       UnusedFormalParameter:
+        enabled: false
+      Naming/ShortVariable:
         enabled: false
     config:
       # https://phpmd.org/rules/index.html
@@ -88,9 +74,6 @@ plugins:
   # https://docs.codeclimate.com/docs/phan
   phan:
     enabled: true
-    checks:
-          PhanTypeInvalidDimOffset:
-            enabled: false
     config:
       file_extensions: "php,module,profile,inc"
       # minimum-severity: 1
@@ -114,28 +97,16 @@ plugins:
     enabled: true
     config:
       strings:
-      - FIXME
-      - BUG
-      - TODO
-      - todo
-      - dpm
-      - dsm
+        - FIXME
+        - BUG
+        - TODO
+        - todo
+        - dpm
+        - dsm
 # exclude these files/paths
 exclude_patterns:
-- "**.features.**"
-- "**.views_default.inc"
-- "**.field_group.inc"
-- "**.ds.inc"
-- "**.bean.inc"
-- "**.context.inc"
-- "test/**/*"
-- "**/vendor/**/*"
-- "**.min.*"
-- "tests/"
-- "spec/"
-- "**/vendor/"
-- "**.api.php"
-- "*.twig"
-- "Gruntfile.js"
-- "**/Gruntfile.js"
-- "node_modules/"
+  - "tests/"
+  - "**.min.*"
+  - "**/Gruntfile.js"
+  - "**.min.*"
+  - "**/tests/**/*"

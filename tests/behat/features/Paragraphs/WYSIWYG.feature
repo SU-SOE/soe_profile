@@ -14,13 +14,14 @@ Feature: WYSIWYG Paragraph
       | title              | Banner Test  |
       | su_page_components | created_text |
 
-    And I click "Edit"
+    And I click the ".local-tasks-block a:contains('Edit')" element
     And I set the window size to "extra large"
     And I wait 1 seconds
     Then I click the ".inner-row-wrapper button" element
     And I wait 1 seconds
     Then I fill in wysiwyg "Body" with "../../assets/documents/WYSIWYG.html"
     Then I press "Continue"
+    Then I wait for element ".MuiDialog-scrollPaper" to be gone
     Then I press "Save"
 
     # Stripped Tags
@@ -84,7 +85,7 @@ Feature: WYSIWYG Paragraph
       | title              | Banner Test  |
       | su_page_components | created_text |
     Then I should see 0 "img" element in the "content" region
-    And I click "Edit"
+    And I click the ".local-tasks-block a:contains('Edit')" element
     And I set the window size to "extra large"
     And I wait 1 seconds
     Then I click the ".inner-row-wrapper button" element
@@ -93,12 +94,13 @@ Feature: WYSIWYG Paragraph
     And I wait for element ".dropzone"
     Then I drop "../../assets/images/logo.jpg" file into dropzone
     And I press "Upload and Continue"
-    And I wait 1 seconds
+    And I wait for element "input[name*='alt']"
     And I fill in "Alternative text" with "Stanford Logo"
     Then I click the ".ui-dialog-buttonset button:contains('Save and insert')" element
     And I wait for AJAX to finish
     And I wait 1 seconds
     Then I press "Continue"
+    Then I wait for element ".MuiDialog-scrollPaper" to be gone
     Then I press "Save"
     And I should see 1 "img" element in the "content" region
 
@@ -113,7 +115,7 @@ Feature: WYSIWYG Paragraph
       | title              | Banner Test  |
       | su_page_components | created_text |
     Then I should see 0 "img" element in the "content" region
-    And I click "Edit"
+    And I click the ".local-tasks-block a:contains('Edit')" element
     And I set the window size to "extra large"
     And I wait 1 seconds
     Then I click the ".inner-row-wrapper button" element
@@ -129,6 +131,7 @@ Feature: WYSIWYG Paragraph
     Then I click the ".ui-dialog-buttonset button:contains('Save and insert')" element
     And I wait for AJAX to finish
     Then I press "Continue"
+    Then I wait for element ".MuiDialog-scrollPaper" to be gone
     Then I press "Save"
     And I should see 1 "iframe" element in the "content" region
 
@@ -143,7 +146,7 @@ Feature: WYSIWYG Paragraph
       | title              | Banner Test  |
       | su_page_components | created_text |
     Then I should see 0 "img" element in the "content" region
-    And I click "Edit"
+    And I click the ".local-tasks-block a:contains('Edit')" element
     And I set the window size to "extra large"
     And I wait 1 seconds
     Then I click the ".inner-row-wrapper button" element
@@ -164,5 +167,6 @@ Feature: WYSIWYG Paragraph
     And I wait for AJAX to finish
     And I wait 1 seconds
     Then I press "Continue"
+    Then I wait for element ".MuiDialog-scrollPaper" to be gone
     Then I press "Save"
-    And I should see 1 "a[href*='.txt']:contains('test.txt')" element in the "content" region
+    And I should see 1 "a[href*='.txt']:contains('Test TXT Document')" element in the "content" region
