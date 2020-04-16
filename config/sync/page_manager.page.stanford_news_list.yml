@@ -1,0 +1,16 @@
+uuid: 770041a4-0ed3-4775-8dd2-5779626b55e4
+langcode: en
+status: true
+dependencies: {  }
+id: stanford_news_list
+label: 'News List'
+description: 'News Listing Page'
+use_admin_theme: false
+path: '/news/{term}'
+access_logic: and
+access_conditions: {  }
+parameters:
+  term:
+    machine_name: term
+    type: string
+    label: 'Term Name'

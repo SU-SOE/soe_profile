@@ -525,6 +525,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       use_ajax: false
+      title: News
     cache_metadata:
       max-age: -1
       contexts:
@@ -696,7 +697,7 @@ display:
           default_argument_type: raw
           default_argument_options:
             index: 1
-            use_alias: true
+            use_alias: false
           default_argument_skip_url: false
           summary_options:
             base_path: ''
