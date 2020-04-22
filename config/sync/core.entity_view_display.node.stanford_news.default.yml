@@ -183,9 +183,20 @@ third_party_settings:
               label_display: '0'
               formatter:
                 label: hidden
-                type: entity_reference_entity_view
+                type: media_multimedia_formatter
                 settings:
-                  view_mode: default
+                  vt_settings:
+                    settings__formatter__settings__vt_settings__active_tab: edit-image
+                  image:
+                    image_formatter: responsive_image_style
+                    image_formatter_image_style: large
+                    image_formatter_responsive_image_style: card_2_1
+                    image_formatter_view_mode: default
+                  video:
+                    video_formatter: entity
+                    video_formatter_view_mode: default
+                  other:
+                    view_mode: default
                 third_party_settings:
                   field_formatter_class:
                     class: ''

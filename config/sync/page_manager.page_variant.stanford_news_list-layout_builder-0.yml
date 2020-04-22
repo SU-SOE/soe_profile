@@ -42,19 +42,6 @@ variant_settings:
         centered: centered-container
         orientation: right
       components:
-        dc27a11c-3e8d-4d47-81f3-abd1caa2e353:
-          uuid: dc27a11c-3e8d-4d47-81f3-abd1caa2e353
-          region: main
-          configuration:
-            id: 'views_block:stanford_news-block_2'
-            label: ''
-            provider: views
-            label_display: '0'
-            views_label: ''
-            items_per_page: none
-            context_mapping: {  }
-          additional: {  }
-          weight: 1
         18f0e896-6e5b-422a-8243-e93cebfdcad6:
           uuid: 18f0e896-6e5b-422a-8243-e93cebfdcad6
           region: left
@@ -83,7 +70,29 @@ variant_settings:
             label_display: '0'
             context_mapping: {  }
           additional: {  }
-          weight: 0
+          weight: 2
+        e8925378-b2ae-48cb-96d9-450124cd1f97:
+          uuid: e8925378-b2ae-48cb-96d9-450124cd1f97
+          region: main
+          configuration:
+            id: 'views_block:stanford_news-term_block'
+            label: ''
+            provider: views
+            label_display: '0'
+            views_label: ''
+            items_per_page: '20'
+            context_mapping: {  }
+          additional: {  }
+          weight: 3
+      third_party_settings: {  }
+    -
+      layout_id: jumpstart_ui_one_column
+      layout_settings:
+        extra_classes: ''
+        centered: centered-container
+        columns: default
+        label: 'Newsletter Signup Block'
+      components:
         7926da84-89ea-4224-8776-c6691efe6932:
           uuid: 7926da84-89ea-4224-8776-c6691efe6932
           region: main
@@ -95,7 +104,7 @@ variant_settings:
             context_mapping: {  }
             form_action: ''
           additional: {  }
-          weight: 2
+          weight: 0
       third_party_settings: {  }
 page: stanford_news_list
 weight: 0
