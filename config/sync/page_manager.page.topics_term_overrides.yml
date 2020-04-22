@@ -1,0 +1,16 @@
+uuid: 86d96ed6-eecc-4455-acaf-605addd02dd2
+langcode: en
+status: true
+dependencies: {  }
+id: topics_term_overrides
+label: 'Topics Term Overrides'
+description: 'Taxonomy Topics Term Page Override'
+use_admin_theme: false
+path: '/taxonomy/term/{taxonomy_term}'
+access_logic: and
+access_conditions: {  }
+parameters:
+  taxonomy_term:
+    machine_name: taxonomy_term
+    type: 'entity:taxonomy_term'
+    label: taxonomy_term

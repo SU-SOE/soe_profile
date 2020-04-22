@@ -6,11 +6,7 @@ id: stanford_news_list
 label: 'News List'
 description: 'News Listing Page'
 use_admin_theme: false
-path: '/news/{term}'
+path: /news
 access_logic: and
 access_conditions: {  }
-parameters:
-  term:
-    machine_name: term
-    type: string
-    label: 'Term Name'
+parameters: {  }

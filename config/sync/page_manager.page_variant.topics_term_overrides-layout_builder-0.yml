@@ -1,15 +1,15 @@
-uuid: 1503ab7f-cbde-4d20-8876-b2a0c91871b5
+uuid: d6e45b4f-95d2-4232-8409-c5c96be0b429
 langcode: en
 status: true
 dependencies:
   config:
-    - page_manager.page.stanford_news_list
-id: stanford_news_list-layout_builder-0
+    - page_manager.page.topics_term_overrides
+id: topics_term_overrides-layout_builder-0
 label: 'Layout Builder'
 variant: layout_builder
 variant_settings:
   id: layout_builder
-  uuid: 863e2f68-64d3-4454-9ec6-0c0cbea1cffd
+  uuid: e12aa1f8-6db0-4a81-99b3-37e450658df1
   label: null
   weight: 0
   sections:
@@ -19,9 +19,10 @@ variant_settings:
         extra_classes: news-title-banner
         centered: null
         columns: default
+        label: Banner
       components:
-        a751ff76-a3fa-4838-a342-b156c90d720c:
-          uuid: a751ff76-a3fa-4838-a342-b156c90d720c
+        02077a09-ff6a-416b-81d7-d9bbfff39100:
+          uuid: 02077a09-ff6a-416b-81d7-d9bbfff39100
           region: main
           configuration:
             id: 'block_content:d0378f17-40d1-4dc3-ac97-f21126599571'
@@ -41,15 +42,40 @@ variant_settings:
         extra_classes: ''
         centered: centered-container
         orientation: right
+        label: Views
       components:
-        18f0e896-6e5b-422a-8243-e93cebfdcad6:
-          uuid: 18f0e896-6e5b-422a-8243-e93cebfdcad6
+        38316c9e-0d05-42d0-9ed8-17eda758a622:
+          uuid: 38316c9e-0d05-42d0-9ed8-17eda758a622
+          region: main
+          configuration:
+            id: 'views_block:stanford_news-term_block'
+            label: ''
+            provider: views
+            label_display: '0'
+            views_label: ''
+            items_per_page: '20'
+            context_mapping: {  }
+          additional: {  }
+          weight: 1
+        4335fb4b-0c3a-4a4c-9e2f-5310d6a76692:
+          uuid: 4335fb4b-0c3a-4a4c-9e2f-5310d6a76692
+          region: main
+          configuration:
+            id: jumpstart_ui_skipnav_main_anchor
+            label: 'Main content anchor target'
+            provider: jumpstart_ui
+            label_display: '0'
+            context_mapping: {  }
+          additional: {  }
+          weight: 0
+        38315261-6ab0-4454-99e5-91b0ccfe6236:
+          uuid: 38315261-6ab0-4454-99e5-91b0ccfe6236
           region: left
           configuration:
             id: 'menu_block:news-topics'
             label: 'Topics Menu'
             provider: menu_block
-            label_display: visible
+            label_display: '0'
             follow: false
             follow_parent: child
             level: 1
@@ -60,30 +86,6 @@ variant_settings:
             context_mapping: {  }
           additional: {  }
           weight: 0
-        043bb0fa-9705-401d-95ce-f71986c4d3a2:
-          uuid: 043bb0fa-9705-401d-95ce-f71986c4d3a2
-          region: main
-          configuration:
-            id: jumpstart_ui_skipnav_main_anchor
-            label: 'Main content anchor target'
-            provider: jumpstart_ui
-            label_display: '0'
-            context_mapping: {  }
-          additional: {  }
-          weight: 2
-        e2f2b7c9-dcfa-457c-8752-2db48ccb108d:
-          uuid: e2f2b7c9-dcfa-457c-8752-2db48ccb108d
-          region: main
-          configuration:
-            id: 'views_block:stanford_news-block_1'
-            label: ''
-            provider: views
-            label_display: '0'
-            views_label: ''
-            items_per_page: '20'
-            context_mapping: {  }
-          additional: {  }
-          weight: 3
       third_party_settings: {  }
     -
       layout_id: jumpstart_ui_one_column
@@ -93,20 +95,20 @@ variant_settings:
         columns: default
         label: 'Newsletter Signup Block'
       components:
-        7926da84-89ea-4224-8776-c6691efe6932:
-          uuid: 7926da84-89ea-4224-8776-c6691efe6932
+        5bebd3b3-a005-4f0e-b6ae-6dde5947c92e:
+          uuid: 5bebd3b3-a005-4f0e-b6ae-6dde5947c92e
           region: main
           configuration:
             id: signup_block
             label: 'Newsletter Signup'
             provider: stanford_news
             label_display: '0'
-            context_mapping: {  }
             form_action: ''
+            context_mapping: {  }
           additional: {  }
           weight: 0
       third_party_settings: {  }
-page: stanford_news_list
+page: topics_term_overrides
 weight: 0
 selection_criteria: {  }
 selection_logic: and
