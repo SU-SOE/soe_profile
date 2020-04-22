@@ -19,17 +19,17 @@ variant_settings:
         extra_classes: news-title-banner
         centered: null
       components:
-        0efb7e45-6afb-44d9-aac9-8e7b12ab3955:
-          uuid: 0efb7e45-6afb-44d9-aac9-8e7b12ab3955
+        a751ff76-a3fa-4838-a342-b156c90d720c:
+          uuid: a751ff76-a3fa-4838-a342-b156c90d720c
           region: main
           configuration:
-            id: 'inline_block:stanford_component_block'
-            label: Banner
-            provider: layout_builder
+            id: 'block_content:d0378f17-40d1-4dc3-ac97-f21126599571'
+            label: 'News Banner'
+            provider: block_content
             label_display: '0'
+            status: true
+            info: ''
             view_mode: full
-            block_revision_id: 1
-            block_serialized: null
             context_mapping: {  }
           additional: {  }
           weight: 0

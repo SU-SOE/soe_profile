@@ -819,10 +819,10 @@ display:
             su_news_source: 0
           separator: ''
           hide_empty: 0
-          pattern: news-card
+          pattern: news-list
           pattern_mapping:
             'views_row:su_news_publishing_date':
-              destination: news_card_publishing_date
+              destination: news_list_publishing_date
               weight: 0
               plugin: views_row
               source: su_news_publishing_date
@@ -832,22 +832,22 @@ display:
               plugin: views_row
               source: su_news_source
             'views_row:su_news_featured_media':
-              destination: news_card_image
+              destination: news_list_image
               weight: 2
               plugin: views_row
               source: su_news_featured_media
             'views_row:su_news_dek':
-              destination: news_card_dek
+              destination: news_list_dek
               weight: 3
               plugin: views_row
               source: su_news_dek
             'views_row:su_news_headline':
-              destination: news_card_headline
+              destination: news_list_headline
               weight: 4
               plugin: views_row
               source: su_news_headline
             'views_row:su_news_topics':
-              destination: news_card_topics
+              destination: news_list_topics
               weight: 5
               plugin: views_row
               source: su_news_topics
