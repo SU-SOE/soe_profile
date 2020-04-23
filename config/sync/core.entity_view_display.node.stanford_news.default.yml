@@ -288,11 +288,11 @@ third_party_settings:
           columns: default
           label: 'Extra Views'
         components:
-          f57990fa-434d-4533-b84e-8cdacb7b8083:
-            uuid: f57990fa-434d-4533-b84e-8cdacb7b8083
+          d43e60bd-c832-439e-8151-1b2fd851b98e:
+            uuid: d43e60bd-c832-439e-8151-1b2fd851b98e
             region: main
             configuration:
-              id: 'views_block:stanford_news-vertical_teaser_term_list'
+              id: 'views_block:stanford_news-vertical_teaser_term'
               label: ''
               provider: views
               label_display: '0'
