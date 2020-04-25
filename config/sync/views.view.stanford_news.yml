@@ -10,7 +10,7 @@ dependencies:
     - field.storage.node.su_news_source
     - field.storage.node.su_news_topics
     - node.type.stanford_news
-    - taxonomy.vocabulary.stanford_topics
+    - taxonomy.vocabulary.stanford_news_topics
   module:
     - datetime
     - link
@@ -708,6 +708,8 @@ display:
               plugin: views_row
               source: su_news_topics
           pattern_variant: default
+      block_category: 'News Lists (Views)'
+      block_description: 'Term Block (All Results)'
     cache_metadata:
       max-age: -1
       contexts:
@@ -773,7 +775,7 @@ display:
             term_page: '1'
             node: true
             vids:
-              stanford_topics: stanford_topics
+              stanford_news_topics: stanford_news_topics
             anyall: ','
             limit: false
           default_argument_skip_url: false
@@ -792,7 +794,7 @@ display:
             fail: empty
           validate_options:
             bundles:
-              stanford_topics: stanford_topics
+              stanford_news_topics: stanford_news_topics
             access: true
             operation: view
             multiple: 1
@@ -928,6 +930,8 @@ display:
               plugin: views_row
               source: su_news_topics
           pattern_variant: default
+      block_category: 'News Lists (Views)'
+      block_description: 'Term Block (Filtered Results)'
     cache_metadata:
       max-age: -1
       contexts:
@@ -1004,6 +1008,8 @@ display:
         options:
           items_per_page: 3
           offset: 0
+      block_category: 'News Lists (Views)'
+      block_description: 'Vertical Teaser Term'
     cache_metadata:
       max-age: -1
       contexts:
@@ -1464,6 +1470,8 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+      block_category: 'News Lists (Views)'
+      block_description: 'Vertical Teaser Term List'
     cache_metadata:
       max-age: -1
       contexts:

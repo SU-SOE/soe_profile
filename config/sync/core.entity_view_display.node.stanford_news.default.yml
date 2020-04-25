@@ -56,7 +56,7 @@ third_party_settings:
                   field_formatter_class:
                     class: su-news-topics
                   ds:
-                    ds_limit: ''
+                    ds_limit: '3'
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
@@ -283,6 +283,38 @@ third_party_settings:
       -
         layout_id: jumpstart_ui_one_column
         layout_settings:
+          extra_classes: su-news-more-topics
+          centered: centered-container
+          columns: flex-10-of-12
+          label: 'More Topics'
+        components:
+          32d871db-85f0-4445-afb8-4d19c97ac98f:
+            uuid: 32d871db-85f0-4445-afb8-4d19c97ac98f
+            region: main
+            configuration:
+              id: 'field_block:node:stanford_news:su_news_topics'
+              label: 'More News Topics'
+              provider: layout_builder
+              label_display: visible
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: su-new-more-topics
+                  ds:
+                    ds_limit: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: jumpstart_ui_one_column
+        layout_settings:
           extra_classes: su-news-supporting-content
           centered: centered-container
           columns: default
@@ -293,10 +325,10 @@ third_party_settings:
             region: main
             configuration:
               id: 'views_block:stanford_news-vertical_teaser_term'
-              label: ''
+              label: 'More News'
               provider: views
-              label_display: '0'
-              views_label: ''
+              label_display: visible
+              views_label: 'More News'
               items_per_page: none
               context_mapping: {  }
             additional: {  }
@@ -310,14 +342,21 @@ third_party_settings:
       whitelisted_blocks:
         'Chaos Tools': {  }
         'Config Pages': {  }
-        'Custom block types': {  }
-        'Custom blocks': {  }
-        Menus: {  }
+        Menus:
+          - 'menu_block:main'
+          - 'menu_block:news-topics'
         'SimpleSAMLphp Authentication': {  }
-        System: {  }
-        core: {  }
+        System:
+          - system_messages_block
+        core:
+          - page_title_block
       blacklisted_blocks: {  }
-      allowed_layouts: {  }
+      allowed_layouts:
+        - jumpstart_ui_one_column
+        - jumpstart_ui_two_column
+        - jumpstart_ui_three_column
+        - stanford_news_byline
+        - ds_reset
 _core:
   default_config_hash: B41OmvNuERwR2YDnVvMDG92xmz4Ch1q1s_GFQvvIO0Q
 id: node.stanford_news.default

@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.su_news_components
     - node.type.stanford_news
-    - paragraphs.paragraphs_type.news_image
     - paragraphs.paragraphs_type.stanford_wysiwyg
   module:
     - entity_reference_revisions
@@ -25,7 +24,6 @@ settings:
     negate: 0
     target_bundles:
       stanford_wysiwyg: stanford_wysiwyg
-      news_image: news_image
     target_bundles_drag_drop:
       stanford_wysiwyg:
         enabled: true

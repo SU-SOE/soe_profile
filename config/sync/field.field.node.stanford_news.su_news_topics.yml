@@ -5,13 +5,13 @@ dependencies:
   config:
     - field.storage.node.su_news_topics
     - node.type.stanford_news
-    - taxonomy.vocabulary.stanford_topics
+    - taxonomy.vocabulary.stanford_news_topics
 id: node.stanford_news.su_news_topics
 field_name: su_news_topics
 entity_type: node
 bundle: stanford_news
 label: Topics
-description: ''
+description: 'Add as many topics as you want but only the top 3 are displayed on listing pages and the top of this page. To add new options to this form please visit <a href="/admin/structure/taxonomy/manage/stanford_news_topics/overview">the overview page</a>'
 required: false
 translatable: false
 default_value: {  }
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      stanford_topics: stanford_topics
+      stanford_news_topics: stanford_news_topics
     sort:
       field: name
       direction: asc

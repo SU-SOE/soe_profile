@@ -4,10 +4,10 @@ status: true
 dependencies:
   config:
     - system.menu.news-topics
-    - taxonomy.vocabulary.stanford_topics
+    - taxonomy.vocabulary.stanford_news_topics
 id: topics_taxonomy_menu
 label: 'Topics Taxonomy Menu'
-vocabulary: stanford_topics
+vocabulary: stanford_news_topics
 menu: news-topics
 expanded: false
 depth: 0

@@ -121,6 +121,7 @@
         "drupal/role_delegation": "^1.0@beta",
         "drupal/rules": "^3.0@alpha",
         "drupal/seckit": "^1.0@alpha",
+        "drupal/site_notifications": "^1.2",
         "drupal/ui_patterns": "~1.0",
         "drupal/view_unpublished": "^1.0@alpha",
         "drupal/views_block_filter_block": "^1.0@beta",
