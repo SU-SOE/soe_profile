@@ -12,12 +12,12 @@ field_name: su_news_source
 entity_type: node
 bundle: stanford_news
 label: Source
-description: ''
+description: 'Add a remote source for this news item. By adding a remote source url all news lists will link to the external source article instead of a page on this website.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   link_type: 17
-  title: 1
+  title: 0
 field_type: link

@@ -39,29 +39,6 @@ third_party_settings:
           columns: flex-10-of-12
           label: Header
         components:
-          7e233eaf-713f-4fc6-acfe-e90213c64914:
-            uuid: 7e233eaf-713f-4fc6-acfe-e90213c64914
-            region: main
-            configuration:
-              id: 'field_block:node:stanford_news:su_news_topics'
-              label: Topics
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_label
-                settings:
-                  link: true
-                third_party_settings:
-                  field_formatter_class:
-                    class: su-news-topics
-                  ds:
-                    ds_limit: '3'
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 1
           7680aebb-4a26-444e-b77a-cb8c6820136b:
             uuid: 7680aebb-4a26-444e-b77a-cb8c6820136b
             region: main
@@ -82,7 +59,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 2
+            weight: 3
           bc326bbf-ff93-4c18-ab2c-ee15c6427f3c:
             uuid: bc326bbf-ff93-4c18-ab2c-ee15c6427f3c
             region: main
@@ -103,7 +80,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 3
+            weight: 4
           1b31bf88-f05a-4d28-b9a8-825322f776c0:
             uuid: 1b31bf88-f05a-4d28-b9a8-825322f776c0
             region: main
@@ -115,6 +92,19 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
+          03aed37a-e4ab-4ee4-b996-0523074be664:
+            uuid: 03aed37a-e4ab-4ee4-b996-0523074be664
+            region: main
+            configuration:
+              id: 'views_block:stanford_news-topics_list'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 2
         third_party_settings: {  }
       -
         layout_id: stanford_news_byline
