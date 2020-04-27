@@ -33,6 +33,7 @@ permissions:
   - 'edit own image media'
   - 'edit own stanford_page content'
   - 'edit own video media'
+  - 'rabbit hole bypass node'
   - 'update media'
   - 'view all revisions'
   - 'view own unpublished content'
