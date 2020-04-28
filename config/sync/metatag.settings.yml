@@ -1,5 +1,8 @@
 entity_type_groups:
   node:
+    stanford_news:
+      basic: basic
+      open_graph: open_graph
     stanford_page:
       basic: basic
       open_graph: open_graph
