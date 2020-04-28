@@ -10,7 +10,7 @@ field_name: su_news_dek
 entity_type: node
 bundle: stanford_news
 label: Dek
-description: ''
+description: 'This is your teaser text. It appears below the headline.'
 required: false
 translatable: false
 default_value: {  }

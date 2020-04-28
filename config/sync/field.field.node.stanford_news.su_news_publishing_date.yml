@@ -1,4 +1,4 @@
-uuid: 7fc0c339-ee7c-4ff0-832d-2e2c1b201b75
+uuid: a7940941-119c-40a1-925d-d8a75eb6fab3
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,7 @@ field_name: su_news_publishing_date
 entity_type: node
 bundle: stanford_news
 label: 'Publishing Date'
-description: ''
+description: 'When this was published.'
 required: false
 translatable: false
 default_value: {  }
