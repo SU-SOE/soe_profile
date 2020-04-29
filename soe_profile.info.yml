@@ -102,6 +102,9 @@ dependencies:
   - menu_block:menu_block
   - menu_link_weight:menu_link_weight
   - metatag:metatag
+  - metatag:metatag_open_graph
+  - metatag:metatag_page_manager
+  - metatag:metatag_verification
   - nobots:nobots
   - paragraphs:paragraphs
   - pathauto:pathauto
