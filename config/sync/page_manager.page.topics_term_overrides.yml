@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: topics_term_overrides
 label: 'Topics Term Overrides'
-description: 'Taxonomy Topics Term Page Override'
+description: 'Taxonomy Term Page Overrides'
 use_admin_theme: false
 path: '/taxonomy/term/{taxonomy_term}'
 access_logic: and
