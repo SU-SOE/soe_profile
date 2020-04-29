@@ -6,3 +6,7 @@ entity_type_groups:
     stanford_page:
       basic: basic
       open_graph: open_graph
+  taxonomy_term:
+    stanford_news_topics:
+      basic: basic
+      open_graph: open_graph
