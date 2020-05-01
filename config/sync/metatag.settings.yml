@@ -1,5 +1,12 @@
 entity_type_groups:
   node:
+    stanford_news:
+      basic: basic
+      open_graph: open_graph
     stanford_page:
+      basic: basic
+      open_graph: open_graph
+  taxonomy_term:
+    stanford_news_topics:
       basic: basic
       open_graph: open_graph
