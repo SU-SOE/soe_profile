@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.stanford_news.layout_builder__layout
+    - field.field.node.stanford_news.su_news_banner
     - field.field.node.stanford_news.su_news_byline
     - field.field.node.stanford_news.su_news_components
     - field.field.node.stanford_news.su_news_dek
@@ -34,7 +35,7 @@ third_party_settings:
       -
         layout_id: jumpstart_ui_one_column
         layout_settings:
-          extra_classes: su-news-header
+          extra_classes: section-header
           centered: centered-container
           columns: flex-10-of-12
           label: Header
@@ -158,17 +159,38 @@ third_party_settings:
       -
         layout_id: jumpstart_ui_one_column
         layout_settings:
-          extra_classes: su-news-featured-media
+          extra_classes: section-banner-media
           centered: centered-container
           columns: default
-          label: 'Featured Media'
+          label: 'Banner Media'
         components:
-          fb94d05f-d714-4450-9c0e-5ff3c9b14e1a:
-            uuid: fb94d05f-d714-4450-9c0e-5ff3c9b14e1a
+          05c3062a-6e09-4b3b-b8f9-fa797362fb67:
+            uuid: 05c3062a-6e09-4b3b-b8f9-fa797362fb67
             region: main
             configuration:
-              id: 'field_block:node:stanford_news:su_news_featured_media'
-              label: 'Featured Media'
+              id: 'field_block:node:stanford_news:su_news_featured_media_caption'
+              label: 'Banner Media Caption'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: su-news-banner-media-caption
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -8
+          c67c266b-204c-4ca8-aff9-715a5cdf2ff8:
+            uuid: c67c266b-204c-4ca8-aff9-715a5cdf2ff8
+            region: main
+            configuration:
+              id: 'field_block:node:stanford_news:su_news_banner'
+              label: Banner
               provider: layout_builder
               label_display: '0'
               formatter:
@@ -189,38 +211,17 @@ third_party_settings:
                     view_mode: default
                 third_party_settings:
                   field_formatter_class:
-                    class: ''
+                    class: su-news-banner
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 0
-          05c3062a-6e09-4b3b-b8f9-fa797362fb67:
-            uuid: 05c3062a-6e09-4b3b-b8f9-fa797362fb67
-            region: main
-            configuration:
-              id: 'field_block:node:stanford_news:su_news_featured_media_caption'
-              label: 'Featured Media Caption'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings:
-                  field_formatter_class:
-                    class: su-news-featured-media-caption
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 1
+            weight: -9
         third_party_settings: {  }
       -
         layout_id: jumpstart_ui_one_column
         layout_settings:
-          extra_classes: su-news-components
+          extra_classes: section-components
           centered: centered-container
           columns: flex-8-of-12
           label: Components
@@ -252,7 +253,7 @@ third_party_settings:
       -
         layout_id: jumpstart_ui_one_column
         layout_settings:
-          extra_classes: su-news-subscribe-form
+          extra_classes: section-subscribe-form
           centered: centered-container
           columns: default
           label: 'Subscribe Form'
@@ -273,7 +274,7 @@ third_party_settings:
       -
         layout_id: jumpstart_ui_one_column
         layout_settings:
-          extra_classes: su-news-more-topics
+          extra_classes: section-more-topics
           centered: centered-container
           columns: flex-10-of-12
           label: 'More Topics'
@@ -305,7 +306,7 @@ third_party_settings:
       -
         layout_id: jumpstart_ui_one_column
         layout_settings:
-          extra_classes: su-news-supporting-content
+          extra_classes: section-supporting-content
           centered: centered-container
           columns: default
           label: 'Extra Views'
@@ -354,6 +355,15 @@ targetEntityType: node
 bundle: stanford_news
 mode: default
 content:
+  su_news_banner:
+    type: entity_reference_entity_view
+    weight: 8
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: main
   su_news_byline:
     weight: 4
     label: hidden

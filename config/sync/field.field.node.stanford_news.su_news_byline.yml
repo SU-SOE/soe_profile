@@ -10,7 +10,7 @@ field_name: su_news_byline
 entity_type: node
 bundle: stanford_news
 label: Byline
-description: 'This is your byline. It identifies the author(s) of the article. '
+description: 'Use a comma to separate the list of names. The “byline" identifies the author(s) of the article. It will appear below the headline and dek on the article page.'
 required: false
 translatable: false
 default_value: {  }

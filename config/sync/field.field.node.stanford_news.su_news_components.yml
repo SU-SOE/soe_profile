@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.su_news_components
     - node.type.stanford_news
-    - paragraphs.paragraphs_type.stanford_wysiwyg
   module:
     - entity_reference_revisions
 id: node.stanford_news.su_news_components
@@ -22,16 +21,21 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 0
-    target_bundles:
-      stanford_wysiwyg: stanford_wysiwyg
+    target_bundles: null
     target_bundles_drag_drop:
       stanford_wysiwyg:
-        enabled: true
         weight: -7
-      news_image:
-        enabled: true
-        weight: -6
-      stanford_news_banner:
-        weight: -5
+        enabled: false
+      news_views:
+        weight: 6
+        enabled: false
+      stanford_banner:
+        weight: 7
+        enabled: false
+      stanford_card:
+        weight: 8
+        enabled: false
+      stanford_media_caption:
+        weight: 9
         enabled: false
 field_type: entity_reference_revisions
