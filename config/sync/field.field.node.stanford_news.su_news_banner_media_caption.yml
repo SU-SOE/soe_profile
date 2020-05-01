@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.su_news_featured_media_caption
+    - field.storage.node.su_news_banner_media_caption
     - node.type.stanford_news
-id: node.stanford_news.su_news_featured_media_caption
-field_name: su_news_featured_media_caption
+id: node.stanford_news.su_news_banner_media_caption
+field_name: su_news_banner_media_caption
 entity_type: node
 bundle: stanford_news
 label: 'Banner Caption'

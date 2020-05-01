@@ -9,7 +9,7 @@ dependencies:
     - field.field.node.stanford_news.su_news_components
     - field.field.node.stanford_news.su_news_dek
     - field.field.node.stanford_news.su_news_featured_media
-    - field.field.node.stanford_news.su_news_featured_media_caption
+    - field.field.node.stanford_news.su_news_banner_media_caption
     - field.field.node.stanford_news.su_news_headline
     - field.field.node.stanford_news.su_news_publishing_date
     - field.field.node.stanford_news.su_news_source
@@ -57,7 +57,7 @@ third_party_settings:
     group_banner:
       children:
         - su_news_banner
-        - su_news_featured_media_caption
+        - su_news_banner_media_caption
       parent_name: group_media
       weight: 11
       format_type: fieldset
@@ -136,7 +136,7 @@ content:
     third_party_settings: {  }
     type: media_library_widget
     region: content
-  su_news_featured_media_caption:
+  su_news_banner_media_caption:
     type: string_textfield
     weight: 12
     region: content

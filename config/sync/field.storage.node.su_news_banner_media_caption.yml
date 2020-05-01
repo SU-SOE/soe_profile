@@ -4,8 +4,8 @@ status: true
 dependencies:
   module:
     - node
-id: node.su_news_featured_media_caption
-field_name: su_news_featured_media_caption
+id: node.su_news_banner_media_caption
+field_name: su_news_banner_media_caption
 entity_type: node
 type: string
 settings:

@@ -9,7 +9,7 @@ dependencies:
     - field.field.node.stanford_news.su_news_components
     - field.field.node.stanford_news.su_news_dek
     - field.field.node.stanford_news.su_news_featured_media
-    - field.field.node.stanford_news.su_news_featured_media_caption
+    - field.field.node.stanford_news.su_news_banner_media_caption
     - field.field.node.stanford_news.su_news_headline
     - field.field.node.stanford_news.su_news_publishing_date
     - field.field.node.stanford_news.su_news_source
@@ -168,7 +168,7 @@ third_party_settings:
             uuid: 05c3062a-6e09-4b3b-b8f9-fa797362fb67
             region: main
             configuration:
-              id: 'field_block:node:stanford_news:su_news_featured_media_caption'
+              id: 'field_block:node:stanford_news:su_news_banner_media_caption'
               label: 'Banner Media Caption'
               provider: layout_builder
               label_display: '0'
@@ -400,7 +400,7 @@ content:
       field_formatter_class:
         class: ''
     region: content
-  su_news_featured_media_caption:
+  su_news_banner_media_caption:
     weight: 6
     label: hidden
     settings:
