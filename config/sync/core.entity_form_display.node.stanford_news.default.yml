@@ -101,6 +101,14 @@ content:
       media_types: {  }
     third_party_settings: {  }
     region: content
+  su_news_banner_media_caption:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   su_news_byline:
     weight: 4
     settings:
@@ -136,14 +144,6 @@ content:
     third_party_settings: {  }
     type: media_library_widget
     region: content
-  su_news_banner_media_caption:
-    type: string_textfield
-    weight: 12
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   su_news_headline:
     weight: 0
     settings:

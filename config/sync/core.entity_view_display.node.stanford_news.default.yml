@@ -364,6 +364,14 @@ content:
       link: false
     third_party_settings: {  }
     region: main
+  su_news_banner_media_caption:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   su_news_byline:
     weight: 4
     label: hidden
@@ -399,14 +407,6 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    region: content
-  su_news_banner_media_caption:
-    weight: 6
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
   su_news_headline:
     weight: 1
