@@ -7,19 +7,9 @@
             "href": "http:\/\/drupal.org\/rest\/type\/menu_link_content\/menu_link_content"
         }
     },
-    "id": [
-        {
-            "value": 9
-        }
-    ],
     "uuid": [
         {
             "value": "26a314fe-33aa-4660-b06a-97b26dc75baf"
-        }
-    ],
-    "revision_id": [
-        {
-            "value": 9
         }
     ],
     "langcode": [

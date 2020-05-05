@@ -83,6 +83,8 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  page_manager: 0
+  page_manager_ui: 0
   paragraphs_edit: 0
   path: 0
   path_alias: 0
@@ -101,11 +103,13 @@ module:
   stanford_image_styles: 0
   stanford_media: 0
   stanford_paragraph_card: 0
+  stanford_person: 0
   stanford_profile_styles: 0
   stanford_ssp: 0
   stanford_text_editor: 0
   system: 0
   taxonomy: 0
+  taxonomy_menu: 0
   text: 0
   token: 0
   toolbar: 0
@@ -116,7 +120,6 @@ module:
   ui_patterns_views: 0
   user: 0
   view_unpublished: 0
-  viewfield: 0
   views: 0
   views_block_filter_block: 0
   views_bulk_operations: 0
