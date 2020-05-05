@@ -1,7 +1,9 @@
-uuid: bba48443-2f14-43b8-9c52-e52d54e29502
+uuid: b1cf5c54-0177-41e9-8523-4ba38add3b20
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: 20XRL4lELmyHr9nhu10tt28ejdy3qsRLpUIAOjdZNTc
 name: news_full_width_banner_tall
 label: 'Full Width Banner Tall'
 effects:

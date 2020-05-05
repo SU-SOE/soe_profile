@@ -1,4 +1,4 @@
-uuid: 695086a3-b74e-42ea-9107-e07a52b252e5
+uuid: 18d62793-6443-4dae-80ef-858aa66c96d9
 langcode: en
 status: true
 dependencies:
@@ -6,6 +6,8 @@ dependencies:
     - entity_reference_revisions
     - node
     - paragraphs
+_core:
+  default_config_hash: dz7DL9SBgyY_d8VbTEAO6bpUc8rjp8VUckPrZGkeqXE
 id: node.su_news_components
 field_name: su_news_components
 entity_type: node

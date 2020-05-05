@@ -5,6 +5,8 @@ dependencies:
   module:
     - media
     - node
+_core:
+  default_config_hash: YYO8s-Sz_X8KL91L75jVzC1ka-d-RACttir5JQWxb7s
 id: node.su_news_banner
 field_name: su_news_banner
 entity_type: node

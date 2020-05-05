@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.su_news_headline
     - node.type.stanford_news
+_core:
+  default_config_hash: 5S0TjddTnoZMjs0Zt8Uq7kTxw-yHK_w1vrN6h3MtSkY
 id: node.stanford_news.su_news_headline
 field_name: su_news_headline
 entity_type: node

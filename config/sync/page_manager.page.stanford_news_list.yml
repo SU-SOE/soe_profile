@@ -1,7 +1,9 @@
-uuid: 770041a4-0ed3-4775-8dd2-5779626b55e4
+uuid: a3f93692-e2a1-4396-95cc-44b6925ad1b7
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: cjecMAXs5UIPrlj3_FnYX11Y_VFHmkCxjbGSPBp4MQQ
 id: stanford_news_list
 label: 'News List'
 description: 'News Listing Page'

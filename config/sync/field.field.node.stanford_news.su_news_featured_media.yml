@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.su_news_featured_media
     - media.type.image
     - node.type.stanford_news
+_core:
+  default_config_hash: 03iNFRQXEuylm4FHZQZ42tvp_SXVRnNMwm6UKlZ0AO0
 id: node.stanford_news.su_news_featured_media
 field_name: su_news_featured_media
 entity_type: node

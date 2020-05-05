@@ -1,10 +1,12 @@
-uuid: b5b992db-3a24-4e11-b81f-d478dcf53284
+uuid: 25c3f6f4-f5e0-4614-8266-9036dee2a6be
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - node
+_core:
+  default_config_hash: VzOeS22r-aQrXdwXluU_FI0UluFHhvnWf_TDdS92Guc
 id: node.su_news_source
 field_name: su_news_source
 entity_type: node

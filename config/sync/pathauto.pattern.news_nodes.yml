@@ -1,9 +1,11 @@
-uuid: d6753c15-e031-49ee-a938-d24c33e3ff0d
+uuid: 469ceb0f-2b9d-4596-a475-08b8458b2e6c
 langcode: en
 status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: ImGEDfKJJTJEAOQzf_oE3z8NicGl0U-NXDe6BKkt79k
 id: news_nodes
 label: 'News Nodes'
 type: 'canonical_entities:node'

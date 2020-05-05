@@ -82,6 +82,7 @@ module:
   metatag_verification: 0
   nobots: 0
   node: 0
+  node_revision_delete: 0
   options: 0
   page_cache: 0
   page_manager: 0
@@ -98,6 +99,7 @@ module:
   rh_node: 0
   role_delegation: 0
   search: 0
+  seckit: 0
   serialization: 0
   shortcut: 0
   simplesamlphp_auth: 0
@@ -107,6 +109,7 @@ module:
   stanford_media: 0
   stanford_news: 0
   stanford_paragraph_card: 0
+  stanford_profile_drush: 0
   stanford_profile_styles: 0
   stanford_ssp: 0
   stanford_text_editor: 0

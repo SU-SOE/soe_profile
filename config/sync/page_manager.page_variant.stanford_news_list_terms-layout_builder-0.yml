@@ -1,13 +1,13 @@
-uuid: d6e45b4f-95d2-4232-8409-c5c96be0b429
+uuid: b4f74f1d-1aa4-483d-8e8d-043750156cc5
 langcode: en
 status: true
 dependencies:
   config:
-    - page_manager.page.topics_term_overrides
-  module:
-    - ctools
-id: topics_term_overrides-layout_builder-0
-label: 'Layout Builder'
+    - page_manager.page.stanford_news_list_terms
+_core:
+  default_config_hash: cpicbIqhHDGugl4CjdatbL06wGdkc-dfElx_aBsKt-U
+id: stanford_news_list_terms-layout_builder-0
+label: 'News - Layout Builder'
 variant: layout_builder
 variant_settings:
   id: layout_builder
@@ -110,15 +110,8 @@ variant_settings:
           additional: {  }
           weight: 0
       third_party_settings: {  }
-page: topics_term_overrides
+page: stanford_news_list_terms
 weight: 0
-selection_criteria:
-  -
-    id: 'entity_bundle:taxonomy_term'
-    bundles:
-      stanford_news_topics: stanford_news_topics
-    negate: false
-    context_mapping:
-      taxonomy_term: taxonomy_term
+selection_criteria: {  }
 selection_logic: and
 static_context: {  }

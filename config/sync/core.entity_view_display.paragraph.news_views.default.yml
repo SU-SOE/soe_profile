@@ -1,4 +1,4 @@
-uuid: 2665bd00-67a4-44cd-b2db-54640769eeca
+uuid: ad76bea8-4235-424c-bc3b-11cd41f31b8d
 langcode: en
 status: true
 dependencies:
@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.news_views
   module:
     - viewfield
+_core:
+  default_config_hash: A9Vi-GYfM5BAmn7D9aFr5AmWot3e4X3U9O3Z1VCU1CA
 id: paragraph.news_views.default
 targetEntityType: paragraph
 bundle: news_views

@@ -1,9 +1,11 @@
-uuid: baeadd4d-68d2-46ab-bfbd-9c6fa48488dd
+uuid: a13f3749-0380-40da-963f-bff82080dac9
 langcode: en
 status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: pWKy1u3hkAUP224QluKqLBlKoq5Bhw9bO3NyCngjh_I
 id: node.su_news_banner_media_caption
 field_name: su_news_banner_media_caption
 entity_type: node

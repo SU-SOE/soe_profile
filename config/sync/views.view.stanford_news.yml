@@ -21,7 +21,7 @@ dependencies:
     - user
     - views_infinite_scroll
 _core:
-  default_config_hash: FEXjlri4zccqJIyLqmxC0UZ2wwdm2bBlL5seg6l2ATY
+  default_config_hash: aaYmdINCeT9XCySjN_DXW2O_2AQFayQFPxfYmjAZgd8
 id: stanford_news
 label: News
 module: views

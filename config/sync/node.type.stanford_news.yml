@@ -8,7 +8,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: 'Stanford News'
+_core:
+  default_config_hash: b02zxl9652i3nzBSiN8FZTF7BrR_wRbFdRHiW_I7QZE
+name: News
 type: stanford_news
 description: ''
 help: ''
