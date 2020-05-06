@@ -24,19 +24,9 @@
             }
         ]
     },
-    "nid": [
-        {
-            "value": 9
-        }
-    ],
     "uuid": [
         {
             "value": "e18a741f-7d86-492a-a02f-7ca73989ca13"
-        }
-    ],
-    "vid": [
-        {
-            "value": 9
         }
     ],
     "langcode": [
@@ -108,7 +98,7 @@
                     }
                 ],
                 "lang": "en",
-                "target_revision_id": "12",
+                "target_revision_id": "c77c8f62-721c-475d-bd5f-ba5ddce96836",
                 "settings": {
                     "row": "0",
                     "index": 0,
@@ -181,7 +171,7 @@
     "path": [
         {
             "alias": "\/research",
-            "pid": 5,
+            "pid": null,
             "langcode": "en",
             "lang": "en"
         }

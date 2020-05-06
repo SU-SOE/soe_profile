@@ -47,9 +47,10 @@
     ],
     "link": [
         {
-            "uri": "entity:node\/8",
+            "uri": "internal:\/node\/d21d84f0-22e7-4596-82cb-9209841a3276",
             "title": "",
-            "options": []
+            "options": [],
+            "target_uuid": "d21d84f0-22e7-4596-82cb-9209841a3276"
         }
     ],
     "external": [
@@ -89,16 +90,6 @@
         {
             "value": true,
             "lang": "en"
-        }
-    ],
-    "metatag": [
-        {
-            "value": {
-                "title": "| University",
-                "og_site_name": "University",
-                "canonical_url": "http:\/\/default\/home",
-                "og_url": "http:\/\/default\/home"
-            }
         }
     ]
 }

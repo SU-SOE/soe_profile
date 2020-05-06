@@ -24,19 +24,9 @@
             }
         ]
     },
-    "nid": [
-        {
-            "value": 7
-        }
-    ],
     "uuid": [
         {
             "value": "bc484600-a21a-4497-b9f7-f928474b511c"
-        }
-    ],
-    "vid": [
-        {
-            "value": 7
         }
     ],
     "langcode": [
@@ -108,7 +98,7 @@
                     }
                 ],
                 "lang": "en",
-                "target_revision_id": "1",
+                "target_revision_id": "8f7b2d0f-f883-43c8-9782-5e8b88fd98dc",
                 "settings": {
                     "row": "0",
                     "index": 0,
@@ -181,7 +171,7 @@
     "path": [
         {
             "alias": "\/resources",
-            "pid": 4,
+            "pid": null,
             "langcode": "en",
             "lang": "en"
         }

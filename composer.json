@@ -153,6 +153,14 @@
             },
             "drupal/paragraphs": {
                 "https://www.drupal.org/project/paragraphs/issues/2901390": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
+            },
+            "drupal/default_content": {
+              "https://www.drupal.org/project/default_content/issues/2698425":
+              "https://www.drupal.org/files/issues/2020-02-05/2698425--accept-content-updates--122.patch"
+            },
+            "drupal/core": {
+              "https://www.drupal.org/project/drupal/issues/2577923":
+              "https://www.drupal.org/files/issues/2019-10-14/2577923-125.patch"
             }
         }
     }
