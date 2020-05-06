@@ -8,6 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus:
       - main
+      - stanford-person-type
     parent: 'main:'
 _core:
   default_config_hash: 6EahYLSjieT-4rfd5ESGUyDmb4BEjrnGYRfk6cHwVn4
