@@ -160,7 +160,9 @@
             },
             "drupal/core": {
               "https://www.drupal.org/project/drupal/issues/2577923":
-              "https://www.drupal.org/files/issues/2019-10-14/2577923-125.patch"
+              "https://www.drupal.org/files/issues/2019-10-14/2577923-125.patch",
+              "https://www.drupal.org/project/drupal/issues/2353611":
+              "https://www.drupal.org/files/issues/2019-10-15/drupal-link_uuid-2353611-262.patch"
             }
         }
     }
