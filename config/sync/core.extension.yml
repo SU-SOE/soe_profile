@@ -32,6 +32,7 @@ module:
   datetime: 0
   datetime_range: 0
   default_content: 0
+  devel_generate: 0
   display_field_copy: 0
   domain_301_redirect: 0
   dropzonejs: 0
@@ -98,6 +99,7 @@ module:
   search: 0
   serialization: 0
   shortcut: 0
+  shs: 0
   simplesamlphp_auth: 0
   stanford_date_formats: 0
   stanford_fields: 0
@@ -124,6 +126,7 @@ module:
   views: 0
   views_block_filter_block: 0
   views_bulk_operations: 0
+  views_contextual_filters_or: 0
   views_infinite_scroll: 0
   views_taxonomy_term_name_depth: 0
   views_ui: 0

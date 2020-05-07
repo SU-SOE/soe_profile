@@ -24,7 +24,7 @@ dependencies:
     - field.field.node.stanford_person.su_person_research
     - field.field.node.stanford_person.su_person_short_title
     - field.field.node.stanford_person.su_person_telephone
-    - field.field.node.stanford_person.su_person_type
+    - field.field.node.stanford_person.su_person_type_group
     - node.type.stanford_person
   module:
     - text
@@ -69,4 +69,4 @@ hidden:
   su_person_research: true
   su_person_short_title: true
   su_person_telephone: true
-  su_person_type: true
+  su_person_type_group: true
