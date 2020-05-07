@@ -553,7 +553,7 @@ display:
           relationship: none
           group_type: group
           admin_label: su_person_type_group
-          required: false
+          required: true
           entity_type: taxonomy_term
           plugin_id: entity_reverse
       arguments:
