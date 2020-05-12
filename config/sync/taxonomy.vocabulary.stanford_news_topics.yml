@@ -1,9 +1,6 @@
-uuid: a088a306-8677-4c49-837d-c96e0d4937f9
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 9m5vGiSvHQ6rdWUx6Bwhe-wsMrHoVcbG3pkYFpiZHEw
 name: 'News Topics'
 vid: stanford_news_topics
 description: 'List of topics for items'

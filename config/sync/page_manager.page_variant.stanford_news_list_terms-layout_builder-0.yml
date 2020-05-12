@@ -1,9 +1,10 @@
-uuid: b4f74f1d-1aa4-483d-8e8d-043750156cc5
 langcode: en
 status: true
 dependencies:
   config:
     - page_manager.page.stanford_news_list_terms
+  module:
+    - ctools
 _core:
   default_config_hash: cpicbIqhHDGugl4CjdatbL06wGdkc-dfElx_aBsKt-U
 id: stanford_news_list_terms-layout_builder-0
@@ -112,6 +113,13 @@ variant_settings:
       third_party_settings: {  }
 page: stanford_news_list_terms
 weight: 0
-selection_criteria: {  }
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      stanford_news_topics: stanford_news_topics
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
 selection_logic: and
 static_context: {  }

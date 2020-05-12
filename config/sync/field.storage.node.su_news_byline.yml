@@ -1,11 +1,8 @@
-uuid: cbc3915a-143f-43c5-b8cd-5ef279e7a9c5
 langcode: en
 status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: U6XF6AbqhTRavpEXCUgZvuRfPtHo-S9aRNmkzgfkyag
 id: node.su_news_byline
 field_name: su_news_byline
 entity_type: node

@@ -1,11 +1,8 @@
-uuid: 2aff513e-6eed-495e-836d-1a2860717a96
 langcode: en
 status: true
 dependencies:
   config:
     - page_manager.page.stanford_news_list
-_core:
-  default_config_hash: qUYWlgvig44GRjh1VGW0qEYDZpQWE0uqPljH-mfjFYc
 id: stanford_news_list-layout_builder-0
 label: 'Layout Builder'
 variant: layout_builder

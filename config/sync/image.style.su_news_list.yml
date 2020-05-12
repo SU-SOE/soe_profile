@@ -1,9 +1,6 @@
-uuid: f55dc0c3-829f-4c2a-82c1-2a06403043be
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 9y2n4NmiX5OS_NgjSQvUbWqde7Omb-nJTyVIGPY7cAg
 name: su_news_list
 label: 'News List (280x132)'
 effects:

@@ -1,12 +1,9 @@
-uuid: 3d2c91ab-e820-4d49-800b-54a7a7d7d5f0
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - taxonomy
-_core:
-  default_config_hash: kM2tbqX2QX_uBVDnY0YOk0uvIhLJm9QFElikph5Tcig
 id: node.su_news_topics
 field_name: su_news_topics
 entity_type: node

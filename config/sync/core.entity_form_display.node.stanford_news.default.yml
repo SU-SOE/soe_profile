@@ -1,4 +1,3 @@
-uuid: cdbd9733-69f2-474a-b6b5-a3e6d25b943b
 langcode: en
 status: true
 dependencies:
@@ -126,7 +125,7 @@ content:
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: stanford_wysiwyg
     third_party_settings: {  }
     region: content
   su_news_dek:

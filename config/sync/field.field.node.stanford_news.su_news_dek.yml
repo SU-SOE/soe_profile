@@ -1,4 +1,3 @@
-uuid: c4fa5966-6c4e-4766-a5f8-37a75c4e1d61
 langcode: en
 status: true
 dependencies:
@@ -12,7 +11,7 @@ field_name: su_news_dek
 entity_type: node
 bundle: stanford_news
 label: Dek
-description: 'Maximum 180 characters. A "dek" is a brief summary that appears below the headline - in smaller font - on the list page and on the article page.'
+description: 'Maximum 180 characters. <em>A "dek" is a brief summary that appears below the headline - in smaller font - on the list page and on the article page.</em>'
 required: false
 translatable: false
 default_value: {  }

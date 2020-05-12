@@ -1,4 +1,3 @@
-uuid: 60b55b26-cb27-418f-b1ff-eb453b86f3fb
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - node.type.stanford_news
   module:
     - layout_builder
-_core:
-  default_config_hash: k6RasWQJ28ihDwlr2ls9LMSx6_AAKp3MEcIMLkDGdCM
 id: node.stanford_news.layout_builder__layout
 field_name: layout_builder__layout
 entity_type: node

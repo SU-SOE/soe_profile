@@ -1,12 +1,9 @@
-uuid: 66dfb4f1-adfc-4d3f-964a-4e5ea0e896fe
 langcode: en
 status: true
 dependencies:
   module:
     - datetime
     - node
-_core:
-  default_config_hash: R4EXNOMhTA_MnD20ONKBFooiIHzdDIM0wveO3EzUaHs
 id: node.su_news_publishing_date
 field_name: su_news_publishing_date
 entity_type: node

@@ -1,11 +1,8 @@
-uuid: a0d749cf-b038-4acb-9067-6ebde1d8e08a
 langcode: en
 status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: S8RHVWak6dF6pjRTFoXEC8MGLReGfRQ0ycjhpdpPNI0
 id: node.su_news_dek
 field_name: su_news_dek
 entity_type: node

@@ -1,11 +1,8 @@
-uuid: eb031bf3-8180-4679-b4bf-790e99793742
 langcode: en
 status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: kZoZ2BBuiVGIrEsWmTNgtJFo1fS6_YReXbIZ1dMOOrE
 id: node.su_news_headline
 field_name: su_news_headline
 entity_type: node

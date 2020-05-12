@@ -1,12 +1,9 @@
-uuid: e589f690-e751-4fdf-af0f-bae35ae15021
 langcode: en
 status: true
 dependencies:
   module:
     - ctools
     - taxonomy
-_core:
-  default_config_hash: DB5CVv3Pu_IW0LddYlHTKS5pSsUHRllJodFKO4ruzQE
 id: news_topics
 label: 'News Topics'
 type: 'canonical_entities:taxonomy_term'

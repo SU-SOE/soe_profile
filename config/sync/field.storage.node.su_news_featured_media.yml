@@ -1,12 +1,9 @@
-uuid: 890c3264-0bdb-481d-acb1-d6194a4c012a
 langcode: en
 status: true
 dependencies:
   module:
     - media
     - node
-_core:
-  default_config_hash: 64OetA4MVWDg3xx2lPI0v0DVJFFNYjXORDE1EwYTV6I
 id: node.su_news_featured_media
 field_name: su_news_featured_media
 entity_type: node

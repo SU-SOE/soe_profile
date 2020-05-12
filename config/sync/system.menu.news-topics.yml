@@ -1,9 +1,6 @@
-uuid: 8a2cc31f-5573-432a-9393-9be9f78907db
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 2xc3URzN9LyZw7_h7Z4LQwCNK88MlIBlwi-u7IahLL0
 id: news-topics
 label: 'Topics Menu'
 description: 'Menu for topics taxonomy'

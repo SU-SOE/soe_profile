@@ -1,4 +1,3 @@
-uuid: af1aa2b6-c79d-4a9e-ae66-c79a8488489e
 langcode: en
 status: true
 dependencies:
@@ -12,7 +11,7 @@ field_name: su_news_byline
 entity_type: node
 bundle: stanford_news
 label: Byline
-description: 'Use a comma to separate the list of names. The “byline" identifies the author(s) of the article. It will appear below the headline and dek on the article page.'
+description: 'Use a comma to separate the list of names. <em>The “byline" identifies the author(s) of the article. It will appear below the headline and dek on the article page.</em>'
 required: false
 translatable: false
 default_value: {  }
