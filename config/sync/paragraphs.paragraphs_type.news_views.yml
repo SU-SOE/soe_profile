@@ -1,8 +1,10 @@
+uuid: d61bf136-0df0-4835-ab28-e09494beff38
 langcode: en
 status: true
 dependencies: {  }
 id: news_views
 label: 'News Views'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins: {  }
