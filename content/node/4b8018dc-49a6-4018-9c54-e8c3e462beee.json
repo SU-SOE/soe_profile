@@ -24,19 +24,9 @@
             }
         ]
     },
-    "nid": [
-        {
-            "value": 3
-        }
-    ],
     "uuid": [
         {
             "value": "4b8018dc-49a6-4018-9c54-e8c3e462beee"
-        }
-    ],
-    "vid": [
-        {
-            "value": 3
         }
     ],
     "langcode": [
@@ -108,7 +98,7 @@
                     }
                 ],
                 "lang": "en",
-                "target_revision_id": "2",
+                "target_revision_id": "9df33d0d-239e-4b51-9d97-8703187629b4",
                 "settings": {
                     "row": "0",
                     "index": 0,
