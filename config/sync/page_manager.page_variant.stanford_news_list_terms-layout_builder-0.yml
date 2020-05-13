@@ -20,22 +20,21 @@ variant_settings:
     -
       layout_id: jumpstart_ui_one_column
       layout_settings:
-        extra_classes: news-title-banner
-        centered: null
+        extra_classes: section-stanford-news-views-header
+        centered: centered-container
         columns: default
-        label: Banner
+        label: 'Section - Header'
       components:
-        02077a09-ff6a-416b-81d7-d9bbfff39100:
-          uuid: 02077a09-ff6a-416b-81d7-d9bbfff39100
+        1d8aa00c-c36f-403c-8c3a-3605cd3762b4:
+          uuid: 1d8aa00c-c36f-403c-8c3a-3605cd3762b4
           region: main
           configuration:
-            id: 'block_content:d0378f17-40d1-4dc3-ac97-f21126599571'
-            label: 'News Banner'
-            provider: block_content
+            id: jumpstart_ui_page_heading
+            label: 'Heading Block'
+            provider: jumpstart_ui
             label_display: '0'
-            status: true
-            info: ''
-            view_mode: full
+            heading_text: News
+            wrapper: h1
             context_mapping: {  }
           additional: {  }
           weight: 0
@@ -43,7 +42,7 @@ variant_settings:
     -
       layout_id: jumpstart_ui_two_column
       layout_settings:
-        extra_classes: ''
+        extra_classes: section-news-views-views
         centered: centered-container
         orientation: right
         label: Views
