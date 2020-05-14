@@ -111,7 +111,6 @@ module:
   stanford_news: 0
   stanford_paragraph_card: 0
   stanford_person: 0
-  stanford_profile_drush: 0
   stanford_profile_styles: 0
   stanford_ssp: 0
   stanford_text_editor: 0
@@ -151,6 +150,6 @@ theme:
   classy: 0
   seven: 0
   stanford_basic: 0
-profile: stanford_profile
+profile: soe_profile
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
