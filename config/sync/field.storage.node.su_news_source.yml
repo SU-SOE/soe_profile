@@ -1,0 +1,19 @@
+uuid: b5b992db-3a24-4e11-b81f-d478dcf53284
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.su_news_source
+field_name: su_news_source
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
