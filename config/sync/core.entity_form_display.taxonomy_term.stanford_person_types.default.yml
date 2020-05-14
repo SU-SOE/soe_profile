@@ -1,4 +1,4 @@
-uuid: fed49132-c506-4f9f-9d1f-b20937402221
+uuid: 53d6a841-b739-48c9-b772-d2f255e5aa3c
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,6 @@ dependencies:
     - allowed_formats
     - path
     - text
-_core:
-  default_config_hash: jsyJeftCFDX63kleUPhKrb0-kL0eRF2sqUQ17ehhKb4
 id: taxonomy_term.stanford_person_types.default
 targetEntityType: taxonomy_term
 bundle: stanford_person_types

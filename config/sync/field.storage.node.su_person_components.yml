@@ -1,4 +1,4 @@
-uuid: e391ea16-6a6c-4727-96c9-69bc0214388b
+uuid: e72da6ec-bc00-4930-b5fc-4af864ef8f24
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,6 @@ dependencies:
     - entity_reference_revisions
     - node
     - paragraphs
-_core:
-  default_config_hash: FmAo6QNOxKpaKQ3vmJX5DN95fdD5Bz5IP7lUijJf88c
 id: node.su_person_components
 field_name: su_person_components
 entity_type: node

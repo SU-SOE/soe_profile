@@ -1,11 +1,9 @@
-uuid: 8ea99992-a8b3-49f9-9646-5bb79a4ab82d
+uuid: 6e1f9eb2-8df5-443e-982c-8a5339f7216f
 langcode: en
 status: true
 dependencies:
   config:
     - page_manager.page.people
-_core:
-  default_config_hash: 7Sjh2NsMrqnGl1fngQhrA6QiPfNe5Aeu-77aeG87zWA
 id: people-layout_builder-0
 label: 'People - Layout Builder'
 variant: layout_builder

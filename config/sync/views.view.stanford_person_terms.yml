@@ -1,4 +1,4 @@
-uuid: 67dd4c23-fdf6-4169-ac63-f86cd4e20970
+uuid: 5dd582a3-d6ed-46a1-b200-d25dc57710ad
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,6 @@ dependencies:
     - taxonomy
     - text
     - user
-_core:
-  default_config_hash: YRpcvj39jSR_WEOceweBJTLwSmk7i6AmcZwyl8G8bc8
 id: stanford_person_terms
 label: 'People Terms'
 module: views

@@ -1,4 +1,4 @@
-uuid: a083e38c-41c3-4485-be24-56fd5c866ab2
+uuid: c8ab7003-094e-4bc9-8fc0-d56af0c26f78
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ field_name: su_news_headline
 entity_type: node
 bundle: stanford_news
 label: Headline
-description: ''
+description: 'Maximum 70 characters.'
 required: true
 translatable: false
 default_value: {  }

@@ -1,4 +1,4 @@
-uuid: 95db236f-0d18-4c34-8908-d90faa3df2b4
+uuid: 8a47775e-f58c-42f7-8594-ff8952d1d835
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ field_name: su_news_headline
 entity_type: node
 type: string
 settings:
-  max_length: 255
+  max_length: 70
   is_ascii: false
   case_sensitive: false
 module: core

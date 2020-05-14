@@ -1,11 +1,9 @@
-uuid: 19bca5ea-b84a-45d6-b464-ae47aff018a1
+uuid: 33232e20-af79-4316-b516-b49da7821822
 langcode: en
 status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: vpOKfm5tUa1znupN6slVbwbzfWIXPuOI7OR99LJ_4xg
 id: node.su_person_telephone
 field_name: su_person_telephone
 entity_type: node

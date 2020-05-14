@@ -1,9 +1,7 @@
-uuid: 289f16d3-fb81-4cdc-aace-10f8d6392b80
+uuid: 5131145a-2cc0-4af4-8644-a4b9fba4be66
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 3NkHuoGWzL_XjASfLiQSmDrea0oPQClcYNdqjoT5HAw
 id: stanford_person_list
 label: 'Stanford Person List'
 description: 'Stanford Person Views'

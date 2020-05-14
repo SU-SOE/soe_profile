@@ -1,4 +1,4 @@
-uuid: 71617901-c24f-448e-b9bf-03ac3f308efe
+uuid: a583c7a9-496f-4b16-8bff-a8cfe78e8593
 langcode: en
 status: true
 dependencies:
@@ -11,13 +11,13 @@ id: node.stanford_news.su_news_source
 field_name: su_news_source
 entity_type: node
 bundle: stanford_news
-label: Source
-description: ''
+label: 'External Source'
+description: 'Add a URL to an external source for this news item such as https://example.com/. By adding an external source URL all listings of this news article will link to the external source instead of a page on this website.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  link_type: 17
-  title: 1
+  link_type: 16
+  title: 0
 field_type: link

@@ -1,4 +1,4 @@
-uuid: a9728724-1d44-4a3a-be3c-700260baf934
+uuid: 9a336806-bb82-4f38-90c1-ff50e7e8798b
 langcode: en
 status: true
 dependencies:
@@ -31,7 +31,6 @@ dependencies:
     - jumpstart_ui
     - layout_builder
     - layout_builder_restrictions
-    - layout_library
     - link
     - stanford_person
     - text
@@ -511,8 +510,6 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
-  layout_library:
-    enable: false
   layout_builder_restrictions:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
@@ -525,8 +522,6 @@ third_party_settings:
         - stanford_person_header
         - stanford_person_body
         - ds_reset
-_core:
-  default_config_hash: RfrWIACvQ3WTMg1KYVldVkUXDhsK7Y_JGoW1hSFpEdI
 id: node.stanford_person.default
 targetEntityType: node
 bundle: stanford_person
@@ -708,3 +703,4 @@ content:
     region: content
 hidden:
   layout_builder__layout: true
+  su_person_research_interests: true

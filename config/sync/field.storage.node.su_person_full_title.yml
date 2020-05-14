@@ -1,11 +1,9 @@
-uuid: d6f4c29d-f589-474f-aef9-98975a1e6627
+uuid: e9df2c0f-e9bb-4f5b-bcab-2ccbe527ee14
 langcode: en
 status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: Tz9MqT1aNTslwqBadBBXdACkXmMU1oLMubeTAFeBRNU
 id: node.su_person_full_title
 field_name: su_person_full_title
 entity_type: node

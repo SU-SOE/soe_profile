@@ -1,4 +1,4 @@
-uuid: 26e63a07-9002-4e65-8220-427684b4323a
+uuid: 5dd1ebc9-f284-4a5f-b64c-3ccae280d2ca
 langcode: en
 status: true
 dependencies:
@@ -29,8 +29,6 @@ dependencies:
   module:
     - text
     - user
-_core:
-  default_config_hash: N0EZcj0R0XgRwVP5zjvCNA97dH-fqITu_BmvQHxbhHo
 id: node.stanford_person.teaser
 targetEntityType: node
 bundle: stanford_person
@@ -67,6 +65,7 @@ hidden:
   su_person_mobile_phone: true
   su_person_photo: true
   su_person_research: true
+  su_person_research_interests: true
   su_person_short_title: true
   su_person_telephone: true
   su_person_type_group: true

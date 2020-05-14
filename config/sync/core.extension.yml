@@ -78,23 +78,31 @@ module:
   menu_ui: 0
   metatag: 0
   metatag_open_graph: 0
+  metatag_page_manager: 0
   metatag_verification: 0
   nobots: 0
   node: 0
+  node_revision_delete: 0
   options: 0
   page_cache: 0
+  page_manager: 0
+  page_manager_ui: 0
   paragraphs_edit: 0
   path: 0
   path_alias: 0
+  rabbit_hole: 0
   react_paragraphs: 0
   redirect: 0
   response_code_condition: 0
   responsive_image: 0
   rest: 0
+  rh_node: 0
   role_delegation: 0
   search: 0
+  seckit: 0
   serialization: 0
   shortcut: 0
+  shs: 0
   simplesamlphp_auth: 0
   stanford_date_formats: 0
   stanford_fields: 0
@@ -102,11 +110,14 @@ module:
   stanford_media: 0
   stanford_news: 0
   stanford_paragraph_card: 0
+  stanford_person: 0
+  stanford_profile_drush: 0
   stanford_profile_styles: 0
   stanford_ssp: 0
   stanford_text_editor: 0
   system: 0
   taxonomy: 0
+  taxonomy_menu: 0
   text: 0
   token: 0
   toolbar: 0
@@ -121,6 +132,7 @@ module:
   views: 0
   views_block_filter_block: 0
   views_bulk_operations: 0
+  views_contextual_filters_or: 0
   views_infinite_scroll: 0
   views_taxonomy_term_name_depth: 0
   views_ui: 0
@@ -139,6 +151,6 @@ theme:
   classy: 0
   seven: 0
   stanford_basic: 0
-profile: soe_profile
+profile: stanford_profile
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
