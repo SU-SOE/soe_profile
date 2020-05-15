@@ -1,8 +1,0 @@
-uuid: 42ab60c5-4a87-4398-a0f4-f8451ce3e18e
-langcode: en
-status: true
-dependencies: {  }
-name: Topics
-vid: stanford_topics
-description: 'List of topics for items'
-weight: 0

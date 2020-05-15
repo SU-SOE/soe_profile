@@ -25,19 +25,9 @@
             }
         ]
     },
-    "mid": [
-        {
-            "value": 10
-        }
-    ],
     "uuid": [
         {
             "value": "13eb6419-1379-4180-8ce0-69d2fcf39ef3"
-        }
-    ],
-    "vid": [
-        {
-            "value": 10
         }
     ],
     "langcode": [
