@@ -1,7 +1,7 @@
 # SOE Profile
 
-8.x-x.x
+8.x-1.0-rc1
 --------------------------------------------------------------------------------
-_Release Date: 2020-XX-XX_
+_Release Date: 2020-05-15_
 
-- Did thing (#155)
+- Initial release candidate
