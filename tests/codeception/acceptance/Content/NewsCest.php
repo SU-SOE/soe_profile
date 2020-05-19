@@ -46,16 +46,6 @@ class NewsCest {
   }
 
   /**
-   * Validate the News View Paragraph type exists
-   */
-  public function testNewsViewsParagraph(AcceptanceTester $I) {
-    $I->logInWithRole('administrator');
-    $I->amOnPage('/admin/structure/paragraphs_type');
-    $I->canSee('News Views');
-    $I->canSee("news_views");
-  }
-
-  /**
    * Validate external content redirect.
    */
   public function testExternalSourceArticle(AcceptanceTester $I) {
