@@ -56,11 +56,11 @@ class NewsCest {
       'su_news_source' => "http://google.com/",
     ]);
 
-    // @TODO Not working yet.
     // Redirect as anon.
-    // $I->amOnPage('/news');
-    // $I->click(".su-news-list__item a:first-of-type");
-    // $I->seeCurrentUrlEquals('http://google.com/');
+    $I->runDrush('cr');
+    $I->amOnPage('/news');
+    $I->click(".su-news-list__item a:first-of-type");
+    $I->seeCurrentUrlEquals('http://google.com/');
 
     // See content as admin.
     $I->logInWithRole('administrator');
