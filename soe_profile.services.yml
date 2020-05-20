@@ -2,8 +2,13 @@ services:
   plugin.manager.install_tasks:
     class: Drupal\soe_profile\InstallTaskManager
     parent: default_plugin_manager
-  stanford_profile.event_subscriber:
+  soe_profile.event_subscriber:
     class: '\Drupal\soe_profile\EventSubscriber\EventSubscriber'
     arguments: ['@file_system', '@logger.factory']
     tags:
       - { name: 'event_subscriber' }
+  soe_profile.config_overrider:
+    class: Drupal\soe_profile\Config\ConfigOverrides
+    arguments: ['@state']
+    tags:
+      - {name: config.factory.override, priority: 5}
