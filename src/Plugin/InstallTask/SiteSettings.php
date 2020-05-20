@@ -95,7 +95,19 @@ class SiteSettings extends InstallTaskBase implements ContainerFactoryPluginInte
   public function runTask(array &$install_state) {
     $this->state->set('nobots', FALSE);
 
+    $node_pages = [
+      '403_page' => '4b8018dc-49a6-4018-9c54-e8c3e462beee',
+      '404_page' => '6d51339d-ff67-498d-98e9-d8228d36fd51',
+      'front_page' => '72f0069b-f1ec-4122-af73-6aa841faea90',
+    ];
+
     // @codeCoverageIgnoreStart
+    foreach ($node_pages as $page => $uuid) {
+      if ($node = $this->getNode($uuid)) {
+        $this->state->set("soe_profile.$page", '/node/' . $node->id());
+      }
+    }
+
     if (!static::isAhEnv()) {
       return;
     }
@@ -107,6 +119,8 @@ class SiteSettings extends InstallTaskBase implements ContainerFactoryPluginInte
     if (empty($site_data)) {
       return;
     }
+    $this->state->set('xmlsitemap_base_url', "https://$site_name.sites.stanford.edu");
+
     $this->entityTypeManager->getStorage('config_pages')->create([
       'type' => 'stanford_basic_site_settings',
       'su_site_email' => $site_data['email'],
@@ -202,16 +216,20 @@ class SiteSettings extends InstallTaskBase implements ContainerFactoryPluginInte
   }
 
   /**
-   * Is the install occurring on Acquia environment.
+   * Load a node by the UUID value.
    *
-   * @return bool
-   *   True if on Acquia.
+   * @param string $uuid
+   *   Node uuid.
    *
-   * @codeCoverageIgnore
-   *   We want to test the class and need to fake being on Acquia.
+   * @return \Drupal\node\NodeInterface
+   *   Node object.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
-  protected static function isAhEnv() {
-    return isset($_ENV['AH_SITE_ENVIRONMENT']);
+  protected function getNode($uuid) {
+    $nodes = $this->entityTypeManager->getStorage('node')->loadByProperties(['uuid' => $uuid]);
+    return reset($nodes);
   }
 
 }

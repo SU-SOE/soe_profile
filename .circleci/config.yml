@@ -31,7 +31,6 @@ code_coverage: &code_coverage
     - run:
         name: Run PHP Unit Coverage Tests
         command: |
-          ./vendor/bin/drush xmlsitemap-regenerate
           composer global require SU-SWS/stanford-caravan:dev-8.x-1.x
           ~/.composer/vendor/bin/sws-caravan phpunit /var/www/html --extension-dir=/var/www/test --with-coverage
     - save_cache:
