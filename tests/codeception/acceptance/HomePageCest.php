@@ -9,6 +9,7 @@ class HomePageCest {
     $I->amOnPage('/');
     $I->canSee('Stanford');
     $I->logInWithRole('administrator');
+    $I->canSee('Welcome to your site!', 'h2');
     $I->amOnPage('/admin/structure');
     $I->canSeeResponseCodeIs(200);
   }
