@@ -245,19 +245,16 @@ function soe_profile_xmlsitemap_link_alter(array &$link, array $context) {
 
   // Get 404 page path
   $soe_profile_404_page = \Drupal::state()->get('soe_profile.404_page');
-  
+
   // If node id matches 403 or 404 pages, remove it from sitemap.
   switch ($node_id) {
     case $soe_profile_403_page:
       // Status is set to zero to exclude the item in the sitemap.
       $link['status'] = 0;
-      // Set to zero to make the element non-accessible by the anonymous user.
-      $link['access'] = 0;
+
     case $soe_profile_404_page:
       // Status is set to zero to exclude the item in the sitemap.
       $link['status'] = 0;
-      // Set to zero to make the element non-accessible by the anonymous user.
-      $link['access'] = 0;
 
   }
 }
