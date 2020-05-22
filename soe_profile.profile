@@ -226,3 +226,38 @@ function soe_profile_config_pages_presave(ConfigPagesInterface $entity) {
     \Drupal::state()->set('xmlsitemap_base_url', $url_field[0]['uri']);
   }
 }
+
+/**
+ * Alter the data of a sitemap link before the link is saved.
+ *
+ * @param array $link
+ *   An array with the data of the sitemap link.
+ * @param array $context
+ *   An optional context array containing data related to the link.
+ */
+function soe_profile_xmlsitemap_link_alter(array &$link, array $context) {
+
+  // Get node/[:id] from loc.
+  $node_id = $link['loc'];
+
+  // Get 403 page path
+  $soe_profile_403_page = \Drupal::state()->get('soe_profile.403_page');
+
+  // Get 404 page path
+  $soe_profile_404_page = \Drupal::state()->get('soe_profile.404_page');
+  
+  // If node id matches 403 or 404 pages, remove it from sitemap.
+  switch ($node_id) {
+    case $soe_profile_403_page:
+      // Status is set to zero to exclude the item in the sitemap.
+      $link['status'] = 0;
+      // Set to zero to make the element non-accessible by the anonymous user.
+      $link['access'] = 0;
+    case $soe_profile_404_page:
+      // Status is set to zero to exclude the item in the sitemap.
+      $link['status'] = 0;
+      // Set to zero to make the element non-accessible by the anonymous user.
+      $link['access'] = 0;
+
+  }
+}
