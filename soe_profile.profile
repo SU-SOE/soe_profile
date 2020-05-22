@@ -241,10 +241,10 @@ function soe_profile_xmlsitemap_link_alter(array &$link, array $context) {
   $node_id = $link['loc'];
 
   // Get 403 page path
-  $soe_profile_403_page = \Drupal::state()->get('soe_profile.403_page');
+  $soe_profile_403_page = \Drupal::config('system.site')->get('page.403');
 
   // Get 404 page path
-  $soe_profile_404_page = \Drupal::state()->get('soe_profile.404_page');
+  $soe_profile_404_page = \Drupal::config('system.site')->get('page.404');
 
   // If node id matches 403 or 404 pages, remove it from sitemap.
   switch ($node_id) {
