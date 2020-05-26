@@ -60,7 +60,7 @@ class NewsCest {
     $I->runDrush('cr');
     $I->amOnPage('/news');
     $I->click(".su-news-list__item a:first-of-type");
-    $I->seeCurrentUrlEquals('http://google.com/');
+    $I->seeCurrentUrlEquals('/');
 
     // See content as admin.
     $I->logInWithRole('administrator');
