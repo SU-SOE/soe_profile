@@ -9,6 +9,10 @@ class XmlsitemapCest {
    * Test that xmlsitemap is having 403 and 404 pages removed.
    */
   public function testSoeSitemapLinkAlter(AcceptanceTester $I) {
+    $I->logInWithRole('administrator');
+    $I->amOnPage("/admin/config/search/xmlsitemap/rebuild");
+    $I->click('Save configuration');
+    $I->runDrush('cr');
     $I->amOnPage("/sitemap.xml");
     $host = \Drupal::request()->getSchemeAndHttpHost();
     $soe_profile_403_page = \Drupal::config('system.site')->get('page.403');
