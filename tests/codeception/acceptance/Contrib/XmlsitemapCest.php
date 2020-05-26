@@ -17,9 +17,9 @@ class XmlsitemapCest {
     $host = \Drupal::request()->getSchemeAndHttpHost();
     $soe_profile_403_page = \Drupal::config('system.site')->get('page.403');
     $alias_403 = \Drupal::service('path.alias_manager')->getAliasByPath($soe_profile_403_page);
-    $I->dontSeeLink($host . $alias_403);
     $soe_profile_404_page = \Drupal::config('system.site')->get('page.404');
     $alias_404 = \Drupal::service('path.alias_manager')->getAliasByPath($soe_profile_404_page);
+    $I->dontSeeLink($host . $alias_403);
     $I->dontSeeLink($host . $alias_404);
   }
 
