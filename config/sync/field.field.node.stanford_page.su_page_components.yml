@@ -35,10 +35,25 @@ settings:
       stanford_media_caption:
         weight: 8
         enabled: false
+      cta_list:
+        weight: 9
+        enabled: false
       stanford_spacer:
         weight: 9
         enabled: false
+      image_cta:
+        weight: 10
+        enabled: false
+      soe_stories:
+        weight: 11
+        enabled: false
     widths:
+      cta_list:
+        min: '12'
+      image_cta:
+        min: '4'
+      soe_stories:
+        min: '12'
       stanford_banner:
         min: '12'
       stanford_card:

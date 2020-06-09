@@ -1,0 +1,23 @@
+uuid: 94bd09f0-9e47-47ee-a060-c35a1a8b1949
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.su_stories_node_link
+    - paragraphs.paragraphs_type.soe_stories
+  module:
+    - link
+id: paragraph.soe_stories.su_stories_node_link
+field_name: su_stories_node_link
+entity_type: paragraph
+bundle: soe_stories
+label: 'Link to Story Node'
+description: 'A link to the full story node'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

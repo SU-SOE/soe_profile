@@ -1,0 +1,27 @@
+uuid: 710f7045-be99-4649-b3bf-cb7246afba38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.su_stories_quote
+    - paragraphs.paragraphs_type.soe_stories
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    stanford_html: stanford_html
+    stanford_minimal_html: stanford_minimal_html
+    plain_text: plain_text
+id: paragraph.soe_stories.su_stories_quote
+field_name: su_stories_quote
+entity_type: paragraph
+bundle: soe_stories
+label: Quote
+description: 'Limited to 101 characters'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
