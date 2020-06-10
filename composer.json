@@ -148,7 +148,7 @@
         "su-sws/stanford_ssp": "~8.1.0",
         "su-sws/stanford_text_editor": "~8.1.0",
         "su-sws/stanford_news": "~8.2.0",
-        "su-sws/stanford_person": "~8.1.0",
+        "su-sws/stanford_person": "dev-8.x-1.x",
         "su-soe/soe_paragraphs": "dev-initial-wip"
     },
     "extra": {
