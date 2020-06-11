@@ -9,9 +9,6 @@ bin/
 node_modules
 styleguide
 
-# Ignore custom modules
-modules/soe_paragraphs
-
 # Ignore build artifacts
 deployment_identifier
 /deploy
