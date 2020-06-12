@@ -6,6 +6,10 @@ dependencies:
     - entity_reference_revisions
     - node
     - paragraphs
+    - react_paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
 id: node.su_page_components
 field_name: su_page_components
 entity_type: node
