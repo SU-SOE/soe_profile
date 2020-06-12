@@ -1,0 +1,20 @@
+uuid: 68655a14-149e-4a2c-8507-6bb798b1e7cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - soe_basic
+id: messages
+theme: soe_basic
+region: content
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 07848bef-405c-4af4-8916-27c263fbf4b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - soe_basic
+id: mainpagecontent
+theme: soe_basic
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
