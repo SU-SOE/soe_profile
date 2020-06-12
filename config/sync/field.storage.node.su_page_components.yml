@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - entity_reference_revisions
+    - field_permissions
     - node
     - paragraphs
     - react_paragraphs
