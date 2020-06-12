@@ -149,7 +149,7 @@
         "su-sws/stanford_text_editor": "dev-8.x-1.x",
         "su-sws/stanford_news": "dev-8.x-2.x",
         "su-sws/stanford_person": "dev-8.x-1.x",
-        "su-soe/soe_paragraphs": "dev-initial-wip"
+        "su-soe/soe_paragraphs": "dev-8.x-1.x"
     },
     "extra": {
         "patches": {
