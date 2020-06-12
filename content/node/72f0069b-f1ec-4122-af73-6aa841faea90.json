@@ -289,18 +289,6 @@
             "lang": "en"
         }
     ],
-    "metatag": [
-        {
-            "value": {
-                "title": "Home | University",
-                "og_site_name": "University",
-                "canonical_url": "http:\/\/default\/home",
-                "og_url": "http:\/\/default\/home",
-                "og_image_0": "http:\/\/default\/sites\/default\/files\/media\/image\/photo-epel-stanford-campus.jpg",
-                "og_image_url_0": "http:\/\/default\/sites\/default\/files\/media\/image\/photo-epel-stanford-campus.jpg"
-            }
-        }
-    ],
     "path": [
         {
             "alias": "\/home",

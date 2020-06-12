@@ -76,6 +76,21 @@ back_to_dev: &back_to_dev
           composer global require SU-SWS/stanford-caravan:dev-8.x-1.x
           ~/.composer/vendor/bin/sws-caravan back-to-dev ${CIRCLE_TAG} ${CIRCLE_WORKING_DIRECTORY}
 
+codeception: &codeception
+  <<: *defaults
+  steps:
+    - checkout:
+        path: /var/www/test
+    - run:
+        name: Run Behat Tests
+        command: |
+          composer global require SU-SWS/stanford-caravan:dev-8.x-1.x
+          ~/.composer/vendor/bin/sws-caravan codeception /var/www/html --extension-dir=/var/www/test
+    - store_test_results:
+        path: /var/www/html/artifacts/behat
+    - store_artifacts:
+        path: /var/www/html/artifacts
+
 # Declare all of the jobs we should run.
 jobs:
   run-coverage:
@@ -84,14 +99,27 @@ jobs:
     <<: *behat
   run-back-to-dev:
     <<: *back_to_dev
+  run-codeception:
+    <<: *codeception
 
 # Declare a workflow that runs all of our jobs in parallel.
 workflows:
   version: 2
+  after_release:
+    jobs:
+      - run-back-to-dev:
+          filters:
+            tags:
+              only:
+                - /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*).*?$/
+            branches:
+              ignore:
+                - /.*/
   tests:
     jobs:
       - run-coverage
       - run-behat
+      - run-codeception
   # Re-test every sunday in case this code becomes stale.
   sundays:
     jobs:
