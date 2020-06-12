@@ -28,7 +28,7 @@
     @at-root #{selector-unify(&, p)},
     & {
       @include margin(0 auto 1em 0);
-      @include modular-spacing('margin', null null 1 null);
+      @include modular-spacing('margin', null null 3 null);
       @include modular-spacing('padding', 0 null null null);
       display: block;
       font-size: 2.8rem;
@@ -50,6 +50,16 @@
         @include margin(null null 0 null);
         @include padding(null null 0 null);
       }
+
+      &::after {
+        @include sr-only;
+        content: "End Callout";
+      }
+
+      &::before {
+        @include sr-only;
+        content: "Callout";
+      }
     }
   }
 
@@ -69,6 +79,16 @@
       line-height: 0.6;
       text-transform: uppercase;
     }
+
+    &::after {
+      @include sr-only;
+      content: "End Intro";
+    }
+
+    &::before {
+      @include sr-only;
+      content: "Begin Intro";
+    }
   }
 
   // Big splashy intro text.
@@ -77,9 +97,25 @@
     & {
       @include intro-text;
       @include modular-typography(2);
-      @include modular-spacing('margin-bottom', 0);
+      @include modular-spacing('margin-bottom', 2);
       // 70 character line length.
       max-width: 55ch;
+
+      &:last-child {
+        // Remove margin-bottom when it is the last item on the paragraph
+        @include margin(null null 0 null);
+      }
+
+      &::after {
+        @include sr-only;
+        content: "End Intro";
+      }
+
+      &::before {
+        @include sr-only;
+        content: "Begin Intro";
+      }
+
     }
   }
 
@@ -103,6 +139,17 @@
         @include margin(null null 0 null);
         @include padding(null null 0 null);
       }
+
+      &::after {
+        @include sr-only;
+        content: "End Splash text";
+      }
+
+      &::before {
+        @include sr-only;
+        content: "Begin Splash text";
+      }
+
     }
   }
 
@@ -114,6 +161,16 @@
       @include type-b;
       // 54 character line length.
       max-width: 42ch;
+
+      &::after {
+        @include sr-only;
+        content: "End Quote";
+      }
+
+      &::before {
+        @include sr-only;
+        content: "Quote";
+      }
     }
   }
 
@@ -135,6 +192,17 @@
       @include padding(25px);
       @include margin(null null 0 null);
     }
+
+    &::after {
+      @include sr-only;
+      content: "End Card";
+    }
+
+    &::before {
+      @include sr-only;
+      content: "Begin Card";
+    }
+
   }
 
   // Subtitle styles.
@@ -145,5 +213,16 @@
       // 76 character line length.
       max-width: 60ch;
     }
+
+    &::after {
+      @include sr-only;
+      content: "End Subtitle";
+    }
+
+    &::before {
+      @include sr-only;
+      content: "Begin Subtitle";
+    }
+
   }
 }
