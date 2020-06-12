@@ -114,6 +114,10 @@ module:
   shortcut: 0
   shs: 0
   simplesamlphp_auth: 0
+  soe_paragraph_cta_list: 0
+  soe_paragraph_image_cta: 0
+  soe_paragraph_stories: 0
+  soe_paragraphs: 0
   smart_date: 0
   sophron: 0
   stanford_date_formats: 0

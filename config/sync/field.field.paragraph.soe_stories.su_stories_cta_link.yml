@@ -1,0 +1,23 @@
+uuid: 1edf331a-4205-4a65-bf91-b6349f355701
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.su_stories_cta_link
+    - paragraphs.paragraphs_type.soe_stories
+  module:
+    - link
+id: paragraph.soe_stories.su_stories_cta_link
+field_name: su_stories_cta_link
+entity_type: paragraph
+bundle: soe_stories
+label: 'CTA Link'
+description: 'An optional link which will be displayed as a button'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

@@ -1,0 +1,19 @@
+uuid: f46502da-48a7-44e8-810f-18cee64650f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.su_stories_cta_link
+field_name: su_stories_cta_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

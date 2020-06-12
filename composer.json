@@ -14,6 +14,10 @@
             "url": "https://github.com/SU-SOE/soe_basic.git"
         },
         {
+            "type": "vcs",
+            "url": "https://github.com/SU-SOE/soe_paragraphs.git"
+        },
+        {
             "type": "package",
             "package": {
                 "name": "ckeditor-plugin/a11ychecker",
@@ -148,7 +152,8 @@
         "su-sws/stanford_ssp": "dev-8.x-1.x",
         "su-sws/stanford_text_editor": "dev-8.x-1.x",
         "su-sws/stanford_news": "dev-8.x-2.x",
-        "su-sws/stanford_person": "dev-8.x-1.x"
+        "su-sws/stanford_person": "dev-8.x-1.x",
+        "su-soe/soe_paragraphs": "dev-8.x-1.x"
     },
     "autoload": {
         "psr-4": {
