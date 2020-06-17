@@ -9,8 +9,8 @@ dependencies:
     - paragraphs.paragraphs_type.stanford_cta_list
   module:
     - ds
+    - element_class_formatter
     - field_formatter_class
-    - link
     - stanford_fields
     - text
 third_party_settings:
@@ -45,7 +45,7 @@ content:
     settings: {  }
     third_party_settings:
       field_formatter_class:
-        class: su-cta-list-paragraph--description
+        class: su-cta-list-paragraph__description
   stanford_cta_list_header:
     weight: 0
     label: hidden
@@ -54,23 +54,24 @@ content:
       linked: false
     third_party_settings:
       field_formatter_class:
-        class: su-cta-list-paragraph--header
+        class: su-cta-list-paragraph__header
     type: entity_title_heading
     region: paragraph_content
   stanford_cta_list_links:
+    type: link_class
     weight: 2
+    region: links
     label: hidden
     settings:
-      trim_length: 80
+      trim_length: null
+      class: ''
       url_only: false
       url_plain: false
       rel: '0'
       target: '0'
     third_party_settings:
       field_formatter_class:
-        class: 'su-cta-list-paragraph--links su-link--action'
+        class: 'su-link--action su-image-cta-paragraph__link'
       ds:
         ds_limit: ''
-    type: link
-    region: links
 hidden: {  }
