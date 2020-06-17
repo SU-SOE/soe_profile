@@ -1,0 +1,62 @@
+uuid: 650bfe5d-c314-4454-b544-bde6c6636469
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stanford_image_cta.stanford_image_cta_image
+    - field.field.paragraph.stanford_image_cta.stanford_image_cta_link
+    - paragraphs.paragraphs_type.stanford_image_cta
+  module:
+    - ds
+    - field_formatter_class
+    - link
+    - stanford_media
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_image-cta-paragraph
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+          variant: default
+    regions:
+      paragraph_content:
+        - stanford_image_cta_image
+        - stanford_image_cta_link
+_core:
+  default_config_hash: N8C8SLINs76Viq8HFAM9cUDyNPmLiK_5TvBTlTTMnEI
+id: paragraph.stanford_image_cta.default
+targetEntityType: paragraph
+bundle: stanford_image_cta
+mode: default
+content:
+  stanford_image_cta_image:
+    type: media_image_formatter
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      image_style: card_2_1
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: su-image-cta-paragraph--image
+    region: paragraph_content
+  stanford_image_cta_link:
+    type: link
+    weight: 1
+    region: paragraph_content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      field_formatter_class:
+        class: 'su-link--action su-image-cta-paragraph--link'
+hidden: {  }

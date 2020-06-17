@@ -1,0 +1,25 @@
+uuid: 55d8d73b-d6f3-486b-8a50-dcc7b811f59f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.stanford_cta_list_links
+    - paragraphs.paragraphs_type.stanford_cta_list
+  module:
+    - link
+_core:
+  default_config_hash: 2yjary7iXepayh1cg6Ocl-hHM42XiZoOhtrwhNuCFL4
+id: paragraph.stanford_cta_list.stanford_cta_list_links
+field_name: stanford_cta_list_links
+entity_type: paragraph
+bundle: stanford_cta_list
+label: Links
+description: 'The links to include in the paragraph'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

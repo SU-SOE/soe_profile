@@ -1,0 +1,21 @@
+uuid: bd995a57-4a67-4a6d-9d9f-435c337183d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+_core:
+  default_config_hash: 5sVPzuyUMJiWakSZh16cumCdYJ9CoaqLTwehWmCG7W4
+id: paragraph.stanford_cta_list_links
+field_name: stanford_cta_list_links
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
