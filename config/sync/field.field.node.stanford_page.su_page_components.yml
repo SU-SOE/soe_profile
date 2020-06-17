@@ -59,7 +59,7 @@ settings:
       stanford_media_caption:
         min: '4'
       stanford_stories:
-        min: '4'
+        min: '12'
       stanford_wysiwyg:
         min: '4'
 field_type: react_paragraphs
