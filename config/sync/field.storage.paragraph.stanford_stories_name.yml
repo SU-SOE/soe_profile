@@ -1,0 +1,23 @@
+uuid: f1039927-168e-4e22-81d7-bc7dc28b7d88
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: LawDlttDSAiueFtLfWJgqxiC5BMh-eWknZ-7WLYhWEw
+id: paragraph.stanford_stories_name
+field_name: stanford_stories_name
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

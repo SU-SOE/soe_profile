@@ -1,6 +1,0 @@
-status: 0
-pattern: ''
-escape: false
-dependencies:
-  config:
-    - paragraphs.paragraphs_type.soe_stories

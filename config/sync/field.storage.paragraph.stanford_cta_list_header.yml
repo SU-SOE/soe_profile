@@ -1,0 +1,23 @@
+uuid: d98f5e9d-9e4c-481f-98d0-bb1631170757
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: hXv_nKb7SHyTvptscg4Sl3-IY5JX1Rzc78TBhtvlEiY
+id: paragraph.stanford_cta_list_header
+field_name: stanford_cta_list_header
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
