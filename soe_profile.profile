@@ -218,7 +218,6 @@ function soe_profile_config_pages_stanford_basic_site_settings_form_validate(arr
   }
 }
 
-
 /**
  * Implements hook_ENTITY_TYPE_presave().
  */
