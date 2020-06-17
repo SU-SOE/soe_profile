@@ -23,14 +23,6 @@ settings:
     negate: 1
     target_bundles: null
     target_bundles_drag_drop:
-      cta_list:
-        weight: 9
-        enabled: false
-      image_cta:
-        weight: 10
-        enabled: false
-      soe_stories:
-        weight: 11
       stanford_banner:
         weight: 4
         enabled: false
@@ -40,12 +32,6 @@ settings:
       stanford_cta_list:
         weight: 11
         enabled: false
-      stanford_person_cta:
-        enabled: true
-        weight: 11
-      stanford_schedule:
-        enabled: true
-        weight: 12
       stanford_image_cta:
         weight: 12
         enabled: false

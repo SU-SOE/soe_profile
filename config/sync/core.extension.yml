@@ -105,7 +105,6 @@ module:
   shortcut: 0
   shs: 0
   simplesamlphp_auth: 0
-  smart_date: 0
   soe_paragraph_cta_list: 0
   soe_paragraph_image_cta: 0
   soe_paragraph_stories: 0
@@ -118,8 +117,6 @@ module:
   stanford_news: 0
   stanford_paragraph_card: 0
   stanford_person: 0
-  stanford_person_importer: 0
-  stanford_profile_drush: 0
   stanford_profile_styles: 0
   stanford_ssp: 0
   stanford_text_editor: 0
