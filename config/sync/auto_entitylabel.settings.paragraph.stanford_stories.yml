@@ -1,8 +1,0 @@
-status: 0
-pattern: ''
-escape: false
-dependencies:
-  config:
-    - paragraphs.paragraphs_type.stanford_stories
-_core:
-  default_config_hash: e8Eja5nTh7L_xKj2v4Ec-qND-dg85AcxbItMj922PrM
