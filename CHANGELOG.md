@@ -1,5 +1,15 @@
 # SOE Profile
 
+8.1.0-rc6
+--------------------------------------------------------------------------------
+_Release Date: 2020-06-18_
+
+- Added soe_paragraphs alpha
+- Sync with stanford_profile. (13a2585)
+- D8CORE-000: configs for Drupal 8.9 (42bb722)
+- D8CORE-000: update dependency to drupal core 8.9 (2912f3c)
+- D8CORE-000: Export SOE Theme blocks. (09842c1)
+
 8.x-1.0-rc4
 --------------------------------------------------------------------------------
 _Release Date: 2020-05-20_
