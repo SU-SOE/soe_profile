@@ -8,7 +8,7 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: Jh4Ws9LdPSsnfhyqMp4cifGPQrWFJ6FcSSS3wWuSWE4
+  default_config_hash: 2NcGP23QBbNNKNesP3UqMp4DUOvaqwLLWSbV89227F4
 id: paragraph.stanford_stories.stanford_stories_border
 field_name: stanford_stories_border
 entity_type: paragraph
