@@ -1,0 +1,12 @@
+uuid: 469612b0-5ff5-4133-8752-17a13d1dc8ab
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5cp5IbJ7U3_c2y98UV68feejH7tSkB98IZ6vyX0gQOI
+id: stanford_stories
+label: Stories
+icon_uuid: null
+icon_default: null
+description: 'Stories Paragraph'
+behavior_plugins: {  }

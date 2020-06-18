@@ -158,16 +158,6 @@
             "lang": "en"
         }
     ],
-    "metatag": [
-        {
-            "value": {
-                "title": "Research | University",
-                "og_site_name": "University",
-                "canonical_url": "http:\/\/default\/research",
-                "og_url": "http:\/\/default\/home"
-            }
-        }
-    ],
     "path": [
         {
             "alias": "\/research",

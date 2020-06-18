@@ -1,0 +1,32 @@
+uuis: 91c801f5-29d9-4bec-ab77-2723fb00b80b
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: ejiB_vH-1pxHKYUtWGpNHJYZWWlgzoYE7zF9gqffuPI
+id: paragraph.stanford_stories_border
+field_name: stanford_stories_border
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: Turquoise
+    -
+      value: '2'
+      label: Pink
+    -
+      value: '3'
+      label: Orange
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
