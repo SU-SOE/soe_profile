@@ -10,14 +10,6 @@
             "url": "https://packages.drupal.org/8"
         },
         {
-            "type": "vcs",
-            "url": "https://github.com/SU-SOE/soe_basic.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/SU-SOE/soe_paragraphs.git"
-        },
-        {
             "type": "package",
             "package": {
                 "name": "ckeditor-plugin/a11ychecker",
