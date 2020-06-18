@@ -158,16 +158,6 @@
             "lang": "en"
         }
     ],
-    "metatag": [
-        {
-            "value": {
-                "title": "Page Not Found | University",
-                "og_site_name": "University",
-                "canonical_url": "http:\/\/default\/page-not-found",
-                "og_url": "http:\/\/default\/home"
-            }
-        }
-    ],
     "path": [
         {
             "alias": "\/page-not-found",

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Tests\stanford_profile\Kernel\Plugin\InstallTask;
+namespace Drupal\Tests\soe_profile\Kernel\Plugin\InstallTask;
 
 use Drupal\config_pages\Entity\ConfigPagesType;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
@@ -15,12 +15,12 @@ use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use Drupal\stanford_profile\Plugin\InstallTask\SiteSettings;
+use Drupal\soe_profile\Plugin\InstallTask\SiteSettings;
 
 /**
  * Class SiteSettingsTest.
  *
- * @coversDefaultClass \Drupal\stanford_profile\Plugin\InstallTask\SiteSettings
+ * @coversDefaultClass \Drupal\soe_profile\Plugin\InstallTask\SiteSettings
  */
 class SiteSettingsTest extends KernelTestBase {
 
@@ -36,6 +36,7 @@ class SiteSettingsTest extends KernelTestBase {
     'stanford_ssp',
     'user',
     'field',
+    'node',
   ];
 
   /**
@@ -50,7 +51,7 @@ class SiteSettingsTest extends KernelTestBase {
    */
   protected function setUp() {
     parent::setUp();
-    $this->setInstallProfile('stanford_profile');
+    $this->setInstallProfile('soe_profile');
 
     $this->installEntitySchema('user');
     $this->installEntitySchema('user_role');
@@ -58,6 +59,7 @@ class SiteSettingsTest extends KernelTestBase {
     $this->installEntitySchema('field_config');
     $this->installEntitySchema('config_pages_type');
     $this->installEntitySchema('config_pages');
+    $this->installEntitySchema('node');
     $this->installSchema('externalauth', 'authmap');
     $this->installSchema('system', ['key_value_expire', 'sequences']);
     $this->installConfig('system');
