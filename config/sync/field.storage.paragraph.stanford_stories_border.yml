@@ -1,4 +1,4 @@
-uuid: 91c801f5-29d9-4bec-ab77-2723fb00b80b
+uuid: e98fdbbd-ed68-48a3-a9fa-77bf084b1208
 langcode: en
 status: true
 dependencies:
@@ -6,9 +6,9 @@ dependencies:
     - options
     - paragraphs
 _core:
-  default_config_hash: ejiB_vH-1pxHKYUtWGpNHJYZWWlgzoYE7zF9gqffuPI
-id: paragraph.stanford_stories_photo_border
-field_name: stanford_stories_photo_border
+  default_config_hash: aeSQUMJp8MBJ9-97l_hcjLyO3TgIw4MJPMnpXc31bLM
+id: paragraph.stanford_stories_border
+field_name: stanford_stories_border
 entity_type: paragraph
 type: list_string
 settings:

@@ -1,16 +1,16 @@
-uuid: c9cda9a2-b490-455a-b4bb-1fa05888bb77
+uuid: 35a87459-ec53-4c1e-81ce-7a5007df734f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.stanford_stories_photo_border
+    - field.storage.paragraph.stanford_stories_border
     - paragraphs.paragraphs_type.stanford_stories
   module:
     - options
 _core:
-  default_config_hash: 2NcGP23QBbNNKNesP3UqMp4DUOvaqwLLWSbV89227F4
-id: paragraph.stanford_stories.stanford_stories_photo_border
-field_name: stanford_stories_photo_border
+  default_config_hash: Jh4Ws9LdPSsnfhyqMp4cifGPQrWFJ6FcSSS3wWuSWE4
+id: paragraph.stanford_stories.stanford_stories_border
+field_name: stanford_stories_border
 entity_type: paragraph
 bundle: stanford_stories
 label: 'Photo Border Color'
