@@ -135,7 +135,9 @@ process:
       source: event_end
       values:
         - event_start
-  su_event_date_time/timezone: America/Los_Angeles
+  su_event_date_time/timezone:
+    plugin: default_value
+    default_value: America/Los_Angeles
   su_event_type:
     -
       plugin: explode
