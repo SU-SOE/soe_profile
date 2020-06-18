@@ -145,7 +145,7 @@
         "su-sws/stanford_person": "~8.1.0",
         "su-sws/stanford_ssp": "~8.1.0",
         "su-sws/stanford_text_editor": "~8.1.0",
-        "su-soe/soe_paragraphs": "^8.1.0-alpha"
+        "su-soe/soe_paragraphs": "8.1.0-alpha-2"
     },
     "autoload": {
         "psr-4": {
