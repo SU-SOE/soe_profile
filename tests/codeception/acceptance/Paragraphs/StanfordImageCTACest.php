@@ -3,6 +3,8 @@
 /**
  * Codeception tests on card paragraph type.
  */
+use Codeception\Util\Locator;
+
 class StanfordImageCTACest {
 
 
@@ -54,8 +56,9 @@ class StanfordImageCTACest {
   public function testCtaList(\AcceptanceTester $I) {
     $node = $this->createNodeWithParagraph($I);
     $I->amOnPage($node->toUrl()->toString());
-    $I->seeElement('//img[@src="/sites/default/files/styles/responsive_large/public/media/image/banner-151017-3191.jpg"]');
-    $I->canSeeLink('Link Alpha', 'http://google.com');
+    $I->seeElement(Locator::find('img', ['alt' => 'Brain research visualization']));
+    //$I->seeElement('//img[@src="/sites/default/files/styles/responsive_large/public/media/image/banner-151017-3191.jpg"]');
+    $I->seeLink('Link Alpha', 'http://google.com');
   }
 
 }
