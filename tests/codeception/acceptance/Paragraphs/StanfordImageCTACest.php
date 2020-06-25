@@ -54,7 +54,6 @@ class StanfordImageCTACest {
   public function testCtaList(\AcceptanceTester $I) {
     $node = $this->createNodeWithParagraph($I);
     $I->amOnPage($node->toUrl()->toString());
-    $I->canSee('Lorem Ipsum CTA List');
     $I->seeElement('//img[@src="/sites/default/files/styles/responsive_large/public/media/image/banner-151017-3191.jpg"]');
     $I->canSeeLink('Link Alpha', 'http://google.com');
   }
