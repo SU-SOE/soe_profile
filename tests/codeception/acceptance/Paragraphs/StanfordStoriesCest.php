@@ -3,6 +3,8 @@
 /**
  * Codeception tests on Stories paragraph type.
  */
+use Codeception\Util\Locator;
+
 class StanfordStoriesCest {
 
   /**
@@ -65,7 +67,7 @@ class StanfordStoriesCest {
   /**
    * Test the CTA List paragraph in the page.
    */
-  public function testCtaList(\AcceptanceTester $I) {
+  public function testStories(\AcceptanceTester $I) {
     $node = $this->createNodeWithParagraph($I);
     $I->amOnPage($node->toUrl()->toString());
     $I->seeElement(Locator::find('img', ['alt' => 'Brain research visualization']));
