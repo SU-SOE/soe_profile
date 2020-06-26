@@ -1,16 +1,17 @@
 <?php
 
 /**
- * Codeception tests on card paragraph type.
+ * Codeception tests on Image CTA paragraph type.
  */
 use Codeception\Util\Locator;
 
+/**
+ *
+ */
 class StanfordImageCTACest {
-
 
   /**
    * Create a CTA List paragraph to test.
-   *
    */
   protected function createParagraph(\AcceptanceTester $I) {
     $paragraph = $I->createEntity([
@@ -27,7 +28,7 @@ class StanfordImageCTACest {
   }
 
   /**
-   * Create a node to hold the paragraph
+   * Create a node to hold the paragraph.
    */
   protected function createNodeWithParagraph(\AcceptanceTester $I) {
     $paragraph = $this->createParagraph($I);
@@ -51,13 +52,12 @@ class StanfordImageCTACest {
   }
 
   /**
-   * Test the CTA List paragraph in the page.
+   * Test the Image CTA paragraph in the page.
    */
   public function testCtaList(\AcceptanceTester $I) {
     $node = $this->createNodeWithParagraph($I);
     $I->amOnPage($node->toUrl()->toString());
     $I->seeElement(Locator::find('img', ['alt' => 'Brain research visualization']));
-    //$I->seeElement('//img[@src="/sites/default/files/styles/responsive_large/public/media/image/banner-151017-3191.jpg"]');
     $I->seeLink('Link Alpha', 'http://google.com');
   }
 

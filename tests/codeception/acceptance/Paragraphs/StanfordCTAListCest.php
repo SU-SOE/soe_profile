@@ -7,7 +7,6 @@ class StanfordCTAListCest {
 
   /**
    * Create a CTA List paragraph to test.
-   *
    */
   protected function createParagraph(\AcceptanceTester $I) {
     $paragraph = $I->createEntity([
@@ -30,14 +29,14 @@ class StanfordCTAListCest {
         [
           'uri' => 'http://google.com',
           'title' => 'Link Gamma',
-        ]
+        ],
       ],
     ], 'paragraph');
     return $paragraph;
   }
 
   /**
-   * Create a node to hold the paragraph
+   * Create a node to hold the paragraph.
    */
   protected function createNodeWithParagraph(\AcceptanceTester $I) {
     $paragraph = $this->createParagraph($I);

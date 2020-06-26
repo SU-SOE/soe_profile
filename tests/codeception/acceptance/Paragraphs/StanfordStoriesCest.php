@@ -1,13 +1,12 @@
 <?php
 
 /**
- * Codeception tests on card paragraph type.
+ * Codeception tests on Stories paragraph type.
  */
 class StanfordStoriesCest {
 
   /**
    * Create a Stories paragraph to test.
-   *
    */
   protected function createParagraph(\AcceptanceTester $I) {
     $paragraph = $I->createEntity([
@@ -40,7 +39,7 @@ class StanfordStoriesCest {
   }
 
   /**
-   * Create a node to hold the paragraph
+   * Create a node to hold the paragraph.
    */
   protected function createNodeWithParagraph(\AcceptanceTester $I) {
     $paragraph = $this->createParagraph($I);
@@ -62,7 +61,6 @@ class StanfordStoriesCest {
     $I->runDrush('cache-clear router');
     return $node;
   }
-
 
   /**
    * Test the CTA List paragraph in the page.
