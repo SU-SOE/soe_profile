@@ -57,7 +57,7 @@ class StanfordImageCTACest {
   public function testCtaList(\AcceptanceTester $I) {
     $node = $this->createNodeWithParagraph($I);
     $I->amOnPage($node->toUrl()->toString());
-    $I->seeElement(Locator::contains("//div[@class='su-image-cta-paragraph__image']//img"));
+    $I->seeElement("//div[@class='su-image-cta-paragraph__image']//img");
     $I->seeLink('Link Alpha', 'http://google.com');
   }
 
