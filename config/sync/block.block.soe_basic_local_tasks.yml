@@ -1,11 +1,11 @@
-uuid: 2fdcc895-b791-481c-8796-1e8f4708d4ba
+uuid: d1a516ba-7533-4126-b36f-87e80bf23513
 langcode: en
 status: true
 dependencies:
   theme:
-    - stanford_basic
-id: stanford_basic_local_tasks
-theme: stanford_basic
+    - soe_basic
+id: soe_basic_local_tasks
+theme: soe_basic
 region: content
 weight: -2
 provider: null
