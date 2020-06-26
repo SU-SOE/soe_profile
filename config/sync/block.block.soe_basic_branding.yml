@@ -7,7 +7,7 @@ dependencies:
   theme:
     - soe_basic
 id: soe_basic_branding
-theme: stanford_basic
+theme: soe_basic
 region: header
 weight: 0
 provider: null
