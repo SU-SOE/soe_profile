@@ -1,0 +1,22 @@
+uuid: 79d37901-ba22-4861-91eb-a27ef145b954
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: 8Agb7n6Ekb1M_psFy_3_OYh6vaJoMM35joMH5LbvFOQ
+id: paragraph.field_mod_image_fx_scale
+field_name: field_mod_image_fx_scale
+entity_type: paragraph
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

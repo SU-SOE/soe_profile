@@ -1,0 +1,12 @@
+uuid: 5dc62fa0-15b6-47d9-b12f-39f5949de99e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: p1I-agu9k61CahzBT_Xh8a6ljlFULnjNo1pmrL-Ais8
+id: linear_gradient_modifier
+label: 'Linear Gradient Modifier'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

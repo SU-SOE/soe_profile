@@ -1,0 +1,12 @@
+uuid: 6345e12c-2619-43e9-92a1-83712e785cdc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Qr8rDeoJz8ED2W-JvOrAeuiJtljn_ME9ATJIqGcFQ-A
+id: corners_modifier
+label: 'Corners Modifier'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

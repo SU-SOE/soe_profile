@@ -1,0 +1,12 @@
+uuid: a7765f34-3bd7-4e6f-ac8a-337af5543adc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: maiqyyayVOqGOB_Np2y_CJepEhRQZAaudaf0BwlztQ8
+id: image_bg_modifier
+label: 'Image Background Modifier'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

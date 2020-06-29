@@ -1,0 +1,12 @@
+uuid: 3f0089d4-213d-4fa0-b740-10f2c96d5b5c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2NU8fvMjlwB1Wpahgi550KAkkRVUj8cEI6S3gEAG4CE
+id: custom_linear_gradient_modifier
+label: 'Custom Linear Gradient Modifier'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

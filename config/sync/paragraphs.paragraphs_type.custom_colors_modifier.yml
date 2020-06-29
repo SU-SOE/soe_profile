@@ -1,0 +1,12 @@
+uuid: f75842f8-152d-4208-b3c4-6bf1e51cc19a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YDRJOZIXIcZhOosxVQiRpJ8O2yMMqy-uVLbskkWjSGw
+id: custom_colors_modifier
+label: 'Custom Colors Modifier'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

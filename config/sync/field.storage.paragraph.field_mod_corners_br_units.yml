@@ -1,0 +1,32 @@
+uuid: 7ffbe694-ac01-4d2a-ac4b-2db6aaabb95f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: B-T28iG2ShzJac2D8RBPvJJo2L0yD0W5b9n8K8NWUBg
+id: paragraph.field_mod_corners_br_units
+field_name: field_mod_corners_br_units
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: px
+      label: px
+    -
+      value: em
+      label: em
+    -
+      value: '%'
+      label: '%'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

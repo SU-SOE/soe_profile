@@ -1,0 +1,22 @@
+uuid: b33bc079-71a8-4bd2-bd14-40c7d0ad6bde
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: JWhOMl-DmaU8zlyY9_SGif_1gFlimXTPEFdkGN2jNL0
+id: paragraph.field_mod_image_fx_hue_rotate
+field_name: field_mod_image_fx_hue_rotate
+entity_type: paragraph
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

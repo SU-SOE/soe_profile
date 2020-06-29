@@ -18,6 +18,7 @@ module:
   ckeditor_balloonpanel: 0
   ckeditor_fixed_toolbar: 0
   color: 0
+  color_field: 0
   components: 0
   config: 0
   config_filter: 0
@@ -90,6 +91,21 @@ module:
   migrate_file: 0
   migrate_plus: 0
   migrate_tools: 0
+  modifiers: 0
+  modifiers_bg_image: 0
+  modifiers_colors: 0
+  modifiers_corners: 0
+  modifiers_custom_colors: 0
+  modifiers_custom_linear_gradient: 0
+  modifiers_custom_radial_gradient: 0
+  modifiers_fonts: 0
+  modifiers_hide: 0
+  modifiers_html_font_size: 0
+  modifiers_image_fx: 0
+  modifiers_linear_gradient: 0
+  modifiers_padding: 0
+  modifiers_radial_gradient: 0
+  modifiers_shadow: 0
   nobots: 0
   node: 0
   node_revision_delete: 0

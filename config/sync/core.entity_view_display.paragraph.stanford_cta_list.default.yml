@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.stanford_cta_list.field_modifiers
     - field.field.paragraph.stanford_cta_list.stanford_cta_list_deck
     - field.field.paragraph.stanford_cta_list.stanford_cta_list_header
     - field.field.paragraph.stanford_cta_list.stanford_cta_list_links
@@ -74,4 +75,5 @@ content:
         class: 'su-link--action su-image-cta-paragraph__link'
       ds:
         ds_limit: ''
-hidden: {  }
+hidden:
+  field_modifiers: true

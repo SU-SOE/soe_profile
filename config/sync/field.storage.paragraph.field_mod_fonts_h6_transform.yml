@@ -1,0 +1,35 @@
+uuid: a3e02758-140d-4965-8c8d-61d9cf39f1ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: yqvnR-XqDeF-iNC1cU7Nz_b5EQpeD94eZjKSTQ-ZUNg
+id: paragraph.field_mod_fonts_h6_transform
+field_name: field_mod_fonts_h6_transform
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: none
+      label: None
+    -
+      value: uppercase
+      label: Uppercase
+    -
+      value: lowercase
+      label: Lowercase
+    -
+      value: capitalize
+      label: Capitalize
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

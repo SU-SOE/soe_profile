@@ -1,0 +1,24 @@
+uuid: 78df1a36-aedb-49ec-9d12-7dd3a01d6d5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_cl_gradient_colors
+    - paragraphs.paragraphs_type.custom_linear_gradient_modifier
+  module:
+    - color_field
+_core:
+  default_config_hash: 3q4s9Nyg4guNlucNQw1_z0zJ4TDCMdve2lBueLyr5KI
+id: paragraph.custom_linear_gradient_modifier.field_mod_cl_gradient_colors
+field_name: field_mod_cl_gradient_colors
+entity_type: paragraph
+bundle: custom_linear_gradient_modifier
+label: 'Custom Linear Gradient Colors'
+description: 'For gradient use at least two colors.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

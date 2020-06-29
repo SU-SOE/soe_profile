@@ -1,0 +1,12 @@
+uuid: 76ce219a-d647-47dd-bee1-917337b096e8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: kIDVA0CAl_uTefQ0P_L9n8hOWf6DLAqcZnN8fIe9Hsk
+id: html_font_size_modifier
+label: 'HTML Font Size Modifier'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

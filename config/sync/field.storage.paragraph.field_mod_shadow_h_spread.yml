@@ -1,0 +1,22 @@
+uuid: e66a907e-b639-4555-a9b6-e82f71379e45
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: KABapP3BeYJIzTggI92kbml_QxAvQJFAM9V8PkMi_R8
+id: paragraph.field_mod_shadow_h_spread
+field_name: field_mod_shadow_h_spread
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

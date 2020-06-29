@@ -1,0 +1,22 @@
+uuid: 291a59b0-aa0d-4ad4-a461-9508f295cfb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+_core:
+  default_config_hash: oNrwzYqvYqsQGZs5cPjcALGPL2s9oDM3mYEFjy7rwWs
+id: paragraph.field_mod_h_text_color
+field_name: field_mod_h_text_color
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

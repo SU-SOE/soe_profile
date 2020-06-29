@@ -1,0 +1,22 @@
+uuid: 034fa165-6333-4a07-8359-21ede22197e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: b08g8jcNB9aMIydBTjHVJTGEcbkLQSF-THvLr8J-6iU
+id: paragraph.field_mod_corners_tl_size
+field_name: field_mod_corners_tl_size
+entity_type: paragraph
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

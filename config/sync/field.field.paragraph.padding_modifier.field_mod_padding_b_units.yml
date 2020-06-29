@@ -1,0 +1,23 @@
+uuid: 118a11b1-97d1-429a-9f12-b007a1ae34cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_padding_b_units
+    - paragraphs.paragraphs_type.padding_modifier
+  module:
+    - options
+_core:
+  default_config_hash: wcS54o3Rf02gcbiQELUiLntH6zOQxcBwuNg7NtdEt0U
+id: paragraph.padding_modifier.field_mod_padding_b_units
+field_name: field_mod_padding_b_units
+entity_type: paragraph
+bundle: padding_modifier
+label: 'Bottom Padding Units'
+description: 'The units for the bottom padding.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

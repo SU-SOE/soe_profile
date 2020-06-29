@@ -1,0 +1,126 @@
+uuid: 88cca3a1-3fed-47de-9a92-2b45668c9356
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_modifiers
+    - paragraphs.paragraphs_type.colors_modifier
+    - paragraphs.paragraphs_type.corners_modifier
+    - paragraphs.paragraphs_type.custom_colors_modifier
+    - paragraphs.paragraphs_type.custom_linear_gradient_modifier
+    - paragraphs.paragraphs_type.custom_radial_gradient_modifier
+    - paragraphs.paragraphs_type.fonts_modifier
+    - paragraphs.paragraphs_type.hide_modifier
+    - paragraphs.paragraphs_type.html_font_size_modifier
+    - paragraphs.paragraphs_type.image_bg_modifier
+    - paragraphs.paragraphs_type.image_fx_modifier
+    - paragraphs.paragraphs_type.linear_gradient_modifier
+    - paragraphs.paragraphs_type.padding_modifier
+    - paragraphs.paragraphs_type.radial_gradient_modifier
+    - paragraphs.paragraphs_type.shadow_modifier
+    - paragraphs.paragraphs_type.stanford_cta_list
+  module:
+    - entity_reference_revisions
+id: paragraph.stanford_cta_list.field_modifiers
+field_name: field_modifiers
+entity_type: paragraph
+bundle: stanford_cta_list
+label: Modifiers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      colors_modifier: colors_modifier
+      corners_modifier: corners_modifier
+      custom_colors_modifier: custom_colors_modifier
+      custom_linear_gradient_modifier: custom_linear_gradient_modifier
+      custom_radial_gradient_modifier: custom_radial_gradient_modifier
+      fonts_modifier: fonts_modifier
+      hide_modifier: hide_modifier
+      html_font_size_modifier: html_font_size_modifier
+      image_bg_modifier: image_bg_modifier
+      image_fx_modifier: image_fx_modifier
+      linear_gradient_modifier: linear_gradient_modifier
+      padding_modifier: padding_modifier
+      radial_gradient_modifier: radial_gradient_modifier
+      shadow_modifier: shadow_modifier
+    target_bundles_drag_drop:
+      colors_modifier:
+        enabled: true
+        weight: 25
+      corners_modifier:
+        enabled: true
+        weight: 26
+      custom_colors_modifier:
+        enabled: true
+        weight: 27
+      custom_linear_gradient_modifier:
+        enabled: true
+        weight: 28
+      custom_radial_gradient_modifier:
+        enabled: true
+        weight: 29
+      fonts_modifier:
+        enabled: true
+        weight: 30
+      hide_modifier:
+        enabled: true
+        weight: 31
+      html_font_size_modifier:
+        enabled: true
+        weight: 32
+      image_bg_modifier:
+        enabled: true
+        weight: 33
+      image_fx_modifier:
+        enabled: true
+        weight: 34
+      linear_gradient_modifier:
+        enabled: true
+        weight: 35
+      padding_modifier:
+        enabled: true
+        weight: 36
+      radial_gradient_modifier:
+        enabled: true
+        weight: 37
+      shadow_modifier:
+        enabled: true
+        weight: 38
+      stanford_banner:
+        weight: 39
+        enabled: false
+      stanford_card:
+        weight: 40
+        enabled: false
+      stanford_cta_list:
+        weight: 41
+        enabled: false
+      stanford_image_cta:
+        weight: 42
+        enabled: false
+      stanford_media_caption:
+        weight: 43
+        enabled: false
+      stanford_person_cta:
+        weight: 44
+        enabled: false
+      stanford_schedule:
+        weight: 45
+        enabled: false
+      stanford_spacer:
+        weight: 46
+        enabled: false
+      stanford_stories:
+        weight: 47
+        enabled: false
+      stanford_wysiwyg:
+        weight: 48
+        enabled: false
+field_type: entity_reference_revisions

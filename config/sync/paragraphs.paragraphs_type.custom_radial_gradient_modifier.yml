@@ -1,0 +1,12 @@
+uuid: d9aa6d63-43d3-4531-9841-6f3ad1624373
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: qMVBMl-xE6gAMvHTtuMNH9T_GI4VqAs2jiut62FrinM
+id: custom_radial_gradient_modifier
+label: 'Custom Radial Gradient Modifier'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

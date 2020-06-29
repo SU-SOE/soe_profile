@@ -1,0 +1,12 @@
+uuid: 91f5b298-10b6-4d1f-a72a-bfddf33c1562
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Yd9fHEjUNpp_laD0ac1HbvYOL1LV-2TKaulk9SRutO4
+id: colors_modifier
+label: 'Colors Modifier'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

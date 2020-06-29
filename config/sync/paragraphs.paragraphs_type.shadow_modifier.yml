@@ -1,0 +1,12 @@
+uuid: b96fa670-9eea-40f0-bb11-8027e68c5547
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: OhO9Tvrd-CJi7nOZWHIdNVtty3eknGZ02JHCCFFFLtM
+id: shadow_modifier
+label: 'Shadow Modifier'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

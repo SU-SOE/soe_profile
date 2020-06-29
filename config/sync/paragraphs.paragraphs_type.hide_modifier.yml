@@ -1,0 +1,12 @@
+uuid: 78b953b7-9ed8-4dcd-af93-e18fa6bd23e9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: x9FLIEL9Xj1RFKlvpjfpSKUIelELvTgVr1doKIEOdjc
+id: hide_modifier
+label: 'Hide Modifier'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

@@ -1,0 +1,12 @@
+uuid: 5e168cfa-096b-4f61-9aa1-da7992b5423e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: DXHmpgEgzkCp7dm6qVugAZhvi9pceLH90LIJ4C_AbFE
+id: padding_modifier
+label: 'Padding Modifier'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

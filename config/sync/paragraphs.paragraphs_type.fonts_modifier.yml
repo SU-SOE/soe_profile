@@ -1,0 +1,12 @@
+uuid: 57e43baf-4138-4082-907c-647791b7d1be
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: AK8bDicONaw6GDq7TaTNE422vzJsigWoQMXgdYdAT_w
+id: fonts_modifier
+label: 'Fonts Modifier'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

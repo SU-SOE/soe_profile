@@ -1,0 +1,22 @@
+uuid: 137f701c-c1a9-4458-8624-a591600845de
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: AGymcwUc11M84M8l0esk-l3zISVzjwDDtxXTeCs4JsQ
+id: paragraph.field_mod_r_gradient_position
+field_name: field_mod_r_gradient_position
+entity_type: paragraph
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

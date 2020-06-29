@@ -1,0 +1,23 @@
+uuid: 2afe8fe4-f8b0-4d78-a245-fb3bf0437c30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_fonts_h1_transform
+    - paragraphs.paragraphs_type.fonts_modifier
+  module:
+    - options
+_core:
+  default_config_hash: SOvedxQhClFkrRKXvG82fx-NLFWG7aZrP9Bp-tMhhBM
+id: paragraph.fonts_modifier.field_mod_fonts_h1_transform
+field_name: field_mod_fonts_h1_transform
+entity_type: paragraph
+bundle: fonts_modifier
+label: 'H1 Transform'
+description: 'Define the H1 capitalization.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.stanford_cta_list.field_modifiers
     - field.field.paragraph.stanford_cta_list.stanford_cta_list_deck
     - field.field.paragraph.stanford_cta_list.stanford_cta_list_header
     - field.field.paragraph.stanford_cta_list.stanford_cta_list_links
     - paragraphs.paragraphs_type.stanford_cta_list
   module:
     - link
+    - paragraphs
     - text
 _core:
   default_config_hash: 8-3k3Re6RhoAeNiBzg8L-mRpnI3Pd5Mad54fiisIy50
@@ -17,6 +19,18 @@ targetEntityType: paragraph
 bundle: stanford_cta_list
 mode: default
 content:
+  field_modifiers:
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: select
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
   stanford_cta_list_deck:
     weight: 1
     settings:

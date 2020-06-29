@@ -1,0 +1,24 @@
+uuid: b676f6c5-ad7c-4a7b-a1a8-72caa41f4ee5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_h_text_color_val
+    - paragraphs.paragraphs_type.custom_colors_modifier
+  module:
+    - color_field
+_core:
+  default_config_hash: N8Owbg7MY9WEVXXP-yTd2Z5IntHAIswDYWUlaB2Es08
+id: paragraph.custom_colors_modifier.field_mod_h_text_color_val
+field_name: field_mod_h_text_color_val
+entity_type: paragraph
+bundle: custom_colors_modifier
+label: 'Hover Text Color'
+description: 'Pick the text hover color.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

@@ -1,0 +1,22 @@
+uuid: 7f13f302-f71f-426c-9fee-b4e8094e7012
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: 41-42a4MrU4mvfVeui27-40_6lZovf3HXeEQiQmEBbI
+id: paragraph.field_mod_image_fx_h_blur
+field_name: field_mod_image_fx_h_blur
+entity_type: paragraph
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
