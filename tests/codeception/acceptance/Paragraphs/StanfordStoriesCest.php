@@ -73,7 +73,8 @@ class StanfordStoriesCest {
     $I->seeElement('.border-color-1');
     // $I->seeElement('div', ['class' => 'su-stories-paragraph__photo']);
     $I->seeElement("//div[contains(@class, 'su-stories-paragraph__photo')]");
-    $I->seeInSource('card-130514-6102.jpg');
+    $I->seeElement("//img[contains(@src, 'card-130514-6102.jpg')]");
+    //$I->seeInSource('card-130514-6102.jpg');
     $I->seeLink('Link Alpha', 'http://google.com');
     $I->seeLink('Link Beta', 'http://yahoo.com');
     $I->see('Test value for the name', '.su-stories-paragraph__name');
