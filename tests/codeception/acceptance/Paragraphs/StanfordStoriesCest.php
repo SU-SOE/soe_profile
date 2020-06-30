@@ -12,7 +12,7 @@ class StanfordStoriesCest {
    */
   protected function createParagraph(\AcceptanceTester $I) {
     $paragraph = $I->createEntity([
-      'type' => 'stanford_stories_cta',
+      'type' => 'stanford_stories',
       'stanford_stories_cta_link' => [
         'uri' => 'http://google.com',
         'title' => 'Link Alpha',
