@@ -47,7 +47,7 @@ class StanfordStoriesCest {
     $paragraph = $this->createParagraph($I);
     $node = $I->createEntity([
       'type' => 'stanford_page',
-      'title' => 'Test Image CTA',
+      'title' => 'Test Stories Paragraph',
       'su_page_components' => [
         'target_id' => $paragraph->id(),
         'entity' => $paragraph,

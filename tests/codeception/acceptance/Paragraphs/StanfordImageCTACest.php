@@ -54,10 +54,10 @@ class StanfordImageCTACest {
   /**
    * Test the Image CTA paragraph in the page.
    */
-  public function testCtaList(\AcceptanceTester $I) {
+  public function testImageCta(\AcceptanceTester $I) {
     $node = $this->createNodeWithParagraph($I);
     $I->amOnPage($node->toUrl()->toString());
-    $I->seeElement("//div[@class='su-image-cta-paragraph__image']//img");
+    $I->seeElement("//div[@class='su-image-cta-paragraph__image']//img[contains(@src, '.jpg')]");
     $I->seeLink('Link Alpha', 'http://google.com');
   }
 
