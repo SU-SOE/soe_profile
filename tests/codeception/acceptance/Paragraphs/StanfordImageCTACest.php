@@ -58,7 +58,7 @@ class StanfordImageCTACest {
     $node = $this->createNodeWithParagraph($I);
     $I->amOnPage($node->toUrl()->toString());
     $I->seeElement('div', ['class' => 'su-image-cta-paragraph__image']);
-    $I->seeInSource('banner-151017-3191.jpg');
+    $I->seeInSource('card-130514-6102.jpg');
     // $I->seeElement("//div[@class='su-image-cta-paragraph__image']//img[contains(@src, '.jpg')]");
     $I->seeLink('Link Alpha', 'http://google.com');
   }

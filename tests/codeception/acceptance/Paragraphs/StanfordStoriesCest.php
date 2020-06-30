@@ -70,9 +70,9 @@ class StanfordStoriesCest {
   public function testStories(\AcceptanceTester $I) {
     $node = $this->createNodeWithParagraph($I);
     $I->amOnPage($node->toUrl()->toString());
-    $I->seeElement(Locator::find('img', ['alt' => 'Brain research visualization']));
     $I->seeElement('.border-color-1');
-    $I->seeElement('.su-stories-paragraph__photo');
+    $I->seeElement('div', ['class' => 'su-stories-paragraph__photo']);
+    $I->seeInSource('card-130514-6102.jpg');
     $I->seeLink('Link Alpha', 'http://google.com');
     $I->seeLink('Link Beta', 'http://yahoo.com');
     $I->see('Test value for the name', '.su-stories-paragraph__name');
