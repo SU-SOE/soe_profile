@@ -3,11 +3,6 @@
 /**
  * Codeception tests on Image CTA paragraph type.
  */
-use Codeception\Util\Locator;
-
-/**
- *
- */
 class StanfordImageCTACest {
 
   /**

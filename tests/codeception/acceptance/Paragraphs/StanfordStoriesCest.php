@@ -3,8 +3,6 @@
 /**
  * Codeception tests on Stories paragraph type.
  */
-use Codeception\Util\Locator;
-
 class StanfordStoriesCest {
 
   /**
