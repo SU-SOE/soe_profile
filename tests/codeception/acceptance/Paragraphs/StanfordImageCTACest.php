@@ -75,7 +75,7 @@ class StanfordImageCTACest {
     ]);
     // Clear router and menu cache so that the node urls work.
     $I->runDrush('cache-clear router');
-    return $node;
+    return $nodes;
   }
 
   /**
