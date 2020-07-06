@@ -61,7 +61,7 @@ class StanfordImageCTACest {
 
     $nodes[0] = $I->createEntity([
       'type' => 'stanford_page',
-      'title' => 'Test Image CTA',
+      'title' => 'Test Image CTA - internal link',
       'su_page_components' => [
         'target_id' => $this->paragraphs[1]->id(),
         'entity' => $this->paragraphs[1],
@@ -69,7 +69,7 @@ class StanfordImageCTACest {
           'row' => 0,
           'index' => 0,
           'width' => 12,
-          'admin_title' => 'Image CTA',
+          'admin_title' => 'Image CTA - internal link',
         ]),
       ],
     ]);
