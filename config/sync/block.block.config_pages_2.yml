@@ -1,0 +1,29 @@
+uuid: eddaedeb-5320-4b02-a643-db99e665c22f
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+  theme:
+    - soe_basic
+id: config_pages_2
+theme: soe_basic
+region: footer
+weight: 0
+provider: null
+plugin: config_pages_block
+settings:
+  id: config_pages_block
+  label: 'Local Footer'
+  provider: config_pages
+  label_display: 0
+  config_page_type: stanford_local_footer
+  config_page_view_mode: full
+visibility:
+  config_pages_values_access:
+    id: config_pages_values_access
+    negate: false
+    config_page_field: stanford_local_footer|su_footer_enabled|boolean
+    operator: '=='
+    condition_value: '1'
+    context_mapping: {  }
