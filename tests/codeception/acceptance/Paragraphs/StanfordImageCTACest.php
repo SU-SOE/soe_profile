@@ -13,6 +13,7 @@ class StanfordImageCTACest {
    */
   protected function createParagraphs(\AcceptanceTester $I) {
     $paragraphs = [];
+
     $paragraphs[0] = $I->createEntity([
       'type' => 'stanford_image_cta',
       'stanford_image_cta_image' => [
@@ -42,8 +43,10 @@ class StanfordImageCTACest {
    * Create a node to hold the paragraph.
    */
   protected function createNodeWithParagraph(\AcceptanceTester $I) {
+
     $nodes = [];
     $paragraph = $this->createParagraphs($I);
+
     $nodes[0] = $I->createEntity([
       'type' => 'stanford_page',
       'title' => 'Test Image CTA',
@@ -59,7 +62,7 @@ class StanfordImageCTACest {
       ],
     ]);
 
-    $nodes[0] = $I->createEntity([
+    $nodes[1] = $I->createEntity([
       'type' => 'stanford_page',
       'title' => 'Test Image CTA - internal link',
       'su_page_components' => [
@@ -82,13 +85,14 @@ class StanfordImageCTACest {
    * Test the Image CTA paragraph in the page.
    */
   public function testImageCta(\AcceptanceTester $I) {
+
     $nodes = $this->createNodeWithParagraph($I);
+
     $I->amOnPage($nodes[0]->toUrl()->toString());
     $I->seeElement("//div[contains(@class, 'su-image-cta-paragraph__image')]");
     $I->seeLink('Link Alpha', 'http://google.com');
-    $I->see('Internal Link test');
 
-    $I->logInWithRole('administrator');
+    $I->logInWithRole('site_manager');
     $I->amOnPage($nodes[1]->toUrl()->toString());
     $I->click('.edit .tabs__tab a');
     $I->see('Image CTA - internal link');
