@@ -8,8 +8,9 @@ class StanfordImageCTACest {
   /**
    * Create a CTA List paragraph to test.
    */
-  protected function createParagraph(\AcceptanceTester $I) {
-    $paragraph = $I->createEntity([
+  protected function createParagraphs(\AcceptanceTester $I) {
+    $paragraphs = [];
+    $paragraphs[0] = $I->createEntity([
       'type' => 'stanford_image_cta',
       'stanford_image_cta_image' => [
         'target_id' => '4',
@@ -19,25 +20,45 @@ class StanfordImageCTACest {
         'title' => 'Link Alpha',
       ],
     ], 'paragraph');
-    return $paragraph;
+
+    $paragraphs[1] = $I->createEntity([
+      'type' => 'stanford_image_cta',
+      'stanford_image_cta_image' => [
+        'target_id' => '4',
+      ],
+      'stanford_image_cta_link' => [
+        'uri' => '<front>',
+        'title' => 'Internal Link test',
+      ],
+    ], 'paragraph');
+
+    return $paragraphs;
   }
 
   /**
    * Create a node to hold the paragraph.
    */
   protected function createNodeWithParagraph(\AcceptanceTester $I) {
-    $paragraph = $this->createParagraph($I);
+    $paragraph = $this->createParagraphs($I);
     $node = $I->createEntity([
       'type' => 'stanford_page',
       'title' => 'Test Image CTA',
       'su_page_components' => [
-        'target_id' => $paragraph->id(),
-        'entity' => $paragraph,
+        'target_id' => $paragraphs[0]->id(),
+        'entity' => $paragraph[0],
         'settings' => json_encode([
           'row' => 0,
           'index' => 0,
           'width' => 12,
           'admin_title' => 'Image CTA',
+        ]),
+        'target_id' => $paragraphs[1]->id(),
+        'entity' => $paragraph[1],
+        'settings' => json_encode([
+          'row' => 0,
+          'index' => 0,
+          'width' => 12,
+          'admin_title' => 'Image CTA - internal link',
         ]),
       ],
     ]);
@@ -54,6 +75,9 @@ class StanfordImageCTACest {
     $I->amOnPage($node->toUrl()->toString());
     $I->seeElement("//div[contains(@class, 'su-image-cta-paragraph__image')]");
     $I->seeLink('Link Alpha', 'http://google.com');
+    $I->see('Internal Link test');
+    $I->click('Internal Link test');
+    $I->amOnPage('/');
   }
 
 }
