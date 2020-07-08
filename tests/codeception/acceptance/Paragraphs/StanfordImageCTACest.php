@@ -94,6 +94,7 @@ class StanfordImageCTACest {
 
     $I->logInWithRole('site_manager');
     $I->amOnPage($nodes[1]->toUrl()->toString());
+    // X-path to the "edit" tab.
     $I->click('/html/body/div[2]/div[2]/div[2]/nav/ul/li[3]/a');
     $I->see('Image CTA - internal link');
     $I->click("//div[@id='react-su-page-components']//button[@class='button']");
