@@ -74,13 +74,13 @@ class ConfigOverridesTest extends UnitTestCase {
    */
   public function getStateCallback($name) {
     switch ($name) {
-      case 'stanford_profile.403_page':
+      case 'soe_profile.403_page':
         return '/node/403';
 
-      case 'stanford_profile.404_page':
+      case 'soe_profile.404_page':
         return '/node/404';
 
-      case 'stanford_profile.front_page':
+      case 'soe_profile.front_page':
         return '/node/99';
 
     }
