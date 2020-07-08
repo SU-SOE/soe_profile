@@ -148,7 +148,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Drupal\\soe_profile\\": "src/",
+            "Drupal\\soe_profile\\": "src/"
         }
     },
     "extra": {
