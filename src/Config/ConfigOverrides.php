@@ -34,7 +34,7 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
    *
    * @param \Drupal\Core\State\StateInterface $state
    *   State service.
-   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
+   * @param \Drupal\Core\Config\ConfigFactoryInterface|null $config_factory
    *   Config factory service.
    */
   public function __construct(StateInterface $state, ConfigFactoryInterface $config_factory = NULL) {
