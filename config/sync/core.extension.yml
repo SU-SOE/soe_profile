@@ -2,7 +2,6 @@ module:
   address: 0
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
-  admin_toolbar_search: 0
   admin_toolbar_tools: 0
   allowed_formats: 0
   anchor_link: 0
@@ -21,6 +20,7 @@ module:
   components: 0
   config: 0
   config_filter: 0
+  config_ignore: 0
   config_merge: 0
   config_pages: 0
   config_readonly: 0
@@ -135,6 +135,7 @@ module:
   stanford_person: 0
   stanford_person_importer: 0
   stanford_profile_drush: 0
+  stanford_profile_helper: 0
   stanford_profile_styles: 0
   stanford_ssp: 0
   stanford_text_editor: 0
