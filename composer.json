@@ -148,8 +148,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Drupal\\stanford_profile\\": "src/",
-            "Drupal\\stanford_profile_drush\\": "modules/stanford_profile_drush/src/"
+            "Drupal\\soe_profile\\": "src/"
         }
     },
     "extra": {
