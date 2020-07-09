@@ -103,7 +103,7 @@ class StanfordImageCTACest {
     //$I->waitForElement(['css' => 'button[class=button]'], 10); // secs
 
     //$I->waitForElement(Locator::contains('button', 'Edit'), 10); // secs
-    $this->sleep(5);
+    sleep(5);
     $I->click(Locator::contains('button', 'Edit'));
     $I->see('The image to display');
     $I->fillField("//input[contains(@id, 'stanford_image_cta_link-uri-0')]", '<front>');
@@ -115,8 +115,6 @@ class StanfordImageCTACest {
     $I->amOnPage('/');
   }
 
-  public function wait($seconds) {
-    sleep($seconds);
-  }
+
 
 }
