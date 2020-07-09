@@ -104,8 +104,9 @@ class StanfordImageCTACest {
 
     //$I->waitForElement(Locator::contains('button', 'Edit'), 10); // secs
     sleep(5);
-    $edit_button = locate('[class=button]').withText('Edit');
-    $I->click($edit_button);
+    $I->see(Locator::contains('button[@class=button]', 'Edit'));
+    // $edit_button = locate('[class=button]').withText('Edit');
+    $I->click(Locator::contains('button[@class=button]', 'Edit'));
     $I->see('The image to display');
     $I->fillField("//input[contains(@id, 'stanford_image_cta_link-uri-0')]", '<front>');
     $I->click('Continue');
