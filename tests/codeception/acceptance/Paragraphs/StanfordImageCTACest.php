@@ -8,7 +8,7 @@ class StanfordImageCTACest {
   /**
    * Create a CTA List paragraph to test.
    */
-  protected function createParagraphs(\AcceptanceTester $I) {
+  protected function createParagraph(\AcceptanceTester $I) {
 
     $paragraph = $I->createEntity([
       'type' => 'stanford_image_cta',
