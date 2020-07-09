@@ -3,6 +3,9 @@
 /**
  * Codeception tests on Image CTA paragraph type.
  */
+
+use \Codeception\Util\Locator;
+
 class StanfordImageCTACest {
 
 
@@ -97,7 +100,11 @@ class StanfordImageCTACest {
     $I->click("//a[contains(@data-drupal-link-system-path, edit)]");
     $I->see('Image CTA - internal link');
     //$I->click("//div[@id='react-su-page-components']//button[@class='button']");
-    $I->click("Edit", 'button');
+    //$I->waitForElement(['css' => 'button[class=button]'], 10); // secs
+
+    $I->waitForElement(Locator::contains('button', 'Edit'), 10); // secs
+
+    $I->click(Locator::contains('button', 'Edit'));
     $I->see('The image to display');
     $I->fillField("//input[contains(@id, 'stanford_image_cta_link-uri-0')]", '<front>');
     $I->click('Continue');
