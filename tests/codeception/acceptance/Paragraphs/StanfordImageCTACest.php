@@ -31,7 +31,7 @@ class StanfordImageCTACest {
         'target_id' => '4',
       ],
       'stanford_image_cta_link' => [
-        'uri' => '',
+        'uri' => 'http://google.com',
         'title' => 'Internal Link test',
       ],
     ], 'paragraph');
