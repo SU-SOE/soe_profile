@@ -94,7 +94,8 @@ class StanfordImageCTACest {
 
     $I->logInWithRole('site_manager');
     $I->amOnPage($nodes[1]->toUrl()->toString());
-    $I->click("//li[contains(@class, 'edit tabs__tab')]/a");
+    //$I->click("//li[contains(@class, 'edit tabs__tab')]/a");
+    $I->click("//a[contains(@data-drupal-link-system-path, edit)]");
     $I->see('Image CTA - internal link');
     $I->click("//div[@id='react-su-page-components']//button[@class='button']");
     $I->see('The image to display');
