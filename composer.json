@@ -146,7 +146,7 @@
         "su-sws/stanford_profile_helper": "dev-8.x-1.x",
         "su-sws/stanford_ssp": "dev-8.x-1.x",
         "su-sws/stanford_text_editor": "dev-8.x-1.x",
-        "su-soe/soe_paragraphs": "dev-D8CORE-2242"
+        "su-soe/soe_paragraphs": "dev-8.x-1.x"
     },
     "autoload": {
         "psr-4": {
