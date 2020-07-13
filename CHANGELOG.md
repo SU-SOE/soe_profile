@@ -1,6 +1,6 @@
 # SOE Profile
 
-8.x-1.1
+8.1.0-rc8
 --------------------------------------------------------------------------------
 _Release Date: 2020-07-13_
 
@@ -11,6 +11,11 @@ _Release Date: 2020-07-13_
 - D8CORE-000: remove xmlsitemap patch, bump to 1.0.0, lose the alpha. (#42) (dd10eaa)
 - SOE basic theme. (#40) (3271d3e)
 - D8CORE-2149: Updated tests and sync with stanford_profile. (#39) (4ea3e61)
+
+8.1.0-rc7
+--------------------------------------------------------------------------------
+_Release Date: 2020-06-18_
+ - Just a retag, no new code.
 
 8.1.0-rc6
 --------------------------------------------------------------------------------
