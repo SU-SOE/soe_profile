@@ -1,5 +1,17 @@
 # SOE Profile
 
+8.x-1.1
+--------------------------------------------------------------------------------
+_Release Date: 2020-07-13_
+
+- D8CORE-2317: changes for the location (#44) (cf90999)
+- D8CORE-2273: added tests for cta list and image cta (#47) (0d53b2d)
+- D8CORE-2129: configs for updates in the SOE paragraphs. (#43) (63af13a)
+- D8CORE-2339: Sync with stanford_profile and fix install bug (#46) (3a704b4)
+- D8CORE-000: remove xmlsitemap patch, bump to 1.0.0, lose the alpha. (#42) (dd10eaa)
+- SOE basic theme. (#40) (3271d3e)
+- D8CORE-2149: Updated tests and sync with stanford_profile. (#39) (4ea3e61)
+
 8.1.0-rc6
 --------------------------------------------------------------------------------
 _Release Date: 2020-06-18_
