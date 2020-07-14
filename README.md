@@ -8,7 +8,7 @@ Changelog: [Changelog.md](CHANGELOG.md)
 Description
 ---
 
-This is the main installation profile for School of Engineering's self service platform.
+This is the main installation profile for School of Engineering's self service platform. It is similar to SU-SWS/stanford_profile, and shares common parts via the stanford_profile_helper module.
 
 Accessibility
 ---
