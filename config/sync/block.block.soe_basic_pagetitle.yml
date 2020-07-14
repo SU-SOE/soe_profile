@@ -1,0 +1,31 @@
+uuid: 63380262-3fbf-4706-aedb-e8f7edd04854
+langcode: en
+status: true
+dependencies:
+  module:
+    - response_code_condition
+    - system
+  theme:
+    - soe_basic
+id: soe_basic_pagetitle
+theme: soe_basic
+region: content
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/*\r\n/news*\r\n/people*\r\n/events*\r\n/event-series*"
+    negate: true
+    context_mapping: {  }
+  response_code:
+    id: response_code
+    response_codes: "404\r\n403"
+    negate: true
+    context_mapping: {  }
