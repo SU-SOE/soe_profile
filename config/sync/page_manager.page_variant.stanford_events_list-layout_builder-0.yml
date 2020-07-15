@@ -16,15 +16,12 @@ variant_settings:
   weight: 0
   sections:
     -
-      layout_id: jumpstart_ui_one_column
+      layout_id: soe_basic_full_width_header
       layout_settings:
-        extra_classes: section-event-list--title
-        centered: centered-container
-        columns: default
-        label: 'Page Title'
+        label: 'Heading block'
       components:
-        611cbf70-b775-493c-9ec3-4af3397319fe:
-          uuid: 611cbf70-b775-493c-9ec3-4af3397319fe
+        a9c80694-4ed2-46aa-aae5-93e28a211682:
+          uuid: a9c80694-4ed2-46aa-aae5-93e28a211682
           region: main
           configuration:
             id: jumpstart_ui_page_heading

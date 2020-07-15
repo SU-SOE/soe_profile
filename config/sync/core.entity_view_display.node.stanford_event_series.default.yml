@@ -27,7 +27,7 @@ third_party_settings:
         layout_id: jumpstart_ui_one_column
         layout_settings:
           extra_classes: section-event-series--header
-          centered: centered-container
+          centered: null
           columns: flex-10-of-12
           label: Header
         components:
