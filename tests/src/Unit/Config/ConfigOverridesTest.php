@@ -1,24 +1,24 @@
 <?php
 
-namespace Drupal\Tests\stanford_profile\Unit\Config;
+namespace Drupal\Tests\soe_profile\Unit\Config;
 
 use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Config\Config;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\State\StateInterface;
-use Drupal\stanford_profile\Config\ConfigOverrides;
+use Drupal\soe_profile\Config\ConfigOverrides;
 use Drupal\Tests\UnitTestCase;
 
 /**
  * Class ConfigOverridesTest
  *
- * @group stanford_profile
- * @coversDefaultClass \Drupal\stanford_profile\Config\ConfigOverrides
+ * @group soe_profile
+ * @coversDefaultClass \Drupal\soe_profile\Config\ConfigOverrides
  */
 class ConfigOverridesTest extends UnitTestCase {
 
   /**
-   * @var \Drupal\stanford_profile\Config\ConfigOverrides
+   * @var \Drupal\soe_profile\Config\ConfigOverrides
    */
   protected $overrideService;
 
@@ -41,7 +41,8 @@ class ConfigOverridesTest extends UnitTestCase {
   }
 
   public function testConfigOverrides() {
-    $this->assertEquals('StanfordProfileConfigOverride', $this->overrideService->getCacheSuffix());
+    $this->assertEquals('SoeProfileConfigOverride', $this->overrideService->getCacheSuffix());
+
     $this->assertNull($this->overrideService->createConfigObject('foo'));
     $this->assertInstanceOf(CacheableMetadata::class, $this->overrideService->getCacheableMetadata('foo'));
 
@@ -69,26 +70,17 @@ class ConfigOverridesTest extends UnitTestCase {
   }
 
   /**
-   * Google Tag manager entities should be disabled.
-   */
-  public function testGoogleTagOverrides() {
-    $overrides = $this->overrideService->loadOverrides(['google_tag.container.foo_bar']);
-    $expected = ['google_tag.container.foo_bar' => ['status' => FALSE]];
-    $this->assertArrayEquals($expected, $overrides);
-  }
-
-  /**
    * State callback.
    */
   public function getStateCallback($name) {
     switch ($name) {
-      case 'stanford_profile.403_page':
+      case 'soe_profile.403_page':
         return '/node/403';
 
-      case 'stanford_profile.404_page':
+      case 'soe_profile.404_page':
         return '/node/404';
 
-      case 'stanford_profile.front_page':
+      case 'soe_profile.front_page':
         return '/node/99';
 
     }
