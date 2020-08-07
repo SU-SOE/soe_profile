@@ -1,5 +1,20 @@
 # SOE Profile
 
+8.x-1.1
+--------------------------------------------------------------------------------
+_Release Date: 2020-08-07_
+
+- D8CORE-2132: Fixing the event node header (#58) (c94eb13)
+- Merge pull request #56 from SU-SOE/D8CORE-2298 (31e57a7)
+- Merge branch '8.x-1.x' of https://github.com/SU-SOE/soe_profile into D8CORE-2298 (aaf7712)
+- D8CORE-1579: fixing up the circleci errors (#53) (15bf38d)
+- D8CORE-2252: Person config changes. (#54) (3aacf1b)
+- Removed field formatter class patch (#57) (2243dfb)
+- D8CORE-2298: moved the h1 above the hero banner image (0076a9b)
+- D8CORE-2249: added configs for full width header (#52) (dfac825)
+- Merge pull request #49 from SU-SOE/imonroe-patch-1 (c18e4b7)
+- Update composer.json (c0a2913)
+
 8.1.0-rc8
 --------------------------------------------------------------------------------
 _Release Date: 2020-07-13_
