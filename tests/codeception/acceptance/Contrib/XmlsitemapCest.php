@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Test that soe_profile_xmlsitemap_link_alter is working.
+ * Test that stanford_profile_xmlsitemap_link_alter is working.
  */
 class XmlsitemapCest {
 
   /**
    * Test that xmlsitemap is having 403 and 404 pages removed.
    */
-  public function testSoeSitemapLinkAlter(AcceptanceTester $I) {
+  public function testStanfordProfileSitemapLinkAlter(AcceptanceTester $I) {
     $I->logInWithRole('administrator');
     $I->amOnPage("/admin/config/search/xmlsitemap/rebuild");
     $I->click('Save configuration');

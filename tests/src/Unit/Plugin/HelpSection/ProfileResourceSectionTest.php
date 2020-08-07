@@ -1,18 +1,18 @@
 <?php
 
-namespace Drupal\Tests\soe_profile\Unit\Plugin\HelpSection;
+namespace Drupal\Tests\stanford_profile\Unit\Plugin\HelpSection;
 
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\Utility\LinkGeneratorInterface;
-use Drupal\soe_profile\Plugin\HelpSection\ProfileConnectSection;
-use Drupal\soe_profile\Plugin\HelpSection\ProfileResourceSection;
+use Drupal\stanford_profile\Plugin\HelpSection\ProfileConnectSection;
+use Drupal\stanford_profile\Plugin\HelpSection\ProfileResourceSection;
 use Drupal\Tests\UnitTestCase;
 
 /**
  * Class ProfileConnectSectionTest
  *
- * @group soe_profile
- * @coversDefaultClass \Drupal\soe_profile\Plugin\HelpSection\ProfileResourceSection
+ * @group stanford_profile
+ * @coversDefaultClass \Drupal\stanford_profile\Plugin\HelpSection\ProfileResourceSection
  */
 class ProfileResourceSectionTest extends UnitTestCase {
 
@@ -34,7 +34,7 @@ class ProfileResourceSectionTest extends UnitTestCase {
   public function testHelpSections() {
     $plugin = new ProfileResourceSection([], '', []);
     $topics = $plugin->listTopics();
-    $this->assertCount(6, $topics);
+    $this->assertCount(4, $topics);
   }
 
 }
