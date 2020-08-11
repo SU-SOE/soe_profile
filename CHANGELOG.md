@@ -1,9 +1,10 @@
 # SOE Profile
 
-8.x-1.1
+8.1.0-rc.9
 --------------------------------------------------------------------------------
-_Release Date: 2020-08-07_
+_Release Date: 2020-08-11_
 
+- D8CORE-2453: syncing changes from stanford_profile (#59) (c156b71)
 - D8CORE-2132: Fixing the event node header (#58) (c94eb13)
 - Merge pull request #56 from SU-SOE/D8CORE-2298 (31e57a7)
 - Merge branch '8.x-1.x' of https://github.com/SU-SOE/soe_profile into D8CORE-2298 (aaf7712)
