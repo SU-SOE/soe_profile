@@ -18,19 +18,29 @@ dependencies:
     - layout_builder_restrictions
     - layout_library
     - user
+  theme:
+    - soe_basic
 third_party_settings:
   layout_builder:
     allow_custom: true
     enabled: true
     sections:
       -
-        layout_id: jumpstart_ui_one_column
+        layout_id: soe_basic_full_width_header
         layout_settings:
-          extra_classes: section-event-series--header
-          centered: centered-container
-          columns: flex-10-of-12
           label: Header
         components:
+          81d0ab6c-c348-4f2c-9fd7-5b35fb9fc80b:
+            uuid: 81d0ab6c-c348-4f2c-9fd7-5b35fb9fc80b
+            region: main
+            configuration:
+              id: jumpstart_ui_skipnav_main_anchor
+              label: 'Main content anchor target'
+              provider: jumpstart_ui
+              label_display: '0'
+              context_mapping: {  }
+            additional: {  }
+            weight: 3
           88ffc4d3-879c-40a2-ae71-c51f2782a54e:
             uuid: 88ffc4d3-879c-40a2-ae71-c51f2782a54e
             region: main
@@ -51,18 +61,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 1
-          81d0ab6c-c348-4f2c-9fd7-5b35fb9fc80b:
-            uuid: 81d0ab6c-c348-4f2c-9fd7-5b35fb9fc80b
-            region: main
-            configuration:
-              id: jumpstart_ui_skipnav_main_anchor
-              label: 'Main content anchor target'
-              provider: jumpstart_ui
-              label_display: '0'
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
+            weight: 4
           9fe3d4f3-866f-4020-b1b4-7820abac0bf2:
             uuid: 9fe3d4f3-866f-4020-b1b4-7820abac0bf2
             region: main
@@ -83,7 +82,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 2
+            weight: 5
           5b9e13a7-5d6f-4142-8bf4-2439a554fc7d:
             uuid: 5b9e13a7-5d6f-4142-8bf4-2439a554fc7d
             region: main
@@ -104,7 +103,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 3
+            weight: 6
         third_party_settings: {  }
       -
         layout_id: jumpstart_ui_one_column
@@ -218,6 +217,7 @@ third_party_settings:
         - jumpstart_ui_three_column
         - stanford_events_editorial_content
         - stanford_events_body
+        - soe_basic_full_width_header
 id: node.stanford_event_series.default
 targetEntityType: node
 bundle: stanford_event_series

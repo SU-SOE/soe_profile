@@ -14,12 +14,9 @@ variant_settings:
   weight: 0
   sections:
     -
-      layout_id: jumpstart_ui_one_column
+      layout_id: soe_basic_full_width_header
       layout_settings:
-        extra_classes: su-people-header
-        centered: centered-container
-        columns: default
-        label: Header
+        label: Heading
       components:
         21416df0-1bf9-492d-9c81-23b8de4debc9:
           uuid: 21416df0-1bf9-492d-9c81-23b8de4debc9

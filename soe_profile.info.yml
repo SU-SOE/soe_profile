@@ -1,6 +1,6 @@
 name: SOE Profile
 description: SOE Profile
-version: 8.x-1.0-rc8
+version: 8.x-1.0-rc9
 core: 8.x
 type: profile
 project: Jumpstart
@@ -18,7 +18,6 @@ dependencies:
   - ckeditor_a11ychecker:ckeditor_a11ychecker
   - ckeditor_a11ychecker:ckeditor_balloonpanel
   - components:components
-  - config_distro:config_distro
   - config_filter:config_filter
   - config_ignore:config_ignore
   - config_merge:config_merge
