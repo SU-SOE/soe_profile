@@ -2,20 +2,11 @@
 
 /**
  * @file
- * stanford_profile.install
+ * Soe_profile.post_update.php
  */
 
 use Drupal\Core\Site\Settings;
 use Drupal\Core\Config\FileStorage;
-
-/**
- * Implements hook_removed_post_updates().
- */
-// function soe_profile_removed_post_updates() {
-//   return [
-//     'stanford_profile_post_update_8001' => '8.x-1.13',
-//   ];
-// }
 
 /**
  * Updates to config ignore before import.
