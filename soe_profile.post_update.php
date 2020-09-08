@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Soe_profile.post_update.php
+ * Soe_profile.post_update.php.
  */
 
 use Drupal\Core\Site\Settings;
