@@ -1,29 +1,29 @@
-uuid: c54ba0aa-7c79-4b15-b361-36f6ea5b560c
+uuid: 75789ba0-e291-475f-93b5-1ba6677caaa4
 langcode: en
 status: true
 dependencies:
   module:
     - config_pages
   theme:
-    - stanford_basic
-id: config_pages
-theme: stanford_basic
+    - soe_basic
+id: soe_basic_config_pages_super_footer
+theme: soe_basic
 region: footer
-weight: -3
+weight: -5
 provider: null
 plugin: config_pages_block
 settings:
   id: config_pages_block
-  label: 'Local Footer'
+  label: 'Super Footer'
   provider: config_pages
-  label_display: '0'
-  config_page_type: stanford_local_footer
+  label_display: 0
+  config_page_type: stanford_super_footer
   config_page_view_mode: full
 visibility:
   config_pages_values_access:
     id: config_pages_values_access
     negate: false
-    config_page_field: stanford_local_footer|su_footer_enabled|boolean
+    config_page_field: stanford_super_footer|su_super_foot_enabled|boolean
     operator: '=='
     condition_value: '1'
     context_mapping: {  }

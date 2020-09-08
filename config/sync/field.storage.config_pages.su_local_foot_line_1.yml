@@ -1,4 +1,4 @@
-uuid: 81e528f9-b5c7-4776-a436-e8d984859dc4
+uuid: d9fe5511-c750-47a5-aebb-8c7cf702f5b8
 langcode: en
 status: true
 dependencies:
@@ -8,12 +8,12 @@ dependencies:
 third_party_settings:
   field_permissions:
     permission_type: public
-id: config_pages.su_global_msg_label
-field_name: su_global_msg_label
+id: config_pages.su_local_foot_line_1
+field_name: su_local_foot_line_1
 entity_type: config_pages
 type: string
 settings:
-  max_length: 65
+  max_length: 255
   is_ascii: false
   case_sensitive: false
 module: core
