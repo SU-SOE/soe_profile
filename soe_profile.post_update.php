@@ -27,10 +27,10 @@ function _soe_profile_import_config($config_name) {
  *
  * @param array $configs
  *   An array of config file names.
- * @param string
+ * @param string $type
  *   The entity type of the config to save.
  */
-function _soe_profile_import_field_config($configs, $type) {
+function _soe_profile_import_field_config(array $configs, $type) {
   // EM.
   $entity_manager = \Drupal::entityManager();
   $config_path = Settings::get('config_sync_directory');
