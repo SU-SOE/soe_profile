@@ -7,14 +7,13 @@
 
 use Drupal\Core\Site\Settings;
 use Drupal\Core\Config\FileStorage;
-use Drupal\field\Entity\FieldStorageConfig;
-use Drupal\field\Entity\FieldConfig;
 use Drupal\config_pages\Entity\ConfigPages;
 
 /**
  * Imports a single config file.
+ *
  * @param string $config_name
- *   The name of the config item. eg: 'config_ignore.settings'
+ *   The name of the config item. eg: 'config_ignore.settings'.
  */
 function _soe_profile_import_config($config_name) {
   $config_path = Settings::get('config_sync_directory');
@@ -35,7 +34,6 @@ function soe_profile_post_update_8101() {
  * Local footer lockup update options.
  */
 function soe_profile_post_update_8102() {
-
   // EM.
   $entity_manager = \Drupal::entityManager();
   $config_path = Settings::get('config_sync_directory');
@@ -65,6 +63,17 @@ function soe_profile_post_update_8102() {
       ->enforceIsNew()
       ->save();
   }
+}
+
+/**
+ * Local footer lockup update options part 2.
+ */
+function soe_profile_post_update_8103() {
+
+  // EM.
+  $entity_manager = \Drupal::entityManager();
+  $config_path = Settings::get('config_sync_directory');
+  $source = new FileStorage($config_path);
 
   // Create the field configs.
   $configs = [
@@ -89,7 +98,12 @@ function soe_profile_post_update_8102() {
       ->enforceIsNew()
       ->save();
   }
+}
 
+/**
+ * Local footer lockup update default options.
+ */
+function soe_profile_post_update_8104() {
   // Load and save the config_pages entity in order to set the default values.
   $entity = ConfigPages::config("stanford_local_footer");
   $entity->set('su_local_foot_use_loc', 1);
