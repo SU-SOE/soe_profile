@@ -23,6 +23,29 @@ function _soe_profile_import_config($config_name) {
 }
 
 /**
+ * Import field related config.
+ *
+ * @param array $configs
+ *   An array of config file names.
+ * @param string
+ *   The entity type of the config to save.
+ */
+function _soe_profile_import_field_config($configs, $type) {
+  // EM.
+  $entity_manager = \Drupal::entityManager();
+  $config_path = Settings::get('config_sync_directory');
+  $source = new FileStorage($config_path);
+
+  // Create the new field storages.
+  foreach ($configs as $config_name) {
+    $entity_manager->getStorage($type)
+      ->createFromStorageRecord($source->read($config_name))
+      ->enforceIsNew()
+      ->save();
+  }
+}
+
+/**
  * Updates to config ignore before import.
  */
 function soe_profile_post_update_8101() {
@@ -34,11 +57,6 @@ function soe_profile_post_update_8101() {
  * Local footer lockup update options.
  */
 function soe_profile_post_update_8102() {
-  // EM.
-  $entity_manager = \Drupal::entityManager();
-  $config_path = Settings::get('config_sync_directory');
-  $source = new FileStorage($config_path);
-
   // Update the config_pages bundle with the new fields first.
   $configs = [
     'field.storage.config_pages.su_local_foot_line_1',
@@ -56,24 +74,13 @@ function soe_profile_post_update_8102() {
     'field.storage.config_pages.su_local_foot_use_logo',
   ];
 
-  // Create the new field storages.
-  foreach ($configs as $config_name) {
-    $entity_manager->getStorage('field_storage_config')
-      ->createFromStorageRecord($source->read($config_name))
-      ->enforceIsNew()
-      ->save();
-  }
+  _soe_profile_import_field_config($configs, 'field_storage_config');
 }
 
 /**
  * Local footer lockup update options part 2.
  */
 function soe_profile_post_update_8103() {
-
-  // EM.
-  $entity_manager = \Drupal::entityManager();
-  $config_path = Settings::get('config_sync_directory');
-  $source = new FileStorage($config_path);
 
   // Create the field configs.
   $configs = [
@@ -92,12 +99,7 @@ function soe_profile_post_update_8103() {
     'field.field.config_pages.stanford_local_footer.su_local_foot_use_logo',
   ];
 
-  foreach ($configs as $config_name) {
-    $entity_manager->getStorage('field_config')
-      ->createFromStorageRecord($source->read($config_name))
-      ->enforceIsNew()
-      ->save();
-  }
+  _soe_profile_import_field_config($configs, 'field_config');
 }
 
 /**
