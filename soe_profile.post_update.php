@@ -12,7 +12,7 @@ use Drupal\Core\Config\FileStorage;
  * Updates to config ignore before import.
  */
 function soe_profile_post_update_8101() {
-  $config_name = "config_ignore.settings.yml";
+  $config_name = "config_ignore.settings";
   $config_path = Settings::get('config_sync_directory');
   $source = new FileStorage($config_path);
   $config_storage = \Drupal::service('config.storage');
