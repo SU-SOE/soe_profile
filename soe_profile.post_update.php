@@ -18,3 +18,10 @@ function soe_profile_post_update_8101() {
   $config_storage = \Drupal::service('config.storage');
   $config_storage->write($config_name, $source->read($config_name));
 }
+
+/**
+ * Updates footer lockup setting overrides to lockup setting form values.
+ */
+function soe_profile_post_update_8102() {
+
+}
