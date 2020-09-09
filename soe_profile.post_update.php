@@ -32,7 +32,7 @@ function _soe_profile_import_config($config_name) {
  */
 function _soe_profile_import_field_config(array $configs, $type) {
   // EM.
-  $entity_manager = \Drupal::entityManager();
+  $entity_manager = \Drupal::entityTypeManager();
   $config_path = Settings::get('config_sync_directory');
   $source = new FileStorage($config_path);
 
