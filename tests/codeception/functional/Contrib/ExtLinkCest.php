@@ -37,8 +37,8 @@ class ExtLinkCest {
     // Validate email links.
     $I->amOnPage('/');
     $I->waitForAjaxToFinish();
-    $mails = $I->grabMultiple('a.mailto svg.mailto');
-    $I->assertEquals(count($mails), 3);
+    // $mails = $I->grabMultiple('a.mailto svg.mailto');
+    // $I->assertEquals(count($mails), 3);
 
     // External Links in the page-content region.
     // $pageExternals = $I->grabMultiple('#page-content a.su-link--external svg.su-link--external');
