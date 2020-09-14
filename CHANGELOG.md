@@ -1,5 +1,12 @@
 # SOE Profile
 
+8.x-1.1
+--------------------------------------------------------------------------------
+_Release Date: 2020-09-14_
+
+- D8CORE-1609: Sync super footer/global messages from stanford_profile (#64) (dc15714)
+- Update composer.json (#63) (2ae6b99)
+
 8.1.0-rc.9
 --------------------------------------------------------------------------------
 _Release Date: 2020-08-11_
