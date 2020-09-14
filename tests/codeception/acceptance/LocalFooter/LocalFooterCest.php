@@ -8,6 +8,15 @@
 class LocalFooterCest {
 
   /**
+   * Tidy up after oneself.
+   */
+  public function _after(AcceptanceTester $I) {
+    $I->logInWithRole('site_manager');
+    $I->amOnPage('/admin/config/system/local-footer');
+    $I->checkOption('Enabled');
+  }
+
+  /**
    * Only site manager and higher should have access.
    */
   public function testAccess(AcceptanceTester $I) {
