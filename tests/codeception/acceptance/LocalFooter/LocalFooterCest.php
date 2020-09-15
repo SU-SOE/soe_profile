@@ -11,7 +11,7 @@ class LocalFooterCest {
    * Tidy up after oneself.
    */
   public function _after(AcceptanceTester $I) {
-    $I->logInWithRole('site_manager');
+    $I->logInWithRole('administrator');
     $I->amOnPage('/admin/config/system/local-footer');
     $I->checkOption('Enabled');
   }
