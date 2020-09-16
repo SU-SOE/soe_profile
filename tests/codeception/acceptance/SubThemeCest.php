@@ -101,7 +101,7 @@ class SubThemeCest {
   protected function runConfigImport(AcceptanceTester $I, $disable_config_ignore = FALSE) {
     $drush_response = $I->runDrush('pm-list --filter=name=stanford_ssp --format=json');
     $drush_response = json_decode($drush_response, TRUE);
-    $saml_enabled = $drush_response['stanford_ssp']['status'] == 'Enabled';
+    $saml_enabled = ($drush_response['stanford_ssp']['status'] == 'Enabled');
 
     if ($disable_config_ignore) {
       $I->runDrush('pmu config_ignore');

@@ -82,7 +82,9 @@ class LocalFooterLockupCest {
     $I->fillField('Line 4', 'Organization name');
     $I->fillField('Line 5', 'Last line full width option');
     $I->click('Save');
+    $I->see('Local Footer has been updated');
     $I->amOnPage('/');
+    $I->runDrush('cr');
     $I->canSee("Site title line");
     $I->canSee("Last line full width option");
   }
@@ -103,7 +105,9 @@ class LocalFooterLockupCest {
     $I->fillField('Line 4', 'Organization name');
     $I->fillField('Line 5', 'Last line full width option');
     $I->click('Save');
+    $I->see('Local Footer has been updated');
     $I->amOnPage('/');
+    $I->runDrush('cr');
     $I->canSee("Site title line");
     $I->canSee("Secondary title line");
   }
@@ -124,7 +128,9 @@ class LocalFooterLockupCest {
     $I->fillField('Line 4', 'Organization name');
     $I->fillField('Line 5', 'Last line full width option');
     $I->click('Save');
+    $I->see('Local Footer has been updated');
     $I->amOnPage('/');
+    $I->runDrush('cr');
     $I->canSee("Site title line");
     $I->canSee("Tertiary title line");
   }
@@ -145,7 +151,9 @@ class LocalFooterLockupCest {
     $I->fillField('Line 4', 'Organization name');
     $I->fillField('Line 5', 'Last line full width option');
     $I->click('Save');
+    $I->see('Local Footer has been updated');
     $I->amOnPage('/');
+    $I->runDrush('cr');
     $I->canSee("Site title line");
     $I->canSee("Secondary title line");
     $I->canSee("Tertiary title line");
@@ -167,7 +175,9 @@ class LocalFooterLockupCest {
     $I->fillField('Line 4', 'Organization name');
     $I->fillField('Line 5', 'Last line full width option');
     $I->click('Save');
+    $I->see('Local Footer has been updated');
     $I->amOnPage('/');
+    $I->runDrush('cr');
     $I->canSee("Site title line");
     $I->canSee("Organization name");
     $I->canSee("Tertiary title line");
@@ -189,7 +199,9 @@ class LocalFooterLockupCest {
     $I->fillField('Line 4', 'Organization name');
     $I->fillField('Line 5', 'Last line full width option');
     $I->click('Save');
+    $I->see('Local Footer has been updated');
     $I->amOnPage('/');
+    $I->runDrush('cr');
     $I->canSee("Site title line");
     $I->canSee("Organization name");
     $I->canSee("Tertiary title line");
@@ -211,7 +223,9 @@ class LocalFooterLockupCest {
     $I->fillField('Line 4', 'Organization name');
     $I->fillField('Line 5', 'Last line full width option');
     $I->click('Save');
+    $I->see('Local Footer has been updated');
     $I->amOnPage('/');
+    $I->runDrush('cr');
     $I->canSee("Site title line");
     $I->canSee("Secondary title line");
   }
@@ -232,7 +246,9 @@ class LocalFooterLockupCest {
     $I->fillField('Line 4', 'Organization name');
     $I->fillField('Line 5', 'Last line full width option');
     $I->click('Save');
+    $I->see('Local Footer has been updated');
     $I->amOnPage('/');
+    $I->runDrush('cr');
     $I->canSee("Organization name");
   }
 
@@ -252,7 +268,9 @@ class LocalFooterLockupCest {
     $I->fillField('Line 4', 'Organization name');
     $I->fillField('Line 5', 'Last line full width option');
     $I->click('Save');
+    $I->see('Local Footer has been updated');
     $I->amOnPage('/');
+    $I->runDrush('cr');
     $I->canSee("Site title line");
     $I->canSee("Organization name");
   }
@@ -273,7 +291,9 @@ class LocalFooterLockupCest {
     $I->fillField('Line 4', 'Organization name');
     $I->fillField('Line 5', 'Last line full width option');
     $I->click('Save');
+    $I->see('Local Footer has been updated');
     $I->amOnPage('/');
+    $I->runDrush('cr');
     $I->canSee("Last line full width option");
   }
 
@@ -293,7 +313,9 @@ class LocalFooterLockupCest {
     $I->fillField('Line 4', 'Organization name');
     $I->fillField('Line 5', 'Last line full width option');
     $I->click('Save');
+    $I->see('Local Footer has been updated');
     $I->amOnPage('/');
+    $I->runDrush('cr');
     $I->canSee("Site title line");
     $I->canSee("Secondary title line");
     $I->canSee("Organization name");
@@ -315,7 +337,9 @@ class LocalFooterLockupCest {
     $I->fillField('Line 4', 'Organization name');
     $I->fillField('Line 5', 'Last line full width option');
     $I->click('Save');
+    $I->see('Local Footer has been updated');
     $I->amOnPage('/');
+    $I->runDrush('cr');
     $I->canSee("Site title line");
     $I->canSee("Secondary title line");
     $I->canSee("Tertiary title line");

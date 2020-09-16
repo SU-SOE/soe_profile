@@ -193,7 +193,7 @@ class LockupSettingsCest {
     $I->canSee("Organization name");
     $I->canSee("Tertiary title line");
   }
-  
+
    /**
    * Test the lockup settings overrides.
    */
