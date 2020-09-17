@@ -1,5 +1,14 @@
 # SOE Profile
 
+8.x-1.1
+--------------------------------------------------------------------------------
+_Release Date: 2020-09-16_
+
+- Update LocalFooterCest.php (#68) (c1711d6)
+- D8CORE-000: Lockup tests and shuffle dance (#67) (482c645)
+- D8CORE-1609: Sync super footer/global messages from stanford_profile (#64) (dc15714)
+- Update composer.json (#63) (2ae6b99)
+
 8.1.0-rc.9
 --------------------------------------------------------------------------------
 _Release Date: 2020-08-11_
