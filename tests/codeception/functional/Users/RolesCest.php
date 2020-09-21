@@ -21,7 +21,7 @@ class RolesCest {
    *   Tester.
    */
   public function _before(FunctionalTester $I) {
-    $this->saveStateValue('stanford_profile.front_page');
+    $this->saveStateValue('soe_profile.front_page');
   }
 
   /**
@@ -61,7 +61,7 @@ class RolesCest {
       'title' => 'Another Page',
     ]);
     $test_home_url = $test_home->toUrl()->toString();
-    \Drupal::state()->set('stanford_profile.front_page', $test_home_url);
+    \Drupal::state()->set('soe_profile.front_page', $test_home_url);
     $I->runDrush('cache-rebuild');
     $I->assertEquals($test_home_url, $this->getFrontPagePath($I));
 
