@@ -78,6 +78,15 @@ content:
   su_page_components:
     type: react_paragraphs
     settings:
+      sizes:
+        stanford_banner: 1
+        stanford_card: 1
+        stanford_wysiwyg: 1
+        stanford_media_caption: 1
+        stanford_spacer: 1
+        stanford_cta_list: 12
+        stanford_image_cta: 1
+        stanford_stories: 12
       resizable: false
     weight: 26
     third_party_settings: {  }
