@@ -70,7 +70,7 @@ content:
       target: '0'
     third_party_settings:
       field_formatter_class:
-        class: 'su-stories-paragraph__cta su-button'
+        class: su-stories-paragraph__cta
   stanford_stories_name:
     weight: 1
     label: hidden
