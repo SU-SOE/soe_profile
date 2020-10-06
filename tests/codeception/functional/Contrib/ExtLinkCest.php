@@ -5,12 +5,32 @@
  */
 class ExtLinkCest {
 
+  /**
+   * External link config settings.
+   *
+   * @var array
+   */
+  protected $extLinkSettings = [];
+
+  /**
+   * Modify the extlink settings first.
+   */
   public function _before(FunctionalTester $I) {
-$I->
+    $config = \Drupal::configFactory()->getEditable('extlink.settings');
+    $this->extLinkSettings = $config->getRawData();
+    $config->set('extlink_class', 'su-link su-link--external')->save();
   }
 
+  /**
+   * Reset the extlink settings.
+   */
   public function _after(FunctionalTester $I) {
-
+    if ($this->extLinkSettings) {
+      \Drupal::configFactory()
+        ->getEditable('extlink.settings')
+        ->setData($this->extLinkSettings)
+        ->save();
+    }
   }
 
   /**
