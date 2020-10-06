@@ -1,5 +1,17 @@
 # SOE Profile
 
+8.x-1.2
+--------------------------------------------------------------------------------
+_Release Date: 2020-10-05_
+
+- D8CORE-000: Updated config and tests from stanford_profile (#75) (9ce458f)
+- D8CORE-2773: change the number of items in a row (#74) (a1361f6)
+- D8CORE-2614: removed the extra su-button class (#73) (52e56e6)
+- Merge pull request #72 from SU-SOE/D8CORE-1200_delete-protect (b0e50ec)
+- stanford -> soe (472ff9c)
+- cache clear (f1a5ad8)
+- D8CORE-1200 Delete protection of home page (1b4753c)
+
 8.x-1.1
 --------------------------------------------------------------------------------
 _Release Date: 2020-09-16_

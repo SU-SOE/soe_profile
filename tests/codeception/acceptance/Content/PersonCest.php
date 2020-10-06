@@ -6,6 +6,29 @@
 class PersonCest {
 
   /**
+   * Sidebar "Contact" header should only appear once.
+   */
+  public function testDoubleHeader(AcceptanceTester $I){
+    $node = $I->createEntity([
+      'type' => 'stanford_person',
+      'title' => 'Foo Bar',
+      'su_person_first_name' => 'Foo',
+      'su_person_last_name' => 'Bar',
+      'su_person_telephone' => '1234567890',
+    ]);
+    $I->amOnPage($node->toUrl()->toString());
+    $I->canSee('Foo Bar', 'h1');
+    $headers = $I->grabMultiple('h2');
+    $contacts = 0;
+    foreach ($headers as $header) {
+      if (strpos(strtolower($header), 'contact') !== FALSE) {
+        $contacts++;
+      }
+    }
+    $I->assertEquals(1, $contacts);
+  }
+
+  /**
    * Test that the default content has installed and is unpublished.
    */
   public function testDefaultContentExists(AcceptanceTester $I) {
@@ -83,6 +106,63 @@ class PersonCest {
     $I->canSeeResponseCodeIs(200);
     $I->amOnPage("/admin/config/search/metatag/node__stanford_person");
     $I->canSeeResponseCodeIs(200);
+  }
+
+  /**
+   * CAP-52: Check for the new fields.
+   */
+  public function testCap52Fields(AcceptanceTester $I) {
+    $I->logInWithRole('administrator');
+
+    $I->amOnPage('/admin/structure/types/manage/stanford_person/fields');
+    $I->canSee('Academic Appointments');
+    $I->canSee('Administrative Appointments');
+    $I->canSee('Scholarly and Research Interests');
+
+    $I->amOnPage('/admin/structure/types/manage/stanford_person/form-display');
+    $I->canSeeOptionIsSelected('fields[su_person_academic_appt][region]', 'Disabled');
+    $I->canSeeOptionIsSelected('fields[su_person_admin_appts][region]', 'Disabled');
+    $I->canSeeOptionIsSelected('fields[su_person_scholarly_interests][region]', 'Disabled');
+  }
+
+  /**
+   * D8CORE-2613: Taxonomy menu items don't respect the UI.
+   */
+  public function testD8Core2613Terms(AcceptanceTester $I) {
+    $I->logInWithRole('site_manager');
+
+    $foo = $I->createEntity([
+      'name' => 'Foo',
+      'vid' => 'stanford_person_types',
+    ], 'taxonomy_term');
+    $bar = $I->createEntity([
+      'name' => 'Bar',
+      'vid' => 'stanford_person_types',
+    ], 'taxonomy_term');
+    $baz = $I->createEntity([
+      'name' => 'Baz',
+      'vid' => 'stanford_person_types',
+      'parent' => ['target_id' => $foo->id()],
+    ], 'taxonomy_term');
+
+    $I->amOnPage('/people');
+    $I->canSeeLink('Foo');
+    $I->canSeeLink('Bar');
+    $I->cantSeeLink('Baz');
+
+    $I->amOnPage($baz->toUrl('edit-form')->toString());
+    $I->selectOption('Parent terms', '<root>');
+    $I->click('Save');
+
+    $I->amOnPage('/people');
+    $I->canSeeLink('Baz');
+
+    $I->amOnPage($baz->toUrl('edit-form')->toString());
+    $I->selectOption('Parent terms', 'Bar');
+    $I->click('Save');
+
+    $I->amOnPage('/people');
+    $I->cantSeeLink('Baz');
   }
 
 }

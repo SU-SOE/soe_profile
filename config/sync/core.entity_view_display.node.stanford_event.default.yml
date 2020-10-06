@@ -166,7 +166,28 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 10
+            weight: -5
+          229e196d-4f22-4f5a-b265-added1838d5d:
+            uuid: 229e196d-4f22-4f5a-b265-added1838d5d
+            region: main
+            configuration:
+              id: 'field_block:node:stanford_event:su_event_type'
+              label: 'Event Type'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: su-event-type
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: -9
         third_party_settings: {  }
       -
         layout_id: stanford_events_body
