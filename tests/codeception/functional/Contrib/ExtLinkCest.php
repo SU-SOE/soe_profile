@@ -5,6 +5,14 @@
  */
 class ExtLinkCest {
 
+  public function _before(FunctionalTester $I) {
+$I->
+  }
+
+  public function _after(FunctionalTester $I) {
+
+  }
+
   /**
    * Test external links get the added class and svg.
    */
