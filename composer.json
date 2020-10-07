@@ -128,7 +128,7 @@
         "drupal/views_bulk_operations": "^3.6",
         "drupal/xmlsitemap": "~1.0",
         "ext-imagick": "*",
-        "su-soe/soe_basic": "^8.1.2",
+        "su-soe/soe_basic": "~8.1.0",
         "su-sws/jumpstart_ui": "~8.1.0",
         "su-sws/nobots": "~8.2.0",
         "su-sws/react_paragraphs": "~8.2.0",
