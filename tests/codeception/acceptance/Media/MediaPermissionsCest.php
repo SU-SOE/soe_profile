@@ -17,6 +17,17 @@ class MediaPermissionsCest {
   }
 
   /**
+   * Test site embedder perms
+   */
+  public function testSiteEmbedderPerms(AcceptanceTester $I) {
+    $I->logInWithRole('site_embedder');
+    $I->amOnPage('/media/add/embeddable');
+    $I->canSeeResponseCodeIs(200);
+    $I->canSee('oEmbed URL');
+    $I->canSee('Embed Code');
+  }
+
+  /**
    * Test site manager perms
    */
   public function testSiteManagerPerms(AcceptanceTester $I) {
