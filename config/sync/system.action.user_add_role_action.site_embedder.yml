@@ -11,4 +11,4 @@ label: 'Add the Site Embedder role to the selected user(s)'
 type: user
 plugin: user_add_role_action
 configuration:
-  rid: site_embedder
+  rid: soe_site_embedder
