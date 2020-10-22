@@ -6,7 +6,7 @@ dependencies:
     - user.role.site_embedder
   module:
     - user
-id: user_add_role_action.site_embedder
+id: user_add_role_action.soe_site_embedder
 label: 'Add the Site Embedder role to the selected user(s)'
 type: user
 plugin: user_add_role_action

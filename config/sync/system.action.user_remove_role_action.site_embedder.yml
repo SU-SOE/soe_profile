@@ -6,7 +6,7 @@ dependencies:
     - user.role.site_embedder
   module:
     - user
-id: user_remove_role_action.site_embedder
+id: user_remove_role_action.soe_site_embedder
 label: 'Remove the Site Embedder role from the selected user(s)'
 type: user
 plugin: user_remove_role_action
