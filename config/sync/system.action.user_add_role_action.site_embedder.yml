@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - user.role.site_embedder
+    - user.role.soe_site_embedder
   module:
     - user
 id: user_add_role_action.soe_site_embedder
