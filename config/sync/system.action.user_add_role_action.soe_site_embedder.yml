@@ -1,0 +1,14 @@
+uuid: 6c15b125-df41-421b-b859-87470b07b89d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.soe_site_embedder
+  module:
+    - user
+id: user_add_role_action.soe_site_embedder
+label: 'Add the Site Embedder role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: soe_site_embedder
