@@ -1,0 +1,14 @@
+uuid: 9ad3d7d9-35f8-4d5b-9336-ecefbf16dba8
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.soe_site_embedder
+  module:
+    - user
+id: user_remove_role_action.soe_site_embedder
+label: 'Remove the Site Embedder role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: soe_site_embedder
