@@ -16,7 +16,10 @@ variant_settings:
     -
       layout_id: soe_basic_full_width_header
       layout_settings:
-        label: Heading
+        extra_classes: section-events-past--header
+        centered: centered-container
+        columns: default
+        label: Header
       components:
         0f215804-4b92-45c1-a5ab-59eb3b7f3122:
           uuid: 0f215804-4b92-45c1-a5ab-59eb3b7f3122
