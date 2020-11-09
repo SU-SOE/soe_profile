@@ -16,7 +16,10 @@ variant_settings:
     -
       layout_id: soe_basic_full_width_header
       layout_settings:
-        label: Heading
+        extra_classes: section-event-list--title
+        centered: centered-container
+        columns: default
+        label: 'Page Title'
       components:
         1d61c490-3289-422f-9025-c70415f7ed1b:
           uuid: 1d61c490-3289-422f-9025-c70415f7ed1b

@@ -16,7 +16,10 @@ variant_settings:
     -
       layout_id: soe_basic_full_width_header
       layout_settings:
-        label: Heading
+        extra_classes: section-stanford-news-views-header
+        centered: centered-container
+        columns: default
+        label: 'Section - Header'
       components:
         f17fb844-f2a6-4847-8923-bedfc2d39521:
           uuid: f17fb844-f2a6-4847-8923-bedfc2d39521

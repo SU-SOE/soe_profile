@@ -16,7 +16,10 @@ variant_settings:
     -
       layout_id: soe_basic_full_width_header
       layout_settings:
-        label: Heading
+        extra_classes: su-people-header
+        centered: centered-container
+        columns: default
+        label: Header
       components:
         21416df0-1bf9-492d-9c81-23b8de4debc9:
           uuid: 21416df0-1bf9-492d-9c81-23b8de4debc9
