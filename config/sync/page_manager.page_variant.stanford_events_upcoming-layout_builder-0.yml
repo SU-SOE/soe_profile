@@ -16,7 +16,10 @@ variant_settings:
     -
       layout_id: soe_basic_full_width_header
       layout_settings:
-        label: Heading
+        extra_classes: section-event-list--title
+        centered: centered-container
+        columns: default
+        label: 'Page Title'
       components:
         1d61c490-3289-422f-9025-c70415f7ed1b:
           uuid: 1d61c490-3289-422f-9025-c70415f7ed1b
@@ -71,7 +74,34 @@ variant_settings:
             items_per_page: none
             context_mapping: {  }
           additional: {  }
+          weight: 2
+        535c57e1-3c85-4315-bd32-3f8277b218d4:
+          uuid: 535c57e1-3c85-4315-bd32-3f8277b218d4
+          region: main
+          configuration:
+            id: 'block_content:f7125c85-197d-4ba2-9f6f-1126bbda0466'
+            label: 'Events Intro'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          additional: {  }
           weight: 0
+        343a76ca-856e-461b-b36c-021c34293235:
+          uuid: 343a76ca-856e-461b-b36c-021c34293235
+          region: main
+          configuration:
+            id: 'views_block:su_block_edit_links-events_intro'
+            label: ''
+            provider: views
+            label_display: '0'
+            views_label: ''
+            items_per_page: none
+            context_mapping: {  }
+          additional: {  }
+          weight: 1
       third_party_settings: {  }
 page: stanford_events_upcoming
 weight: 0

@@ -124,26 +124,28 @@
         "drupal/seckit": "^1.0@alpha",
         "drupal/ui_patterns": "~1.0",
         "drupal/view_unpublished": "dev-1.x#d3f72872dd8dd3f288dc9d63d65a740ce7d0ba9a",
+        "drupal/viewfield": "^3.0@beta",
         "drupal/views_block_filter_block": "^1.0@beta",
         "drupal/views_bulk_operations": "^3.6",
+        "drupal/views_taxonomy_term_name_depth": "^7.0",
         "drupal/xmlsitemap": "~1.0",
         "ext-imagick": "*",
-        "su-soe/soe_basic": "~8.1.0",
-        "su-sws/jumpstart_ui": "~8.1.0",
-        "su-sws/nobots": "~8.2.0",
-        "su-sws/react_paragraphs": "~8.2.0",
-        "su-sws/stanford_basic": "~8.4.0",
-        "su-sws/stanford_date_formats": "~8.1.0",
-        "su-sws/stanford_events": "~8.1.0",
-        "su-sws/stanford_fields": "~8.1.0",
-        "su-sws/stanford_image_styles": "~8.1.0",
-        "su-sws/stanford_news": "~8.2.0",
-        "su-sws/stanford_notifications": "~8.1.0",
-        "su-sws/stanford_person": "~8.1.0",
-        "su-sws/stanford_profile_helper": "~8.1.0",
-        "su-sws/stanford_ssp": "~8.1.0",
-        "su-sws/stanford_text_editor": "~8.1.0",
-        "su-soe/soe_paragraphs": "~8.1.0"
+        "su-soe/soe_basic": "^8.1.0",
+        "su-sws/jumpstart_ui": "^8.1.0",
+        "su-sws/nobots": "^8.2.0",
+        "su-sws/react_paragraphs": "^8.2.0",
+        "su-sws/stanford_basic": "^8.4.0",
+        "su-sws/stanford_date_formats": "^8.1.0",
+        "su-sws/stanford_events": "^8.1.0",
+        "su-sws/stanford_fields": "^8.1.0",
+        "su-sws/stanford_image_styles": "^8.1.0",
+        "su-sws/stanford_news": "^8.2.0",
+        "su-sws/stanford_notifications": "^8.1.0",
+        "su-sws/stanford_person": "^8.1.0",
+        "su-sws/stanford_profile_helper": "^8.1.0",
+        "su-sws/stanford_ssp": "^8.1.0",
+        "su-sws/stanford_text_editor": "^8.1.0",
+        "su-soe/soe_paragraphs": "^8.1.0"
     },
     "autoload": {
         "psr-4": {
@@ -176,6 +178,12 @@
             },
             "drupal/paragraphs": {
                 "https://www.drupal.org/project/paragraphs/issues/2901390": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch"
+            },
+            "drupal/views_taxonomy_term_name_depth": {
+                "https://www.drupal.org/project/views_taxonomy_term_name_depth/issues/2877249": "https://www.drupal.org/files/issues/2020-05-01/2877249_21.patch"
+            },
+            "drupal/token": {
+                "https://www.drupal.org/project/token/issues/3154183": "https://www.drupal.org/files/issues/2020-06-23/3154183-2.patch"
             }
         }
     }
