@@ -1,6 +1,6 @@
 name: SOE Profile
 description: SOE Profile
-version: 8.x-1.5-dev
+version: 8.x-1.5
 core: 8.x
 type: profile
 project: Jumpstart
