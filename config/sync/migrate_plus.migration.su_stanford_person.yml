@@ -227,6 +227,7 @@ process:
       entity_type: media
       ignore_case: true
       values:
+        name: '@title'
         field_media_image/target_id: '@image_file'
         field_media_image/alt: '@title'
   su_person_links:
