@@ -61,7 +61,18 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 4
+            weight: 1
+          81d0ab6c-c348-4f2c-9fd7-5b35fb9fc80b:
+            uuid: 81d0ab6c-c348-4f2c-9fd7-5b35fb9fc80b
+            region: main
+            configuration:
+              id: jumpstart_ui_skipnav_main_anchor
+              label: 'Main content anchor target'
+              provider: jumpstart_ui
+              label_display: '0'
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
           9fe3d4f3-866f-4020-b1b4-7820abac0bf2:
             uuid: 9fe3d4f3-866f-4020-b1b4-7820abac0bf2
             region: main
