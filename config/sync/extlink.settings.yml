@@ -9,18 +9,18 @@ extlink_alert: false
 extlink_alert_text: 'This link will take you to an external web site. We are not responsible for their content.'
 extlink_exclude: ''
 extlink_include: ''
-extlink_class: '0'
+extlink_class: 'su-link su-link--external'
 extlink_label: '(link is external)'
 extlink_img_class: false
 extlink_css_exclude: ''
 extlink_css_explicit: '#page-content, .su-local-footer'
-extlink_mailto_class: '0'
+extlink_mailto_class: 'mailto'
 extlink_mailto_label: '(link sends email)'
 extlink_use_font_awesome: false
 extlink_font_awesome_classes:
   links: 'fa fa-external-link'
   mailto: 'fa fa-envelope-o'
-extlink_icon_placement: '0'
+extlink_icon_placement: 'append'
 whitelisted_domains: {  }
 _core:
   default_config_hash: gp38_GoeI-5DmdfeFE0NfHi_mbT2SqdU0zsJIQv-ehc
