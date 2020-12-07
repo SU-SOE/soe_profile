@@ -1,5 +1,13 @@
 # SOE Profile
 
+8.x-1.7
+--------------------------------------------------------------------------------
+_Release Date: 2020-12-07_
+
+- D8CORE-3070: updated configs and tests (#93) (f4da716)
+- D8CORE-3070: syncing configs, tests, default content with stanford_basic (#92) (1192fb3)
+- D8CORE-2670: configs for the ext link (#90) (53175ff)
+
 8.x-1.6
 --------------------------------------------------------------------------------
 _Release Date: 2020-11-18_
