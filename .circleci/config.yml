@@ -89,7 +89,7 @@ merge_upstream: &merge_upstream
             DATE=`date +%Y-%m-%d`
             git checkout -b ${DATE}
             git push origin ${DATE}
-            hub pull-request --base=${CIRCLE_BRANCH} --message="Updates from stanford_profile" --assign=pookmish
+            hub pull-request --base=${CIRCLE_BRANCH} --message="Updates from stanford_profile" --assign=pookmish,imonroe
           fi
 
 # Declare all of the jobs we should run.
