@@ -2,14 +2,14 @@
 
 /**
  * @file
- * stanford_profile.profile
+ * soe_profile.profile
  */
 
 /**
  * Implements hook_install_tasks().
  */
-function stanford_profile_install_tasks(&$install_state) {
-  return ['stanford_profile_final_task' => []];
+function soe_profile_install_tasks(&$install_state) {
+  return ['soe_profile_final_task' => []];
 }
 
 /**
@@ -18,6 +18,6 @@ function stanford_profile_install_tasks(&$install_state) {
  * @param array $install_state
  *   Current install state.
  */
-function stanford_profile_final_task(array &$install_state) {
+function soe_profile_final_task(array &$install_state) {
   \Drupal::service('plugin.manager.install_tasks')->runTasks($install_state);
 }

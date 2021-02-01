@@ -1,24 +1,24 @@
 <?php
 
-namespace Drupal\Tests\stanford_profile\Unit\Plugin\HelpSection;
+namespace Drupal\Tests\soe_profile\Unit\Plugin\HelpSection;
 
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\Utility\LinkGeneratorInterface;
-use Drupal\stanford_profile\Plugin\HelpSection\ProfileConnectSection;
+use Drupal\soe_profile\Plugin\HelpSection\ProfileConnectSection;
 use Drupal\Tests\UnitTestCase;
 
 /**
  * Class ProfileConnectSectionTest
  *
- * @group stanford_profile
- * @coversDefaultClass \Drupal\stanford_profile\Plugin\HelpSection\ProfileConnectSection
+ * @group soe_profile
+ * @coversDefaultClass \Drupal\soe_profile\Plugin\HelpSection\ProfileConnectSection
  */
 class ProfileConnectSectionTest extends UnitTestCase {
 
   /**
    * {@inheritDoc}
    */
-  protected function setUp(): void {
+  protected function setUp() {
     parent::setUp();
     $container = new ContainerBuilder();
     $container->set('string_translation', $this->getStringTranslationStub());

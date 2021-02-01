@@ -119,6 +119,10 @@ module:
   shs: 0
   simplesamlphp_auth: 0
   smart_date: 0
+  soe_paragraph_cta_list: 0
+  soe_paragraph_image_cta: 0
+  soe_paragraph_stories: 0
+  soe_paragraphs: 0
   sophron: 0
   stanford_date_formats: 0
   stanford_events: 0
@@ -174,11 +178,12 @@ module:
   externalauth: 10
   menu_link_weight: 10
   paragraphs: 11
-  stanford_profile: 1000
+  soe_profile: 1000
 theme:
   stable: 0
   seven: 0
   stanford_basic: 0
-profile: stanford_profile
+  soe_basic: 0
+profile: soe_profile
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

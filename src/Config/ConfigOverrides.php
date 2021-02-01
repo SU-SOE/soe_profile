@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\stanford_profile\Config;
+namespace Drupal\soe_profile\Config;
 
 use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Config\ConfigFactoryInterface;
@@ -12,7 +12,7 @@ use Drupal\Core\State\StateInterface;
 /**
  * Config overrides for stanford profile.
  *
- * @package Drupal\stanford_profile\Config
+ * @package Drupal\soe_profile\Config
  */
 class ConfigOverrides implements ConfigFactoryOverrideInterface {
 
@@ -52,9 +52,9 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
     $overrides = [];
     if (in_array('system.site', $names)) {
       $overrides['system.site']['page'] = [
-        403 => $this->state->get('stanford_profile.403_page'),
-        404 => $this->state->get('stanford_profile.404_page'),
-        'front' => $this->state->get('stanford_profile.front_page'),
+        403 => $this->state->get('soe_profile.403_page'),
+        404 => $this->state->get('soe_profile.404_page'),
+        'front' => $this->state->get('soe_profile.front_page'),
       ];
     }
 
