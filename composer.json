@@ -97,6 +97,7 @@
     ],
     "require": {
         "composer/installers": "^1.2",
+        "su-soe/soe_paragraphs": "dev-8.x-1.x",
         "su-sws/stanford_profile": "dev-8.x-2.x"
     },
     "config": {
