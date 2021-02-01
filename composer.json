@@ -97,7 +97,7 @@
     ],
     "require": {
         "composer/installers": "^1.2",
-        "su-sws/stanford_profile": "^dev-8.x-2.x"
+        "su-sws/stanford_profile": "dev-8.x-2.x"
     },
     "config": {
         "sort-packages": true
