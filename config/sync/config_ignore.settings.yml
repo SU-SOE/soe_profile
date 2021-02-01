@@ -1,0 +1,10 @@
+ignored_config_entities:
+  - 'core.extension:theme'
+  - 'system.theme:default'
+  - '~block.block.seven_*'
+  - '~block.block.stanford_basic_*'
+  - 'block.block.*'
+  - 'google_tag.container.*'
+enable_export_filtering: false
+_core:
+  default_config_hash: v7E8C8wJWeAW2BGohMNY1tZSBc4bexM6O62tGxecTfE
