@@ -10,7 +10,7 @@ use Faker\Factory;
 class PublicationsCest {
 
   /**
-   * @group testme
+   *
    */
   public function testBookCitation(AcceptanceTester $I) {
     $faker = Factory::create();

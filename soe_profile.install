@@ -10,7 +10,9 @@
  */
 function soe_profile_update_8002() {
   $state = \Drupal::state();
-  $state->set('soe_profile.403_page', '/node/3');
-  $state->set('soe_profile.404_page', '/node/2');
-  $state->set('soe_profile.front_page', '/node/1');
+  if (!$state->get('soe_profile.front_page', FALSE)) {
+    $state->set('soe_profile.403_page', '/node/3');
+    $state->set('soe_profile.404_page', '/node/2');
+    $state->set('soe_profile.front_page', '/node/1');
+  }
 }
