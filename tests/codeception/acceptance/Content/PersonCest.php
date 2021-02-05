@@ -6,6 +6,29 @@
 class PersonCest {
 
   /**
+   * Sidebar "Contact" header should only appear once.
+   */
+  public function testDoubleHeader(AcceptanceTester $I){
+    $node = $I->createEntity([
+      'type' => 'stanford_person',
+      'title' => 'Foo Bar',
+      'su_person_first_name' => 'Foo',
+      'su_person_last_name' => 'Bar',
+      'su_person_telephone' => '1234567890',
+    ]);
+    $I->amOnPage($node->toUrl()->toString());
+    $I->canSee('Foo Bar', 'h1');
+    $headers = $I->grabMultiple('h2');
+    $contacts = 0;
+    foreach ($headers as $header) {
+      if (strpos(strtolower($header), 'contact') !== FALSE) {
+        $contacts++;
+      }
+    }
+    $I->assertEquals(1, $contacts);
+  }
+
+  /**
    * Test that the default content has installed and is unpublished.
    */
   public function testDefaultContentExists(AcceptanceTester $I) {

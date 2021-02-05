@@ -1,0 +1,25 @@
+uuid: d3fa0d87-0ab4-4f74-8b95-937a9c949bf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.stanford_stories_node_link
+    - paragraphs.paragraphs_type.stanford_stories
+  module:
+    - link
+_core:
+  default_config_hash: mmUfF2xGXg57cqGTs-fBJruOwikCOWIRRHJesYPB9dI
+id: paragraph.stanford_stories.stanford_stories_node_link
+field_name: stanford_stories_node_link
+entity_type: paragraph
+bundle: stanford_stories
+label: 'Link to Story Node'
+description: 'A link to the full story node'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

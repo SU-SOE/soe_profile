@@ -31,6 +31,12 @@ settings:
       stanford_card:
         weight: 4
         enabled: false
+      stanford_cta_list:
+        weight: 11
+        enabled: false
+      stanford_image_cta:
+        weight: 12
+        enabled: false
       stanford_media_caption:
         weight: 8
         enabled: false
@@ -43,6 +49,9 @@ settings:
       stanford_spacer:
         weight: 9
         enabled: false
+      stanford_stories:
+        weight: 15
+        enabled: false
       stanford_wysiwyg:
         weight: 6
         enabled: false
@@ -51,8 +60,14 @@ settings:
         min: '12'
       stanford_card:
         min: '4'
+      stanford_cta_list:
+        min: '12'
+      stanford_image_cta:
+        min: '4'
       stanford_media_caption:
         min: '4'
+      stanford_stories:
+        min: '12'
       stanford_wysiwyg:
         min: '4'
 field_type: entity_reference_revisions

@@ -1,0 +1,21 @@
+uuid: 5170ae51-599a-4146-85c5-3ecb0e8df3d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: LtlZ42J-qHkAQ7eB5Eel9sZR_SzfJRbj63uEPox2y6M
+id: paragraph.stanford_cta_list_deck
+field_name: stanford_cta_list_deck
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

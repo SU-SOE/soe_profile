@@ -8,6 +8,33 @@ targetEntityType: node
 targetBundle: stanford_page
 layout:
   -
+    layout_id: defaults
+    layout_settings:
+      extra_classes: node-stanford-page-full-width-title
+      centered: centered-container
+      columns: default
+      label: ''
+    components:
+      6ce9c0ce-a019-44f4-9225-4c2a1a9fbc6d:
+        uuid: 6ce9c0ce-a019-44f4-9225-4c2a1a9fbc6d
+        region: main
+        configuration:
+          id: 'field_block:node:stanford_page:title'
+          label: Title
+          provider: layout_builder
+          label_display: '0'
+          formatter:
+            label: hidden
+            type: entity_title_heading
+            settings:
+              tag: h1
+            third_party_settings: {  }
+          context_mapping:
+            entity: layout_builder.entity
+        additional: {  }
+        weight: 0
+    third_party_settings: {  }
+  -
     layout_id: jumpstart_ui_one_column
     layout_settings:
       extra_classes: ''
@@ -27,32 +54,6 @@ layout:
             type: entity_reference_revisions_entity_view
             settings:
               view_mode: default
-            third_party_settings: {  }
-          context_mapping:
-            entity: layout_builder.entity
-        additional: {  }
-        weight: 0
-    third_party_settings: {  }
-  -
-    layout_id: jumpstart_ui_one_column
-    layout_settings:
-      extra_classes: ''
-      centered: centered-container
-      columns: default
-    components:
-      6ce9c0ce-a019-44f4-9225-4c2a1a9fbc6d:
-        uuid: 6ce9c0ce-a019-44f4-9225-4c2a1a9fbc6d
-        region: main
-        configuration:
-          id: 'field_block:node:stanford_page:title'
-          label: Title
-          provider: layout_builder
-          label_display: '0'
-          formatter:
-            label: hidden
-            type: entity_title_heading
-            settings:
-              tag: h1
             third_party_settings: {  }
           context_mapping:
             entity: layout_builder.entity
