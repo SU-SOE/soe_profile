@@ -31,13 +31,16 @@ settings:
         weight: 4
         enabled: false
       stanford_card:
-        weight: -18
+        weight: -20
         enabled: false
       stanford_entity:
-        weight: -14
+        weight: -16
+        enabled: false
+      stanford_gallery:
+        weight: -13
         enabled: false
       stanford_lists:
-        weight: -12
+        weight: -14
         enabled: false
       stanford_media_caption:
         weight: 8
