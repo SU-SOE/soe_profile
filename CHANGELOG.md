@@ -13,6 +13,7 @@ _Release Date: 2021-02-08_
 - D8CORE-3263 Create gallery paragraph type with colorbox actions (#347) (4815971)
 - Exported configs after D9.1 database updates (#340) (9c84759)
 - D8CORE-3142: adding a class to the intro block (#345) (6187724)
+- Upgrade to Drupal 9
 
 8.x-1.7
 --------------------------------------------------------------------------------
