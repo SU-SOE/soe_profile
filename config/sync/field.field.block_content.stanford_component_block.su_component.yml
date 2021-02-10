@@ -17,13 +17,13 @@ field_name: su_component
 entity_type: block_content
 bundle: stanford_component_block
 label: Component
-description: ''
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:paragraph'
+  handler: "default:paragraph"
   handler_settings:
     negate: 0
     target_bundles:

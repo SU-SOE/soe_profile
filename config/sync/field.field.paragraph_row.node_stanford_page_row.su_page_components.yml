@@ -31,6 +31,7 @@ settings:
         weight: 4
         enabled: false
       stanford_card:
+<<<<<<< HEAD
         weight: -20
         enabled: false
       stanford_entity:
@@ -41,6 +42,15 @@ settings:
         enabled: false
       stanford_lists:
         weight: -14
+=======
+        weight: -18
+        enabled: false
+      stanford_entity:
+        weight: -14
+        enabled: false
+      stanford_lists:
+        weight: -12
+>>>>>>> master
         enabled: false
       stanford_media_caption:
         weight: 8

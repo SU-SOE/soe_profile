@@ -1,5 +1,5 @@
 status: 1
-pattern: '[node:su_person_first_name] [node:su_person_last_name]'
+pattern: "[node:su_person_first_name] [node:su_person_last_name]"
 escape: false
 dependencies:
   config:
