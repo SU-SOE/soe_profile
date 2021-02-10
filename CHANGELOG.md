@@ -2,7 +2,7 @@
 
 8.x-2.0
 --------------------------------------------------------------------------------
-_Release Date: 2021-02-08_
+_Release Date: 2021-02-10_
 
 - D8CORE-2968 Change the events schedule view (#354) (567973f)
 - Several configuration tweaks. (#352) (11728b4)
