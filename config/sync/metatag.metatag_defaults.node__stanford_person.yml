@@ -9,6 +9,5 @@ tags:
   description: '[node:summary]'
   keywords: '[node:su_person_type]'
   title: '[node:title] | [site:name]'
-  description: '[node:summary]'
   og_image_url: '[node:su_person_photo:entity:field_media_image:large]'
   og_image: '[node:su_person_photo:entity:field_media_image:large]'

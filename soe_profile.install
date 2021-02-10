@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * soe_profile.install
+ */
+
+/**
+ * Save the system pages from the original config values into state.
+ */
+function soe_profile_update_8002() {
+  $state = \Drupal::state();
+  if (!$state->get('soe_profile.front_page', FALSE)) {
+    $state->set('soe_profile.403_page', '/node/3');
+    $state->set('soe_profile.404_page', '/node/2');
+    $state->set('soe_profile.front_page', '/node/1');
+  }
+}

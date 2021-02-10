@@ -1,23 +1,15 @@
 version: 2
 # CircleCI integration with Drupal 8.
 
-## Add SSH Key
-add_ssh: &add_ssh
-  add_ssh_keys:
-    fingerprints:
-      - "dd:1a:a9:f6:36:db:a8:e0:71:ef:8f:37:bf:62:d4:c4"
-
-
 ## Defines images and working directory.
 defaults: &defaults
   docker:
     - image: pookmish/drupal8ci:pcov
-    - image: selenium/standalone-chrome:3.141.59-neon
+    - image: selenium/standalone-chrome:latest
     - image: mariadb:10.3
       environment:
         MYSQL_ALLOW_EMPTY_PASSWORD: 1
   working_directory: /var/www/html
-
 
 #Jobs
 code_coverage: &code_coverage
@@ -31,7 +23,7 @@ code_coverage: &code_coverage
     - run:
         name: Run PHP Unit Coverage Tests
         command: |
-          composer global require SU-SWS/stanford-caravan:dev-8.x-1.x
+          composer global require SU-SWS/stanford-caravan:dev-8.x-2.x
           ~/.composer/vendor/bin/sws-caravan phpunit /var/www/html --extension-dir=/var/www/test --with-coverage
     - save_cache:
         key: dependencies-v1-{{ epoch }}
@@ -49,16 +41,16 @@ back_to_dev: &back_to_dev
     - run:
         name: Back to dev
         command: |
-          composer global require SU-SWS/stanford-caravan:dev-8.x-1.x
+          composer global require SU-SWS/stanford-caravan:dev-8.x-2.x
           ~/.composer/vendor/bin/sws-caravan back-to-dev ${CIRCLE_TAG} ${CIRCLE_WORKING_DIRECTORY}
 
-codeception: &codeception
+d8_codeception: &d8_codeception
   <<: *defaults
   steps:
     - checkout:
         path: /var/www/test
     - run:
-        name: Run Acceptance Tests
+        name: Run Codeception Tests
         command: |
           composer global require SU-SWS/stanford-caravan:dev-8.x-1.x
           ~/.composer/vendor/bin/sws-caravan codeception /var/www/html --extension-dir=/var/www/test
@@ -67,14 +59,51 @@ codeception: &codeception
     - store_artifacts:
         path: /var/www/html/artifacts
 
+d9_codeception: &d9_codeception
+  <<: *defaults
+  steps:
+    - checkout:
+        path: /var/www/test
+    - run:
+        name: Run Codeception Tests
+        command: |
+          composer global require SU-SWS/stanford-caravan:dev-8.x-2.x
+          ~/.composer/vendor/bin/sws-caravan codeception /var/www/html --extension-dir=/var/www/test
+    - store_test_results:
+        path: /var/www/html/artifacts/behat
+    - store_artifacts:
+        path: /var/www/html/artifacts
+
+merge_upstream: &merge_upstream
+  <<: *defaults
+  steps:
+    - checkout:
+        path: /var/www/html
+    - run:
+        name: Merge stanford_profile upstream
+        command: |
+          git config --global user.email "sws-developers@lists.stanford.edu"
+          git config --global user.name "CircleCI"
+          git pull https://github.com/SU-SWS/stanford_profile.git 8.x-2.x -X ours --no-edit
+          if [[ $(git diff origin/${CIRCLE_BRANCH} --name-only) ]]; then
+            DATE=`date +%Y-%m-%d`
+            git checkout -b ${DATE}
+            git push origin ${DATE}
+            hub pull-request --base=${CIRCLE_BRANCH} --message="Updates from stanford_profile" --assign=pookmish,imonroe
+          fi
+
 # Declare all of the jobs we should run.
 jobs:
   run-coverage:
     <<: *code_coverage
   run-back-to-dev:
     <<: *back_to_dev
-  run-codeception:
-    <<: *codeception
+  run-d8-codeception:
+    <<: *d8_codeception
+  run-d9-codeception:
+    <<: *d9_codeception
+  run-merge-upstream:
+    <<: *merge_upstream
 
 # Declare a workflow that runs all of our jobs in parallel.
 workflows:
@@ -92,7 +121,8 @@ workflows:
   tests:
     jobs:
       - run-coverage
-      - run-codeception
+#      - run-d8-codeception
+      - run-d9-codeception
   # Re-test every sunday in case this code becomes stale.
   sundays:
     jobs:
@@ -104,3 +134,13 @@ workflows:
             branches:
               only:
                 - 8.x-1.x
+  daily:
+    jobs:
+      - run-merge-upstream
+    triggers:
+      - schedule:
+          cron: "0 8 * * *"
+          filters:
+            branches:
+              only:
+                - /8.x-2.x/

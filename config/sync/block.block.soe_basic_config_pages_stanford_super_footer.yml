@@ -6,7 +6,7 @@ dependencies:
     - config_pages
   theme:
     - soe_basic
-id: soe_basic_config_pages_super_footer
+id: soe_basic_config_pages_stanford_super_footer
 theme: soe_basic
 region: footer
 weight: -5
