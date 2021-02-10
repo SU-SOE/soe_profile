@@ -2,6 +2,14 @@
 
 8.x-2.0
 --------------------------------------------------------------------------------
+_Release Date: 2021-02-10_
+
+- Updates from stanford_profile 2021-02-09 (facaecc)
+- Reset The version (ef60be8)
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x (bb6997e)
+
+8.x-2.0
+--------------------------------------------------------------------------------
 _Release Date: 2021-02-08_
 
 - D8CORE-2968 Change the events schedule view (#354) (567973f)
