@@ -11,6 +11,14 @@ use Faker\Factory;
 class BasicPageCest {
 
   /**
+   * Make sure the basic page settings are correct.
+   */
+  public function testComponentSettings(AcceptanceTester $I){
+    $response = $I->runDrush('cget core.entity_form_display.node.stanford_page.default content.su_page_components.settings.sizes');
+    $I->assertStringContainsString('stanford_gallery: 12', $response);
+  }
+
+  /**
    * Test placing a basic page in the menu with a child menu item.
    */
   public function testCreatingPage(AcceptanceTester $I) {

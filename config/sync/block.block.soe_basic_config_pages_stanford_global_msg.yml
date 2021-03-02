@@ -6,7 +6,7 @@ dependencies:
     - config_pages
   theme:
     - soe_basic
-id: soe_basic_config_pages_global_msg
+id: soe_basic_config_pages_stanford_global_msg
 theme: soe_basic
 region: help
 weight: 0
