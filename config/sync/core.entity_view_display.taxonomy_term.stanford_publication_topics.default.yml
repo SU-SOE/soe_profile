@@ -20,9 +20,9 @@ third_party_settings:
     enabled: true
     sections:
       -
-        layout_id: jumpstart_ui_one_column
+        layout_id: defaults
         layout_settings:
-          extra_classes: ''
+          extra_classes: 'section-bgcolor--title section-editorial-content section-stanford-pubs-views-header publications-terms--filtered'
           centered: null
           columns: default
           label: ''
