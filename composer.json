@@ -96,11 +96,10 @@
         }
     ],
     "require": {
-        "ext-imagick": "*",
         "composer/installers": "^1.2",
-        "su-soe/soe_basic": "dev-8.x-1.x",
-        "su-soe/soe_paragraphs": "dev-8.x-1.x",
-        "su-sws/stanford_profile": "dev-8.x-2.x"
+        "su-soe/soe_basic": "^8.1",
+        "su-soe/soe_paragraphs": "^8.1",
+        "su-sws/stanford_profile": "^8.2"
     },
     "config": {
         "sort-packages": true
