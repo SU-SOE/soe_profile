@@ -18,10 +18,10 @@ variant_settings:
     -
       layout_id: soe_basic_full_width_header
       layout_settings:
+        label: Header
         extra_classes: section-header
         centered: centered-container
         columns: default
-        label: Header
       components:
         6b34a32c-90af-41df-a053-36515c431bad:
           uuid: 6b34a32c-90af-41df-a053-36515c431bad
