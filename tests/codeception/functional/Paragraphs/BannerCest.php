@@ -50,7 +50,7 @@ class BannerCest {
     $I->canSee('Ipsum Lorem');
     $I->canSeeLink('Google Button', 'http://google.com/');
     $I->cantSeeElement('.overlay-right');
-
+    return;
     $I->logInWithRole('site_manager');
 
     $I->amOnPage($node->toUrl('edit-form')->toString());
