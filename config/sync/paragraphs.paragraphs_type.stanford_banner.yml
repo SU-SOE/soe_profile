@@ -13,4 +13,4 @@ icon_default: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAkACQAAD/2wBDAAEBAQEBAQ
 description: 'Banner Paragraph Type'
 behavior_plugins:
   hero_pattern:
-    enabled: true
+    enabled: false
