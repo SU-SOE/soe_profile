@@ -12,7 +12,6 @@ dependencies:
     - field.field.node.stanford_news.su_news_dek
     - field.field.node.stanford_news.su_news_featured_media
     - field.field.node.stanford_news.su_news_banner_media_caption
-    - field.field.node.stanford_news.su_news_headline
     - field.field.node.stanford_news.su_news_publishing_date
     - field.field.node.stanford_news.su_news_source
     - field.field.node.stanford_news.su_news_topics
