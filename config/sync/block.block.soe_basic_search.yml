@@ -1,21 +1,23 @@
-uuid: d9708db3-0a65-4a75-b7c8-c56235391407
+uuid: 578f3234-f636-4716-bd59-daa9a8163a58
 langcode: en
 status: true
 dependencies:
+  config:
+    - views.view.search
   module:
-    - search
+    - views
   theme:
-    - soe_basic
+    - stanford_basic
 id: soe_basic_search
 theme: soe_basic
 region: search
-weight: -1
+weight: 0
 provider: null
-plugin: search_form_block
+plugin: 'views_exposed_filter_block:search-results'
 settings:
-  id: search_form_block
-  label: Search
-  provider: search
-  label_display: visible
-  page_id: ''
+  id: 'views_exposed_filter_block:search-results'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
 visibility: {  }
