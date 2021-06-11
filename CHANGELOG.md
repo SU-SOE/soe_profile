@@ -1,5 +1,25 @@
 # Stanford Profile
 
+8.x-2.10
+--------------------------------------------------------------------------------
+_Release Date: 2021-06-11_
+
+- Stanford Profile updates 2021-06-09 (01f2213)
+- Merge branch '8.x-2.x' of https://github.com/SU-SWS/stanford_profile into updates-2021-06-09 (cb0baf5)
+- Corrected acceptance tests with the latest dependency updates (#427) (30c2d25)
+- D8CORE-4090 D8CORE-2888 D8CORE-4126: accessbility changes to the news modules. (#425) (b0f2e0d)
+- Updates from stanford_profile 2021-05-29 (d6bac68)
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x (3862436)
+- D8CORE-4339 Allow restriction based on the persons affiliation to the university (#424) (15ea056)
+- Updates from stanford_profile 2021-05-27 (f3497e1)
+- Corrected search blocks (0e08393)
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x (8f43337)
+- D8CORE-2520 reset configs for events refactored patterns (#416) (54d8f44)
+- D8CORE-3158 Enable more paragraph components on news and people (#420) (4bf9741)
+- D8CORE-4245 Disable search module since search api exists (#421) (ceaf186)
+- D8CORE-2898 Removed the headline field in favor of title field (#422) (0fe5ada)
+- Updated stanford_ssp dev version to 2.x (d820722)
+
 8.x-2.9
 --------------------------------------------------------------------------------
 _Release Date: 2021-05-18_
