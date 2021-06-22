@@ -19,18 +19,13 @@ function soe_profile_removed_post_updates() {
     'soe_profile_post_update_8102' => '8.x-2.0',
     'soe_profile_post_update_8103' => '8.x-2.0',
     'soe_profile_post_update_8104' => '8.x-2.0',
+    'soe_profile_post_update_8200_uuids' => '8.x-2.10',
   ];
 }
 
 /**
- * Set the UUID's on block configs.
+ * Disable the core search module.
  */
-function soe_profile_post_update_8200_uuids() {
-  $config_factory = \Drupal::configFactory();
-  if ($config = $config_factory->getEditable('block.block.soe_basic_config_pages_global_msg')) {
-    $config->delete();
-  }
-  if ($config = $config_factory->getEditable('block.block.soe_basic_config_pages_super_footer')) {
-    $config->delete();
-  }
+function soe_profile_post_update_8201_search(){
+  \Drupal::service('module_installer')->uninstall(['search']);
 }
