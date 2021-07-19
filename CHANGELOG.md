@@ -1,5 +1,29 @@
 # Stanford Profile
 
+8.x-2.11
+--------------------------------------------------------------------------------
+_Release Date: 2021-07-09_
+
+- Updates from stanford_profile (#175) (940a941)
+- Updates from stanford_profile 2021-07-07 (c93e43b)
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x (bcad403)
+- D8CORE-4497 Replaced <h3> with <p> in views no results text (0610b19)
+- D8CORE-4235 Require alt text on gallery images (#433) (758231d)
+- Updates from stanford_profile 2021-07-03 (b5b799b)
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x (506de8b)
+- Updates from stanford_profile (#172) (ba4c8e6)
+- D8CORE-4504 Added mathjax for latex formula support (#434) (879cbb6)
+- D8CORE-4194 Add url text for the link on media w caption paragraph (#423) (1122ead)
+- Updates from stanford_profile 2021-07-01 (1f57e2c)
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x (b839e04)
+- Added and enabled the PDB module (#432) (de890ff)
+- Updates from stanford_profile (#169) (85353f2)
+- D8CORE-4378: adding the skip to main content on these list page layouts that were missing (#431) (fc11f09)
+- Corrected the events schedule display settings for the pattern refactor (aff23dc)
+- Updates from stanford_profile 2021-06-24 (754ba5c)
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x (2f9ffbf)
+- Exported configs after Drupal 9.2.0 upgrade (#429) (a81ffde)
+
 8.x-2.10
 --------------------------------------------------------------------------------
 _Release Date: 2021-06-11_
