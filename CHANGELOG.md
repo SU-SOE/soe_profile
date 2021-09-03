@@ -1,5 +1,25 @@
 # Stanford Profile
 
+
+8.x-2.12
+--------------------------------------------------------------------------------
+_Release Date: 2021-09-03_
+
+- Updates from stanford_profile (#182)
+- Updates from stanford_profile 2021-08-10
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- D8CORE-4653 Add editoria11y module with permissions for contributors (#445)
+- Updates from stanford_profile 2021-08-05
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- D8CORE-4681 Enabled rabbit hole taxonomy support (#443)
+- D8CORE-4350 Sort publications by month and day along with year (#444)
+- CAW21-82 Build accordion paragraph component (#440)
+- D8CORE-2277: updated fields help text (#441)
+- D8CORE-2278: Tweaks to Event Series help text (#442)
+- Updates from stanford_profile 2021-07-30
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- D8CORE-4668 Allow new google analytics account id format `G-` (#439)
+
 8.x-2.11
 --------------------------------------------------------------------------------
 _Release Date: 2021-07-09_
