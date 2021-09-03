@@ -230,7 +230,7 @@ class RolesCest {
         continue;
       }
 
-      $I->cantSeeLink($link_text, $path);
+      $I->cantSeeLink($link_text, $path ?? '');
     }
   }
 
