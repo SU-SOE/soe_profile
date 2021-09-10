@@ -1,6 +1,19 @@
 # Stanford Profile
 
 
+8.x-2.13
+--------------------------------------------------------------------------------
+_Release Date: 2021-09-10_
+
+- Updates from stanford_profile 2021-09-10
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- Merge branch 'master' into 8.x-2.x
+- 8.2.12
+- 8.2.11
+- 8.2.11
+- D8CORE-4643 Swapped out the "menu block" block with a regular "menu" block (#446)
+
+
 8.x-2.12
 --------------------------------------------------------------------------------
 _Release Date: 2021-09-03_
