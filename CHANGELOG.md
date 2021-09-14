@@ -1,6 +1,20 @@
 # Stanford Profile
 
 
+8.x-2.14
+--------------------------------------------------------------------------------
+_Release Date: 2021-09-14_
+
+- Merge branch '8.x-2.x' of https://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- Merge branch 'master' into 8.x-2.x
+- 8.2.13
+- 8.2.13
+- D8CORE-4534: adding a skip anchor block to the filtered pub page (#437)
+- D8CORE-4534: adding a skip anchor block to the filtered pub page (#437)
+- Updates from stanford_profile (#187)
+- D8CORE-4749 Add and configure views bulk edit (#449)
+
+
 8.x-2.13
 --------------------------------------------------------------------------------
 _Release Date: 2021-09-10_
