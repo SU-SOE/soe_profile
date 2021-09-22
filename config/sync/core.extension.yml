@@ -133,6 +133,7 @@ module:
   soe_paragraph_stories: 0
   soe_paragraphs: 0
   sophron: 0
+  stanford_actions: 0
   stanford_basic_page_types: 0
   stanford_date_formats: 0
   stanford_events: 0
