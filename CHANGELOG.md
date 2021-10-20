@@ -1,5 +1,52 @@
 # Stanford Profile
 
+
+8.x-2.15
+--------------------------------------------------------------------------------
+_Release Date: 2021-10-08_
+
+- Merge branch '8.x-2.x' of https://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- Added publications help text
+- Updates from stanford_profile 2021-10-08
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- Index intranet content (#458)
+- Updates from stanford_profile 2021-10-07
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- adjusted publication importer label
+- Updates from stanford_profile 2021-10-05
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- Add citation to clonable entities
+- Updates from stanford_profile 2021-09-30
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- tweaks to publication csv importer for easier data
+- Added site manager permission to import publications
+- Updates from stanford_profile 2021-09-29
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- Exported config after database updates with latest contrib
+- D8CORE-3749 Publication CSV importer
+- D8CORE-4693 Filter events by the second instead of the day (#457)
+- Updates from stanford_profile 2021-09-25
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- D8CORE-4759 add specific view mode for search indexing for better control (#454)
+- D8CORE-4096 Updated help section text (#455)
+- Updates from stanford_profile (#192)
+- D8CORE-3026 added and configured stanford_actions (#453)
+- Updates from stanford_profile 2021-09-18
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- Added layout builder role (#451)
+- Updates from stanford_profile 2021-09-16
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- Configure the new media embeddable validator (#450)
+- Merge branch 'master' into 8.x-2.x
+- Merge branch '8.x-2.x' of https://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- Merge branch 'master' into 8.x-2.x
+- 8.2.13
+- 8.2.13
+- D8CORE-4534: adding a skip anchor block to the filtered pub page (#437)
+- D8CORE-4534: adding a skip anchor block to the filtered pub page (#437)
+- Updates from stanford_profile (#187)
+- D8CORE-4749 Add and configure views bulk edit (#449)
+
 8.x-2.14
 --------------------------------------------------------------------------------
 _Release Date: 2021-09-14_
