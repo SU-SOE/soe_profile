@@ -197,7 +197,7 @@ module:
   paragraphs: 11
   soe_profile: 1000
 theme:
-  stable9: 0
+  stable: 0
   seven: 0
   stanford_basic: 0
   soe_basic: 0
