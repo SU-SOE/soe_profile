@@ -1,6 +1,33 @@
 # Stanford Profile
 
 
+8.x-2.16
+--------------------------------------------------------------------------------
+_Release Date: 2021-11-19_
+
+- Merge branch '8.x-2.x' of https://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- D8CORE-4521 Localist Events Importer (#463)
+- Change profile helper module weight for priority
+- enabled stable9 theme in core.extension
+- Merge branch '8.x-2.x' of https://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- D8CORE-4677 Use an access token to fetch stanford-only profile images from CAP (#467)
+- D8CORE-4860 Wrap publication importer body text in <p> (#466)
+- D8CORE-4996 Remove taxonomy term on basic page card and list displays (#465)
+- Updates from stanford_profile 2021-11-12
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- D8CORE-4246 Add fontawesome module for wysiwyg icon support (#464)
+- D8CORE-4876 Enable ajax on publication list view
+- D8CORE-4824 Disable accordion on event series
+- D8CORE-4878: Added configs for oEmbed Providers module (#462)
+- D8CORE-4871: adding a class to the table element and the aside element (#460)
+- Merge branch 'master' into 8.x-2.x
+- Merge branch '8.x-2.x' of https://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- Merge branch 'master' into 8.x-2.x
+- 8.2.14
+- 8.2.14
+- D8CORE-4816 Add configurable allowed tags for unstructured embed (#461)
+
+
 8.x-2.15
 --------------------------------------------------------------------------------
 _Release Date: 2021-10-08_
