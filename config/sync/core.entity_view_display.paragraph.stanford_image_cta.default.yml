@@ -36,7 +36,6 @@ mode: default
 content:
   stanford_image_cta_image:
     type: media_multimedia_formatter
-    weight: 0
     label: hidden
     settings:
       view_mode: default
@@ -54,11 +53,10 @@ content:
     third_party_settings:
       field_formatter_class:
         class: su-image-cta-paragraph__image
+    weight: 0
     region: image
   stanford_image_cta_link:
     type: link
-    weight: 1
-    region: link
     label: hidden
     settings:
       trim_length: null
@@ -69,5 +67,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: 'su-link--action su-image-cta-paragraph__link'
+    weight: 1
+    region: link
 hidden:
   search_api_excerpt: true
