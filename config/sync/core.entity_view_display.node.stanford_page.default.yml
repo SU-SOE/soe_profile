@@ -29,10 +29,10 @@ third_party_settings:
       -
         layout_id: jumpstart_ui_one_column
         layout_settings:
+          label: ''
           extra_classes: node-stanford-page-title
           centered: centered-container
           columns: default
-          label: ''
         components:
           af0809fe-fe61-4e78-be4e-4837cd773c26:
             uuid: af0809fe-fe61-4e78-be4e-4837cd773c26
@@ -40,15 +40,14 @@ third_party_settings:
             configuration:
               id: 'field_block:node:stanford_page:title'
               label: Title
-              provider: layout_builder
               label_display: '0'
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                label: hidden
                 type: entity_title_heading
+                label: hidden
                 settings:
                   tag: h1
                 third_party_settings: {  }
@@ -69,15 +68,14 @@ third_party_settings:
             configuration:
               id: 'field_block:node:stanford_page:su_page_banner'
               label: Banner
-              provider: layout_builder
               label_display: '0'
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                label: hidden
                 type: entity_reference_revisions_entity_view
+                label: hidden
                 settings:
                   view_mode: default
                 third_party_settings: {  }

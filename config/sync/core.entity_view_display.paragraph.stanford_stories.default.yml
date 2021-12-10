@@ -52,15 +52,13 @@ mode: default
 content:
   stanford_stories_border:
     type: list_key
-    weight: 6
-    region: border_color_variant
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 6
+    region: border_color_variant
   stanford_stories_cta_link:
     type: link
-    weight: 5
-    region: cta
     label: hidden
     settings:
       trim_length: null
@@ -71,20 +69,20 @@ content:
     third_party_settings:
       field_formatter_class:
         class: su-stories-paragraph__cta
+    weight: 5
+    region: cta
   stanford_stories_name:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings:
       field_formatter_class:
         class: su-stories-paragraph__name
-    type: string
+    weight: 1
     region: person_content
   stanford_stories_node_link:
     type: link
-    weight: 4
-    region: link
     label: hidden
     settings:
       trim_length: null
@@ -95,34 +93,36 @@ content:
     third_party_settings:
       field_formatter_class:
         class: 'su-link--external su-stories-paragraph__node-link'
+    weight: 4
+    region: link
   stanford_stories_photo:
     type: media_responsive_image_formatter
-    weight: 0
     label: hidden
     settings:
       view_mode: stanford_image_large_square
-      image_style: ''
       link: false
+      image_style: ''
     third_party_settings:
       field_formatter_class:
         class: su-stories-paragraph__photo
+    weight: 0
     region: image
   stanford_stories_quote:
     type: text_default
-    weight: 3
-    region: quote
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 3
+    region: quote
   stanford_stories_title:
     type: string
-    weight: 2
-    region: person_content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings:
       field_formatter_class:
         class: su-stories-paragraph__title
+    weight: 2
+    region: person_content
 hidden:
   search_api_excerpt: true

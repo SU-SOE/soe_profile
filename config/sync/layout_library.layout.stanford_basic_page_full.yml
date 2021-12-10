@@ -10,10 +10,10 @@ layout:
   -
     layout_id: defaults
     layout_settings:
+      label: ''
       extra_classes: node-stanford-page-full-width-title
       centered: centered-container
       columns: default
-      label: ''
     components:
       6ce9c0ce-a019-44f4-9225-4c2a1a9fbc6d:
         uuid: 6ce9c0ce-a019-44f4-9225-4c2a1a9fbc6d
@@ -21,14 +21,13 @@ layout:
         configuration:
           id: 'field_block:node:stanford_page:title'
           label: Title
-          provider: layout_builder
           label_display: '0'
           provider: layout_builder
           context_mapping:
             entity: layout_builder.entity
           formatter:
-            label: hidden
             type: entity_title_heading
+            label: hidden
             settings:
               tag: h1
             third_party_settings: {  }
@@ -48,14 +47,13 @@ layout:
         configuration:
           id: 'field_block:node:stanford_page:su_page_banner'
           label: Banner
-          provider: layout_builder
           label_display: '0'
           provider: layout_builder
           context_mapping:
             entity: layout_builder.entity
           formatter:
-            label: hidden
             type: entity_reference_revisions_entity_view
+            label: hidden
             settings:
               view_mode: default
             third_party_settings: {  }

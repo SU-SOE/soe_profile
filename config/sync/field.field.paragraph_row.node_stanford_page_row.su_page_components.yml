@@ -51,11 +51,11 @@ settings:
         weight: 8
         enabled: false
       stanford_person_cta:
-        enabled: true
         weight: 11
-      stanford_schedule:
         enabled: true
+      stanford_schedule:
         weight: 12
+        enabled: true
       stanford_spacer:
         weight: 9
         enabled: false

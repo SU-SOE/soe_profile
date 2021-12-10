@@ -21,6 +21,8 @@ third_party_settings:
       -
         layout_id: defaults
         layout_settings:
+          label: ''
+          context_mapping: {  }
           extra_classes: 'section-bgcolor--title section-editorial-content section-stanford-pubs-views-header publications-terms--filtered'
           centered: null
           columns: default

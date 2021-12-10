@@ -36,8 +36,8 @@ dependencies:
     - rabbit_hole
     - redirect
     - role_delegation
+    - soe_profile
     - stanford_migrate
-    - stanford_profile
     - stanford_publication
     - system
     - taxonomy

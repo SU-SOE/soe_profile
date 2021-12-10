@@ -55,8 +55,8 @@ dependencies:
     - responsive_image
     - role_delegation
     - shortcut
+    - soe_profile
     - stanford_media
-    - stanford_profile
     - stanford_publication
     - system
     - taxonomy

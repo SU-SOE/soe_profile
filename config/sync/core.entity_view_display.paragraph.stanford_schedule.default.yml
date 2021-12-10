@@ -102,4 +102,5 @@ content:
         class: ''
     weight: 4
     region: url
-hidden: {  }
+hidden:
+  search_api_excerpt: true

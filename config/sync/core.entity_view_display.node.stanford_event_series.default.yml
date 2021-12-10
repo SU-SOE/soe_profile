@@ -83,11 +83,8 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: 'su-event-series-subheadline flex-9-of-12'
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 5
+            additional: {  }
           5b9e13a7-5d6f-4142-8bf4-2439a554fc7d:
             uuid: 5b9e13a7-5d6f-4142-8bf4-2439a554fc7d
             region: main
@@ -107,11 +104,8 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: 'su-event-series-dek flex-7-of-12'
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 6
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: jumpstart_ui_one_column
@@ -191,6 +185,7 @@ third_party_settings:
         - jumpstart_ui_three_column
         - stanford_events_editorial_content
         - stanford_events_body
+        - soe_basic_full_width_header
       blacklisted_blocks: {  }
       whitelisted_blocks:
         'Chaos Tools': {  }
@@ -227,15 +222,6 @@ third_party_settings:
         'Stanford SimpleSAML PHP': {  }
         System:
           - system_messages_block
-      blacklisted_blocks: {  }
-      allowed_layouts:
-        - jumpstart_ui_one_column
-        - jumpstart_ui_one_column_overlay
-        - jumpstart_ui_two_column
-        - jumpstart_ui_three_column
-        - stanford_events_editorial_content
-        - stanford_events_body
-        - soe_basic_full_width_header
 id: node.stanford_event_series.default
 targetEntityType: node
 bundle: stanford_event_series

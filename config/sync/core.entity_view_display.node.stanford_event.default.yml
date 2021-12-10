@@ -58,8 +58,8 @@ third_party_settings:
               label_display: '0'
               provider: jumpstart_ui
               context_mapping: {  }
-            additional: {  }
             weight: 5
+            additional: {  }
           9c246a83-54f9-4f93-a975-e9bdc0259f82:
             uuid: 9c246a83-54f9-4f93-a975-e9bdc0259f82
             region: main
@@ -79,11 +79,8 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: 'su-event-headline flex-10-of-12'
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 7
+            additional: {  }
           2d7ecccf-4511-455e-ae69-f2b24a376a43:
             uuid: 2d7ecccf-4511-455e-ae69-f2b24a376a43
             region: main
@@ -103,11 +100,8 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: 'su-event-subheadline flex-9-of-12'
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 8
+            additional: {  }
           ff876f05-89b3-49c8-9bae-516ac86b4e79:
             uuid: ff876f05-89b3-49c8-9bae-516ac86b4e79
             region: main
@@ -127,11 +121,8 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: 'su-event-dek flex-7-of-12'
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 9
+            additional: {  }
           625d8b06-94fb-4027-bec0-f39e16810c8a:
             uuid: 625d8b06-94fb-4027-bec0-f39e16810c8a
             region: main
@@ -544,6 +535,7 @@ third_party_settings:
         - jumpstart_ui_three_column
         - stanford_events_editorial_content
         - stanford_events_body
+        - soe_basic_full_width_header
       blacklisted_blocks: {  }
       whitelisted_blocks:
         'Chaos Tools': {  }
@@ -593,15 +585,6 @@ third_party_settings:
         'Stanford SimpleSAML PHP': {  }
         System:
           - system_messages_block
-      blacklisted_blocks: {  }
-      allowed_layouts:
-        - jumpstart_ui_one_column
-        - jumpstart_ui_one_column_overlay
-        - jumpstart_ui_two_column
-        - jumpstart_ui_three_column
-        - stanford_events_editorial_content
-        - stanford_events_body
-        - soe_basic_full_width_header
 id: node.stanford_event.default
 targetEntityType: node
 bundle: stanford_event
