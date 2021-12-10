@@ -14,7 +14,6 @@ mode: default
 content:
   su_component:
     type: entity_reference_revisions_entity_view
-    weight: 0
     label: hidden
     settings:
       view_mode: default
