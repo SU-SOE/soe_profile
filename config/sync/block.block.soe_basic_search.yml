@@ -5,9 +5,10 @@ dependencies:
   config:
     - views.view.search
   module:
+    - config_pages
     - views
   theme:
-    - stanford_basic
+    - soe_basic
 id: soe_basic_search
 theme: soe_basic
 region: search
