@@ -39,15 +39,15 @@ mode: default
 content:
   stanford_cta_list_deck:
     type: text_default
-    weight: 1
-    region: paragraph_content
     label: hidden
     settings: {  }
     third_party_settings:
       field_formatter_class:
         class: su-cta-list-paragraph__description
+    weight: 1
+    region: paragraph_content
   stanford_cta_list_header:
-    weight: 0
+    type: entity_title_heading
     label: hidden
     settings:
       tag: h2
@@ -55,16 +55,14 @@ content:
     third_party_settings:
       field_formatter_class:
         class: su-cta-list-paragraph__header
-    type: entity_title_heading
+    weight: 0
     region: paragraph_content
   stanford_cta_list_links:
     type: link_class
-    weight: 2
-    region: links
     label: hidden
     settings:
-      trim_length: null
       class: ''
+      trim_length: null
       url_only: false
       url_plain: false
       rel: '0'
@@ -74,5 +72,7 @@ content:
         class: 'su-link--action su-image-cta-paragraph__link'
       ds:
         ds_limit: ''
+    weight: 2
+    region: links
 hidden:
   search_api_excerpt: true

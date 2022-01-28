@@ -1,5 +1,25 @@
 # Stanford Profile
 
+
+8.x-2.18
+--------------------------------------------------------------------------------
+_Release Date: 2022-01-27_
+
+- Updates from stanford_profile (#214)
+- Merge branch 'master' into 8.x-2.x
+- Updates from stanford_profile 2022-01-11
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- Added localist url to external source field (#471)
+- Adjust localist end dates for Smart Date "All Day" (#474)
+- Updates from stanford_profile (#209)
+- Added checkbox to hide site search in site settings config page (#472)
+- D8CORE-5183: changes to external links config to skip localist (#473)
+- D8CORE-5119: added help text for the localist import field. (#470)
+- Updates from Stanford Profile 2021-12-10
+- clean config export
+- Merge branch '8.x-2.x' of https://github.com/SU-SWS/stanford_profile into updates
+- Upgrade drupal core to 9.3.0 with config updates (#469)
+
 8.x-2.17
 --------------------------------------------------------------------------------
 _Release Date: 2022-01-20_
