@@ -36,6 +36,7 @@ module:
   core_event_dispatcher: 0
   crop: 0
   ctools: 0
+  ctools_views: 0
   datetime: 0
   datetime_range: 0
   default_content: 0
@@ -79,6 +80,7 @@ module:
   inline_entity_form: 0
   inline_form_errors: 0
   jsonapi: 0
+  jsonapi_extras: 0
   jumpstart_ui: 0
   key: 0
   layout_builder: 0
@@ -192,6 +194,7 @@ module:
   views_bulk_edit: 0
   views_bulk_operations: 0
   views_contextual_filters_or: 0
+  views_custom_cache_tag: 0
   views_event_dispatcher: 0
   views_infinite_scroll: 0
   views_taxonomy_term_name_depth: 0
