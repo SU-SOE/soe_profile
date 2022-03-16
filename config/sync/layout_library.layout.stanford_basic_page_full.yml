@@ -37,6 +37,8 @@ layout:
   -
     layout_id: jumpstart_ui_one_column
     layout_settings:
+      label: ''
+      context_mapping: {  }
       extra_classes: ''
       centered: null
       columns: default
