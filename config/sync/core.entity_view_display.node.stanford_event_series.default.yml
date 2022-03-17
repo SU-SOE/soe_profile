@@ -176,7 +176,34 @@ third_party_settings:
   layout_library:
     enable: false
   layout_builder_restrictions:
-    allowed_block_categories: {  }
+    allowed_block_categories:
+      - 'Basic Page Type Lists (Views)'
+      - 'Chaos Tools'
+      - 'Config Pages'
+      - 'Content fields'
+      - 'Custom block types'
+      - 'Custom blocks'
+      - Devel
+      - 'Devel PHP'
+      - 'Events Lists (Views)'
+      - Forms
+      - Help
+      - 'Inline blocks'
+      - 'Jumpstart UI'
+      - 'Lists (Views)'
+      - Menus
+      - 'News Lists (Views)'
+      - 'PDB React'
+      - 'People Lists (Views)'
+      - 'Publication (Views)'
+      - React
+      - 'SimpleSAMLphp Authentication'
+      - 'Stanford News'
+      - 'Stanford Profile Helper'
+      - 'Stanford SimpleSAML PHP'
+      - System
+      - Views
+      - core
     entity_view_mode_restriction:
       allowed_layouts:
         - jumpstart_ui_one_column
@@ -207,19 +234,16 @@ third_party_settings:
           - 'field_block:node:stanford_event_series:title'
         'Devel PHP': {  }
         Menus:
+          - 'system_menu_block:stanford-event-types'
           - 'menu_block:stanford-event-types'
           - 'menu_block:main'
-        'News Lists (Views)':
-          - 'views_block:stanford_news-vertical_teaser_term'
-          - 'views_block:stanford_news-vertical_teaser_term_list'
-          - 'views_block:stanford_news-block_1'
-          - 'views_block:stanford_news-term_block'
-        'People Lists (Views)':
-          - 'views_block:stanford_person-grid_list_all'
-          - 'views_block:stanford_person_list_terms_first-person_list_grid'
-        'SimpleSAMLphp Authentication': {  }
-        'Stanford News': {  }
-        'Stanford SimpleSAML PHP': {  }
+          - 'system_menu_block:main'
+          - 'system_menu_block:stanford-person-type'
+          - 'menu_block:stanford-person-type'
+          - 'system_menu_block:stanford-publication-topics'
+          - 'menu_block:stanford-publication-topics'
+          - 'system_menu_block:news-topics'
+          - 'menu_block:news-topics'
         System:
           - system_messages_block
 id: node.stanford_event_series.default
