@@ -1,5 +1,63 @@
 # Stanford Profile
 
+
+8.x-2.21
+--------------------------------------------------------------------------------
+_Release Date: 2022-03-17_
+
+- Fix yaml configs
+- Merge branch '8.x-2.x' of https://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- Configure layout builder restrictions consistently (#509)
+- Enable minimally branded theme for easier switching (#508)
+- Updates from stanford_profile 2022-03-16
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- adjusted VBO dependency to inherit from stanford_actions
+- Updated google analytics to latest 4.0 version
+- D8CORE-3345 Updated path auto pattern for events, news, and people (#505)
+- Added jsonapi_extras and disable write access
+- D8CORE-4704 Fix person list to show nested content (#506)
+- D8CORE-4526 Adjust full width layout for page title position (#497)
+- D8CORE-5583 enabled views_custom_cache_tag module
+- Process Localist html to fix <img> tag styles to attributes (#504)
+- Updates from stanford_profile 2022-03-15
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- Removed scheduler from media and taxonomy terms
+- Updates from stanford_profile 2022-03-11
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- conditional fields (#503)
+- Updates from stanford_profile 2022-03-09
+- Merge branch '8.x-2.x' of https://github.com/SU-SWS/stanford_profile into 2022-03-09
+- Added and enabled webp for performance improvement
+- 8.2.19
+- 8.2.19
+- Modified the revision test to have a dynamic page title.
+- Updates from stanford_profile (#226)
+- Enabled pdb_react module.
+- D8CORE-2893: Added minimally branded subtheme (#492)
+- Updates from stanford_profile 2022-03-02
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- D8CORE-5180 D8CORE-5227 Remove alt text on people images (#498)
+- D8CORE-4713 Added id attribute for several wysiwyg tags (#496)
+- D8CORE-4974 Added a third content block for the local footer (#491)
+- Updates from stanford_profile 2022-02-25
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- BOT-8: Adjusted file upload access test for Intranet and allow_file_uploads. (#493)
+- Updates from stanford_profile 2022-02-23
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- Updated config and tests for smartdate module update (#494)
+- Updates from stanford_profile (#221)
+- D8CORE-5278 Added scheduler module and configured for all content types (#486)
+- preg_replace of null is deprecated in php 8, use strings (#490)
+- Fix pathauto parent path generation (#489)
+- Merge branch 'master' into 8.x-2.x
+- Updates from stanford_profile 2022-02-04
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- Merge branch 'master' into 8.x-2.x
+- Updates from stanford_profile 2022-02-02
+- Merge branch '8.x-2.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x-2.x
+- D8CORE-5236: Updated text on "Load More" buttons to be more descriptive (#483)
+- Merge branch 'master' into 8.x-2.x
+
 8.x-2.20
 --------------------------------------------------------------------------------
 _Release Date: 2022-02-04_
