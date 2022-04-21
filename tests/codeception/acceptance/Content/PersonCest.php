@@ -8,6 +8,20 @@ use Faker\Factory;
 class PersonCest {
 
   /**
+   * Faker service.
+   *
+   * @var \Faker\Generator
+   */
+  protected $faker;
+
+  /**
+   * Test constructor.
+   */
+  public function __construct() {
+    $this->faker = Factory::create();
+  }
+
+  /**
    * Sidebar "Contact" header should only appear once.
    */
   public function testDoubleHeader(AcceptanceTester $I){
