@@ -92,6 +92,24 @@ _Release Date: 2022-05-02_
 - 8.2.20
 
 
+8.x-3.1
+--------------------------------------------------------------------------------
+_Release Date: 2022-03-23_
+
+- Merge branch '8.x' of https://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-5172: Updated references to localist and events-legacy urls
+- DO not require lockup option select, prevent requiring lockup fields
+- 8.3.1
+- 8.3.1
+- Switched stanford_profile dependency in composer.json
+- Merge branch 'main' into 8.x
+- Merge branch 'main' into 8.x
+- switch master branch to main
+- Adjust circleci jobs
+- 8.3.0
+- 8.2.20
+
+
 8.x-2.21
 --------------------------------------------------------------------------------
 _Release Date: 2022-03-17_
