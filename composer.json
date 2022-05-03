@@ -98,9 +98,9 @@
     "require": {
         "ext-imagick": "*",
         "composer/installers": "^1.2",
-        "su-soe/soe_basic": "^8.1",
-        "su-soe/soe_paragraphs": "^8.1",
-        "su-sws/stanford_profile": "^8.3"
+        "su-soe/soe_basic": "8.x-dev",
+        "su-soe/soe_paragraphs": "8.x-dev",
+        "su-sws/stanford_profile": "8.x-dev"
     },
     "config": {
         "sort-packages": true
