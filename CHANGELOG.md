@@ -1,5 +1,96 @@
 # Stanford Profile
 
+8.x-4.0
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-02_
+
+- Added twitter card metadata for person content
+- Several tweaks to the taxonomy display and fields. (#532)
+- Update block.block.minimally_branded_subtheme_pagetitle.yml (#535)
+- D8CORE-5772: Added custom block and edit link on `/courses` page (#534)
+- D8CORE-5748: Adding a listy style to the taxonomy terms (#533)
+- D8CORE-5778: adding the grid col 3 for three across (#530)
+- D8CORE-5627: added <object> and <param> to allowed tags in embeddables (#529)
+- D8CORE-5729 People term pages: display only child terms groupings (#526)
+- D8CORE-5187 Courses and Importer(#500)
+- D8CORE-5611 Allow multiple basic page types and change widget
+- D8CORE-5696 Only display location address once (#520)
+- D8CORE-5629 Adjust profile link url for stanford only profiles (#521)
+- D8CORE-4118 Remove layout builder settings on other display modes (#519)
+- D8CORE-4128 Change views to HTML lists (#518)
+- Enabled transliterate_filenames from stanford_media
+- D8CORE-3975 Created shared tags vocabulary and fields (#511)
+- D8CORE-5666 Enabled and configured responsive_tables_filter module (#515)
+- Dont trim the url on even cards
+- Updated link_title_formatter module
+- Updated domain_301_redirect version
+- D8CORE-5172: Updated references to localist and events-legacy urls
+- DO not require lockup option select, prevent requiring lockup fields
+
+
+8.x-3.2
+--------------------------------------------------------------------------------
+_Release Date: 2022-03-22_
+
+- DO not require lockup option select, prevent requiring lockup fields
+- D8CORE-5172: Updated references to localist and events-legacy urls
+
+8.x-3.1
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-02_
+
+- updated dependencies
+- Merge branch '8.x' of https://github.com/SU-SWS/stanford_profile into 8.x
+- Several tweaks to the taxonomy display and fields. (#532)
+- Update block.block.minimally_branded_subtheme_pagetitle.yml (#535)
+- D8CORE-5772: Added custom block and edit link on `/courses` page (#534)
+- Updates from stanford_profile (#247)
+- Updates from stanford_profile (#246)
+- D8CORE-5748: Adding a listy style to the taxonomy terms (#533)
+- D8CORE-5778: adding the grid col 3 for three across (#530)
+- Updates from stanford_profile 2022-04-22
+- Merge branch '8.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-5627: added <object> and <param> to allowed tags in embeddables (#529)
+- Updates from stanford_profile 2022-04-21
+- config fixup
+- Merge branch '8.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-5729 People term pages: display only child terms groupings (#526)
+- D8CORE-5187 Courses and Importer(#500)
+- localist terms (#522)
+- Merge branch '8.x' of https://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-5611 Allow multiple basic page types and change widget
+- Updates from stanford_profile 2022-04-09
+- Merge branch '8.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-5696 Only display location address once (#520)
+- Updates from stanford_profile 2022-04-08
+- Merge branch '8.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-5629 Adjust profile link url for stanford only profiles (#521)
+- D8CORE-4118 Remove layout builder settings on other display modes (#519)
+- D8CORE-4128 Change views to HTML lists (#518)
+- Merge branch '8.x' of https://github.com/SU-SWS/stanford_profile into 8.x
+- Enabled transliterate_filenames from stanford_media
+- Merge branch '8.x' of https://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-3975 Created shared tags vocabulary and fields (#511)
+- D8CORE-5666 Enabled and configured responsive_tables_filter module (#515)
+- Updates from stanford_profile 2022-04-02
+- Merge branch '8.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x
+- Dont trim the url on even cards
+- Updated link_title_formatter module
+- Updated domain_301_redirect version
+- Merge branch '8.x' of https://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-5172: Updated references to localist and events-legacy urls
+- DO not require lockup option select, prevent requiring lockup fields
+- 8.3.1
+- 8.3.1
+- Switched stanford_profile dependency in composer.json
+- Merge branch 'main' into 8.x
+- switch master branch to main
+- Merge branch 'main' into 8.x
+- switch master branch to main
+- Adjust circleci jobs
+- 8.3.0
+- 8.2.20
+
 
 8.x-3.1
 --------------------------------------------------------------------------------
