@@ -6,14 +6,26 @@ use Drupal\config_pages\Entity\ConfigPages;
  * Test the external link module functionality.
  */
 class ExtLinkCest {
+
+  /**
+   * External link config settings.
+   *
+   * @var array
+   */
+  protected $extLinkSettings = [];
+
   /**
    * Start with a clean config page.
+   * Modify the extlink settings first.
    *
    * @param \AcceptanceTester $I
    *   Tester.
    */
   public function _before(FunctionalTester $I){
     $this->_after($I);
+    $config = \Drupal::configFactory()->getEditable('extlink.settings');
+    $this->extLinkSettings = $config->getRawData();
+    $config->set('extlink_class', 'su-link su-link--external')->save();
   }
 
   /**
@@ -35,28 +47,7 @@ class ExtLinkCest {
       'context' => 'a:0:{}',
     ]);
     $config_page->save();
-  }
 
-  /**
-   * External link config settings.
-   *
-   * @var array
-   */
-  protected $extLinkSettings = [];
-
-  /**
-   * Modify the extlink settings first.
-   */
-  public function _before(FunctionalTester $I) {
-    $config = \Drupal::configFactory()->getEditable('extlink.settings');
-    $this->extLinkSettings = $config->getRawData();
-    $config->set('extlink_class', 'su-link su-link--external')->save();
-  }
-
-  /**
-   * Reset the extlink settings.
-   */
-  public function _after(FunctionalTester $I) {
     if ($this->extLinkSettings) {
       \Drupal::configFactory()
         ->getEditable('extlink.settings')
