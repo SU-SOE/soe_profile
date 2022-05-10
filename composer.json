@@ -100,7 +100,7 @@
         "composer/installers": "^1.2",
         "su-soe/soe_basic": "^8.1",
         "su-soe/soe_paragraphs": "^8.1",
-        "su-sws/stanford_profile": "^8.2"
+        "su-sws/stanford_profile": "^8.4"
     },
     "config": {
         "sort-packages": true
