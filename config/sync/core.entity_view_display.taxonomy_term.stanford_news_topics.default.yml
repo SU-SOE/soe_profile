@@ -26,7 +26,7 @@ third_party_settings:
         layout_settings:
           label: ''
           context_mapping: {  }
-          extra_classes: ''
+          extra_classes: 'section-bgcolor--title section-editorial-content section-stanford-news-views-header'
           centered: null
           columns: default
         components:
@@ -48,7 +48,7 @@ third_party_settings:
                   tag: h1
                 third_party_settings:
                   field_formatter_class:
-                    class: 'su-margin-top-6 su-margin-bottom-5'
+                    class: centered-container
             weight: 0
             additional: {  }
         third_party_settings: {  }
