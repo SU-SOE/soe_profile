@@ -1,0 +1,12 @@
+name: 'CTA List Paragraph'
+description: 'A paragraph type which provides a list of text CTAs'
+type: module
+core_version_requirement: ^8.8 || ^9
+package: Stanford
+dependencies:
+  - ds:ds
+  - drupal:field
+  - paragraphs:paragraphs
+  - drupal:text
+  - soe_paragraphs:soe_paragraphs
+version: 8.x-1.0-dev

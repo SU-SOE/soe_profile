@@ -1,0 +1,22 @@
+cta-list-paragraph:
+  label: CTA List Paragraph
+  description: CTA List Paragraph
+  variants:
+    default:
+      label: Default
+      Description: "Default"
+  fields:
+    paragraph_content:
+      type: text
+      label: "Content"
+      description: "The headline and description text for the paragraph"
+    links:
+      type: text
+      label: "Links"
+      description: "One or more hyperlinks"
+  use: "@soe_paragraph_cta_list/cta-list-paragraph.html.twig"
+  libraries:
+    - cta-list-paragraph:
+        css:
+          component:
+            ../../../dist/css/cta-list-paragraph.styles.css: {}

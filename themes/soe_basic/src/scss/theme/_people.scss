@@ -1,0 +1,230 @@
+@charset 'UTF-8';
+
+// Person header
+.stanford-person-terms-term-name-h1 {
+  .page-title {
+    margin: 0;
+  }
+}
+
+// Person List
+div[class^='stanford-people-grid'] {
+
+  .views-col {
+    word-wrap: break-word;
+  }
+
+  // Load more button.
+  .js-pager__items {
+    .pager__item {
+      .button {
+        @include box-shadow('shallow');
+
+        background-color: $soe-color-turquoise;
+        color: $soe-color-black;
+
+        &:hover {
+          background-color: $su-color-black;
+          color: $su-color-white;
+        }
+      }
+    }
+  }
+}
+
+// Person Node.
+.layout--section-person-header {
+  &.centered-container {
+    @include modular-spacing('padding', 8 null 5 6);
+
+    color: $su-color-white;
+    margin: 0;
+
+    @include grid-media-max('sm') {
+      .su-quote__media {
+        &.flex-2-of-12 {
+          .field-media-image {
+            margin: unset;
+          }
+        }
+      }
+    }
+
+    .node-stanford-person-su-person-short-title {
+      display: none;
+      margin-top: 0;
+    }
+  }
+}
+
+.content {
+  .right-region {
+    .node-stanford-person-su-person-contact,
+    .node-stanford-person-su-person-telephone,
+    .node-stanford-person-su-person-location-name,
+    .node-stanford-person-su-person-links {
+      .block__title {
+        &::before {
+          color: $su-color-white;
+        }
+      }
+    }
+
+    .node-stanford-person-su-person-links {
+      .su-person-links {
+        a {
+          &:hover,
+          &:focus {
+            color: $su-color-white;
+            text-decoration: underline;
+
+            &::after {
+              background-color: $su-color-white;
+            }
+          }
+
+          &::after {
+            background-color: $soe-color-orange;
+          }
+        }
+      }
+    }
+  }
+
+  .su-person-content {
+
+    .su-link,
+    .su-link--external,
+    a {
+      color: $soe-color-orange;
+
+      &::after {
+        background-color: $soe-color-orange;
+      }
+
+      &:hover,
+      &:focus {
+        color: $su-color-white;
+        text-decoration: underline;
+
+        &::after {
+          background-color: $su-color-white;
+          fill: $su-color-white;
+        }
+
+        svg {
+          fill: $su-color-white;
+
+          &:hover,
+          &:focus {
+            fill: $su-color-white;
+          }
+        }
+      }
+
+      svg {
+        fill: $soe-color-orange;
+      }
+    }
+
+    .su-button {
+      color: $su-color-black;
+
+      &.su-link--external {
+        &::after {
+          background-color: $su-color-black;
+        }
+      }
+
+      &:hover {
+        color: $su-color-white;
+
+        &::after {
+          background-color: $su-color-white;
+        }
+      }
+    }
+
+    .su-card {
+      color: $su-color-black;
+
+      .su-card__button {
+        color: $soe-color-black;
+
+        &:hover {
+          color: $su-color-white;
+        }
+      }
+
+      .su-button {
+        color: $soe-color-black;
+        text-decoration: none;
+
+        &:hover {
+          color: $su-color-white;
+          text-decoration: underline;
+        }
+      }
+
+      a {
+        color: $su-color-bright-red;
+        text-decoration: underline;
+
+        &:hover {
+          color: $su-color-black;
+        }
+
+        &.su-link--action {
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .layout--section-person-header {
+      color: $su-color-white;
+    }
+
+    .su-person-affiliations {
+      .su-link {
+        background-color: $soe-color-pink;
+        color: $soe-color-black;
+
+        &::after {
+          background-color: $soe-color-black;
+        }
+
+        &:hover {
+          background-color: $su-color-black;
+          color: $su-color-white;
+        }
+      }
+    }
+
+    .su-person-links {
+      a {
+        &::after {
+          background-color: $su-color-white;
+        }
+      }
+    }
+
+    .su-person-profile-link {
+
+      a {
+        background-color: $soe-color-turquoise;
+        color: $soe-color-black;
+
+        &:hover {
+          background-color: $su-color-black;
+          color: $su-color-white;
+        }
+
+      }
+    }
+
+  }
+}

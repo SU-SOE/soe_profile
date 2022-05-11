@@ -1,0 +1,12 @@
+name: 'Stories Paragraph'
+description: 'A paragraph type to display a person to highlight'
+type: module
+core_version_requirement: ^8.8 || ^9
+package: Stanford
+dependencies:
+  - ds:ds
+  - drupal:field
+  - paragraphs:paragraphs
+  - drupal:text
+  - soe_paragraphs:soe_paragraphs
+version: 8.x-1.0-dev

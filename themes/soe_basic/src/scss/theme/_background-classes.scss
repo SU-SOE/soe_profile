@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+/* Set up background classes to be used in various contexts */
+.soe-bg--pink {
+  background-color: $soe-color-pink;
+}
+
+.soe-bg-turquoise {
+  background-color: $soe-color-turquoise;
+}
+
+.soe-bg-orange {
+  background-color: $soe-color-orange;
+}
+
+// gradients, using utilities/mixins/gradients.scss
+// solid gradients
+.soe-gradient--solid-purple-lagunita {
+  @include gradient--solid-purple-lagunita;
+}
+
+.soe-gradient--solid-purple-green {
+  @include gradient--solid-purple-green;
+}
+
+// transparent gradients
+.soe-gradient--transparent-purple-lagunita {
+  @include gradient--transparent-purple-lagunita;
+}
+
+.soe-gradient--transparent-purple-green {
+  @include gradient--transparent-purple-green;
+}
+
+.soe-gradient--transparent-blue-purple {
+  @include gradient--transparent-blue-purple;
+}
+
+.soe-gradient--transparent-purple-red {
+  @include gradient--transparent-purple-red;
+}
+
+.soe-gradient--transparent-blue-green {
+  @include gradient--transparent-blue-green;
+}
+
+// Background gradients as replacement for the author selected gradients over images. Also has the title colors.
+.section-bgcolor--title,
+.section-event-list--title,
+.section-editorial-content,
+.section-event-series--header,
+.section-event-series--header {
+  @include gradient--solid-purple-green;
+  @include modular-spacing('margin', null null 5 null);
+
+  h1,
+  h2,
+  a,
+  .su-event-series-dek,
+  .su-event-dek,
+  .su-event-sponsor {
+    color: $su-color-white;
+  }
+
+  @include grid-media-max('sm') {
+    padding: $su-gutter-sm;
+  }
+
+  @include grid-media-max('xs') {
+    padding: $su-gutter-xs;
+  }
+}
+
+.section-bgcolor--title {
+  &.section-event-list--title,
+  &.section-events-past--header,
+  &.section-stanford-news-views-header,
+  &.su-people-header,
+  &.section-header,
+  &.section-stanford-pubs-views-header {
+    @include modular-spacing('padding', 6 null 6 null);
+
+    .heading-h1 {
+      margin: 0;
+    }
+  }
+}
+
+// Person node has a background color
+.person {
+  @include gradient--solid-teal;
+
+  color: $su-color-white;
+}
+
+// Publications background header color
+.section-editorial-content {
+  .node-stanford-page-title {
+    margin-top: 0;
+  }
+}
+
+
+.section-bgcolor--title {
+  &.section-stanford-news-views-header {
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+  }
+  &.section-editorial-content {
+    &.su-people-header,
+    &.section-event-list--title,
+    &.section-pubs-list--title {
+      left: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      max-width: 100vw;
+      position: relative;
+      right: 50%;
+      width: 100vw;
+    }
+  }
+
+  h1 {
+    margin: 0;
+  }
+}

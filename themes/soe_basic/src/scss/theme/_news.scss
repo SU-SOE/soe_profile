@@ -1,0 +1,147 @@
+@charset 'UTF-8';
+
+// News List
+.su-news-list {
+
+  h2 {
+    line-height: 1.5;
+  }
+
+  .su-news-article {
+
+    a {
+      h2 {
+        font-weight: $su-font-black;
+
+        @include soe--link;
+
+        color: $su-color-black;
+
+        &:focus,
+        &:active,
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &:focus,
+      &:active,
+      &:hover {
+        text-decoration: none;
+
+        h2 {
+          @include soe--link-hover;
+        }
+
+      }
+
+      &::after {
+        background-color: $su-color-black;
+      }
+    }
+
+    .su-news-list__item__date {
+      @include modular-spacing('margin', null null 1 null);
+    }
+
+    .su-news-list__topics {
+      a {
+        color: $su-color-bright-blue;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Load more button.
+.js-pager__items {
+  .pager__item {
+    .button {
+      @include box-shadow('shallow');
+
+      background-color: $soe-color-turquoise;
+      color: $soe-color-black;
+
+      &:hover {
+        background-color: $su-color-black;
+        color: $su-color-white;
+      }
+    }
+  }
+}
+
+.stanford-news--cards,
+.stanford-news-vertical-teaser-term,
+.ds-entity--stanford-news {
+
+  h2 {
+    line-height: 1.5;
+  }
+
+  .su-news-vertical-teaser {
+    .su-news-vertical-teaser__link {
+      text-decoration: none;
+    }
+
+    .su-news-header {
+      @include modular-spacing('margin', null 2 2 2);
+
+      .su-link {
+        @include soe--link;
+        @include soe-link-icon(soe_arrow, 1.8rem, 0);
+
+        display: inline;
+        font-weight: $su-font-bold;
+        margin: 0;
+        animation: none;
+
+        &:hover,
+        &:focus {
+          @include soe--link-hover;
+
+          &::after {
+            transform: none;
+          }
+        }
+
+        &::after {
+          background-color: $su-color-black;
+        }
+
+        &.su-link--external {
+          @include link-icon(arrow-up-right, 1.3rem, topright);
+
+          &::after {
+            background-color: $su-color-black;
+          }
+        }
+      }
+    }
+  }
+
+  .stanford-news--cards {
+    > .more-link {
+      a {
+        background-color: $soe-color-turquoise;
+        color: $soe-color-black;
+
+        &:hover {
+          background-color: $su-color-black;
+          color: $su-color-white;
+        }
+      }
+    }
+  }
+
+  .su-news-vertical-teaser {
+    &.su-card {
+      .su-news-vertical-teaser__link {
+        &:hover {
+          h2 {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

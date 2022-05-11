@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+$soe-font--sans: Source Sans Pro; // waiting for Kerri to provide fall-back fonts
+
+@mixin soe-sans {
+  font-family: $soe-font--sans;
+}
+
+// Note that the main difference with basic styles is font family & font-weight
+@mixin soe-type-sans-base {
+  font-family: $soe-font--sans; // should already be, but we can make sure
+  font-weight: $su-font-black;
+}
+
+// SOE Type 5 maps to su-type-a, SOE Type 4 to b, etc. Not working as expected.
+// SOE Type 5 maps to su-type-a
+@mixin soe--type-5 {
+  @include soe-type-sans-base;
+  @include modular-typography(5);
+  font-weight: $su-font-black;
+}
+
+// SOE Type 4 maps to su-type-b
+@mixin soe--type-4 {
+  @include soe-type-sans-base;
+  @include modular-typography(4);
+  font-weight: $su-font-black;
+}
+
+// SOE Type 3 maps to su-type-c
+@mixin soe--type-3 {
+  @include soe-type-sans-base;
+  @include modular-typography(3);
+  font-weight: $su-font-black;
+}
+
+// SOE Type 2 maps to su-type-d
+@mixin soe--type-2 {
+  @include soe-type-sans-base;
+  @include modular-typography(2);
+  font-weight: $su-font-black;
+}
+
+// SOE Type 1 maps to su-type-e
+@mixin soe--type-1 {
+  @include soe-type-sans-base;
+  @include modular-typography(1);
+}
+
+@mixin soe--type-0 {
+  @include soe-type-sans-base;
+  @include modular-typography(0);
+}

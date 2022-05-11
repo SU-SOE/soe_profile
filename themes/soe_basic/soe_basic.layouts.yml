@@ -1,0 +1,11 @@
+soe_basic_full_width_header:
+  label: "SOE Full Width Header"
+  category: "SOE Basic - Sections"
+  path: templates/sections
+  template: header-full-width
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    main:
+      label: "Main"
