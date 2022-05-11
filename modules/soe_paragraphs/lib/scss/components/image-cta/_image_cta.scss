@@ -1,0 +1,62 @@
+@charset 'UTF-8';
+
+// Getting the correct margins for responsive sizing.
+.content {
+  .paragraph-item {
+    &.ptype-stanford-image-cta {
+      @include modular-spacing('margin', null null 7 null);
+
+      @include grid-media-between('md', 'lg') {
+        @include modular-spacing('margin', null null 6 null);
+      }
+
+      @include grid-media-between('xs', 'sm') {
+        @include modular-spacing('margin', null null 1 null);
+      }
+    }
+  }
+}
+
+.su-image-cta-paragraph {
+
+  .su-image-cta-paragraph__image {
+    @include grid-media-between('xs', 'sm') {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .su-image-cta-paragraph__link {
+    @include modular-spacing('padding', 0 1 1 1);
+
+    a {
+      color: $su-color-bright-red;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $su-color-black;
+        text-decoration: underline;
+      }
+    }
+
+    &::after {
+      background-color: $su-color-bright-red;
+
+      &:hover {
+        background-color: $su-color-black;
+      }
+
+      &:focus {
+        background-color: $su-color-black;
+      }
+
+      &:active {
+        background-color: $su-color-bright-red;
+      }
+    }
+  }
+}

@@ -1,0 +1,180 @@
+@charset 'UTF-8';
+
+.publication {
+  .main-region {
+
+    .su-publication-cta {
+      .su-button {
+        @include soe-button--turquoise;
+
+        &.su-link--external {
+          &::after {
+            background-color: $su-color-black;
+          }
+        }
+
+        &:hover {
+          color: $su-color-white;
+
+          &::after {
+            background-color: $su-color-white;
+          }
+        }
+      }
+    }
+
+  }
+
+  // More publications cards on the publication node page.
+  .stanford-publications-related {
+    .su-card__contents {
+      h2 {
+        > a:not(.su-link--external) {
+          @include soe--link;
+          @include soe-link-icon(soe_arrow, 1.8rem, 0);
+
+          display: inline;
+          font-weight: $su-font-bold;
+          margin: 0;
+          animation: none;
+
+          &::after {
+            background-color: $su-color-black;
+            color: $su-color-black;
+            transform: none;
+          }
+
+          &:hover,
+          &:focus {
+            @include soe--link-hover;
+
+            color: $su-color-black;
+            text-decoration: none;
+
+            &::after {
+              transform: none;
+            }
+          }
+
+          &::after {
+            background-color: $su-color-black;
+          }
+        }
+
+        > a {
+          &.su-link--external {
+            @include soe--link;
+            @include link-icon(arrow-up-right, 1.3rem, topright);
+
+            &::after {
+              background-color: $su-color-black;
+            }
+
+            &:hover,
+            &:focus {
+              @include soe--link-hover;
+
+              color: $su-color-black;
+              text-decoration: none;
+
+              &::after {
+                transform: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Publications list view
+.stanford-publications {
+  &.view {
+    a:not([class*="button"]) {
+      @include soe--link;
+
+      display: inline;
+      font-weight: $su-font-bold;
+      margin: 0;
+      animation: none;
+      color: $su-color-black;
+
+      &:hover,
+      &:focus {
+        @include soe--link-hover;
+
+        text-decoration: none;
+
+        &::after {
+          transform: none;
+        }
+      }
+
+      &::after {
+        background-color: $su-color-black;
+      }
+
+      &.su-link--external {
+        @include link-icon(arrow-up-right, 1.3rem, 0);
+
+        &::after {
+          background-color: $su-color-black;
+        }
+      }
+    }
+
+    > .more-link {
+      a {
+        background-color: $soe-color-turquoise;
+        border-bottom: 0;
+        color: $soe-color-black;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $su-color-black;
+          color: $su-color-white;
+          text-decoration: none;
+          border-bottom: 0;
+        }
+      }
+    }
+
+    // Load more button.
+    .js-pager__items {
+      .pager__item {
+        .button {
+          @include button-primary;
+          @include box-shadow('shallow');
+
+          background-color: $soe-color-turquoise;
+          color: $soe-color-black;
+
+          &:hover {
+            background-color: $su-color-black;
+            color: $su-color-white;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+// Filter list view
+// Getting the banner aligned full width
+.publications-terms--filtered {
+  max-width: 100vw;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  h1 {
+    @include centered-column;
+  }
+
+}

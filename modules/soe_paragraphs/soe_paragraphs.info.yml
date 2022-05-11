@@ -1,0 +1,17 @@
+name: 'SOE Paragraphs'
+type: module
+description: 'Provides custom paragraph types for SOE'
+core_version_requirement: ^8.8 || ^9
+package: Stanford
+version: 8.x-1.0-dev
+dependencies:
+  - paragraphs:paragraphs
+  - jumpstart_ui:jumpstart_ui
+  - ds:ds
+  - drupal:field
+  - drupal:text
+  - drupal:allowed_formats
+  - drupal:field_formatter_class
+  - drupal:element_class_formatter
+  - stanford_fields:stanford_fields
+  - stanford_text_editor:stanford_text_editor

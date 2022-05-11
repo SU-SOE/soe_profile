@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+/* SOE Specific colors, Stanford/Decanter colors are not defined here */
+// SOE Accent Colors
+$soe-color-turquoise: #00ece9;
+$soe-color-pink: #ff525c;
+$soe-color-orange: #ffbd54;
+
+// Colors that will be added to Decanter later and converted to using those values instead later:
+$su-color-bright-palo-alto: #017e7c;
+$su-color-bright-purple: #620059;
+$su-color-bay-blue: #016895;
+
+// Link display and hovers use border-bottom instead.
+@mixin soe--link {
+  border-bottom: 3px solid $soe-color-turquoise;
+  text-decoration: none;
+}
+
+@mixin soe--link-hover {
+  border-bottom: 5px solid $su-color-black;
+}
+
+// SU link-action should be red
+.su-link--action {
+  color: $su-color-bright-red;
+
+  &::after {
+    background-color: $su-color-bright-red;
+  }
+}
+
+// External action links
+a {
+  &.su-link--external {
+    text-decoration: inherit;
+  }
+}
+
+// Links have hover underline by default.
+.su-link {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.stanford-image-cta {
+  [data-extlink] {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.su-local-footer {
+  .mailto {
+    text-decoration: none;
+
+    svg {
+      fill: $su-color-bright-red;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+
+      svg {
+        fill: $su-color-black;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.stanford_stories_title
+    - paragraphs.paragraphs_type.stanford_stories
+id: paragraph.stanford_stories.stanford_stories_title
+field_name: stanford_stories_title
+entity_type: paragraph
+bundle: stanford_stories
+label: 'Title and/or Dept'
+description: 'The title and/or department of the person'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

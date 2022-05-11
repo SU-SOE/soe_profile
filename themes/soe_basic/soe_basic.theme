@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * Preprocess functions for SOE Basic.
+ */
+
+/**
+ * Prepares variables for the html.html.twig template.
+ */
+function soe_basic_preprocess_html(&$variables) {
+  $variables['stanford_basic_path'] = drupal_get_path('theme', 'stanford_basic');
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function soe_basic_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (!empty($variables['elements']['#id']) && $variables['elements']['#id'] == 'soe_basic_search') {
+    $suggestions[] = 'block__stanford_basic_search';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+
+function soe_basic_preprocess_pattern_localfooter(&$variables){
+  $med = theme_get_setting('show_su_med_logo');
+  $soe_basic_path = base_path() . drupal_get_path('theme', 'soe_basic');
+
+  // Default to Engineering.
+  if (
+    empty($variables['line1'])
+    && (!isset($variables['custom_lockup']) || !$variables['custom_lockup'])
+  ) {
+    $variables['custom_lockup'] = 1;
+    $variables['lockup_option'] = "su-lockup--option-a";
+    $variables['line1'] = t('ENGINEERING');
+    $variables['link'] = "https://engineering.stanford.edu/";
+  }
+
+  if ($med) {
+    $variables['headercontent']['med_logo'] = [
+      '#markup' => '
+      <div class="su-med-logo">
+        <a href="https://med.stanford.edu/">
+          <img src="' . $soe_basic_path . '/dist/assets/img/stanford_medicine.png" alt="Stanford Medicine home" />
+        </a>
+      </div>',
+    ];
+  }
+
+}

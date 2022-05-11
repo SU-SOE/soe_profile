@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+// Local variable not for changing.
+$_su-hero-height: (
+  'xs': 208px,
+  'sm': 208px,
+  'md': 320px,
+  'lg': 409px,
+  'xl': 520px,
+  '2xl': 520px
+) !default;
+
+//
+// Hero
+//
+// Overrides for the SOE hero block on gradients.
+//
+// Markup: templates/components/hero/hero.twig
+//
+//
+.su-hero {
+
+  @include grid-media('xs') {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: map-get($_su-hero-height, 'xs');
+  }
+
+  @include grid-media('sm') {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: map-get($_su-hero-height, 'sm');
+  }
+
+  @include grid-media('md') {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: map-get($_su-hero-height, 'md');
+  }
+
+  @include grid-media('lg') {
+    min-height: map-get($_su-hero-height, 'lg');
+  }
+
+  @include grid-media('xl') {
+    min-height: map-get($_su-hero-height, 'xl');
+  }
+
+  // The content
+  .su-hero__card {
+
+    @include grid-media('xs') {
+      @include margin(20px null);
+      left: 20px;
+      max-width: 320px;
+    }
+
+    @include grid-media('sm') {
+      @include margin(20px null);
+      left: 20px;
+      max-width: 399px;
+    }
+
+    @include grid-media('md') {
+      @include margin(45px null);
+      left: 45px;
+      max-width: 400px;
+    }
+
+    @include grid-media('lg') {
+      max-width: 450px;
+    }
+
+    @include grid-media('xl') {
+      @include margin(96px null 0 null);
+      bottom: 48px;
+      left: 48px;
+      max-width: 450px;
+      top: auto;
+    }
+  }
+}
+
+// The media element.
+// Big tall wide and in a little bid of a shade.
+.su-hero__media {
+  @include grid-media('xs') {
+    min-height: map-get($_su-hero-height, 'xs');
+    position: absolute;
+  }
+
+  @include grid-media('sm') {
+    min-height: map-get($_su-hero-height, 'sm');
+    position: absolute;
+  }
+
+  @include grid-media('md') {
+    min-height: map-get($_su-hero-height, 'md');
+    position: absolute;
+  }
+
+  @include grid-media('lg') {
+    min-height: map-get($_su-hero-height, 'lg');
+    position: absolute;
+  }
+
+  @include grid-media('xl') {
+    min-height: map-get($_su-hero-height, 'xl');
+    position: absolute;
+  }
+}
+

@@ -1,0 +1,22 @@
+image-cta-paragraph:
+  label: Image CTA Paragraph
+  description: Image CTA Paragraph
+  variants:
+    default:
+      label: Minimal
+      description: "Minimal"
+  fields:
+    image:
+      type: text
+      label: "Content"
+      description: "The image to display for the Paragraph"
+    link:
+      type: text
+      label: "Link"
+      description: "The link to use"
+  use: "@soe_paragraph_image_cta/image-cta-paragraph.html.twig"
+  libraries:
+    - image-cta-paragraph:
+        css:
+          component:
+            ../../../dist/css/image-cta-paragraph.styles.css: {}

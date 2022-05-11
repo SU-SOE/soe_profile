@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+// Solid gradients
+@mixin gradient--solid-purple-lagunita {
+  background: linear-gradient(91.01deg, $su-color-purple 3.46%, $su-color-lagunita 95.48%);
+}
+
+@mixin gradient--solid-purple-green {
+  background: linear-gradient(91.01deg, $su-color-bright-purple 3.46%, $su-color-bright-palo-alto 95.48%);
+}
+
+@mixin gradient--solid-gray {
+  background: linear-gradient(180deg, $su-color-fog 0%, rgba(244, 244, 244, 0) 100%);
+}
+
+@mixin gradient--solid-teal {
+  background: linear-gradient(180deg, #175f5f 0%, #4d5054 32.56%);
+}
+
+@mixin gradient--solid-dark-grey {
+  background: linear-gradient(1.26deg, #4d4f53 11.05%, rgba(0, 0, 0, 0.4) 97.9%);
+}
+
+// Transparent gradients
+@mixin gradient--transparent-purple-lagunita {
+  background: linear-gradient(91.01deg, rgba($su-color-bright-purple, 0.9) 3.47%, rgba($su-color-lagunita, 0.8) 95.48%);
+}
+
+@mixin gradient--transparent-purple-green {
+  background: linear-gradient(89.49deg, rgba($su-color-bright-purple, 0.9) 0.24%, rgba($su-color-bright-palo-alto, 0.8) 102.73%);
+}
+
+@mixin gradient--transparent-blue-purple {
+  background: linear-gradient(89.78deg, rgba($su-color-bay-blue, 0.9) 0.12%, rgba($su-color-bright-purple, 0.8) 99.89%);
+}
+
+@mixin gradient--transparent-purple-red {
+  background: linear-gradient(270.22deg, $su-color-bright-purple 0.12%, rgba($su-color-bright-red, 0.8) 99.89%);
+  transform: rotate(-180deg);
+}
+
+@mixin gradient--transparent-blue-green {
+  background: linear-gradient(270.22deg, rgba($su-color-bay-blue, 0.9) 0.12%, rgba($su-color-bright-palo-alto, 0.8) 99.89%);
+}
