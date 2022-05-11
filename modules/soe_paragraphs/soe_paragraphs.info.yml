@@ -3,7 +3,7 @@ type: module
 description: 'Provides custom paragraph types for SOE'
 core_version_requirement: ^8.8 || ^9
 package: Stanford
-version: 8.x-1.0-dev
+version: 9.0.0
 dependencies:
   - paragraphs:paragraphs
   - jumpstart_ui:jumpstart_ui
