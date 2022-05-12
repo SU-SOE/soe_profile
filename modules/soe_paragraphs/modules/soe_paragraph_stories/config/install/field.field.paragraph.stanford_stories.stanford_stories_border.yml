@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.stanford_stories_border
+    - paragraphs.paragraphs_type.stanford_stories
+  module:
+    - options
+id: paragraph.stanford_stories.stanford_stories_border
+field_name: stanford_stories_border
+entity_type: paragraph
+bundle: stanford_stories
+label: 'Photo Border Color'
+description: 'The color of the photo border'
+required: true
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,134 @@
+.su-stories-paragraph {
+  @include card;
+
+  .su-stories-paragraph__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    @include modular-spacing('padding', 2);
+    @include grid-media-between('xs', 'sm') {
+      display: block;
+      @include modular-spacing('padding-top', 0);
+    };
+  }
+
+  .su-stories-paragraph__photo {
+
+    .stanford-stories-photo-border {
+      display: none;
+    }
+
+    &.border-color-default {
+      img {
+        border: 6px #000000 solid;
+      }
+    }
+
+    &.border-color-1 {
+      img {
+        border: 6px #00ece9 solid;
+      }
+    }
+
+    &.border-color-2 {
+      img {
+        border: 6px #ff525c solid;
+      }
+    }
+
+    &.border-color-3 {
+      img {
+        border: 6px #ffbd54 solid;
+      }
+    }
+
+    img {
+      width: 290px;
+      height: 290px;
+      min-width: 290px;
+      min-height: 290px;
+      border-radius: 50%;
+      overflow: hidden;
+      @include modular-spacing('margin-left', 2);
+      @include modular-spacing('margin-right', 5);
+
+      @include grid-media-between('md', 'lg') {
+        width: 255px;
+        height: 255px;
+        min-width: 255px;
+        min-height: 255px;
+      };
+
+      @include grid-media-between('xs', 'sm') {
+        display: block;
+        @include modular-spacing('margin-top', 2);
+        @include modular-spacing('margin-bottom', 2);
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        width: 220px;
+        height: 220px;
+        min-width: 220px;
+        min-height: 220px;
+      };
+  }
+}
+
+  .su-stories__details {
+    @include grid-media-between('xs', 'sm') {
+      display: block;
+    };
+  }
+
+  .su-stories-paragraph__name {
+    @include type-d;
+    font-weight: 800;
+    @include modular-spacing('margin-top', 0);
+  }
+
+  .su-stories-paragraph__title {
+    @include big-paragraph;
+    @include modular-spacing('margin-bottom', 0);
+  }
+
+  .su-stories-paragraph__quote {
+    @include type-a;
+    font-weight: 800;
+    @include modular-spacing('margin-bottom', 3);
+  }
+
+  .su-stories-paragraph__node-link {
+    @include modular-spacing('margin-bottom', 1);
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .su-stories-paragraph__content {
+    &+ .su-stories-paragraph__cta-region {
+      @include modular-spacing('padding-top', 3);
+    }
+  }
+
+  .su-stories-paragraph__cta-region {
+    @include modular-spacing('padding-bottom', 5);
+
+    display: flex;
+    justify-content: center;
+
+    a {
+      @include button-primary();
+      color: #fff;
+    }
+
+  }
+}

@@ -1,0 +1,13 @@
+{#
+/**
+ * Full width header template.
+ * This is to have a full bleed image/gradiant and the content within a centered container.
+ */
+ #}
+<div{{ attributes.addClass('flex-container', 'section-bgcolor--title', 'section-editorial-content', settings.extra_classes) }}>
+  {% if content.main|render %}
+    <div {{ region_attributes.main.addClass('centered-container') }}>
+      {{ content.main }}
+    </div>
+  {% endif %}
+</div>

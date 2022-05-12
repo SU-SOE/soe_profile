@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.stanford_image_cta_link
+    - paragraphs.paragraphs_type.stanford_image_cta
+  module:
+    - link
+id: paragraph.stanford_image_cta.stanford_image_cta_link
+field_name: stanford_image_cta_link
+entity_type: paragraph
+bundle: stanford_image_cta
+label: Link
+description: 'The CTA link.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

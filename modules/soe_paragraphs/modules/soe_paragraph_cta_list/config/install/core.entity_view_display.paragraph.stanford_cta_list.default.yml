@@ -1,0 +1,75 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stanford_cta_list.stanford_cta_list_deck
+    - field.field.paragraph.stanford_cta_list.stanford_cta_list_header
+    - field.field.paragraph.stanford_cta_list.stanford_cta_list_links
+    - paragraphs.paragraphs_type.stanford_cta_list
+  module:
+    - ds
+    - element_class_formatter
+    - field_formatter_class
+    - stanford_fields
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_cta-list-paragraph
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        pattern:
+          field_templates: default
+          variant: default
+    regions:
+      paragraph_content:
+        - stanford_cta_list_header
+        - stanford_cta_list_deck
+      links:
+        - stanford_cta_list_links
+id: paragraph.stanford_cta_list.default
+targetEntityType: paragraph
+bundle: stanford_cta_list
+mode: default
+content:
+  stanford_cta_list_deck:
+    type: text_default
+    weight: 1
+    region: paragraph_content
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: su-cta-list-paragraph__description
+  stanford_cta_list_header:
+    weight: 0
+    label: hidden
+    settings:
+      tag: h2
+      linked: false
+    third_party_settings:
+      field_formatter_class:
+        class: su-cta-list-paragraph__header
+    type: entity_title_heading
+    region: paragraph_content
+  stanford_cta_list_links:
+    type: link_class
+    weight: 2
+    region: links
+    label: hidden
+    settings:
+      trim_length: null
+      class: ''
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      field_formatter_class:
+        class: 'su-link--action su-cta-list-paragraph__links'
+      ds:
+        ds_limit: ''
+hidden: {  }
+

@@ -1,0 +1,75 @@
+/* font overrides for SOE */
+
+.soe-sans {
+  @include soe-sans;
+}
+
+.su-wysiwyg-text {
+  p.su-font-splash,
+  p.su-callout-text {
+    @include soe-type-sans-base;
+  }
+}
+
+h1,
+.soe--type-5,
+.su-type-a {
+  @include soe--type-5;
+}
+
+.soe--type-4,
+.su-type-b {
+  @include soe--type-4;
+}
+
+// Su-type-c
+.soe--type-3,
+.su-type-c,
+h2 {
+  @include soe--type-3;
+}
+
+.soe--type-2,
+.su-type-d,
+h3 {
+  @include soe--type-2;
+}
+
+.soe--type-1,
+.su-type-e,
+h4 {
+  @include soe--type-1;
+}
+
+.soe--type-0,
+.su-type-f,
+h5 {
+  @include soe--type-0;
+}
+
+.su-wysiwyg-text {
+  h2 {
+    @include soe--type-3;
+  }
+
+  h3 {
+    @include soe--type-2;
+  }
+
+  h4 {
+    @include soe--type-1;
+  }
+
+  h5 {
+    @include soe--type-0;
+  }
+}
+
+// Drop cap styles.
+.su-drop-cap {
+  // This sets the position for the first character.
+  &::first-letter {
+    @include soe-type-sans-base;
+  }
+}
+

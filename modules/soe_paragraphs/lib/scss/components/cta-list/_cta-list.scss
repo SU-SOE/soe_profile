@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+.su-cta-list-paragraph {
+
+  @include modular-spacing('padding-top', 3);
+  @include modular-spacing('padding-left', 2);
+  @include modular-spacing('padding-right', 2);
+
+  border-top: 1px solid $su-color-cool-grey-25;
+
+  @include grid-media-max('md') {
+    @include modular-spacing('padding-left', 0);
+    @include modular-spacing('padding-right', 0);
+  }
+
+  .su-cta-list-paragraph__header {
+    @include type-c;
+    font-weight: $su-font-bold;
+    @include modular-spacing('margin-bottom', 1);
+  }
+
+  .su-cta-list-paragraph__description {
+    @include big-paragraph;
+    @include modular-spacing('margin-bottom', 3);
+  }
+
+  .su-cta-list__links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include grid-media-only('xs') {
+      display: block;
+      width: 100%;
+      @include modular-spacing('padding-bottom', 1);
+    };
+
+    .su-link--action {
+      display: block;
+      width: 100%;
+      @include modular-spacing('margin-bottom', 1);
+    }
+
+    .col-1 {
+      @include modular-spacing('margin-right', 1);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 200px;
+
+      a {
+        color: $su-color-bright-red;
+
+        &:hover,
+        &:focus {
+          color: $su-color-black;
+          text-decoration: underline;
+        }
+
+        &::after {
+          background-color: $su-color-bright-red;
+
+          &:hover {
+            background-color: $su-color-bright-red;
+          }
+
+          &:focus {
+            background-color: $su-color-bright-red;
+          }
+
+          &:active {
+            background-color: $su-color-bright-red;
+          }
+        }
+      }
+
+      @include grid-media-only('xs') {
+        display: block;
+        width: 100%;
+      };
+    }
+
+    .col-2 {
+      @include modular-spacing('margin-right', 7);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+
+      a {
+        color: $su-color-bright-red;
+
+        &:hover,
+        &:focus {
+          color: $su-color-black;
+          text-decoration: underline;
+        }
+
+        &::after {
+          background-color: $su-color-bright-red;
+
+          &:hover {
+            background-color: $su-color-bright-red;
+          }
+
+          &:focus {
+            background-color: $su-color-bright-red;
+          }
+
+          &:active {
+            background-color: $su-color-bright-red;
+          }
+        }
+      }
+
+      @include grid-media-between('xs', 'lg') {
+        min-width: 150px;
+        @include modular-spacing('margin-right', 1);
+      }
+
+      @include grid-media-only('xs') {
+        display: block;
+        width: 100%;
+      };
+    }
+  }
+}

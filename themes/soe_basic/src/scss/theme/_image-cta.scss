@@ -1,0 +1,194 @@
+@charset 'UTF-8';
+
+// Color set up for the alternating.
+.react-paragraphs-row {
+
+  // Image hover animation
+  .su-image-cta-paragraph__image {
+    .field-media-image {
+      transition: transform 1s ease;
+      transform: scale(1);
+    }
+  }
+
+  // Shared between all image-ctas.
+  .ptype-stanford-image-cta {
+    .su-image-cta-paragraph {
+      cursor: pointer;
+
+      &:hover {
+        // Image transform on hover.
+        .su-image-cta-paragraph__image {
+          overflow: hidden;
+
+          .field-media-image {
+            transform: scale(1.02);
+          }
+        }
+
+        // Text and arrow changes to white.
+        a {
+          color: $su-color-white;
+
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+
+            &::after {
+              background-color: $su-color-white;
+            }
+          }
+        }
+
+        .su-image-cta-paragraph__link {
+          color: $su-color-white;
+        }
+
+        .su-image-cta-paragraph__link::after {
+          background-color: $su-color-white;
+        }
+      }
+
+      .su-link--external {
+        @include link-icon(arrow-up-right, 10px, topright);
+
+        &::after {
+          background-color: $soe-color-black;
+        }
+      }
+
+      .su-image-cta-paragraph__link {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Set up for the rows where the color pattern alternates. The row needs to be selected as odd or even.
+// Then each card is selected by position.
+// Also sets the black hover color on the text link.
+.su-page-components {
+
+  // Setting up the external link icon to be white on hover all types.
+  .ptype-stanford-image-cta {
+    .su-image-cta-paragraph {
+      &:hover {
+        background-color: $su-color-black;
+
+        .su-link--external {
+          &::after {
+            background-color: $su-color-white;
+          }
+        }
+      }
+    }
+  }
+
+
+  > div:nth-of-type(even) {
+    .ptype-stanford-image-cta:first-of-type {
+      .su-image-cta-paragraph {
+        background-color: $soe-color-orange;
+
+        &:hover {
+          background-color: $su-color-black;
+        }
+      }
+    }
+
+    .ptype-stanford-image-cta:nth-of-type(2) {
+      .su-image-cta-paragraph {
+        background-color: $soe-color-turquoise;
+
+        &:hover {
+          background-color: $su-color-black;
+        }
+      }
+    }
+
+    .ptype-stanford-image-cta:nth-of-type(3) {
+      .su-image-cta-paragraph {
+        background-color: $soe-color-pink;
+
+        &:hover {
+          background-color: $su-color-black;
+        }
+      }
+    }
+  }
+
+
+  > div:nth-of-type(odd) {
+    .ptype-stanford-image-cta:first-of-type {
+      .su-image-cta-paragraph {
+        background-color: $soe-color-turquoise;
+
+        &:hover {
+          background-color: $su-color-black;
+        }
+      }
+    }
+
+
+    .ptype-stanford-image-cta:nth-of-type(2) {
+      .su-image-cta-paragraph {
+        background-color: $soe-color-pink;
+
+        &:hover {
+          background-color: $su-color-black;
+        }
+      }
+    }
+
+
+    .ptype-stanford-image-cta:nth-of-type(3) {
+      .su-image-cta-paragraph {
+        background-color: $soe-color-orange;
+
+        &:hover {
+          background-color: $su-color-black;
+        }
+      }
+    }
+  }
+  // End alternating color set up.
+
+  // Link hover colors.
+  .su-image-cta-paragraph {
+    overflow: hidden;
+
+    .su-image-cta-paragraph__link {
+
+      a {
+        color: $soe-color-black;
+        text-decoration: none;
+
+        &:hover {
+          color: $su-color-white;
+        }
+
+        &:focus {
+          color: $su-color-white;
+        }
+      }
+
+      &::after {
+        background-color: $su-color-black;
+
+        &:hover {
+          background-color: $su-color-white;
+        }
+
+        &:focus {
+          background-color: $su-color-white;
+        }
+
+        &:active {
+          background-color: $su-color-white;
+        }
+      }
+    }
+  }
+}

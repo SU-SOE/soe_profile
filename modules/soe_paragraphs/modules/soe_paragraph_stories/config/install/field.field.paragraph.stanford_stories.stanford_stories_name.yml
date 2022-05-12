@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.stanford_stories_name
+    - paragraphs.paragraphs_type.stanford_stories
+id: paragraph.stanford_stories.stanford_stories_name
+field_name: stanford_stories_name
+entity_type: paragraph
+bundle: stanford_stories
+label: Name
+description: 'The name of the person profiled.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

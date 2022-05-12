@@ -1,0 +1,68 @@
+@charset 'UTF-8';
+
+.node-stanford-page-su-page-banner {
+  @include modular-spacing('margin', null null 7 null);
+}
+
+.su-hero {
+  align-items: center;
+
+  .su-hero__card {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    left: auto;
+    top: auto;
+    text-align: center;
+    max-width: unset;
+    width: 75%;
+
+    @include grid-media-max('sm') {
+      text-align: left;
+      width: unset;
+    }
+
+
+    .su-card__contents {
+      color: $su-color-white;
+
+      span {
+        @include soe--type-1;
+        font-weight: $su-font-black;
+      }
+
+      h2 {
+        @include soe--type-4;
+        font-weight: $su-font-black;
+      }
+
+      p {
+        @include big-paragraph;
+      }
+
+      .su-card__button {
+        .su-button {
+          @include soe-button--orange;
+
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          }
+
+          &.su-link--external {
+            &::after {
+              background-color: $su-color-black;
+            }
+
+            &:hover,
+            &:focus {
+              &::after {
+                background-color: $su-color-white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

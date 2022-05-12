@@ -1,0 +1,31 @@
+
+{#
+/**
+ * @file
+ * Image CTA Paragraph
+ *
+ * Template for the Image CTA paragraph type.
+ *
+ * Available variables:
+ *
+ * {{ image }}
+ * {{ link }}
+ *
+ */
+#}
+{%- set image_field_keys = image|keys -%}
+{%- set image_field_name = image_field_keys[0] -%}
+{%- set image_field_info = image[image_field_name] -%}
+{%- set image_field_items = image_field_info["#items"] -%}
+{%- set link_field_keys = link|keys -%}
+{%- set link_field_name = link_field_keys[0] -%}
+{%- set link_field_info = link[link_field_name] -%}
+{%- set link_field_items = link_field_info["#items"] -%}
+{%- set link_uri = link_field_items[0].uri -%}
+{%- set attributes = attributes.addClass(['su-image-cta-paragraph', modifier_class]) -%}
+<div{{ attributes }}>
+  {% if image_field_items is not empty %}
+  {{ link(image, link_uri, {'tabindex': '-1', 'aria-hidden': 'true', 'role': 'presentation'}) }}
+  {% endif %}
+  {{ link }}
+</div>
