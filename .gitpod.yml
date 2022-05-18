@@ -18,8 +18,8 @@ ports:
     onOpen: ignore
     visibility: public
 image: pookmish/drupal8ci:gitpod
-checkoutLocation: profile
-workspaceLocation: /workspace
+checkoutLocation: soe_profile
+workspaceLocation: /workspace/stack
 tasks:
   - before: >
       rm -rf ~/.ssh/id_rsa &&
@@ -36,28 +36,38 @@ tasks:
       echo $GITCONFIG | base64 -d > ~/.gitconfig &&
       chmod 644 ~/.gitconfig
     init: >
+      cd $GITPOD_REPO_ROOT &&
+      export PROFILE_BRANCH=`git rev-parse --abbrev-ref HEAD` &&
       export PREVIEW_FULL_URL=`gp url 8001` &&
       export PREVIEW_URL=${PREVIEW_FULL_URL#"https://"} &&
-      cd /workspace && git clone https://github.com/SU-SWS/acsf-cardinalsites-public.git stack
-#      cp .gitpod/blt.yml blt/local.blt.yml &&
-#      composer update --no-interaction &&
-#      rm -rf docroot/*/custom/* &&
-#      composer install --prefer-source --no-interaction &&
-#      composer update su-sws/* &&
-#      blt blt:telemetry:disable --no-interaction &&
-#      blt settings &&
-#      blt drupal:install -n &&
-#      blt sws:keys &&
-#      blt sbsc
+
+      cd /workspace &&
+      git clone https://github.com/SU-SWS/acsf-cardinalsites-public.git stack &&
+      cd /workspace/stack &&
+      rm -rf .git* &&
+
+      composer remove su-sws/stanford_profile --no-update &&
+      composer require su-sws/soe_profile:"dev-$PROFILE_BRANCH || $PROFILE_BRANCH-dev" --no-update &&
+      composer update --no-interaction &&
+      rm -rf docroot/*/custom/* &&
+      composer install --prefer-source --no-interaction &&
+
+      rm -rf docroot/profiles/custom/soe_profile &&
+      rsync -r $GITPOD_REPO_ROOT docroot/profiles/custom/soe_profile &&
+
+      cp .gitpod/blt.yml blt/local.blt.yml &&
+      mkdir -p docroot/sites/settings &&
+      cp .gitpod/global.settings.php docroot/sites/settings/global.settings.php &&
+      find docroot/sites/ -name 'local*' | xargs rm &&
+      blt blt:telemetry:disable --no-interaction &&
+      blt settings &&
+#      drush si soe_profile -v -y
+#      drush cr
+#      drush cim -y
 #    command: |
 #      apache2ctl restart
-#      gp await-port 8001
-#      find docroot -name 'local.drush.yml' | xargs rm &&
-#      export PREVIEW_FULL_URL=`gp url 8001` &&
-#      export PREVIEW_URL=${PREVIEW_FULL_URL#"https://"} &&
-#      blt settings
 #      drush uli
 #      drush uli | xargs gp preview --external
 #      git config core.fileMode false
 #      blt blt:telemetry:disable --no-interaction
-#      git remote set-url origin git@github.com:SU-SOE/soe_profile.git
+#      git remote set-url origin git@github.com:SU-SWS/acsf-cardinalsites-public.git
