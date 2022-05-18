@@ -52,7 +52,7 @@ tasks:
       rm -rf docroot/*/custom/* &&
       composer install --prefer-source --no-interaction &&
       rm -rf docroot/profiles/custom/soe_profile &&
-      rsync -r $GITPOD_REPO_ROOT/ docroot/profiles/custom/soe_profile &&
+      ln -s $GITPOD_REPO_ROOT docroot/profiles/custom/soe_profile &&
       cp .gitpod/blt.yml blt/local.blt.yml &&
       mkdir -p docroot/sites/settings &&
       cp .gitpod/global.settings.php docroot/sites/settings/global.settings.php &&
@@ -63,9 +63,10 @@ tasks:
       drush si soe_profile -v -y &&
       drush cim -y
     command: |
+      export GITPOD_REPO_ROOT=/workspace/stack
       apache2ctl restart
       drush uli
       drush uli | xargs gp preview --external
       git config core.fileMode false
       blt blt:telemetry:disable --no-interaction
-      cd docroot/profiles/custom/soe_profile  && git remote set-url origin git@github.com:SU-SOE/soe_profile.git
+      cd docroot/profiles/custom/soe_profile  && git remote set-url origin git@github.com:SU-SOE/soe_profile.git && cd -
