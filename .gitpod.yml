@@ -41,7 +41,6 @@ tasks:
       cd /workspace &&
       git clone https://github.com/SU-SWS/acsf-cardinalsites-public.git stack &&
       cd /workspace/stack &&
-      ls -a | grep .git | grep -v '.gitpod*' | xargs rm -rf &&
       cd $GITPOD_REPO_ROOT &&
       export PROFILE_BRANCH=`git rev-parse --abbrev-ref HEAD` &&
       echo $PROFILE_BRANCH &&
@@ -61,7 +60,8 @@ tasks:
       blt blt:telemetry:disable --no-interaction &&
       blt settings &&
       drush si soe_profile -v -y &&
-      drush cim -y
+      drush cim -y &&
+      ls -a | grep .git | grep -v '.gitpod*' | xargs rm -rf
     command: |
       export GITPOD_REPO_ROOT=/workspace/stack
       apache2ctl restart
