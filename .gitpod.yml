@@ -65,8 +65,13 @@ tasks:
     command: |
       export GITPOD_REPO_ROOT=/workspace/stack
       apache2ctl restart
+      gp await-port 8001
+      find docroot -name 'local.drush.yml' | xargs rm &&
+      export PREVIEW_FULL_URL=`gp url 8001` &&
+      export PREVIEW_URL=${PREVIEW_FULL_URL#"https://"} &&
+      blt settings
       drush uli
       drush uli | xargs gp preview --external
       git config core.fileMode false
       blt blt:telemetry:disable --no-interaction
-      cd docroot/profiles/custom/soe_profile  && git remote set-url origin git@github.com:SU-SOE/soe_profile.git && cd -
+      cd docroot/profiles/custom/soe_profile && git remote set-url origin git@github.com:SU-SOE/soe_profile.git && cd $GITPOD_REPO_ROOT
