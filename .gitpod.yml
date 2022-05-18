@@ -39,7 +39,7 @@ tasks:
       cd /workspace &&
       git clone https://github.com/SU-SWS/acsf-cardinalsites-public.git stack &&
       cd /workspace/stack &&
-      rm -rf .git* &&
+      ls -a | grep .git | grep -v '.gitpod*' | xargs rm -rf &&
       cd $GITPOD_REPO_ROOT &&
       export PROFILE_BRANCH=`git rev-parse --abbrev-ref HEAD` &&
       echo $PROFILE_BRANCH &&
@@ -54,12 +54,13 @@ tasks:
       cp .gitpod/blt.yml blt/local.blt.yml &&
       mkdir -p docroot/sites/settings &&
       cp .gitpod/global.settings.php docroot/sites/settings/global.settings.php &&
+      sed --in-place 's/stanford_profile/soe_profile/' docroot/sites/settings/global.settings.php
       find docroot/sites/ -name 'local*' | xargs rm &&
       blt blt:telemetry:disable --no-interaction &&
       blt settings
-#      drush si soe_profile -v -y
-#      drush cr
-#      drush cim -y
+      drush si soe_profile -v -y
+      drush cr
+      drush cim -y
 #    command: |
 #      apache2ctl restart
 #      drush uli
