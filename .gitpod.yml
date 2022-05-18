@@ -18,7 +18,8 @@ ports:
     onOpen: ignore
     visibility: public
 image: pookmish/drupal8ci:gitpod
-
+checkoutLocation: profile
+workspaceLocation: /workspace
 tasks:
   - before: >
       rm -rf ~/.ssh/id_rsa &&
@@ -36,7 +37,8 @@ tasks:
       chmod 644 ~/.gitconfig
     init: >
       export PREVIEW_FULL_URL=`gp url 8001` &&
-      export PREVIEW_URL=${PREVIEW_FULL_URL#"https://"}
+      export PREVIEW_URL=${PREVIEW_FULL_URL#"https://"} &&
+      cd /workspace && git clone https://github.com/SU-SWS/acsf-cardinalsites-public.git stack
 #      cp .gitpod/blt.yml blt/local.blt.yml &&
 #      composer update --no-interaction &&
 #      rm -rf docroot/*/custom/* &&
