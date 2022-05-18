@@ -22,10 +22,6 @@ checkoutLocation: soe_profile
 workspaceLocation: /workspace/stack
 tasks:
   - before: >
-      cd /workspace &&
-      git clone https://github.com/SU-SWS/acsf-cardinalsites-public.git stack &&
-      cd /workspace/stack &&
-      rm -rf .git* &&
       rm -rf ~/.ssh/id_rsa &&
       rm -rf ~/.ssh/id_rsa.pub &&
       eval $(command gp env -e) &&
@@ -40,12 +36,16 @@ tasks:
       echo $GITCONFIG | base64 -d > ~/.gitconfig &&
       chmod 644 ~/.gitconfig
     init: >
+      cd /workspace &&
+      git clone https://github.com/SU-SWS/acsf-cardinalsites-public.git stack &&
+      cd /workspace/stack &&
+      rm -rf .git* &&
       cd $GITPOD_REPO_ROOT &&
       export PROFILE_BRANCH=`git rev-parse --abbrev-ref HEAD` &&
       echo $PROFILE_BRANCH &&
       cd /workspace/stack &&
       composer remove su-sws/stanford_profile --no-update &&
-      composer require su-sws/soe_profile:"dev-$PROFILE_BRANCH || $PROFILE_BRANCH-dev" --no-update &&
+      composer require su-soe/soe_profile:"dev-$PROFILE_BRANCH || $PROFILE_BRANCH-dev" --no-update &&
       composer update --no-interaction &&
       rm -rf docroot/*/custom/* &&
       composer install --prefer-source --no-interaction &&
