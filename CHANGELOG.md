@@ -7,8 +7,17 @@ _Release Date: 2022-07-08_
 - Updated config from search_api module
 - D8CORE-5128 Enable embed code validators (#579)
 - D8CORE-6005 Allow Span tags in the wysiwyg
+- fixed composer namespace to lowercase
+- fixed composer namespace to lowercase
+- Removed fzaninotto/faker workaround in CI tests
+- Updates from stanford_profile (#271)
+- Adjusted functional tests (#577)
 - Drupal 9.4 support (#576)
+- Move some CircleCi to GH Actions (#568)
 - D8CORE-5886 Enable ajax on people lists
+- Added and configured ckeditor_blockimagepaste to prevent inline base64 images
+- D8CORe-5871 Change order of filter processing to fix <picture><source> tags
+- D8CORE-5773: Added edit buttons on courses list page (#555)
 
 8.x-4.5
 --------------------------------------------------------------------------------
