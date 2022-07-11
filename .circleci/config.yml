@@ -69,8 +69,8 @@ merge_upstream: &merge_upstream
           git pull https://github.com/SU-SWS/stanford_profile.git 8.x -X ours --no-edit
           if [[ $(git diff origin/${CIRCLE_BRANCH} --name-only) ]]; then
             DATE=`date +%Y-%m-%d`
-            git checkout -b ${DATE}
-            git push origin ${DATE}
+            git checkout -b ${DATE}-${CIRCLE_BRANCH}
+            git push origin ${DATE}-${CIRCLE_BRANCH}
             hub pull-request --base=${CIRCLE_BRANCH} --message="Updates from stanford_profile" --assign=pookmish,imonroe
           fi
 
