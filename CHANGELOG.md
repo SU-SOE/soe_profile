@@ -8,6 +8,7 @@ _Release Date: 2022-07-12_
 - D8CORE-4780 Changed search page button text to "Search"
 - D8CORE-5862: Removed obsolete checkbox from theme settings (#575)
 - D8CORE-6000: Added additional html elements to embeddables allow list (#584)
+- Adjusted merge upstream task
 
 8.x-4.6
 --------------------------------------------------------------------------------
