@@ -1,6 +1,6 @@
 name: 'SOE Profile'
 description: 'Jumpstart Website Profile'
-version: 9.x-1.1-dev
+version: 9.1.0
 type: profile
 project: Jumpstart
 core_version_requirement: ^9
