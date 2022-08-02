@@ -12,6 +12,7 @@ class StanfordTextEditorTest extends KernelTestBase {
   protected static $modules = [
     'ckeditor',
     'editor',
+    'file',
     'filter',
     'linkit',
     'stanford_text_editor',
@@ -20,6 +21,7 @@ class StanfordTextEditorTest extends KernelTestBase {
     'media_library',
     'views',
     'stanford_media',
+    'file',
   ];
 
   /**
