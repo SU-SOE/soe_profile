@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.stanford_cta_list_links
+    - paragraphs.paragraphs_type.stanford_cta_list
+  module:
+    - link
+id: paragraph.stanford_cta_list.stanford_cta_list_links
+field_name: stanford_cta_list_links
+entity_type: paragraph
+bundle: stanford_cta_list
+label: Links
+description: 'The links to include in the paragraph'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

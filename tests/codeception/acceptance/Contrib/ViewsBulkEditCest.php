@@ -16,34 +16,61 @@ class ViewsBulkEditCest {
   protected $nodes;
 
   /**
+   * Faker generator.
+   *
+   * @var \Faker\Generator
+   */
+  protected $faker;
+
+  /**
+   * Test constructor.
+   */
+  public function __construct() {
+    $this->faker = Factory::create();
+  }
+
+  /**
    * Bulk editing content changes the field values.
    */
   public function testBulkEdits(AcceptanceTester $I) {
     $I->logInWithRole('site_manager');
     $this->createEvents($I);
-    $this->createTerms($I);
+
+    $event_foo_bar_baz = $I->createEntity([
+      'name' => $this->faker->words(3, true),
+      'vid' => 'stanford_event_types',
+    ], 'taxonomy_term');
+    $news_foo_bar_baz= $I->createEntity([
+      'name' => $this->faker->words(3, true),
+      'vid' => 'stanford_news_topics',
+    ], 'taxonomy_term');
+    $pubs_foo_bar_baz = $I->createEntity([
+      'name' => $this->faker->words(3, true),
+      'vid' => 'stanford_publication_topics',
+    ], 'taxonomy_term');
+
     $I->amOnPage('/admin/content');
     $I->selectOption('Action', 'Modify field values');
     foreach ($this->nodes as $delta => $node) {
       $I->canSee($node->label(), 'tr');
-      $I->checkOption("views_bulk_operations_bulk_form[$delta]");
+      $I->checkOption('tr:contains("' . $node->label() . '") input[name^="views_bulk_operations_bulk_form"]');
     }
     $I->click('Apply to selected items');
     $I->canSee('Items selected');
     foreach ($this->nodes as $node) {
       $I->canSee($node->label());
     }
-    $I->checkOption('News Topics Terms');
-    $I->fillField('node[stanford_news][su_news_topics][0][target_id]', 'Foo Bar Baz');
-    $I->checkOption('Event Type');
-    $I->selectOption('node[stanford_event][su_event_type]', 'Foo Bar Baz');
+    $I->checkOption('News Types');
+    $I->selectOption('node[stanford_news][su_news_topics][]', $news_foo_bar_baz->label());
+    $I->checkOption('Event Types');
+    $I->selectOption('node[stanford_event][su_event_type][]', $event_foo_bar_baz->label());
     $I->fillField('node[stanford_event][su_event_date_time][0][time_wrapper][value][date]', date('Y-m-d'));
     $I->fillField('node[stanford_event][su_event_date_time][0][time_wrapper][value][time]', '12:00:00');
     $I->fillField('node[stanford_event][su_event_date_time][0][time_wrapper][end_value][date]', date('Y-m-d'));
     $I->fillField('node[stanford_event][su_event_date_time][0][time_wrapper][end_value][time]', '12:00:00');
 
-    $I->checkOption('Publication Topic Terms');
-    $I->fillField('node[stanford_publication][su_publication_topics][0][target_id]', 'Foo Bar Baz');
+    $I->checkOption('Publication Types');
+    $I->selectOption('node[stanford_publication][su_publication_topics][]', $pubs_foo_bar_baz->label());
     $I->click('Apply');
     $I->canSee('Action processing results');
 
@@ -52,17 +79,15 @@ class ViewsBulkEditCest {
 
       switch ($node->bundle()) {
         case 'stanford_event':
-          $I->canSeeOptionIsSelected('Event Type', 'Foo Bar Baz');
+          $I->canSeeOptionIsSelected('Event Types', $event_foo_bar_baz->label());
           break;
 
         case 'stanford_news':
-          $value = $I->grabValueFrom('[name="su_news_topics[0][target_id]"]');
-          $I->assertStringContainsString('Foo Bar Baz (', $value);
+          $I->canSeeOptionIsSelected('News Types', $news_foo_bar_baz->label());
           break;
 
         case 'stanford_publication':
-          $value = $I->grabValueFrom('[name="su_publication_topics[0][target_id]"]');
-          $I->assertStringContainsString('Foo Bar Baz (', $value);
+          $I->canSeeOptionIsSelected('Publication Types', $pubs_foo_bar_baz->label());
           break;
       }
     }
@@ -89,27 +114,6 @@ class ViewsBulkEditCest {
         ]);
       }
     }
-  }
-
-  /**
-   * Create some taxonomy terms.
-   *
-   * @param \AcceptanceTester $I
-   *   Tester
-   */
-  protected function createTerms(AcceptanceTester $I) {
-    $I->createEntity([
-      'name' => 'Foo Bar Baz',
-      'vid' => 'stanford_event_types',
-    ], 'taxonomy_term');
-    $I->createEntity([
-      'name' => 'Foo Bar Baz',
-      'vid' => 'stanford_news_topics',
-    ], 'taxonomy_term');
-    $I->createEntity([
-      'name' => 'Foo Bar Baz',
-      'vid' => 'stanford_publication_topics',
-    ], 'taxonomy_term');
   }
 
 }

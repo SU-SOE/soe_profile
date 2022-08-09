@@ -1,0 +1,17 @@
+files:
+  include: "**/*.s+(a|c)ss"
+  ignore:
+    - vendor/**/*.scss
+    - node_modules/**/*.scss
+syntax:
+    include:
+      - scss
+      - sass
+resolvers:
+  empty-line-between-blocks: 1
+  final-newline: 1
+  space-after-colon: 1
+  space-before-colon: 1
+  space-between-parens: 1
+options:
+  optOut: false

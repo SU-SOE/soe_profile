@@ -1,5 +1,221 @@
 # Stanford Profile
 
+9.0.2
+--------------------------------------------------------------------------------
+_Release Date: 2022-08-08_
+
+- D8CORE-6006 Disable link attributes module (#597)
+- Improve person importer url fetching with some error handeling
+- Changed automated updates to use `gh` instead of `hub`
+- Add functional tests for wysiwyg button focus (#593)
+- Validate menu items for local absoluate urls (#594)
+- Update StanfordTextEditorTest unit test(#595)
+- D8CORE-5867 Simplify and unify rabbit hole message and action (#592)
+- D8CORE-5975 Allow resetting taxonomy term order to alphabetical with the button (#591)
+- Updated field encrypt module to version 3.0.0
+- Updated configs for latest core and contrib modules
+- Hide "Sticky" and "Promote" fields on node form
+- Fix duplicates in course lists
+- D8CORE-6035 Show image title field when uploading in media library.
+- Ensure events importer widget works when the API is empty
+- Removed entity_print from composer.json (#589)
+- D8CORE-5684: Underline buttons on the events mini calendar. (#586)
+- Adjusted Merge upstream task.
+- Updated config from search_api module
+- D8CORE-6000: Added additional html elements to embeddables allow list (#584)
+- D8CORE-4183: fix up to alignment. (#569)
+- D8CORE-6003 Save terms in the order they were chosen (#583)
+- D8CORE-6005 Allow Span tags in the wysiwyg
+- D8CORE-5128 Enable embed code validators (#579)
+- Refactored and improved codeception tests.
+- fixed composer namespace to lowercase
+- Removed fzaninotto/faker workaround in CI tests
+- D8CORE-5948: removing the li from the ch line limit (#578)
+- D8CORE-5862: Removed obsolete checkbox from theme settings (#575)
+- fix circle ci config
+- D8CORE-4972 Provide aria-label input for links on paragraphs (#573)
+- removed unwanted composer files
+- Updated drupal core 9.4
+- Improve event sponsor field update hook (#574)
+- D8CORE-3558 Fix error when the access token expires (#566)
+- Move some CircleCi to GH Actions (#568)
+- D8CORE-5860 Fix intranet icons for paragraphs and media
+- D8CORE-4780 Changed search page button text to "Search"
+- D8CORE-2274: Updated event sponsor field "Add More" button label (#570)
+- D8CORE-4489: fixing font sizes within tables (#564)
+- D8CORE-5598 D8CORE-5592: making margins even on OL and UL (#565)
+- D8CORE-5886 Enable ajax on people lists
+- added ckeditor_blockimagepaste module
+- Added and configured ckeditor_blockimagepaste to prevent inline base64 images
+- D8CORE-4858 Allow hiding paragraph and custom empty results message (#563)
+- D8CORE-5864: fixing the news alignment. (#559)
+- D8CORE-5859: changes to the font sizes in courses (#562)
+- Adjusted VBO form for event date fields that are required
+- D8CORE-4867 Publication lists on people pages (#561)
+- D8CORe-5871 Change order of filter processing to fix <picture><source> tags
+- D8CORE-5858 Add missing "All" courses menu item
+- Locked citeprocphp to version 2.4.1, pre ext-intl requirement. (#560)
+- D8CORE-5763 Updated default content (#558)
+- D8CORE-4348 Setup Gitpod (#261)
+- D8CORE-5680 Switch list landing pages to nodes with layout builder settings (#552)
+- D8CORE-5773: Added edit buttons on courses list page (#555)
+- Updates from stanford_profile 2022-05-14
+- Updated some codeception tests (#554)
+- D8CORE-1835: Added abbr buttons to ckeditor (#550)
+- Disabled courses department importer
+- D8CORE-2215: Let editors sort content by author (#551)
+- D8CORE-5824: Added a second provider for Stanford University Library oEmbeds (#548)
+- Updated circleci docker
+
+
+9.0.1
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-11_
+
+- Updated submodules with their latest code form their repos.
+
+9.0.0
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-11_
+
+- Consolidation of all modules into a mono repo.
+
+8.x-4.4
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-11_
+
+- Fixup for "Results For" on people list pages.
+
+8.x-4.3
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-10_
+
+- Enabled aggregation for duplicates in course view
+
+
+8.x-4.2
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-10_
+
+- Enabled aggregation for duplicates in course view
+
+8.x-4.1
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-10_
+
+- D8CORE-2331: Updated help on media caption field text (#542)
+- Allow admins to change the home page via site settings (#540)
+- D8CORE-5833: Fix for courses view to respect chosen limit in card grid list paragraph (#539)
+
+8.x-4.0
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-02_
+
+- Added twitter card metadata for person content
+- Several tweaks to the taxonomy display and fields. (#532)
+- Update block.block.minimally_branded_subtheme_pagetitle.yml (#535)
+- D8CORE-5772: Added custom block and edit link on `/courses` page (#534)
+- D8CORE-5748: Adding a listy style to the taxonomy terms (#533)
+- D8CORE-5778: adding the grid col 3 for three across (#530)
+- D8CORE-5627: added <object> and <param> to allowed tags in embeddables (#529)
+- D8CORE-5729 People term pages: display only child terms groupings (#526)
+- D8CORE-5187 Courses and Importer(#500)
+- D8CORE-5611 Allow multiple basic page types and change widget
+- D8CORE-5696 Only display location address once (#520)
+- D8CORE-5629 Adjust profile link url for stanford only profiles (#521)
+- D8CORE-4118 Remove layout builder settings on other display modes (#519)
+- D8CORE-4128 Change views to HTML lists (#518)
+- Enabled transliterate_filenames from stanford_media
+- D8CORE-3975 Created shared tags vocabulary and fields (#511)
+- D8CORE-5666 Enabled and configured responsive_tables_filter module (#515)
+- Dont trim the url on even cards
+- Updated link_title_formatter module
+- Updated domain_301_redirect version
+- D8CORE-5172: Updated references to localist and events-legacy urls
+- DO not require lockup option select, prevent requiring lockup fields
+
+
+8.x-3.2
+--------------------------------------------------------------------------------
+_Release Date: 2022-03-22_
+
+- DO not require lockup option select, prevent requiring lockup fields
+- D8CORE-5172: Updated references to localist and events-legacy urls
+
+8.x-3.1
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-02_
+
+- updated dependencies
+- Merge branch '8.x' of https://github.com/SU-SWS/stanford_profile into 8.x
+- Several tweaks to the taxonomy display and fields. (#532)
+- Update block.block.minimally_branded_subtheme_pagetitle.yml (#535)
+- D8CORE-5772: Added custom block and edit link on `/courses` page (#534)
+- Updates from stanford_profile (#247)
+- Updates from stanford_profile (#246)
+- D8CORE-5748: Adding a listy style to the taxonomy terms (#533)
+- D8CORE-5778: adding the grid col 3 for three across (#530)
+- Updates from stanford_profile 2022-04-22
+- Merge branch '8.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-5627: added <object> and <param> to allowed tags in embeddables (#529)
+- Updates from stanford_profile 2022-04-21
+- config fixup
+- Merge branch '8.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-5729 People term pages: display only child terms groupings (#526)
+- D8CORE-5187 Courses and Importer(#500)
+- localist terms (#522)
+- Merge branch '8.x' of https://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-5611 Allow multiple basic page types and change widget
+- Updates from stanford_profile 2022-04-09
+- Merge branch '8.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-5696 Only display location address once (#520)
+- Updates from stanford_profile 2022-04-08
+- Merge branch '8.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-5629 Adjust profile link url for stanford only profiles (#521)
+- D8CORE-4118 Remove layout builder settings on other display modes (#519)
+- D8CORE-4128 Change views to HTML lists (#518)
+- Merge branch '8.x' of https://github.com/SU-SWS/stanford_profile into 8.x
+- Enabled transliterate_filenames from stanford_media
+- Merge branch '8.x' of https://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-3975 Created shared tags vocabulary and fields (#511)
+- D8CORE-5666 Enabled and configured responsive_tables_filter module (#515)
+- Updates from stanford_profile 2022-04-02
+- Merge branch '8.x' of ssh://github.com/SU-SWS/stanford_profile into 8.x
+- Dont trim the url on even cards
+- Updated link_title_formatter module
+- Updated domain_301_redirect version
+- Merge branch '8.x' of https://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-5172: Updated references to localist and events-legacy urls
+- DO not require lockup option select, prevent requiring lockup fields
+- 8.3.1
+- 8.3.1
+- Switched stanford_profile dependency in composer.json
+- Merge branch 'main' into 8.x
+- switch master branch to main
+- Merge branch 'main' into 8.x
+- switch master branch to main
+- Adjust circleci jobs
+- 8.3.0
+- 8.2.20
+
+
+8.x-3.1
+--------------------------------------------------------------------------------
+_Release Date: 2022-03-23_
+
+- Merge branch '8.x' of https://github.com/SU-SWS/stanford_profile into 8.x
+- D8CORE-5172: Updated references to localist and events-legacy urls
+- DO not require lockup option select, prevent requiring lockup fields
+- 8.3.1
+- 8.3.1
+- Switched stanford_profile dependency in composer.json
+- Merge branch 'main' into 8.x
+- Merge branch 'main' into 8.x
+- switch master branch to main
+- Adjust circleci jobs
+- 8.3.0
+- 8.2.20
+
 
 8.x-2.21
 --------------------------------------------------------------------------------

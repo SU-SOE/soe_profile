@@ -1,9 +1,23 @@
 <?php
 
+use Faker\Factory;
+
 /**
  * Tests for various media access functionality.
  */
 class MediaPermissionsCest {
+
+  /**
+   * @var \Faker\Generator
+   */
+  protected $faker;
+
+  /**
+   * Test Constructor
+   */
+  public function __construct() {
+    $this->faker = Factory::create();
+  }
 
   /**
    * Test admin perms
@@ -38,17 +52,17 @@ class MediaPermissionsCest {
     $I->canSee('oEmbed URL');
     $I->canSee('Embed Code');
 
-    $I->fillField('Name', 'Foo Bar');
+    $I->fillField('Name', $this->faker->words(3, TRUE));
     $I->fillField('Embed Code', 'Lorem Ipsum');
     $I->click('Save');
     $I->canSee('The given embeddable code is not permitted.');
     $code = [
       '<div id="localist-widget-88041469" class="localist-widget"></div>',
-      '<script defer type="text/javascript" src="http://stanford.enterprise.localist.com/widget/view?schools=stanford&days=31&num=50&container=localist-widget-88041469&template=modern"></script>',
+      '<script defer type="text/javascript" src="http://events.stanford.edu/widget/view?schools=stanford&days=31&num=50&container=localist-widget-88041469&template=modern"></script>',
     ];
     $I->fillField('Embed Code', implode("\n", $code));
     $I->click('Save');
-    $I->canSee('Embeddable Foo Bar has been created.');
+    $I->canSee('has been created.');
   }
 
   /**
@@ -61,7 +75,7 @@ class MediaPermissionsCest {
     $I->canSee('oEmbed URL');
     $I->canSee('Embed Code');
 
-    $I->fillField('Name', 'Foo Bar');
+    $I->fillField('Name', $this->faker->words(3, TRUE));
     $I->fillField('Embed Code', 'Lorem Ipsum');
     $I->click('Save');
     $I->canSee('The given embeddable code is not permitted.');

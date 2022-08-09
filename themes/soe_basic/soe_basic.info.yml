@@ -1,0 +1,46 @@
+name: SOE Basic
+type: theme
+description: 'SOE Branding Subtheme.'
+package: Stanford
+version: 9.1.0
+core_version_requirement: ^9
+
+# Defines the base theme
+base theme: stanford_basic
+
+regions:
+  page_top: 'Page top'
+  header: Header
+  search: Search
+  menu: Menu
+  help: Help
+  content: Content
+  footer: Footer
+  page_bottom: 'Page bottom'
+
+features:
+  - favicon
+  - logo
+
+components:
+  namespaces:
+    basic: templates
+
+libraries:
+#  - stanford_basic/basic
+  - soe_basic/allpages
+
+ckeditor_stylesheets:
+  - dist/css/ckeditor.css
+
+libraries-override:
+  jumpstart_ui/base: false
+
+# Not working yet.
+# Waiting on: https://www.drupal.org/project/drupal/issues/474684
+# dependencies:
+#   - ui_patterns
+#   - ui_patterns_layouts
+#   - ui_patterns_library
+#   - layout_discovery
+#   - jumpstart_ui

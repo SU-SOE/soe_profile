@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Stories Paragraph
+ *
+ * Template for the Stories paragraph type.
+ *
+ * Available variables:
+ *
+ * {{ image }}
+ * {{ person_content }}
+ * {{ cta }}
+ * {{ quote }}
+ * {{ border_color_variant }}
+ *
+ */
+#}
+{%- set attributes = attributes.addClass(['su-stories-paragraph', modifier_class]) -%}
+
+{%- if border_color_variant|render|striptags|trim is not empty -%}
+{%- set border_color = 'border-color-' ~ border_color_variant|render|striptags|trim -%}
+{%- else -%}
+{%- set border_color = 'border-color-default' -%}
+{%- endif -%}
+
+{%- set img_attributes = create_attribute() -%}
+{%- set img_classes = ['su-stories-paragraph__photo', border_color] -%}
+
+<div{{ attributes }}>
+  <div class="su-stories-paragraph__content">
+
+    <div{{ img_attributes.addClass(img_classes) }}>
+      {{ image }}
+    </div>
+
+    <div class="su-stories-paragraph__details">
+      {{ person_content }}
+
+      {%- if quote|render|striptags('<drupal-placeholder>') is not empty -%}
+      <div class="su-stories-paragraph__quote">
+        <p>&ldquo;{{ quote|render|striptags }}... &rdquo;</p>
+      </div>
+      {%- endif -%}
+
+      {{ link }}
+    </div>
+  </div>
+
+  {%- if cta|render|striptags('<drupal-placeholder>') is not empty -%}
+  <div class="su-stories-paragraph__cta-region">
+    {{ cta }}
+  </div>
+  {%- endif -%}
+</div>

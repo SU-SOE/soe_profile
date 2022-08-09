@@ -1,0 +1,295 @@
+@charset 'UTF-8';
+
+// Event node page
+.event {
+  .section-editorial-content {
+    color: $su-color-white;
+
+    .su-event-type {
+      a {
+        color: $su-color-white;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .su-event-label-past {
+      color: $su-color-white;
+    }
+  }
+
+  .su-event-headline,
+  .su-event-subheadline {
+    font-weight: $su-font-black;
+  }
+
+  .su-event-sponsor {
+    @include modular-spacing('padding', null null 3 null);
+  }
+
+  .centered-container {
+    .cta {
+      .su-button {
+        @include soe-button--pink;
+
+        color: $soe-color-black;
+
+        &:hover,
+        &:focus {
+          color: $su-color-white;
+        }
+      }
+
+      .su-link--external {
+        &::after {
+          background-color: $su-color-white;
+        }
+      }
+    }
+  }
+}
+
+// Explore More Events block
+// Events Card
+.su-event-card,
+.stanford-events-more-events-block {
+
+  .su-event-list-item__details {
+
+    h2 {
+      @include modular-typography(1.3);
+      line-height: 1.5;
+
+      a,
+      a:link,
+      a:visited,
+      a:focus {
+        @include soe-type-sans-base;
+        @include soe--link;
+
+        &:hover {
+          @include soe--link-hover;
+          color: $soe-color-black;
+          text-decoration: none;
+        }
+
+        &::after {
+          background: $su-color-black;
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .su-date-stacked {
+    .su-event-end-date,
+    .su-event-start-date {
+      font-weight: $su-font-black;
+    }
+  }
+
+  .more-link {
+    a {
+      background-color: $soe-color-pink;
+    }
+  }
+
+  a,
+  a:link,
+  a:visited,
+  a:focus {
+    color: $soe-color-black;
+    font-weight: $su-font-regular;
+    text-decoration: none;
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Specific override for the event module.
+// Cards appear in the Explore More Events on the event node.
+// Lists - event cards.
+.su-event-card {
+  &.su-event-list-item {
+    .su-event-list-item__details {
+
+      h2 {
+        line-height: 1.5;
+
+        > a {
+          &:active,
+          &:hover,
+          &:focus {
+            @include soe--link-hover;
+
+            color: $su-color-black;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Event schedule
+.su-event-schedule {
+  h2 {
+    line-height: 1.5;
+
+    .block__title,
+    .grouping-title {
+      font-weight: $su-font-black;
+    }
+  }
+
+  .su-event-schedule__headline {
+    a {
+      @include soe-type-sans-base;
+      @include soe--link;
+
+      color: $su-color-black;
+
+      &:visited,
+      &:link,
+      &:focus {
+        @include soe--link-hover;
+      }
+    }
+  }
+
+  .su-event-schedule__time {
+    font-weight: $su-font-black;
+  }
+
+  .su-person-cta {
+    .su-person-cta__content {
+      .su-person-cta__name {
+        a,
+        a:link,
+        a:visited,
+        a:focus {
+          color: $su-color-bright-blue;
+          font-weight: $su-font-black;
+          text-decoration: none;
+
+          &::after {
+            background: $su-color-bright-blue;
+          }
+        }
+      }
+    }
+  }
+
+  .su-event-schedule__location {
+    .address {
+      margin-left: 20px;
+
+      &::before {
+        @include small-paragraph;
+
+        content: "\f3c5";
+        color: $su-color-black;
+        font-family: 'Font Awesome 5 Free';
+        // Need this for the new version of FA. Will go away later.
+        font-weight: $su-font-semi-bold;
+        position: absolute;
+        margin-left: -20px;
+      }
+    }
+  }
+}
+
+// Event List pages
+.section-events-list--content {
+  .main-region {
+    @include modular-spacing('padding', 2 null null null);
+  }
+}
+
+.stanford-events-list-page,
+.stanford-events-list-page-filtered,
+.su-event-series-items,
+.stanford-event-series-list-all,
+.stanford-events-past-past-events-block {
+
+  .su-event-list-item {
+    .event-list-item__type {
+      a {
+        font-weight: $su-font-regular;
+
+        &:hover {
+          color: $su-color-black;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    h2 {
+      line-height: 1.5;
+
+      a {
+        @include soe-type-sans-base;
+        @include soe--link;
+
+        color: $su-color-black;
+
+        &:hover,
+        &:focus,
+        &:active {
+          @include soe--link-hover;
+        }
+
+        &::after {
+          background: $su-color-black;
+          border-bottom: 0;
+        }
+      }
+    }
+
+    .su-event-list-item__date {
+      .su-event-end-date,
+      .su-event-start-date {
+        font-weight: $su-font-black;
+      }
+    }
+  }
+
+  .js-pager__items {
+    .pager__item {
+      .button {
+        @include box-shadow('shallow');
+
+        background-color: $soe-color-turquoise;
+        color: $soe-color-black;
+
+        &:hover {
+          color: $su-color-white;
+        }
+      }
+    }
+  }
+}
+
+
+// Event Series page
+.stanford-event-series-list-all {
+  @include modular-spacing('padding', 2 null null null);
+}
+
+.section-event-series--header {
+  .node-stanford-event-series-title {
+    @include modular-spacing('padding', 6 null null null);
+
+    margin-top: 0;
+  }
+}
+
+.section-bgcolor--title {
+  @include modular-spacing('padding', 6 null 5 null);
+}

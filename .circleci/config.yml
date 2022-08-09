@@ -4,7 +4,7 @@ version: 2
 ## Defines images and working directory.
 defaults: &defaults
   docker:
-    - image: pookmish/drupal8ci:latest
+    - image: pookmish/drupal8ci:php8
     - image: selenium/standalone-chrome:latest
     - image: circleci/mysql:5.7
       environment:
@@ -15,20 +15,20 @@ defaults: &defaults
   working_directory: /var/www/html
 
 #Jobs
-code_coverage: &code_coverage
-  <<: *defaults
-  steps:
-    - checkout:
-        path: /var/www/test
-    - run:
-        name: Run PHP Unit Coverage Tests
-        command: |
-          composer global require SU-SWS/stanford-caravan:dev-8.x-2.x
-          ~/.composer/vendor/bin/sws-caravan phpunit /var/www/html --extension-dir=/var/www/test --with-coverage
-    - store_test_results:
-        path: /var/www/html/artifacts/phpunit
-    - store_artifacts:
-        path: /var/www/html/artifacts/phpunit/coverage
+#code_coverage: &code_coverage
+#  <<: *defaults
+#  steps:
+#    - checkout:
+#        path: /var/www/test
+#    - run:
+#        name: Run PHP Unit Coverage Tests
+#        command: |
+#          composer global require su-sws/stanford-caravan:dev-8.x-2.x
+#          ~/.composer/vendor/bin/sws-caravan phpunit /var/www/html --extension-dir=/var/www/test --with-coverage
+#    - store_test_results:
+#        path: /var/www/html/artifacts/phpunit
+#    - store_artifacts:
+#        path: /var/www/html/artifacts/phpunit/coverage
 
 back_to_dev: &back_to_dev
   <<: *defaults
@@ -37,23 +37,8 @@ back_to_dev: &back_to_dev
     - run:
         name: Back to dev
         command: |
-          composer global require SU-SWS/stanford-caravan:dev-8.x-2.x
-          ~/.composer/vendor/bin/sws-caravan back-to-dev ${CIRCLE_TAG} ${CIRCLE_WORKING_DIRECTORY}
-
-d8_codeception: &d8_codeception
-  <<: *defaults
-  steps:
-    - checkout:
-        path: /var/www/test
-    - run:
-        name: Run Codeception Tests
-        command: |
-          composer global require SU-SWS/stanford-caravan:dev-8.x-1.x
-          ~/.composer/vendor/bin/sws-caravan codeception /var/www/html --extension-dir=/var/www/test
-    - store_test_results:
-        path: /var/www/html/artifacts/behat
-    - store_artifacts:
-        path: /var/www/html/artifacts
+          composer global require su-sws/stanford-caravan:dev-8.x-2.x
+          ~/.composer/vendor/bin/sws-caravan back-to-dev ${CIRCLE_TAG} ${CIRCLE_WORKING_DIRECTORY} main
 
 d9_codeception: &d9_codeception
   <<: *defaults
@@ -63,8 +48,9 @@ d9_codeception: &d9_codeception
     - run:
         name: Run Codeception Tests
         command: |
-          composer global require SU-SWS/stanford-caravan:dev-8.x-2.x
-          ~/.composer/vendor/bin/sws-caravan codeception /var/www/html --extension-dir=/var/www/test
+          composer global require su-sws/stanford-caravan:dev-8.x-2.x
+          ~/.composer/vendor/bin/sws-caravan codeception /var/www/html --extension-dir=/var/www/test --suites=functional
+#          ~/.composer/vendor/bin/sws-caravan codeception /var/www/html --extension-dir=/var/www/test
     - store_test_results:
         path: /var/www/html/artifacts/behat
     - store_artifacts:
@@ -80,22 +66,20 @@ merge_upstream: &merge_upstream
         command: |
           git config --global user.email "sws-developers@lists.stanford.edu"
           git config --global user.name "CircleCI"
-          git pull https://github.com/SU-SWS/stanford_profile.git 8.x-3.x -X ours --no-edit
+          git pull https://github.com/SU-SWS/stanford_profile.git 9.x -X ours --no-edit
           if [[ $(git diff origin/${CIRCLE_BRANCH} --name-only) ]]; then
             DATE=`date +%Y-%m-%d`
-            git checkout -b ${DATE}
-            git push origin ${DATE}
-            hub pull-request --base=${CIRCLE_BRANCH} --message="Updates from stanford_profile" --assign=pookmish,imonroe
+            git checkout -b ${DATE}-${CIRCLE_BRANCH}
+            git push origin ${DATE}-${CIRCLE_BRANCH}
+            gh pr create --base=${CIRCLE_BRANCH} --body="Updates from stanford_profile" --assignee=pookmish,imonroe
           fi
 
 # Declare all of the jobs we should run.
 jobs:
-  run-coverage:
-    <<: *code_coverage
+#  run-coverage:
+#    <<: *code_coverage
   run-back-to-dev:
     <<: *back_to_dev
-  run-d8-codeception:
-    <<: *d8_codeception
   run-d9-codeception:
     <<: *d9_codeception
   run-merge-upstream:
@@ -116,20 +100,7 @@ workflows:
                 - /.*/
   tests:
     jobs:
-      - run-coverage
-#      - run-d8-codeception
       - run-d9-codeception
-  # Re-test every sunday in case this code becomes stale.
-  sundays:
-    jobs:
-      - run-coverage
-    triggers:
-      - schedule:
-          cron: "0 0 * * 0"
-          filters:
-            branches:
-              only:
-                - 8.x-1.x
   daily:
     jobs:
       - run-merge-upstream
@@ -139,4 +110,4 @@ workflows:
           filters:
             branches:
               only:
-                - /8.x-2.x/
+                - /9.x/

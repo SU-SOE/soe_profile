@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+// Overrides to the CTA list paragraph
+.su-cta-list-paragraph {
+
+  .su-cta-list-paragraph__header {
+    h2 {
+      font-weight: $su-font-black;
+      font-size: inherit;
+    }
+  }
+}

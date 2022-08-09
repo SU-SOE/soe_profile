@@ -1,23 +1,17 @@
 <?php
 
+use Drupal\config_pages\Entity\ConfigPages;
+
+require_once __DIR__ . '/../TestFilesTrait.php';
+
 /**
- * Test for the local lockup settings
+ * Test for the local lockup settings.
+ *
+ * @group local_footer
  */
 class LocalFooterLockupCest {
 
-  /**
-   * The path to the data dir where codeception wants the logo file.
-   *
-   * @var string
-   */
-  protected $DATA_DIR;
-
-  /**
-   * The logo file name.
-   *
-   * @var string
-   */
-  const LOGO_FILENAME = "logo.jpg";
+  use TestFilesTrait;
 
   /**
    * Setup work before running tests.
@@ -26,12 +20,7 @@ class LocalFooterLockupCest {
    *  The working class.
    */
   function _before(AcceptanceTester $I) {
-    $this->DATA_DIR = rtrim(codecept_data_dir(), '/\\');
-    // Copy our assets into place first.
-    if (!file_exists($this->DATA_DIR . DIRECTORY_SEPARATOR)) {
-      mkdir($this->DATA_DIR, 0777, TRUE);
-    }
-    copy(__DIR__ . DIRECTORY_SEPARATOR . self::LOGO_FILENAME, $this->DATA_DIR . DIRECTORY_SEPARATOR . self::LOGO_FILENAME);
+    $this->prepareImage();
   }
 
   /**
@@ -41,31 +30,10 @@ class LocalFooterLockupCest {
    *   Tester.
    */
   public function _after(AcceptanceTester $I) {
-    $I->logInWithRole('administrator');
-    $I->amOnPage('/admin/config/system/local-footer');
-    $I->uncheckOption('Use Default Lockup');
-    $I->uncheckOption('Use the logo supplied by the theme');
-    $I->selectOption('Lockup Options', "a");
-    // In case there was an image already.
-    if ($I->grabMultiple('input[value="Remove"]')) {
-      $I->click("Remove");
+    if ($config_page = ConfigPages::load('stanford_local_footer')) {
+      $config_page->delete();
     }
-    $I->checkOption('Use the logo supplied by the theme');
-    $I->checkOption('Use Default Lockup');
-    $I->click('Save');
-
-    // Clean up our assets.
-    if (file_exists($this->DATA_DIR . DIRECTORY_SEPARATOR . self::LOGO_FILENAME)) {
-      unlink($this->DATA_DIR . DIRECTORY_SEPARATOR . self::LOGO_FILENAME);
-    }
-  }
-
-  /**
-   * Test the lockup exists.
-   */
-  public function testLockupSettings(AcceptanceTester $I) {
-    $I->amOnPage('/');
-    $I->seeElement('.su-local-footer .su-lockup');
+    $this->removeFiles();
   }
 
   /**
@@ -197,7 +165,7 @@ class LocalFooterLockupCest {
     $I->canSee("Tertiary title line");
   }
 
-   /**
+  /**
    * Test the lockup settings overrides.
    */
   public function testLockupSettingsM(AcceptanceTester $I) {
@@ -347,11 +315,10 @@ class LocalFooterLockupCest {
       $I->click("Remove");
     }
 
-    $I->attachFile('input[name="files[su_local_foot_loc_img_0]"]', self::LOGO_FILENAME);
+    $I->attachFile('input[name="files[su_local_foot_loc_img_0]"]', $this->logoPath);
     $I->click('Upload');
 
     $I->click('Save');
-    $I->runDrush('cr');
     $I->amOnPage('/');
     $I->seeElement(".su-lockup__custom-logo");
     $I->assertNotEmpty($I->grabAttributeFrom('.su-lockup__custom-logo', 'alt'));
@@ -382,11 +349,10 @@ class LocalFooterLockupCest {
     }
 
     // For CircleCI
-    $I->attachFile('input[name="files[su_local_foot_loc_img_0]"]', self::LOGO_FILENAME);
+    $I->attachFile('input[name="files[su_local_foot_loc_img_0]"]', $this->logoPath);
     $I->click('Upload');
 
     $I->click('Save');
-    $I->runDrush('cr');
     $I->amOnPage('/');
     $I->seeElement(".su-lockup__custom-logo");
     $I->cantSee("Site title line");

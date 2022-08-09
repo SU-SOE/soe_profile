@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.stanford_stories_quote
+    - paragraphs.paragraphs_type.stanford_stories
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    stanford_html: stanford_html
+    stanford_minimal_html: stanford_minimal_html
+    plain_text: plain_text
+id: paragraph.stanford_stories.stanford_stories_quote
+field_name: stanford_stories_quote
+entity_type: paragraph
+bundle: stanford_stories
+label: Quote
+description: 'Limited to 101 characters'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

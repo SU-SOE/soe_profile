@@ -1,0 +1,38 @@
+stories-paragraph:
+  label: Stories Paragraph
+  description: Stories Paragraph
+  variants:
+    default:
+      label: Minimal
+      description: "Minimal"
+  fields:
+    image:
+      type: text
+      label: "Image"
+      description: "The image to display for the Paragraph"
+    person_content:
+      type: text
+      label: "Content"
+      description: "The main content area"
+    quote:
+      type: text
+      label: "Quote"
+      description: "The quote for the story"
+    link:
+      type: text
+      label: "Link"
+      description: "Link to the story node"
+    cta:
+      type: text
+      label: "CTA"
+      description: "An optional CTA button"
+    border_color_variant:
+      type: integer
+      label: "Border color option"
+      description: "A numerical variant item"
+  use: "@soe_paragraph_stories/stories-paragraph.html.twig"
+  libraries:
+    - stories-paragraph:
+        css:
+          component:
+            ../../../dist/css/stories-paragraph.styles.css: {}
