@@ -9,4 +9,4 @@ dependencies:
   - paragraphs:paragraphs
   - drupal:text
   - soe_paragraphs:soe_paragraphs
-version: 9.1.0
+version: 9.x-1.1-dev

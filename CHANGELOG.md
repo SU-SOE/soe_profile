@@ -1,12 +1,18 @@
 # Stanford Profile
 
-9.0.2
+9.1.1
+--------------------------------------------------------------------------------
+_Release Date: 2022-08-09_
+
+- Updated field validation for google analytics and allow multiple property ids (#600)
+
+
+9.1.0
 --------------------------------------------------------------------------------
 _Release Date: 2022-08-08_
 
 - D8CORE-6006 Disable link attributes module (#597)
 - Improve person importer url fetching with some error handeling
-- Changed automated updates to use `gh` instead of `hub`
 - Add functional tests for wysiwyg button focus (#593)
 - Validate menu items for local absoluate urls (#594)
 - Update StanfordTextEditorTest unit test(#595)
@@ -20,7 +26,6 @@ _Release Date: 2022-08-08_
 - Ensure events importer widget works when the API is empty
 - Removed entity_print from composer.json (#589)
 - D8CORE-5684: Underline buttons on the events mini calendar. (#586)
-- Adjusted Merge upstream task.
 - Updated config from search_api module
 - D8CORE-6000: Added additional html elements to embeddables allow list (#584)
 - D8CORE-4183: fix up to alignment. (#569)
@@ -32,7 +37,6 @@ _Release Date: 2022-08-08_
 - Removed fzaninotto/faker workaround in CI tests
 - D8CORE-5948: removing the li from the ch line limit (#578)
 - D8CORE-5862: Removed obsolete checkbox from theme settings (#575)
-- fix circle ci config
 - D8CORE-4972 Provide aria-label input for links on paragraphs (#573)
 - removed unwanted composer files
 - Updated drupal core 9.4
@@ -45,7 +49,6 @@ _Release Date: 2022-08-08_
 - D8CORE-4489: fixing font sizes within tables (#564)
 - D8CORE-5598 D8CORE-5592: making margins even on OL and UL (#565)
 - D8CORE-5886 Enable ajax on people lists
-- added ckeditor_blockimagepaste module
 - Added and configured ckeditor_blockimagepaste to prevent inline base64 images
 - D8CORE-4858 Allow hiding paragraph and custom empty results message (#563)
 - D8CORE-5864: fixing the news alignment. (#559)
@@ -56,16 +59,14 @@ _Release Date: 2022-08-08_
 - D8CORE-5858 Add missing "All" courses menu item
 - Locked citeprocphp to version 2.4.1, pre ext-intl requirement. (#560)
 - D8CORE-5763 Updated default content (#558)
-- D8CORE-4348 Setup Gitpod (#261)
 - D8CORE-5680 Switch list landing pages to nodes with layout builder settings (#552)
 - D8CORE-5773: Added edit buttons on courses list page (#555)
-- Updates from stanford_profile 2022-05-14
 - Updated some codeception tests (#554)
 - D8CORE-1835: Added abbr buttons to ckeditor (#550)
 - Disabled courses department importer
 - D8CORE-2215: Let editors sort content by author (#551)
 - D8CORE-5824: Added a second provider for Stanford University Library oEmbeds (#548)
-- Updated circleci docker
+
 
 
 9.0.1
