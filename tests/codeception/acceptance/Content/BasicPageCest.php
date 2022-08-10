@@ -12,6 +12,18 @@ use Faker\Factory;
 class BasicPageCest {
 
   /**
+   * @var \Faker\Generator
+   */
+  protected $faker;
+
+  /**
+   * Test Constructor
+   */
+  public function __construct() {
+    $this->faker = Factory::create();
+  }
+
+  /**
    * Make sure the basic page settings are correct.
    */
   public function testComponentSettings(AcceptanceTester $I){
