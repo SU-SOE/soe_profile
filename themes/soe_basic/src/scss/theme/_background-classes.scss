@@ -129,3 +129,31 @@
     margin: 0;
   }
 }
+
+// Background gradients on Basic pages
+// News, Events
+// section-bgcolor--title
+// section-editorial-content
+// section-stanford-news-views-header
+// soe-events--all
+
+// All News, Events, Pubs pages
+.soe-news--all,
+.soe-events--all,
+.soe-pubs--all {
+  h1 {
+    @include centered-column;
+  }
+}
+
+// Spacing on the gradient for header
+.section-bgcolor--title {
+  @include modular-spacing('padding', 6 null 6 null);
+}
+
+// Override for too much space
+.section-editorial-content .su-event-dek,
+.node-stanford-event-series-su-event-series-dek {
+  margin-bottom: 0;
+}
+
