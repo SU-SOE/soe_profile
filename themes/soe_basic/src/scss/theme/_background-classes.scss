@@ -131,28 +131,31 @@
 }
 
 // Background gradients on Basic pages
-// News, Events, Pubs
-// All News, Events, Pubs pages
-.soe-news--all,
-.soe-events--all,
-.soe-pubs--all {
-  h1 {
-    @include centered-column;
+// News, Events, People
+// CSS solution
+.page-news,
+.page-people,
+.page-events {
+
+  .jumpstart-ui--one-column {
+    &.centered-container {
+      @include modular-spacing('padding', 6 null 6 null);
+      @include modular-spacing('margin', null null 5 null);
+      @include gradient--solid-purple-green;
+
+      margin-top: 0;
+      max-width: 100%;
+      width: 100%;
+    }
   }
-}
 
-// Spacing on the gradient for header
-.section-bgcolor--title {
-  @include modular-spacing('padding', 6 null 6 null);
-}
+  .node-stanford-page-title {
+    margin-top: 0;
 
-// Override for too much space
-.section-editorial-content {
-  .su-event-dek {
-    margin-bottom: 0;
+    h1 {
+      @include centered-column;
+
+      color: $su-color-white;
+    }
   }
-}
-
-.node-stanford-event-series-su-event-series-dek {
-  margin-bottom: 0;
 }
