@@ -131,12 +131,7 @@
 }
 
 // Background gradients on Basic pages
-// News, Events
-// section-bgcolor--title
-// section-editorial-content
-// section-stanford-news-views-header
-// soe-events--all
-
+// News, Events, Pubs
 // All News, Events, Pubs pages
 .soe-news--all,
 .soe-events--all,
@@ -152,8 +147,12 @@
 }
 
 // Override for too much space
-.section-editorial-content .su-event-dek,
+.section-editorial-content {
+  .su-event-dek {
+    margin-bottom: 0;
+  }
+}
+
 .node-stanford-event-series-su-event-series-dek {
   margin-bottom: 0;
 }
-
