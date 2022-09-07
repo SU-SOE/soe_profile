@@ -131,11 +131,12 @@
 }
 
 // Background gradients on Basic pages
-// News, Events, People
+// News, Events, People, Publications
 // CSS solution
 .page-news,
 .page-people,
-.page-events {
+.page-events,
+.page-publications {
 
   .jumpstart-ui--one-column {
     &.centered-container {
@@ -157,5 +158,12 @@
 
       color: $su-color-white;
     }
+  }
+}
+
+// Event Series title feSpecularLighting
+.su-event-series-title {
+  h1 {
+    @include modular-spacing('padding-top', 6);
   }
 }
