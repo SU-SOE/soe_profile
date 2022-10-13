@@ -26,7 +26,6 @@ use Drupal\search_api\IndexInterface;
 use Drupal\stanford_profile_helper\StanfordProfileHelper;
 use Drupal\taxonomy\TermInterface;
 use Drupal\taxonomy_menu\Plugin\Menu\TaxonomyMenuMenuLink;
-use Drupal\views\ViewExecutable;
 use Drupal\Core\Render\Element;
 
 /**
@@ -164,6 +163,10 @@ function stanford_profile_helper_theme($existing, $type, $theme, $path) {
  * Implements hook_library_info_alter().
  */
 function stanford_profile_helper_library_info_alter(&$libraries, $extension) {
+  if ($extension == 'views') {
+    $libraries['views.ajax']['dependencies'][] = 'stanford_profile_helper/ajax_views';
+  }
+
   if ($extension == 'mathjax') {
     $libraries['source']['dependencies'][] = 'stanford_profile_helper/mathjax';
     unset($libraries['setup'], $libraries['config']);
@@ -734,8 +737,11 @@ function stanford_profile_helper_preprocess_menu(&$variables) {
       $term = \Drupal::entityTypeManager()
         ->getStorage('taxonomy_term')
         ->load($item['url']->getRouteParameters()['taxonomy_term']);
-      $cache_tags[] = 'taxonomy_term_list:' . $term->bundle();
-      $cache_tags = array_merge($cache_tags, $term->getCacheTags());
+
+      if ($term) {
+        $cache_tags[] = 'taxonomy_term_list:' . $term->bundle();
+        $cache_tags = array_merge($cache_tags, $term->getCacheTags());
+      }
     }
   }
   $variables['#cache']['tags'] = array_unique($cache_tags);
@@ -856,33 +862,6 @@ function _stanford_profile_helper_extension_enabled(Extension $extension) {
     $path = implode('/', $path);
   }
   return FALSE;
-}
-
-/**
- * Implements hook_views_pre_view().
- */
-function stanford_profile_helper_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
-  $display_options = &$view->getDisplay()->options;
-  $default_options = &$view->getDisplay()->default_display->options;
-  $filters = !empty($display_options['filters']) ? $display_options['filters'] : $default_options['filters'];
-
-  // Change the default cache mechanism to use custom tags that we generate
-  // using the node type filters that exist on the view.
-  // @see \Drupal\Core\Entity\EntityBase::getListCacheTagsToInvalidate().
-  if (!empty($filters['type']['entity_type']) && $filters['type']['entity_type'] == 'node') {
-    $tags = [];
-    foreach ($filters['type']['value'] as $node_type) {
-      $tags[] = 'node_list:' . $node_type;
-    }
-    // If no node type tags are available, fall back to the general `node_list`.
-    $tags = empty($tags) ? ['node_list'] : $tags;
-    $cache = [
-      'type' => 'custom_tag',
-      'options' => ['custom_tag' => implode(' ', $tags)],
-    ];
-    $display_options['cache'] = $cache;
-    $default_options['cache'] = $cache;
-  }
 }
 
 /**
