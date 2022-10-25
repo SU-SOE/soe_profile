@@ -4,6 +4,8 @@ use Drupal\config_pages\Entity\ConfigPages;
 
 /**
  * Test the external link module functionality.
+ *
+ * @group ext_links
  */
 class ExtLinkCest {
 
@@ -60,9 +62,11 @@ class ExtLinkCest {
    * Test external links get the added class and svg.
    */
   public function testExtLink(FunctionalTester $I) {
-
-    // Local footer block isnt showing up on circle for some reason.
     $I->logInWithRole('site_manager');
+    $I->amOnPage('/admin/config/system/basic-site-settings');
+    $I->uncheckOption('Hide External Link Icons');
+    $I->click('Save');
+
     $I->amOnPage('/admin/config/system/local-footer');
     $I->checkOption('#edit-su-footer-enabled-value');
     $I->click('#edit-group-primary-links summary');

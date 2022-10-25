@@ -129,3 +129,41 @@
     margin: 0;
   }
 }
+
+// Background gradients on Basic pages
+// News, Events, People, Publications
+// CSS solution
+.page-news,
+.page-people,
+.page-events,
+.page-publications {
+
+  .jumpstart-ui--one-column {
+    &.centered-container {
+      @include modular-spacing('padding', 6 null 6 null);
+      @include modular-spacing('margin', null null 5 null);
+      @include gradient--solid-purple-green;
+
+      margin-top: 0;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .node-stanford-page-title {
+    margin-top: 0;
+
+    h1 {
+      @include centered-column;
+
+      color: $su-color-white;
+    }
+  }
+}
+
+// Event Series title feSpecularLighting
+.su-event-series-title {
+  h1 {
+    @include modular-spacing('padding-top', 6);
+  }
+}
