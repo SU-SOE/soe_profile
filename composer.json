@@ -108,7 +108,7 @@
         "composer/installers": ">=1.2",
         "drupal/address": "^1.2",
         "drupal/admin_toolbar": "^3.1",
-        "drupal/allowed_formats": "^1.1",
+        "drupal/allowed_formats": "^2.1",
         "drupal/anchor_link": "^2.5",
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/block_content_permissions": "^1.8",
@@ -233,37 +233,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Drupal\\jumpstart_ui\\": "modules/jumpstart_ui/src",
-            "Drupal\\soe_profile\\": "src/",
-            "Drupal\\stanford_events_importer\\": "modules/stanford_events/modules/stanford_events_importer/src",
-            "Drupal\\stanford_image_styles_preview\\": "modules/stanford_image_styles/modules/stanford_image_styles_preview/src",
-            "Drupal\\stanford_intranet\\": "modules/stanford_intranet/src",
-            "Drupal\\stanford_news\\": "modules/stanford_news/src",
-            "Drupal\\stanford_notifications\\": "modules/stanford_notifications/src",
-            "Drupal\\stanford_person_importer\\": "modules/stanford_person/modules/stanford_person_importer/src",
-            "Drupal\\stanford_profile_admin\\": "modules/stanford_profile_admin/src",
-            "Drupal\\stanford_profile_drush\\": "modules/stanford_profile_drush/src",
-            "Drupal\\stanford_profile_helper\\": "modules/stanford_profile_helper/src",
-            "Drupal\\stanford_publication\\": "modules/stanford_publication/src",
-            "Drupal\\stanford_text_editor\\": "modules/stanford_text_editor/src"
+            "Drupal\\soe_profile\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Drupal\\Tests\\jumpstart_ui\\": "modules/jumpstart_ui/tests/src",
-            "Drupal\\Tests\\soe_profile\\": "tests/src",
-            "Drupal\\Tests\\stanford_events_importer\\": "modules/stanford_events/modules/stanford_events_importer/tests/src",
-            "Drupal\\Tests\\stanford_image_styles_preview\\": "modules/stanford_image_styles/modules/stanford_image_styles_preview/tests/src",
-            "Drupal\\Tests\\stanford_intranet\\": "modules/stanford_intranet/tests/src",
-            "Drupal\\Tests\\stanford_news\\": "modules/stanford_news/tests/src",
-            "Drupal\\Tests\\stanford_notifications\\": "modules/stanford_notifications/tests/src",
-            "Drupal\\Tests\\stanford_person_importer\\": "modules/stanford_person/modules/stanford_person_importer/tests/src",
-            "Drupal\\Tests\\stanford_profile_admin\\": "modules/stanford_profile_admin/tests/src",
-            "Drupal\\Tests\\stanford_profile_drush\\": "modules/stanford_profile_drush/tests/src",
-            "Drupal\\Tests\\stanford_profile_helper\\": "modules/stanford_profile_helper/tests/src",
-            "Drupal\\Tests\\stanford_publication\\": "modules/stanford_publication/tests/src",
-            "Drupal\\Tests\\stanford_text_editor\\": "modules/stanford_text_editor/tests/src",
-            "Drupal\\stanford_policy\\": "modules/stanford_policy/src"
+            "Drupal\\Tests\\soe_profile\\": "tests/src"
         }
     },
     "extra": {
@@ -279,18 +254,6 @@
             },
             "drupal/ckeditor_blockimagepaste": {
                 "https://www.drupal.org/project/ckeditor_blockimagepaste/issues/3272772": "https://www.drupal.org/files/issues/2022-04-14/prevent_js_alert_and_block_ms_word_paste-v2.patch"
-            },
-            "drupal/decoupled_router": {
-                "Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2021-05-05/3111456-34.patch"
-            },
-            "drupal/default_content":{
-                "https://www.drupal.org/project/default_content/issues/3160146": "https://git.drupalcode.org/project/default_content/-/merge_requests/15.patch"
-            },
-            "drupal/jsonapi_extras": {
-                "https://www.drupal.org/project/jsonapi_extras/issues/3232279": "https://www.drupal.org/files/issues/2021-09-10/fix-output-schema-3232279-3.patch"
-            },
-            "drupal/subrequests": {
-                "Get same results on different request": "https://www.drupal.org/files/issues/2019-07-18/change_request_type-63049395-09.patch"
             }
         }
     }
