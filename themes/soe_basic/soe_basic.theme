@@ -9,7 +9,8 @@
  * Prepares variables for the html.html.twig template.
  */
 function soe_basic_preprocess_html(&$variables) {
-  $variables['stanford_basic_path'] = drupal_get_path('theme', 'stanford_basic');
+  $variables['stanford_basic_path'] = \Drupal::service('extension.list.theme')
+    ->getPath('stanford_basic');
 }
 
 /**
@@ -25,9 +26,10 @@ function soe_basic_theme_suggestions_block_alter(array &$suggestions, array $var
  * Implements hook_preprocess_HOOK().
  */
 
-function soe_basic_preprocess_pattern_localfooter(&$variables){
+function soe_basic_preprocess_pattern_localfooter(&$variables) {
   $med = theme_get_setting('show_su_med_logo');
-  $soe_basic_path = base_path() . drupal_get_path('theme', 'soe_basic');
+  $soe_basic_path = base_path() . \Drupal::service('extension.list.theme')
+      ->getPath('soe_basic');
 
   // Default to Engineering.
   if (
@@ -50,5 +52,4 @@ function soe_basic_preprocess_pattern_localfooter(&$variables){
       </div>',
     ];
   }
-
 }
