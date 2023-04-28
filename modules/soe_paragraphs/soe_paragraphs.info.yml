@@ -14,4 +14,3 @@ dependencies:
   - drupal:field_formatter_class
   - drupal:element_class_formatter
   - stanford_fields:stanford_fields
-  - stanford_text_editor:stanford_text_editor
