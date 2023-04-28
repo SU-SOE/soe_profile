@@ -1,14 +1,30 @@
 <?php
 
+use Faker\Factory;
+
 /**
  * Codeception tests on Stories paragraph type.
  */
 class StanfordStoriesCest {
 
   /**
+   * The Faker instance.
+   *
+   * @var \Faker\Generator
+   */
+  protected $faker;
+
+  /**
+   * Constructor.
+   */
+  public function __construct() {
+    $this->faker = Factory::create();
+  }
+
+  /**
    * Create a Stories paragraph to test.
    */
-  protected function createParagraph(\AcceptanceTester $I) {
+  protected function createParagraph(AcceptanceTester $I) {
     $paragraph = $I->createEntity([
       'type' => 'stanford_stories',
       'stanford_stories_cta_link' => [
@@ -41,34 +57,26 @@ class StanfordStoriesCest {
   /**
    * Create a node to hold the paragraph.
    */
-  protected function createNodeWithParagraph(\AcceptanceTester $I) {
+  protected function createNodeWithParagraph(AcceptanceTester $I) {
     $paragraph = $this->createParagraph($I);
 
-    $row = $I->createEntity([
-      'type' => 'node_stanford_page_row',
+    $node = $I->createEntity([
+      'type' => 'stanford_page',
+      'title' => $this->faker->words(3, TRUE),
       'su_page_components' => [
         'target_id' => $paragraph->id(),
         'entity' => $paragraph,
       ],
-    ], 'paragraph_row');
-
-    $node = $I->createEntity([
-      'type' => 'stanford_page',
-      'title' => 'Test Stories Paragraph',
-      'su_page_components' => [
-        'target_id' => $row->id(),
-        'entity' => $row,
-      ],
     ]);
-    // Clear router and menu cache so that the node urls work.
-    $I->runDrush('cache-clear router');
     return $node;
   }
 
   /**
    * Test the CTA List paragraph in the page.
+   *
+   * @group foobar
    */
-  public function testStories(\AcceptanceTester $I) {
+  public function testStories(AcceptanceTester $I) {
     $node = $this->createNodeWithParagraph($I);
     $I->amOnPage($node->toUrl()->toString());
     $I->seeElement('.border-color-1');
