@@ -47,7 +47,7 @@ class ConfigOverridesTest extends UnitTestCase {
     $this->assertInstanceOf(CacheableMetadata::class, $this->overrideService->getCacheableMetadata('foo'));
 
     $overrides = $this->overrideService->loadOverrides(['system.site']);
-    $this->assertArrayEquals([
+    $this->assertEquals([
       'page' => [
         403 => '/node/403',
         404 => '/node/404',
@@ -66,7 +66,7 @@ class ConfigOverridesTest extends UnitTestCase {
         'ignored_config_entities' => ['stable.settings', 'seven.settings'],
       ],
     ];
-    $this->assertArrayEquals($expected, $overrides);
+    $this->assertEquals($expected, $overrides);
   }
 
   /**
@@ -75,7 +75,7 @@ class ConfigOverridesTest extends UnitTestCase {
   public function testGoogleTagOverrides() {
     $overrides = $this->overrideService->loadOverrides(['google_tag.container.foo_bar']);
     $expected = ['google_tag.container.foo_bar' => ['status' => FALSE]];
-    $this->assertArrayEquals($expected, $overrides);
+    $this->assertEquals($expected, $overrides);
   }
 
   /**

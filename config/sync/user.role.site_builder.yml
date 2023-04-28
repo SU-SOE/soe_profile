@@ -69,6 +69,7 @@ dependencies:
     - shortcut
     - soe_profile
     - stanford_media
+    - stanford_policy
     - stanford_publication
     - system
     - taxonomy
