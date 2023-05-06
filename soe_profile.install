@@ -304,8 +304,7 @@ function soe_profile_update_9100(&$sandbox) {
  */
 function soe_profile_update_9101() {
   \Drupal::service('module_installer')->install(['menu_link']);
-  \Drupal::entityTypeManager()
-    ->getStorage('field_storage_config')
+  $entity_type_manager->getStorage('field_storage_config')
     ->create([
       'uuid' => '963caf4a-7a55-4ed6-961d-765ea7594192',
       'field_name' => 'field_menulink',
@@ -313,8 +312,7 @@ function soe_profile_update_9101() {
       'entity_type' => 'node',
       'cardinality' => 1,
     ])->save();
-  $field_config_storage = \Drupal::entityTypeManager()
-    ->getStorage('field_config');
+  $field_config_storage = $entity_type_manager->getStorage('field_config');
   $bundles = [
     'stanford_page',
     'stanford_event_series',
@@ -329,8 +327,7 @@ function soe_profile_update_9101() {
       'label' => 'Menu Link',
     ])->save();
   }
-  $menu_items = \Drupal::entityTypeManager()
-    ->getStorage('menu_link_content')
+  $menu_items = $entity_type_manager->getStorage('menu_link_content')
     ->loadByProperties(['menu_name' => 'main']);
 
   // Re-save all menu items to update their link uris.
@@ -338,6 +335,7 @@ function soe_profile_update_9101() {
   foreach ($menu_items as $menu_item) {
     $menu_item->save();
   }
+  drupal_flush_all_caches();
 }
 
 /**
@@ -381,13 +379,12 @@ function _soe_profile_get_parent_menu_item_id($link_id) {
 }
 
 /**
- * Move the menu link data into the node and return the new menu link id.
+ * Update menu links on nodes for the updated version of menu_link_weight.
  *
- * @param \Drupal\menu_link_content\MenuLinkContentInterface $menu_item
- *   Menu link entity.
- *
- * @return string
- *   Updated link id.
+ * @param array $menu_items
+ *   Menu items.
+ * @param string|null $parent
+ *   Parent menu id.
  */
 function _soe_profile_update_fix_menu_item(MenuLinkContentInterface $menu_item): string {
   $node_storage = \Drupal::entityTypeManager()->getStorage('node');
@@ -424,13 +421,34 @@ function soe_profile_update_9103() {
     ->getStorage('menu_link_content')
     ->loadByProperties(['menu_name' => 'main']);
 
-  /** @var \Drupal\menu_link_content\Entity\MenuLinkContent $menu_item */
-  foreach ($menu_items as $menu_item) {
-    $link_url = $menu_item->get('link')->get(0)->get('uri')->getString();
-    [$schema, $path] = explode(':', $link_url);
+        if ($menu_item->subtree) {
+          _stanford_profile_fix_menu($menu_item->subtree, $new_parent);
+        }
 
-    if ($schema == 'entity' && str_starts_with($path, 'node/')) {
-      $menu_item->delete();
+        if (!$link->isEnabled()) {
+          \Drupal::database()
+            ->update('menu_tree')
+            ->fields(['enabled' => 0])
+            ->condition('id', $new_parent)
+            ->execute();
+        }
+
+        $link->deleteLink();
+        continue;
+      }
+    }
+    catch (\Throwable $e) {
+      \Drupal::logger('stanford_profile')
+        ->error('Unable to update link %title. Error: %error', [
+          '%title' => $link->getTitle(),
+          '%error' => $e->getMessage(),
+        ]);
+    }
+    if ($parent) {
+      $link->updateLink(['parent' => $parent], TRUE);
+    }
+    if ($menu_item->subtree) {
+      _stanford_profile_fix_menu($menu_item->subtree, $id);
     }
   }
 }
