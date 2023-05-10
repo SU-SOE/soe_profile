@@ -5,6 +5,8 @@
  * soe_profile.install
  */
 
+use Drupal\Core\Menu\MenuTreeParameters;
+
 /**
  * Save the system pages from the original config values into state.
  */
