@@ -100,6 +100,10 @@ class BasicPageCest {
   public function testPageDescription(AcceptanceTester $I) {
     $title = $this->faker->words(3, TRUE);
     $description = $this->faker->words(10, TRUE);
+    $type_term = $I->createEntity([
+      'vid' => 'basic_page_types',
+      'name' => $this->faker->word,
+    ], 'taxonomy_term');
     $I->logInWithRole('site_manager');
     $I->amOnPage('/node/add/stanford_page');
     $I->see('Page Metadata');
@@ -107,7 +111,7 @@ class BasicPageCest {
     $I->see('Basic Page Type');
     $I->fillField('Title', $title);
     $I->fillField('Page Description', $description);
-    $I->selectOption('Basic Page Type', 'Research');
+    $I->fillField('Basic Page Type', $type_term->id());
     $I->click('Save');
     $I->seeInSource('<meta name="description" content="' . $description . '" />');
   }
@@ -353,6 +357,5 @@ class BasicPageCest {
     return \Drupal::config('system.date')
       ->get('timezone.default') ?: @date_default_timezone_get();
   }
-
 
 }
