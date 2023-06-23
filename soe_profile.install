@@ -71,6 +71,42 @@ function soe_profile_update_9001() {
 }
 
 /**
+ * Correct path aliases that somehow are incorrectly formatted.
+ */
+function stanford_profile_update_9004() {
+  $database = \Drupal::database();
+  $query = $database->select('path_alias', 'p')
+    ->fields('p');
+  $conditions = $query->orConditionGroup()
+    ->condition('alias', '%http:/%', 'LIKE')
+    ->condition('alias', '%https:/%', 'LIKE');
+  $query->condition($conditions);
+  $results = $query->execute();
+
+  while ($row = $results->fetchAssoc()) {
+    $new_alias = trim(preg_replace('/:\/([a-z0-9])/', '://$1', $row['alias']), '/');
+    if (!str_starts_with($new_alias, 'http')) {
+      throw new \Exception('Unknown path alias pattern to correct');
+    }
+    $new_alias = parse_url($new_alias);
+
+    if (empty($new_alias['path'])) {
+      throw new \Exception('Unknown path alias pattern to correct');
+    }
+    $new_alias = $new_alias['path'];
+
+    $database->update('path_alias')
+      ->fields(['alias' => $new_alias])
+      ->condition('id', $row['id'])
+      ->execute();
+    $database->update('path_alias_revision')
+      ->fields(['alias' => $new_alias])
+      ->condition('id', $row['id'])
+      ->execute();
+  }
+}
+
+/**
  * Migrate Basic Page react paragraphs to layout paragraphs.
  */
 function soe_profile_update_9005(&$sandbox) {
@@ -89,10 +125,12 @@ function soe_profile_update_9005(&$sandbox) {
   $row_storage = \Drupal::entityTypeManager()->getStorage('paragraph_row');
   $paragraph_storage = \Drupal::entityTypeManager()->getStorage('paragraph');
   $node_ids = array_splice($sandbox['nids'], 0, 25);
+
   /** @var \Drupal\node\NodeInterface[] $nodes */
   $nodes = $node_storage->loadMultiple($node_ids);
   $delete_entities = [];
   foreach ($nodes as $node) {
+    $changed_time = $node->getChangedTime();
     $new_components = [];
     /** @var \Drupal\Core\Field\EntityReferenceFieldItemListInterface $row */
     foreach ($node->get('su_page_components') as $row) {
@@ -100,7 +138,7 @@ function soe_profile_update_9005(&$sandbox) {
         ->getString());
 
       $delete_entities[] = $row_entity;
-      $number_of_items = $row_entity->get('su_page_components')->count();
+      $number_of_items = min($row_entity->get('su_page_components')->count(), 3);
       $layout_id = "layout_paragraphs_{$number_of_items}_column";
 
       $new_row_entity = $paragraph_storage->create(['type' => 'stanford_layout']);
@@ -140,6 +178,7 @@ function soe_profile_update_9005(&$sandbox) {
     }
 
     $node->set('su_page_components', $new_components)->save();
+    _stanford_profile_reset_node_changed_time($node, $changed_time);
   }
   foreach ($delete_entities as $entity) {
     $entity->delete();
@@ -165,10 +204,12 @@ function soe_profile_update_9006(&$sandbox) {
   $row_storage = \Drupal::entityTypeManager()->getStorage('paragraph_row');
   $paragraph_storage = \Drupal::entityTypeManager()->getStorage('paragraph');
   $node_ids = array_splice($sandbox['nids'], 0, 25);
+
   /** @var \Drupal\node\NodeInterface[] $nodes */
   $nodes = $node_storage->loadMultiple($node_ids);
   $delete_entities = [];
   foreach ($nodes as $node) {
+    $changed_time = $node->getChangedTime();
     $new_components = [];
     /** @var \Drupal\Core\Field\EntityReferenceFieldItemListInterface $row */
     foreach ($node->get('su_publication_components') as $row) {
@@ -214,6 +255,7 @@ function soe_profile_update_9006(&$sandbox) {
     }
 
     $node->set('su_publication_components', $new_components)->save();
+    _stanford_profile_reset_node_changed_time($node, $changed_time);
   }
   foreach ($delete_entities as $entity) {
     $entity->delete();
@@ -238,7 +280,7 @@ function _soe_profile_update_9005_get_item_region(int $delta, string $layout_id)
       return $delta ? 'right' : 'left';
 
     case 'layout_paragraphs_3_column':
-      $delta_regions = ['left', 'main', 'right'];
+      $delta_regions = ['left', 'main', 'right', 'right', 'right'];
       return $delta_regions[$delta];
   }
   return 'main';
@@ -292,15 +334,7 @@ function soe_profile_update_9007(&$sandbox) {
     if ($save_node) {
       $node->save();
 
-      // Reset the changed time to the value before this process.
-      $database->update('node_field_data')
-        ->fields(['changed' => $changed_time])
-        ->condition('nid', $node->id())
-        ->execute();
-      $database->update('node_field_revision')
-        ->fields(['changed' => $changed_time])
-        ->condition('vid', $node->getRevisionId())
-        ->execute();
+      _stanford_profile_reset_node_changed_time($node, $changed_time);
     }
   }
 
@@ -387,6 +421,25 @@ function soe_profile_update_9102() {
 }
 
 /**
+ * Re-run stanford_card update.
+ */
+function stanford_profile_update_9103(&$sandbox) {
+  if ($field = FieldConfig::loadByName('paragraph', 'stanford_card', 'su_card_link_display')) {
+    module_load_install('stanford_paragraph_card');
+    stanford_paragraph_card_update_8001($sandbox);
+    /** @var \Drupal\paragraphs\ParagraphsTypeInterface $paragraph_type */
+    $paragraph_type = \Drupal::entityTypeManager()
+      ->getStorage('paragraphs_type')
+      ->load('stanford_card');
+    $behaviors = $paragraph_type->get('behavior_plugins');
+    $behaviors['su_card_styles'] = ['enabeld' => true];
+    $paragraph_type->set('behavior_plugins', $behaviors);
+    $paragraph_type->save();
+    $field->delete();
+  }
+}
+
+/**
  * Update menu links on nodes for the updated version of menu_link_weight.
  *
  * @param array $menu_items
@@ -430,15 +483,7 @@ function _stanford_profile_fix_menu(array $menu_items = [], string $parent = NUL
         $node->set('field_menulink', $menu_field_data)->save();
         $new_parent = 'menu_link_field:node_field_menulink_' . $node->uuid() . '_und';
 
-        // Reset the changed time to the value before this process.
-        $database->update('node_field_data')
-          ->fields(['changed' => $changed_time])
-          ->condition('nid', $node->id())
-          ->execute();
-        $database->update('node_field_revision')
-          ->fields(['changed' => $changed_time])
-          ->condition('vid', $node->getRevisionId())
-          ->execute();
+        _stanford_profile_reset_node_changed_time($node, $changed_time);
 
         if ($menu_item->subtree) {
           _stanford_profile_fix_menu($menu_item->subtree, $new_parent);
@@ -475,4 +520,25 @@ function _stanford_profile_fix_menu(array $menu_items = [], string $parent = NUL
       _stanford_profile_fix_menu($menu_item->subtree, $id);
     }
   }
+}
+
+/**
+ * Update the node tables to reset the changed time.
+ *
+ * @param \Drupal\node\NodeInterface $node
+ *   Node entity.
+ * @param int $changed
+ *   Changed time.
+ */
+function _stanford_profile_reset_node_changed_time(NodeInterface $node, int $changed) {
+  $database = \Drupal::database();
+  // Reset the changed time to the value before this process.
+  $database->update('node_field_data')
+    ->fields(['changed' => $changed])
+    ->condition('nid', $node->id())
+    ->execute();
+  $database->update('node_field_revision')
+    ->fields(['changed' => $changed])
+    ->condition('vid', $node->getRevisionId())
+    ->execute();
 }

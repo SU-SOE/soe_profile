@@ -186,6 +186,20 @@ function stanford_basic_preprocess_field(&$variables, $hook) {
 function stanford_basic_preprocess_block(&$variables) {
   $variables['attributes']['class'][] = Html::cleanCssIdentifier(_stanford_basic_change_characters($variables['base_plugin_id']));
   $variables['attributes']['class'][] = Html::cleanCssIdentifier(_stanford_basic_change_characters($variables['derivative_plugin_id']));
+
+  if (\Drupal::hasService('config_pages.loader')) {
+
+    /** @var \Drupal\config_pages\ConfigPagesLoaderServiceInterface $config_pages */
+    $config_pages = \Drupal::service('config_pages.loader');
+    $new_menu = (bool) $config_pages->getValue('stanford_basic_site_settings', 'su_site_new_menu', 0, 'value');
+    if (
+      $variables['plugin_id'] == 'system_menu_block:main' &&
+      $new_menu
+    ) {
+      $variables['attributes']['data-island'] = 'main-menu-island';
+      $variables['#attached']['library'][] = 'stanford_basic/decoupled_menu';
+    }
+  }
 }
 
 /**
@@ -305,9 +319,7 @@ function stanford_basic_preprocess_menu(&$variables, $hook) {
     // If path is current_path, add aria-current to the link.
     if (parse_url($item['url']->toString(), PHP_URL_PATH) == $current_path) {
       $link_options = $variables['items'][$key]['url']->getOptions();
-      $link_options['attributes'] = [
-        'aria-current' => 'true',
-      ];
+      $link_options['attributes']['aria-current'] = 'true';
       $variables['items'][$key]['url']->setOptions($link_options);
       $variables['items'][$key]['attributes']['aria-current'] = 'true';
     }
