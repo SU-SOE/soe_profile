@@ -5,10 +5,7 @@
  * soe_profile.install
  */
 
-use Drupal\Core\Site\Settings;
-use Drupal\Core\Config\FileStorage;
-use Drupal\react_paragraphs\Entity\ParagraphRow;
-use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\block\Entity\Block;
 
 /**
  * Implements hook_removed_post_updates().
