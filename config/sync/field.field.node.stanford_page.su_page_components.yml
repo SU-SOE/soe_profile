@@ -23,7 +23,7 @@ id: node.stanford_page.su_page_components
 field_name: su_page_components
 entity_type: node
 bundle: stanford_page
-label: Components
+label: Paragraphs
 description: ''
 required: false
 translatable: false
@@ -43,15 +43,14 @@ settings:
       stanford_gallery: stanford_gallery
       stanford_layout: stanford_layout
       stanford_lists: stanford_lists
-      stanford_media_caption: stanford_media_caption
       stanford_spacer: stanford_spacer
     negate: 0
     target_bundles_drag_drop:
       stanford_accordion:
-        weight: 13
+        weight: -25
         enabled: false
       stanford_banner:
-        weight: 14
+        weight: -22
         enabled: true
       stanford_card:
         weight: 4
@@ -60,25 +59,25 @@ settings:
         weight: 11
         enabled: true
       stanford_entity:
-        weight: 16
+        weight: -20
         enabled: true
       stanford_gallery:
-        weight: 17
+        weight: -19
         enabled: true
       stanford_image_cta:
         weight: 12
         enabled: true
       stanford_layout:
-        weight: 18
+        weight: -18
         enabled: true
       stanford_lists:
-        weight: 19
+        weight: -17
         enabled: true
       stanford_media_caption:
-        weight: 20
+        weight: -21
         enabled: true
       stanford_person_cta:
-        weight: 21
+        weight: -16
         enabled: false
       stanford_schedule:
         weight: 27
