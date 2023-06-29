@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\node\NodeInterface;
+use Drupal\field\Entity\FieldConfig;
 
 /**
  * Save the system pages from the original config values into state.
@@ -73,7 +75,7 @@ function soe_profile_update_9001() {
 /**
  * Correct path aliases that somehow are incorrectly formatted.
  */
-function stanford_profile_update_9004() {
+function soe_profile_update_9004() {
   $database = \Drupal::database();
   $query = $database->select('path_alias', 'p')
     ->fields('p');
@@ -178,7 +180,7 @@ function soe_profile_update_9005(&$sandbox) {
     }
 
     $node->set('su_page_components', $new_components)->save();
-    _stanford_profile_reset_node_changed_time($node, $changed_time);
+    _soe_profile_reset_node_changed_time($node, $changed_time);
   }
   foreach ($delete_entities as $entity) {
     $entity->delete();
@@ -255,7 +257,7 @@ function soe_profile_update_9006(&$sandbox) {
     }
 
     $node->set('su_publication_components', $new_components)->save();
-    _stanford_profile_reset_node_changed_time($node, $changed_time);
+    _soe_profile_reset_node_changed_time($node, $changed_time);
   }
   foreach ($delete_entities as $entity) {
     $entity->delete();
@@ -334,7 +336,7 @@ function soe_profile_update_9007(&$sandbox) {
     if ($save_node) {
       $node->save();
 
-      _stanford_profile_reset_node_changed_time($node, $changed_time);
+      _soe_profile_reset_node_changed_time($node, $changed_time);
     }
   }
 
@@ -396,7 +398,7 @@ function soe_profile_update_9101() {
     ->loadByProperties(['menu_name' => 'main']);
 
   // Re-save all menu items to update their link uris.
-  // @see \Drupal\stanford_profile_helper\EventSubscriber\EntityEventSubscriber::preSaveMenuLinkContent()
+  // @see \Drupal\soe_profile_helper\EventSubscriber\EntityEventSubscriber::preSaveMenuLinkContent()
   foreach ($menu_items as $menu_item) {
     $menu_item->save();
   }
@@ -417,13 +419,13 @@ function soe_profile_update_9102() {
   $parameters = new MenuTreeParameters();
 
   $menu = $menu_link_tree->load('main', $parameters);
-  _stanford_profile_fix_menu($menu);
+  _soe_profile_fix_menu($menu);
 }
 
 /**
  * Re-run stanford_card update.
  */
-function stanford_profile_update_9103(&$sandbox) {
+function soe_profile_update_9103(&$sandbox) {
   if ($field = FieldConfig::loadByName('paragraph', 'stanford_card', 'su_card_link_display')) {
     module_load_install('stanford_paragraph_card');
     stanford_paragraph_card_update_8001($sandbox);
@@ -447,7 +449,7 @@ function stanford_profile_update_9103(&$sandbox) {
  * @param string|null $parent
  *   Parent menu id.
  */
-function _stanford_profile_fix_menu(array $menu_items = [], string $parent = NULL): void {
+function _soe_profile_fix_menu(array $menu_items = [], string $parent = NULL): void {
   $node_storage = \Drupal::entityTypeManager()
     ->getStorage('node');
   /** @var \Drupal\Core\Menu\MenuLinkManagerInterface $menu_link_manager */
@@ -483,10 +485,10 @@ function _stanford_profile_fix_menu(array $menu_items = [], string $parent = NUL
         $node->set('field_menulink', $menu_field_data)->save();
         $new_parent = 'menu_link_field:node_field_menulink_' . $node->uuid() . '_und';
 
-        _stanford_profile_reset_node_changed_time($node, $changed_time);
+        _soe_profile_reset_node_changed_time($node, $changed_time);
 
         if ($menu_item->subtree) {
-          _stanford_profile_fix_menu($menu_item->subtree, $new_parent);
+          _soe_profile_fix_menu($menu_item->subtree, $new_parent);
         }
 
         if (!$link->isEnabled()) {
@@ -501,7 +503,7 @@ function _stanford_profile_fix_menu(array $menu_items = [], string $parent = NUL
       }
     }
     catch (\Throwable $e) {
-      \Drupal::logger('stanford_profile')
+      \Drupal::logger('soe_profile')
         ->error('Unable to update link %title. Error: %error', [
           '%title' => $link->getTitle(),
           '%error' => $e->getMessage(),
@@ -517,7 +519,7 @@ function _stanford_profile_fix_menu(array $menu_items = [], string $parent = NUL
     }
 
     if ($menu_item->subtree) {
-      _stanford_profile_fix_menu($menu_item->subtree, $id);
+      _soe_profile_fix_menu($menu_item->subtree, $id);
     }
   }
 }
@@ -530,7 +532,7 @@ function _stanford_profile_fix_menu(array $menu_items = [], string $parent = NUL
  * @param int $changed
  *   Changed time.
  */
-function _stanford_profile_reset_node_changed_time(NodeInterface $node, int $changed) {
+function _soe_profile_reset_node_changed_time(NodeInterface $node, int $changed) {
   $database = \Drupal::database();
   // Reset the changed time to the value before this process.
   $database->update('node_field_data')
