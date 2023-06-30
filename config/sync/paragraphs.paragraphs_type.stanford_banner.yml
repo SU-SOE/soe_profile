@@ -6,6 +6,7 @@ dependencies:
     - 'file:file:b25106ce-70ec-4e96-88dc-45fd681897d5'
   module:
     - jumpstart_ui
+    - layout_paragraphs
 id: stanford_banner
 label: Banner
 icon_uuid: b25106ce-70ec-4e96-88dc-45fd681897d5
