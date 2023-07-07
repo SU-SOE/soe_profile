@@ -69,6 +69,94 @@
 // The cards alternate colors for one row.
 // Then each card is selected by position.
 // Also sets the black hover color on the text link.
+.paragraph-item:nth-of-type(even) {
+
+  .layout {
+
+    > div:first-of-type {
+      .ptype-stanford-image-cta {
+        .su-image-cta-paragraph {
+          background-color: $soe-color-orange;
+
+          &:hover {
+            background-color: $su-color-black;
+          }
+        }
+      }
+    }
+
+    > div:nth-of-type(2) {
+      .ptype-stanford-image-cta {
+        .su-image-cta-paragraph {
+          background-color: $soe-color-turquoise;
+
+          &:hover {
+            background-color: $su-color-black;
+          }
+        }
+      }
+    }
+
+    > div:nth-of-type(3) {
+      .ptype-stanford-image-cta {
+        .su-image-cta-paragraph {
+          background-color: $soe-color-pink;
+
+          &:hover {
+            background-color: $su-color-black;
+          }
+        }
+      }
+    }
+    // End alternating color set up.
+  }
+}
+
+.paragraph-item:nth-of-type(odd) {
+
+  .layout {
+
+    // Setting up the external link icon to be white on hover all types.
+    > div:first-of-type {
+      .ptype-stanford-image-cta {
+        .su-image-cta-paragraph {
+          background-color: $soe-color-turquoise;
+
+          &:hover {
+            background-color: $su-color-black;
+          }
+        }
+      }
+    }
+
+    > div:nth-of-type(2) {
+      .ptype-stanford-image-cta {
+        .su-image-cta-paragraph {
+          background-color: $soe-color-pink;
+
+          &:hover {
+            background-color: $su-color-black;
+          }
+        }
+      }
+    }
+
+    > div:nth-of-type(3) {
+      .ptype-stanford-image-cta {
+        .su-image-cta-paragraph {
+          background-color: $soe-color-orange;
+
+          &:hover {
+            background-color: $su-color-black;
+          }
+        }
+      }
+    }
+    // End alternating color set up.
+  }
+}
+
+// General settings
 .layout {
 
   // Setting up the external link icon to be white on hover all types.
@@ -85,43 +173,6 @@
       }
     }
   }
-
-  > div:first-of-type {
-    .ptype-stanford-image-cta {
-      .su-image-cta-paragraph {
-        background-color: $soe-color-orange;
-
-        &:hover {
-          background-color: $su-color-black;
-        }
-      }
-    }
-  }
-
-  > div:nth-of-type(2) {
-    .ptype-stanford-image-cta {
-      .su-image-cta-paragraph {
-        background-color: $soe-color-turquoise;
-
-        &:hover {
-          background-color: $su-color-black;
-        }
-      }
-    }
-  }
-
-  > div:nth-of-type(3) {
-    .ptype-stanford-image-cta {
-      .su-image-cta-paragraph {
-        background-color: $soe-color-pink;
-
-        &:hover {
-          background-color: $su-color-black;
-        }
-      }
-    }
-  }
-  // End alternating color set up.
 
   // Link hover colors.
   .su-image-cta-paragraph {
