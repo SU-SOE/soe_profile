@@ -1,5 +1,12 @@
 # Stanford Profile
 
+10.0.1
+--------------------------------------------------------------------------------
+- D8CORE-6792: fix to the CTA image hovers (#298)
+- add ptype classes just in case
+- Remove unwanted paragraph types on publication field
+- Add new layout paragraphs styles class
+
 10.0.0
 --------------------------------------------------------------------------------
 
