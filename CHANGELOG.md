@@ -1,5 +1,10 @@
 # Stanford Profile
 
+10.0.2
+-------------------------------------------------------------------------------
+- Added to the update hook to handle layout builder menu blocks when updating menu links.
+- Added user json api endpoint.
+
 10.0.1
 --------------------------------------------------------------------------------
 - D8CORE-6792: fix to the CTA image hovers (#298)
