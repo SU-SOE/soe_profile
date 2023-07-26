@@ -62,7 +62,7 @@ function soe_profile_post_update_8202() {
 /**
  * Update field storage definitions.
  */
-function stanford_profile_post_update_update_field_defs() {
+function soe_profile_post_update_update_field_defs() {
   $um = \Drupal::entityDefinitionUpdateManager();
   foreach ($um->getChangeList() as $entity_type => $changes) {
     if (isset($changes['field_storage_definitions'])) {
