@@ -142,17 +142,10 @@ content:
     weight: 7
     region: content
     settings:
-      resizable: false
-      sizes:
-        stanford_banner: 12
-        stanford_card: 3
-        stanford_wysiwyg: 3
-        stanford_media_caption: 3
-        stanford_spacer: 1
-        stanford_cta_list: 12
-        stanford_image_cta: 1
-        stanford_stories: 12
-        stanford_gallery: 12
+      preview_view_mode: default
+      nesting_depth: 0
+      require_layouts: 1
+      empty_message: ''
     third_party_settings: {  }
   su_page_description:
     type: string_textfield

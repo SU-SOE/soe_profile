@@ -33,16 +33,17 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      stanford_card: stanford_card
-      stanford_wysiwyg: stanford_wysiwyg
-      stanford_cta_list: stanford_cta_list
-      stanford_image_cta: stanford_image_cta
       stanford_banner: stanford_banner
-      stanford_stories: stanford_stories
+      stanford_media_caption: stanford_media_caption
       stanford_entity: stanford_entity
       stanford_gallery: stanford_gallery
       stanford_layout: stanford_layout
       stanford_lists: stanford_lists
+      stanford_card: stanford_card
+      stanford_wysiwyg: stanford_wysiwyg
+      stanford_cta_list: stanford_cta_list
+      stanford_image_cta: stanford_image_cta
+      stanford_stories: stanford_stories
       stanford_spacer: stanford_spacer
     negate: 0
     target_bundles_drag_drop:

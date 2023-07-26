@@ -1,5 +1,22 @@
 # Stanford Profile
 
+<<<<<<< HEAD
+10.0.4
+-------------------------------------------------------------------------------
+- Update hook to update field storage definitions.
+
+10.0.3
+=======
+10.0.2
+>>>>>>> 10.0.2
+-------------------------------------------------------------------------------
+- Update decoupled menu to recognize "Expanded" menu setting
+- D8CORE-6816 Restored permissions to run importers for site managers
+- Add missing chosen library
+- Updated google tag settings
+- Added to the update hook to handle layout builder menu blocks when updating menu links.
+- Added user json api endpoint.
+
 10.0.1
 --------------------------------------------------------------------------------
 - D8CORE-6792: fix to the CTA image hovers (#298)
