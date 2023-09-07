@@ -2,9 +2,11 @@
 
 namespace Drupal\Tests\soe_profile\Unit\Config;
 
+use Drupal\config_pages\ConfigPagesLoaderServiceInterface;
 use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Config\Config;
 use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\State\StateInterface;
 use Drupal\soe_profile\Config\ConfigOverrides;
 use Drupal\Tests\UnitTestCase;
@@ -28,16 +30,22 @@ class ConfigOverridesTest extends UnitTestCase {
   protected function setUp(): void {
     parent::setUp();
     $state = $this->createMock(StateInterface::class);
-    $state->method('get')->will($this->returnCallback([
-      $this,
-      'getStateCallback',
-    ]));
+    $state->method('get')
+      ->will($this->returnCallback([$this, 'getStateCallback']));
 
     $config_factory = $this->createMock(ConfigFactoryInterface::class);
     $config_factory->method('getEditable')
       ->will($this->returnCallback([$this, 'getConfigCallback']));
 
     $this->overrideService = new ConfigOverrides($state, $config_factory);
+
+    $config_page_loader = $this->createMock(ConfigPagesLoaderServiceInterface::class);
+    $config_page_loader->method('getValue')
+      ->will($this->returnCallback([$this, 'getConfigPageValue']));
+
+    $container = new ContainerBuilder();
+    $container->set('config_pages.loader', $config_page_loader);
+    \Drupal::setContainer($container);
   }
 
   public function testConfigOverrides() {
@@ -75,6 +83,20 @@ class ConfigOverridesTest extends UnitTestCase {
   public function testGoogleTagOverrides() {
     $overrides = $this->overrideService->loadOverrides(['google_tag.container.foo_bar']);
     $expected = ['google_tag.container.foo_bar' => ['status' => FALSE]];
+    $this->assertEquals($expected, $overrides);
+  }
+
+  public function testSamlOverrides() {
+    $overrides = $this->overrideService->loadOverrides(['stanford_samlauth.settings']);
+    $expected = [
+      'stanford_samlauth.settings' => [
+        'role_mapping' => [
+          'mapping' => [
+            ['role' => 'foo', 'attribute' => 'bar', 'value' => 'baz:bin'],
+          ],
+        ],
+      ],
+    ];
     $this->assertEquals($expected, $overrides);
   }
 
