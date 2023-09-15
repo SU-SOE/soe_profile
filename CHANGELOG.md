@@ -1,14 +1,17 @@
-# Stanford Profile
+# SOE Profile
 
-<<<<<<< HEAD
+10.1.1
+-------------------------------------------------------------------------------
+- Fixed uuid of role.
+
 10.0.4
 -------------------------------------------------------------------------------
 - Update hook to update field storage definitions.
 
 10.0.3
-=======
+-------------------------------------------------------------------------------
+
 10.0.2
->>>>>>> 10.0.2
 -------------------------------------------------------------------------------
 - Update decoupled menu to recognize "Expanded" menu setting
 - D8CORE-6816 Restored permissions to run importers for site managers
