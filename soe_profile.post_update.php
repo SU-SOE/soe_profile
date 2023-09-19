@@ -76,7 +76,7 @@ function soe_profile_post_update_update_field_defs() {
 /**
  * Enable samlauth.
  */
-function stanford_profile_post_update_samlauth() {
+function soe_profile_post_update_samlauth() {
   if (\Drupal::moduleHandler()->moduleExists('stanford_samlauth')) {
     return;
   }
