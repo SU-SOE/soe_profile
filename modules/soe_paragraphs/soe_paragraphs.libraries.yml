@@ -48,5 +48,3 @@ soe_paragraphs:
   css:
     component:
       dist/css/soe_paragraphs.styles.css: {}
-  js:
-    dist/js/soe_paragraphs.script.js: {}

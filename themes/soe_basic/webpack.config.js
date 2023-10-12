@@ -15,12 +15,12 @@ const config = {
 
 var webpackConfig = {
   entry: {
-    'base': path.resolve('src/scss/base/index.scss'),
-    'components': path.resolve('src/scss/components/index.scss'),
-    'layout': path.resolve('src/scss/layout/index.scss'),
-    'print': path.resolve('src/scss/print/index.scss'),
-    'state': path.resolve('src/scss/state/index.scss'),
-    'theme': path.resolve('src/scss/theme/index.scss'),
+    "base":          path.resolve("src/scss/base/index.scss"),
+    "components":    path.resolve("src/scss/components/index.scss"),
+    "layout":        path.resolve("src/scss/layout/index.scss"),
+    "print":         path.resolve("src/scss/print/index.scss"),
+    "state":         path.resolve("src/scss/state/index.scss"),
+    "theme":         path.resolve("src/scss/theme/index.scss"),
   },
   output: {
     path: config.distFolder,
@@ -82,7 +82,14 @@ var webpackConfig = {
     new FixStyleOnlyEntriesPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
-    })
+    }),
+    new FileManagerPlugin({
+      events: {
+        onStart: {
+          delete: ["dist"]
+        }
+      }
+    }),
   ],
   optimization: {
     minimizer: [
