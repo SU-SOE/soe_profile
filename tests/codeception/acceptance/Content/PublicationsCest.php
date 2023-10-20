@@ -31,7 +31,7 @@ class PublicationsCest {
   }
 
   /**
-   *
+   * Create a book citation
    */
   public function testBookCitation(AcceptanceTester $I) {
     $this->values['term_name'] = $this->faker->words(3, TRUE);

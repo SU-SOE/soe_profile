@@ -73,8 +73,6 @@ class StanfordStoriesCest {
 
   /**
    * Test the CTA List paragraph in the page.
-   *
-   * @group foobar
    */
   public function testStories(AcceptanceTester $I) {
     $node = $this->createNodeWithParagraph($I);
