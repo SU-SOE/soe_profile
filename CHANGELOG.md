@@ -1,6 +1,6 @@
 # SOE Profile
 
-10.1.2
+11.0.0
 -------------------------------------------------------------------------------
 - Update samlauth settings when a role is created or deleted
 
