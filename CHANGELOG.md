@@ -1,5 +1,9 @@
 # SOE Profile
 
+11.0.1
+-------------------------------------------------------------------------------
+- Fix site setting redirect logic
+
 11.0.0
 -------------------------------------------------------------------------------
 - Update samlauth settings when a role is created or deleted
