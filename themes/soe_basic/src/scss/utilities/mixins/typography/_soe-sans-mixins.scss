@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-$soe-font--sans: Source Sans Pro; // waiting for Kerri to provide fall-back fonts
+$soe-font--sans: "Source Sans 3", Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
 
 @mixin soe-sans {
   font-family: $soe-font--sans;
