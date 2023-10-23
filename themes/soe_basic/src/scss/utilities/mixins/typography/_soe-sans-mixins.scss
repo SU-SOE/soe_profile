@@ -3,7 +3,7 @@
 $soe-font--sans: "Source Sans 3", Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
 
 @mixin soe-sans {
-  font-family: $soe-font--sans;
+  $soe-font--sans: $su-font-sans;
 }
 
 // Note that the main difference with basic styles is font family & font-weight
