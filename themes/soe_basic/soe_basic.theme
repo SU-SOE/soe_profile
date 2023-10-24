@@ -47,7 +47,7 @@ function soe_basic_preprocess_pattern_localfooter(&$variables) {
       '#markup' => '
       <div class="su-med-logo">
         <a href="https://med.stanford.edu/">
-          <img src="' . $soe_basic_path . '/dist/assets/img/stanford_medicine.png" alt="Stanford Medicine home" />
+          <img src="' . $soe_basic_path . '/src/assets/img/stanford_medicine.png" alt="Stanford Medicine home" />
         </a>
       </div>',
     ];
