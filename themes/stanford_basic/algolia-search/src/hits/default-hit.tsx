@@ -4,20 +4,19 @@ import {Highlight, Snippet} from "react-instantsearch";
 const HitContainer = styled.article`
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  justify-content: left;
-  padding: 20px;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 2rem 2rem 2rem 0;
+  margin-bottom: 2rem;
 
   @media (min-width: 768px) {
     flex-direction: row;
   }
 
   img {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 300px;
+    max-height: 300px;
     object-fit: cover;
-    aspect-ratio: 1;
   }
 `
 
@@ -28,15 +27,14 @@ const DetailsContainer = styled.div`
 `
 
 const DefaultHit = ({hit}) => {
+  const hitUrl = new URL(hit.url);
+
   return (
-    <HitContainer className="su-card">
-      {hit.photo &&
-        <img src={hit.photo} alt=""/>
-      }
+    <HitContainer>
       <DetailsContainer>
         <div>
           <h2>
-            <a href={hit.url}>
+            <a href={hit.url.replace(hitUrl.origin, '')}>
               {hit.title}
             </a>
           </h2>
@@ -46,19 +44,28 @@ const DefaultHit = ({hit}) => {
               <Highlight hit={hit} attribute="summary"/>
             }
 
-            {!hit.summary &&
+            {(!hit.summary && hit.html) &&
               <>
-                ...<Snippet hit={hit} attribute="rendered"/>...
+                ...<Snippet hit={hit} attribute="html"/>...
               </>
             }
           </p>
         </div>
 
         {hit.updated &&
-          <div>Last
-            Updated: {new Date(hit.updated * 1000).toLocaleDateString('en-us', {month: "long", day: "numeric", year: "numeric"})}</div>
+          <div>
+            Last
+            Updated: {new Date(hit.updated * 1000).toLocaleDateString('en-us', {
+            month: "long",
+            day: "numeric",
+            year: "numeric"
+          })}
+          </div>
         }
       </DetailsContainer>
+      {hit.photo &&
+        <img src={hit.photo.replace(hitUrl.origin, '')} alt=""/>
+      }
     </HitContainer>
   )
 }
