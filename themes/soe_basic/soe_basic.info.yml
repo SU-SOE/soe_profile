@@ -2,7 +2,7 @@ name: SOE Basic
 type: theme
 description: 'SOE Branding Subtheme.'
 package: Stanford
-version: 9.2.0
+version: 11.1.0
 core_version_requirement: ^9 || ^10
 
 # Defines the base theme
