@@ -289,3 +289,16 @@
     margin-top: 0;
   }
 }
+
+// Event List paragraph, card view.
+.view.stanford-events.cards {
+  .su-list-unstyled.grid-container-3 {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1em;
+
+    li {
+      flex: 1 0 29;
+    }
+  }
+}
