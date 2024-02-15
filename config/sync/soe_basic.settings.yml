@@ -1,0 +1,21 @@
+favicon:
+  use_default: true
+features:
+  favicon: true
+logo:
+  path: ''
+  use_default: true
+browser_sync:
+  enabled: false
+  host: localhost
+  port: 3000
+clear_registry: false
+lockup:
+  option: a
+  line1: ''
+  line2: ''
+  line3: ''
+  line4: ''
+  line5: ''
+brand_bar_variant: default
+nav_dropdown_enabled: 0
