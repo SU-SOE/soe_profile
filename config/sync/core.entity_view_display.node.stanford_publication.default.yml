@@ -140,7 +140,7 @@ third_party_settings:
                 label: hidden
                 settings:
                   class: su-button
-                  trim_length: 80
+                  trim_length: null
                   url_only: false
                   url_plain: false
                   rel: '0'
@@ -278,14 +278,9 @@ third_party_settings:
       allowlisted_blocks:
         Menus:
           - 'system_menu_block:stanford-event-types'
-          - 'menu_block:stanford-event-types'
           - 'menu_block:main'
-          - 'system_menu_block:main'
           - 'system_menu_block:stanford-person-type'
-          - 'menu_block:stanford-person-type'
           - 'system_menu_block:stanford-publication-topics'
-          - 'menu_block:stanford-publication-topics'
-          - 'menu_block:news-topics'
           - 'system_menu_block:news-topics'
         System:
           - system_breadcrumb_block

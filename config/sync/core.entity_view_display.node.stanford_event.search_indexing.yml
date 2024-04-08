@@ -91,7 +91,7 @@ content:
     type: link
     label: hidden
     settings:
-      trim_length: 80
+      trim_length: null
       url_only: false
       url_plain: false
       rel: ''
@@ -138,7 +138,7 @@ content:
     type: link
     label: hidden
     settings:
-      trim_length: 80
+      trim_length: null
       url_only: false
       url_plain: false
       rel: ''
@@ -159,7 +159,7 @@ content:
     type: link
     label: hidden
     settings:
-      trim_length: 80
+      trim_length: null
       url_only: false
       url_plain: false
       rel: ''
@@ -206,6 +206,7 @@ hidden:
   links: true
   search_api_excerpt: true
   stanford_intranet__access: true
+  su_event_ext_image: true
   su_event_groups: true
   su_event_keywords: true
   su_event_subject: true

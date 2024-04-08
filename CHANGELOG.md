@@ -1,5 +1,75 @@
 # SOE Profile
 
+11.3.6
+-------------------------------------------------------------------------------
+- D8CORE-000 Update Past Event List
+
+11.3.5
+-------------------------------------------------------------------------------
+- Disabled link trimming on content type displays and view settings.
+
+11.3.4
+-------------------------------------------------------------------------------
+- Index algolia items only during cron
+- Added event image to algolia index data
+- D8CORE-7295 D8CORE-7301 Enable rabbit hole for publications content type
+
+11.3.3
+-------------------------------------------------------------------------------
+- D8CORE-7341 Add h2 headings to courses quarter term pages
+
+11.3.2
+-------------------------------------------------------------------------------
+- D8CORE-7341 Add h2 headings to past events and courses term pages
+
+11.3.1
+-------------------------------------------------------------------------------
+- Fix images and oembed videos to be lazy loading
+
+11.3.0
+-------------------------------------------------------------------------------
+- Add taxonomy terms to algolia search indexing
+- D8CORE-7333 Change paragraph behaviors for teaser and lists (#774)
+- Add role evaluation choice to saml config page
+- D8CORE-7307 Remove anonymous access to /patterns or /admin/patterns page
+- D8CORE-6983: added test for stacking site_embedder role (#773)
+- D8CORE-7331 Use aria-labelledby on the submenu buttons in the decoupled menu
+- D8CORE-7300 Add Algolia checkbox to allow indexing separate from search results
+- D8CORE-7212 Use h3 header for cards in teasers when appropriate (#765)
+- D8CORE-7207 Add Page Title Banner Paragraph (#754)
+- D8CORE-7211 Header behaviors for card and banners (#763)
+- added pager for events and publication graphql views
+
+11.2.1
+-------------------------------------------------------------------------------
+- Provide items per page for graphql views
+- Expose event image via graphql
+- Added external image url for events content from Localist
+
+11.2.1
+-------------------------------------------------------------------------------
+- Fixed logger syntax during site install.
+
+11.2.0
+-------------------------------------------------------------------------------
+- Removed decanter from stanford_basic in favor of jumpstart_ui templates
+- D8CORE-7125 Use field_label module to choose which heading element for field labels (#761)
+- D8CORE-6982 Add validation to publication DOI fields to avoid full urls
+- D8CORE-7203 Some improvements to metatags on some content types
+- Add empty alt text to logo in policy print page
+- D8CORE-7088 Replace policy print page h2 with h1 tag
+- Adjust allowed menus in layout builder restrictions
+- D8CORE-7132 Add policy content types to teasser paragraph field
+- D8CORE-7255 exclude lazy load oembed links from external links (#760)
+- D8CORE-7215 Test to Display the topic menu label on list pages (#758)
+- Added "fields" to page cache query ignore for jsonapi
+- D8CORE-7111 Add local footer social icons for mastodon and google scholar (#756)
+- Increase jsonapi page limit to 500 for nodes
+- D8CORE-7205 Trim all html before sending index data to Algolia
+- Replaced transliterate_filenames module functionality
+- Add and configure graphql compose module (#751)
+- Drupal 11.2.0 upgrade (#752)
+
 11.1.0
 -------------------------------------------------------------------------------
 - D8CORE-7096 Update algolia search results styles and structure (#747)

@@ -22,7 +22,6 @@ module:
   components: 0
   conditional_fields: 0
   config: 0
-  config_filter: 0
   config_ignore: 0
   config_pages: 0
   config_readonly: 0
@@ -62,6 +61,7 @@ module:
   field_event_dispatcher: 0
   field_formatter_class: 0
   field_group: 0
+  field_label: 0
   field_permissions: 0
   field_ui: 0
   field_validation: 0
@@ -88,6 +88,7 @@ module:
   hook_event_dispatcher: 0
   image: 0
   image_effects: 0
+  imagecache_external: 0
   imagemagick: 0
   inline_entity_form: 0
   inline_form_errors: 0
@@ -138,7 +139,6 @@ module:
   nobots: 0
   node: 0
   node_revision_delete: 0
-  oembed_lazyload: 0
   oembed_providers: 0
   options: 0
   page_cache: 0
