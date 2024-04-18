@@ -9,6 +9,7 @@ label: 'Site Embedder'
 weight: 1
 is_admin: null
 permissions:
+  - 'bypass embed field validation'
   - 'create field_media_embeddable_code'
   - 'edit field_media_embeddable_code'
   - 'edit own field_media_embeddable_code'
