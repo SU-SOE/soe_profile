@@ -22,7 +22,7 @@ function soe_profile_removed_post_updates() {
 }
 
 /**
- * Disable the core search module.
+ * Create default past event and event series node pages if content exists.
  */
 function soe_profile_post_update_8201_search(){
   \Drupal::service('module_installer')->uninstall(['search']);
