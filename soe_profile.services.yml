@@ -4,7 +4,7 @@ services:
     parent: default_plugin_manager
   soe_profile.event_subscriber:
     class: '\Drupal\soe_profile\EventSubscriber\EventSubscriber'
-    arguments: ['@file_system', '@logger.factory', '@messenger']
+    arguments: ['@file_system', '@http_client', '@logger.factory', '@messenger']
     tags:
       - { name: 'event_subscriber' }
   soe_profile.config_overrider:

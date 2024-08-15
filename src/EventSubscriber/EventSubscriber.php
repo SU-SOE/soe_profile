@@ -81,7 +81,7 @@ class EventSubscriber implements EventSubscriberInterface {
    * @param \Drupal\Core\Messenger\MessengerInterface $messenger
    *   Messenger service.
    */
-  public function __construct(protected FileSystemInterface $fileSystem, LoggerChannelFactoryInterface $logger_factory, protected MessengerInterface $messenger) {
+  public function __construct(protected FileSystemInterface $fileSystem, protected ClientInterface $client, LoggerChannelFactoryInterface $logger_factory, protected MessengerInterface $messenger) {
     $this->logger = $logger_factory->get('soe_profile');
   }
 

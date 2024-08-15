@@ -188,7 +188,7 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
    * {@inheritDoc}
    */
   public function getCacheSuffix() {
-    return 'SoeProfileConfigOverride';
+    return 'StanfordProfileConfigOverride';
   }
 
   /**
