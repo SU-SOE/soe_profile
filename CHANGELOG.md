@@ -1,5 +1,9 @@
 # SOE Profile
 
+11.4.1
+-------------------------------------------------------------------------------
+- Added "Site Type" field to site information config page.
+
 11.4.0
 -------------------------------------------------------------------------------
 - Enabled internal link force relative option
