@@ -1,5 +1,9 @@
 # SOE Profile
 
+11.4.2
+-------------------------------------------------------------------------------
+- Adjusted codeception test for cache issue.
+
 11.4.1
 -------------------------------------------------------------------------------
 - Added "Site Type" field to site information config page.
