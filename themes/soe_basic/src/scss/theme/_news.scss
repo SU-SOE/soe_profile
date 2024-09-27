@@ -85,6 +85,7 @@
 
     .su-news-header {
       @include modular-spacing('margin', null 2 2 2);
+      display: block;
 
       .su-link {
         @include soe--link;
