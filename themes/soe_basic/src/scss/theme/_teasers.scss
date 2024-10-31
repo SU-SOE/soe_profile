@@ -10,7 +10,6 @@
     }
   }
 
-  .ds-entity--stanford-person,
   .stanford-event-series {
 
     a {
@@ -28,6 +27,27 @@
 
       &::after {
         background-color: $su-color-black;
+      }
+    }
+  }
+
+  .ds-entity--stanford-person {
+    a {
+      @include soe-link-icon(soe_arrow, 1.8rem, 0);
+
+      color: $su-color-black;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: $soe-color-turquoise;
+
+      &::after {
+        background-color: $su-color-black;
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        text-decoration-color: $su-color-black;
       }
     }
   }
