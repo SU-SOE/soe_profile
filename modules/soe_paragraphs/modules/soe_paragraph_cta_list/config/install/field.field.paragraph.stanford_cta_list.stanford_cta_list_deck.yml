@@ -5,13 +5,8 @@ dependencies:
     - field.storage.paragraph.stanford_cta_list_deck
     - paragraphs.paragraphs_type.stanford_cta_list
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    stanford_html: stanford_html
-    stanford_minimal_html: stanford_minimal_html
-    plain_text: '0'
+third_party_settings: {  }
 id: paragraph.stanford_cta_list.stanford_cta_list_deck
 field_name: stanford_cta_list_deck
 entity_type: paragraph

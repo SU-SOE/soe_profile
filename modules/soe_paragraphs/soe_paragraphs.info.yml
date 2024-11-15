@@ -10,7 +10,6 @@ dependencies:
   - ds:ds
   - drupal:field
   - drupal:text
-  - drupal:allowed_formats
   - drupal:field_formatter_class
   - drupal:element_class_formatter
   - stanford_fields:stanford_fields
