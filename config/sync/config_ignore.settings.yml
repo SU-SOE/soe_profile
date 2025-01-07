@@ -2,13 +2,6 @@ _core:
   default_config_hash: v7E8C8wJWeAW2BGohMNY1tZSBc4bexM6O62tGxecTfE
 mode: simple
 ignored_config_entities:
-  - 'core.extension:theme'
-  - 'system.theme:default'
-  - '~block.block.claro_*'
-  - '~block.block.stanford_profile_admin_*'
-  - '~block.block.stanford_basic_*'
-  - '~block.block.soe_basic_*'
-  - '~block.block.minimally_branded_subtheme_*'
   - 'block.block.*'
   - 'core.extension:theme'
   - 'google_tag.container.*'
@@ -21,5 +14,6 @@ ignored_config_entities:
   - 'user.role.custm_*'
   - '~block.block.claro_*'
   - '~block.block.minimally_branded_subtheme_*'
+  - '~block.block.soe_basic_*'
   - '~block.block.stanford_basic_*'
   - '~block.block.stanford_profile_admin_*'
