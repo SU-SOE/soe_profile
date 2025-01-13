@@ -13,12 +13,12 @@ $su-color-bay-blue: #016895;
 
 // Link display and hovers use border-bottom instead.
 @mixin soe--link {
-  border-bottom: 3px solid $soe-color-turquoise;
-  text-decoration: none;
+  text-decoration-color: $soe-color-turquoise;
+  text-decoration: underline;
 }
 
 @mixin soe--link-hover {
-  border-bottom: 5px solid $su-color-black;
+  text-decoration-color: $su-color-black;
 }
 
 // SU link-action should be red
