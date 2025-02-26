@@ -60,6 +60,7 @@
         "drupal/admin_toolbar": "^3.1",
         "drupal/allowed_formats": "^3.0",
         "drupal/auto_entitylabel": "^3.0@beta",
+        "drupal/book": "^2.0",
         "drupal/change_labels": "^1.0",
         "drupal/chosen": "^5.0",
         "drupal/ckeditor5_icons": "^1.1",
@@ -146,6 +147,7 @@
         "drupal/search_api": "^1.19",
         "drupal/search_api_algolia": "^3.0@beta",
         "drupal/seckit": "^2.0",
+        "drupal/shield": "^1.8",
         "drupal/shs": "^2.0@RC",
         "drupal/simple_oauth": "^6.0",
         "drupal/smart_date": "^4.0",
@@ -153,6 +155,7 @@
         "drupal/taxonomy_entity_index": "^1.8",
         "drupal/taxonomy_menu": "^3.5",
         "drupal/token_or": "^2.0",
+        "drupal/trash": "^3.0",
         "drupal/ui_patterns": "^1.0",
         "drupal/ultimate_cron": "^2.0@beta",
         "drupal/view_unpublished": "^1.0",
@@ -207,6 +210,9 @@
             },
             "drupal/menu_link_weight": {
                 "https://www.drupal.org/project/menu_link_weight/issues/2875984": "https://git.drupalcode.org/project/menu_link_weight/-/merge_requests/2.diff"
+            },
+            "drupal/trash": {
+                "Trash module delete condition group": "https://sws-devguide.stanford.edu/sites/g/files/sbiybj17516/files/trash-delete_condition.patch"
             }
         }
     }
