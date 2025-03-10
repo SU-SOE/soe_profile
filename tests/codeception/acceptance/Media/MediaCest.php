@@ -139,7 +139,6 @@ class MediaCest {
     $I->click('Save');
     $I->canSee('has been created');
 
-    return;
     $I->amOnPage('/admin/content/media');
     $I->fillField('Media name', $name);
     $I->click('Filter');
