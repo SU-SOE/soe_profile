@@ -19,7 +19,7 @@ class ProfileResourceSectionTest extends UnitTestCase {
   /**
    * {@inheritDoc}
    */
-  public function setUp(): void {
+  public function setup(): void {
     parent::setUp();
     $container = new ContainerBuilder();
     $container->set('string_translation', $this->getStringTranslationStub());

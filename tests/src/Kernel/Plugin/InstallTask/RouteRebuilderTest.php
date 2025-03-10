@@ -27,7 +27,7 @@ class RouteRebuilderTest extends KernelTestBase {
    */
   public function setup(): void {
     parent::setUp();
-    $this->setInstallProfile('stanford_profile');
+    $this->setInstallProfile('soe_profile');
     $this->installEntitySchema('user');
     $this->installEntitySchema('node');
     $this->installSchema('node', 'node_access');
