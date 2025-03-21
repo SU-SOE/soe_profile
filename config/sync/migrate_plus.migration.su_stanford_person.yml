@@ -243,15 +243,11 @@ process:
     -
       plugin: skip_on_empty
       method: process
-      source: profile_photo
-    -
-      plugin: skip_on_empty
-      method: process
       source: '@image_file'
     -
       plugin: entity_generate
-      source: display_name
-      value_key: name
+      source: '@image_file'
+      value_key: field_media_image
       bundle_key: bundle
       bundle: image
       entity_type: media
