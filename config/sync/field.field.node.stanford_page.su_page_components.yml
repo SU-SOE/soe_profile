@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.stanford_cta_list
     - paragraphs.paragraphs_type.stanford_entity
     - paragraphs.paragraphs_type.stanford_faq
+    - paragraphs.paragraphs_type.stanford_filtered_lists
     - paragraphs.paragraphs_type.stanford_gallery
     - paragraphs.paragraphs_type.stanford_image_cta
     - paragraphs.paragraphs_type.stanford_layout
@@ -46,6 +47,7 @@ settings:
       stanford_image_cta: stanford_image_cta
       stanford_stories: stanford_stories
       stanford_spacer: stanford_spacer
+      stanford_filtered_lists: stanford_filtered_lists
       stanford_faq: stanford_faq
     negate: 0
     target_bundles_drag_drop:
@@ -66,6 +68,9 @@ settings:
         enabled: true
       stanford_faq:
         weight: 28
+        enabled: true
+      stanford_filtered_lists:
+        weight: 21
         enabled: true
       stanford_gallery:
         weight: -19
