@@ -213,7 +213,6 @@
 }
 
 .stanford-events-list-page,
-.stanford-events-list-page-filtered,
 .su-event-series-items,
 .stanford-event-series-list-all,
 .stanford-events-past-past-events-block {
@@ -273,6 +272,45 @@
         }
       }
     }
+  }
+}
+
+.stanford-events-list-page-filtered {
+  .su-event-list-item {
+    .event-list-item__type {
+      a {
+        font-weight: $su-font-regular;
+
+        &:hover {
+          color: $su-color-black;
+        }
+      }
+    }
+
+    h2 {
+      line-height: 1.5;
+
+      a {
+        @include soe-type-sans-base;
+        @include soe--link;
+
+        color: $su-color-digital-red;
+        text-decoration: none;
+
+
+        &:hover,
+        &:focus,
+        &:active {
+          @include soe--link-hover;
+        }
+
+        &::after {
+          background: $su-color-black;
+          border-bottom: 0;
+        }
+      }
+    }
+
   }
 }
 
