@@ -9,11 +9,10 @@
     @include grid-media-between('xs', 'sm') {
       display: block;
       @include modular-spacing('padding-top', 0);
-    };
+    }
   }
 
   .su-stories-paragraph__photo {
-
     .stanford-stories-photo-border {
       display: none;
     }
@@ -57,7 +56,7 @@
         height: 255px;
         min-width: 255px;
         min-height: 255px;
-      };
+      }
 
       @include grid-media-between('xs', 'sm') {
         display: block;
@@ -70,14 +69,14 @@
         height: 220px;
         min-width: 220px;
         min-height: 220px;
-      };
+      }
+    }
   }
-}
 
   .su-stories__details {
     @include grid-media-between('xs', 'sm') {
       display: block;
-    };
+    }
   }
 
   .su-stories-paragraph__name {
@@ -92,13 +91,17 @@
   }
 
   .su-stories-paragraph__quote {
-    @include type-a;
+    @include type-b;
+    @include modular-spacing('margin-bottom', 1);
     font-weight: 800;
-    @include modular-spacing('margin-bottom', 3);
+
+    p {
+      margin: 0;
+    }
   }
 
   .su-stories-paragraph__node-link {
-    @include modular-spacing('margin-bottom', 1);
+    margin-bottom: 0;
 
     a {
       text-decoration: none;
@@ -114,21 +117,21 @@
   }
 
   .su-stories-paragraph__content {
-    &+ .su-stories-paragraph__cta-region {
+    & + .su-stories-paragraph__cta-region {
       @include modular-spacing('padding-top', 3);
     }
   }
 
   .su-stories-paragraph__cta-region {
-    @include modular-spacing('padding-bottom', 5);
+    @include modular-spacing('padding-bottom', 4);
 
     display: flex;
     justify-content: center;
+    padding-top: 0;
 
     a {
       @include button-primary();
       color: #fff;
     }
-
   }
 }
