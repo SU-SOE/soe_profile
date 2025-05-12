@@ -90,7 +90,7 @@ allpages:
   version: VERSION
   css:
     base:
-      dist/css/base.css: { weight: 100 }
+      dist/css/base.css: {}
     layout:
       dist/css/layout.css: {}
     component:
