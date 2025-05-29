@@ -49,6 +49,7 @@ settings:
       stanford_spacer: stanford_spacer
       stanford_filtered_lists: stanford_filtered_lists
       stanford_faq: stanford_faq
+      stanford_stat_card: stanford_stat_card
     negate: 0
     target_bundles_drag_drop:
       stanford_accordion:
@@ -98,6 +99,9 @@ settings:
         enabled: false
       stanford_spacer:
         weight: 28
+        enabled: true
+      stanford_stat_card:
+        weight: 31
         enabled: true
       stanford_stories:
         weight: 15
