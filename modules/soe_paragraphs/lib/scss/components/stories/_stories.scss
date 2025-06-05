@@ -116,12 +116,6 @@
     }
   }
 
-  .su-stories-paragraph__content {
-    & + .su-stories-paragraph__cta-region {
-      @include modular-spacing('padding-top', 3);
-    }
-  }
-
   .su-stories-paragraph__cta-region {
     @include modular-spacing('padding-bottom', 4);
 
