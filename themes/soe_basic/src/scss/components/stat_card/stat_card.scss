@@ -1,0 +1,103 @@
+@charset 'UTF-8';
+@import 'decanter/core/src/scss/decanter-no-markup';
+@import 'decanter/core/src/scss/components/card/index';
+
+@mixin stat-card-dark-bg {
+  .stat-button {
+    box-shadow: inset 0 0 0 2px $su-color-white;
+    color: white;
+
+    &:hover,
+    &:focus {
+      box-shadow: inset 0 0 0 2px $su-color-white;
+      color: $su-color-white;
+    }
+  }
+
+  a {
+    color: $su-color-white;
+
+    &::after {
+      background-color: $su-color-white;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        background-color: $su-color-white;
+      }
+    }
+  }
+}
+
+.su-stat-card {
+  .stat-card-headline {
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-weight: 700;
+    }
+  }
+
+  .stat-card-stat {
+    font-weight: 700;
+  }
+}
+
+.stat-icon-d18100 {
+  .stat-card-icon {
+    color: #d18100;
+  }
+}
+
+.stat-icon-ff525c {
+  .stat-card-icon {
+    color: #ff525c;
+  }
+}
+
+.stat-icon-009e9b {
+  .stat-card-icon {
+    color: #009e9b;
+  }
+}
+
+.stat-stat-d18100 {
+  .stat-card-stat {
+    color: #d18100;
+  }
+}
+
+.stat-stat-ff525c {
+  .stat-card-stat {
+    color: #ff525c;
+  }
+}
+
+.stat-stat-009e9b {
+  .stat-card-stat {
+    color: #009e9b;
+  }
+}
+
+.stat-bg-ffbd54 {
+  .su-stat-card {
+    background: #ffbd54;
+  }
+}
+
+.stat-bg-ff525c {
+  @include stat-card-dark-bg;
+
+  .su-stat-card {
+    background: #ff525c;
+    color: $su-color-white;
+  }
+}
+
+.stat-bg-00ece9 {
+  .su-stat-card {
+    background: #00ece9;
+  }
+}
