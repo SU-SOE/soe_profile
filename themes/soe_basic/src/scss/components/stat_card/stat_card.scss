@@ -3,34 +3,6 @@
 @import 'decanter/core/src/scss/components/card/index';
 @import '../../utilities/variables/colors';
 
-@mixin stat-card-dark-bg {
-  .stat-button {
-    box-shadow: inset 0 0 0 2px $su-color-white;
-    color: white;
-
-    &:hover,
-    &:focus {
-      box-shadow: inset 0 0 0 2px $su-color-white;
-      color: $su-color-white;
-    }
-  }
-
-  a {
-    color: $su-color-white;
-
-    &::after {
-      background-color: $su-color-white;
-    }
-
-    &:hover,
-    &:focus {
-      &::after {
-        background-color: $su-color-white;
-      }
-    }
-  }
-}
-
 .su-stat-card {
   .stat-card-headline {
     h2,
@@ -89,11 +61,8 @@
 }
 
 .stat-bg-ff525c {
-  @include stat-card-dark-bg;
-
   .su-stat-card {
     background: $soe-color-pink;
-    color: $su-color-white;
   }
 }
 
