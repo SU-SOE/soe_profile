@@ -1,6 +1,7 @@
 @charset 'UTF-8';
 @import 'decanter/core/src/scss/decanter-no-markup';
 @import 'decanter/core/src/scss/components/card/index';
+@import '../../utilities/variables/colors';
 
 @mixin stat-card-dark-bg {
   .stat-button {
@@ -47,43 +48,43 @@
 
 .stat-icon-d18100 {
   .stat-card-icon {
-    color: #d18100;
+    color: $soe-color-orange-dark;
   }
 }
 
 .stat-icon-ff525c {
   .stat-card-icon {
-    color: #ff525c;
+    color: $soe-color-pink;
   }
 }
 
 .stat-icon-009e9b {
   .stat-card-icon {
-    color: #009e9b;
+    color: $soe-color-turquoise-dark;
   }
 }
 
 .stat-stat-d18100 {
   .stat-card-stat {
-    color: #d18100;
+    color: $soe-color-orange-dark;
   }
 }
 
 .stat-stat-ff525c {
   .stat-card-stat {
-    color: #ff525c;
+    color: $soe-color-pink;
   }
 }
 
 .stat-stat-009e9b {
   .stat-card-stat {
-    color: #009e9b;
+    color: $soe-color-turquoise-dark;
   }
 }
 
 .stat-bg-ffbd54 {
   .su-stat-card {
-    background: #ffbd54;
+    background: $soe-color-orange;
   }
 }
 
@@ -91,13 +92,13 @@
   @include stat-card-dark-bg;
 
   .su-stat-card {
-    background: #ff525c;
+    background: $soe-color-pink;
     color: $su-color-white;
   }
 }
 
 .stat-bg-00ece9 {
   .su-stat-card {
-    background: #00ece9;
+    background: $soe-color-turquoise;
   }
 }
