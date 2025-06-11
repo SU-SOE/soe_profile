@@ -89,8 +89,6 @@
 allpages:
   version: VERSION
   css:
-    base:
-      dist/css/base.css: { weight: 100 }
     layout:
       dist/css/layout.css: {}
     component:
@@ -100,3 +98,5 @@ allpages:
     theme:
       dist/css/theme.css: {}
       dist/css/print.css: { media: print }
+    base:
+      dist/css/base.css: { weight: 200 }

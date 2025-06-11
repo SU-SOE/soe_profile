@@ -27,7 +27,6 @@ components:
     basic: templates
 
 libraries:
-#  - stanford_basic/basic
   - soe_basic/allpages
 
 ckeditor_stylesheets:
