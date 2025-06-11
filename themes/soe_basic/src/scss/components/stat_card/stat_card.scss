@@ -1,0 +1,71 @@
+@charset 'UTF-8';
+@import '../../utilities/variables/colors';
+
+.su-stat-card {
+  .stat-card-headline {
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-weight: 900;
+    }
+  }
+
+  .stat-card-stat {
+    font-weight: 900;
+  }
+}
+
+.stat-icon-d18100 {
+  .stat-card-icon {
+    color: $soe-color-orange-dark;
+  }
+}
+
+.stat-icon-ff525c {
+  .stat-card-icon {
+    color: $soe-color-pink;
+  }
+}
+
+.stat-icon-009e9b {
+  .stat-card-icon {
+    color: $soe-color-turquoise-dark;
+  }
+}
+
+.stat-stat-d18100 {
+  .stat-card-stat {
+    color: $soe-color-orange-dark;
+  }
+}
+
+.stat-stat-ff525c {
+  .stat-card-stat {
+    color: $soe-color-pink;
+  }
+}
+
+.stat-stat-009e9b {
+  .stat-card-stat {
+    color: $soe-color-turquoise-dark;
+  }
+}
+
+.stat-bg-ffbd54 {
+  .su-stat-card {
+    background: $soe-color-orange;
+  }
+}
+
+.stat-bg-ff525c {
+  .su-stat-card {
+    background: $soe-color-pink;
+  }
+}
+
+.stat-bg-00ece9 {
+  .su-stat-card {
+    background: $soe-color-turquoise;
+  }
+}
