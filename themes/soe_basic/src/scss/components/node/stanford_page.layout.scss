@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+// Home page hack.
+body.front {
+  .node-stanford-page-title {
+    @include sr-only;
+    margin: 0;
+  }
+}
