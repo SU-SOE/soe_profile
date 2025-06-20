@@ -4,6 +4,12 @@
 -------------------------------------------------------------------------------
 - SRC-81: Fix lockup work wrapping
 
+11.8.1
+-------------------------------------------------------------------------------
+- UE-536: adjusting opportunity layout to be in only 2 cols (#956)
+- Wrap page header and page footer in `data-nosnippet` to prevent google snippets from the menus
+- D8CORE-8144: Removed duplication of fields in sidebar on opportunities
+
 11.8.0
 -------------------------------------------------------------------------------
 - D8CORE-8019: Move opportunity fields into a view for better styles (#924)
