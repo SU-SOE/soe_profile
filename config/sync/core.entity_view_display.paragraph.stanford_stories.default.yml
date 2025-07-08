@@ -14,9 +14,12 @@ dependencies:
     - paragraphs.paragraphs_type.stanford_stories
   module:
     - ds
+    - empty_fields
     - field_formatter_class
+    - field_label
     - link
     - options
+    - stanford_fields
     - stanford_media
     - text
 third_party_settings:
@@ -74,10 +77,11 @@ content:
     weight: 5
     region: cta
   stanford_stories_name:
-    type: string
+    type: entity_title_heading
     label: hidden
     settings:
-      link_to_entity: false
+      tag: h2
+      linked: false
     third_party_settings:
       empty_fields:
         handler: ''
@@ -85,7 +89,7 @@ content:
         class: su-stories-paragraph__name
       field_label:
         label_value: ''
-        label_tag: h2
+        label_tag: ''
     weight: 1
     region: person_content
   stanford_stories_node_link:
