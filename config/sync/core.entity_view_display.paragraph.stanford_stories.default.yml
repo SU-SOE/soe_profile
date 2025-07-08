@@ -10,6 +10,7 @@ dependencies:
     - field.field.paragraph.stanford_stories.stanford_stories_photo
     - field.field.paragraph.stanford_stories.stanford_stories_quote
     - field.field.paragraph.stanford_stories.stanford_stories_title
+    - field.field.paragraph.stanford_stories.su_heading_lvl
     - paragraphs.paragraphs_type.stanford_stories
   module:
     - ds
@@ -32,6 +33,7 @@ third_party_settings:
     regions:
       image:
         - stanford_stories_photo
+        - su_heading_lvl
       person_content:
         - stanford_stories_name
         - stanford_stories_title
@@ -77,8 +79,13 @@ content:
     settings:
       link_to_entity: false
     third_party_settings:
+      empty_fields:
+        handler: ''
       field_formatter_class:
         class: su-stories-paragraph__name
+      field_label:
+        label_value: ''
+        label_tag: h2
     weight: 1
     region: person_content
   stanford_stories_node_link:
@@ -102,6 +109,7 @@ content:
       view_mode: stanford_image_large_square
       link: false
       image_style: ''
+      remove_alt: false
     third_party_settings:
       field_formatter_class:
         class: su-stories-paragraph__photo
@@ -124,5 +132,12 @@ content:
         class: su-stories-paragraph__title
     weight: 2
     region: person_content
+  su_heading_lvl:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: image
 hidden:
   search_api_excerpt: true
