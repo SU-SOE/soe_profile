@@ -187,9 +187,6 @@
         "su-sws/stanford_profile_helper": "^9.10",
         "su-sws/stanford_samlauth": "^1.0"
     },
-    "conflict": {
-        "drupal/migrate_tools": ">6.0.5"
-    },
     "config": {
         "sort-packages": true
     },
