@@ -25,7 +25,7 @@
 {%- set attributes = attributes.addClass(['su-image-cta-paragraph', modifier_class]) -%}
 <div{{ attributes }}>
   {% if image_field_items is not empty %}
-  {{ link(image, link_uri, {'tabindex': '-1', 'aria-hidden': 'true', 'role': 'presentation'}) }}
+  {{ link(image, link_uri, {'tabindex': '-1', 'aria-hidden': 'true'}) }}
   {% endif %}
   {{ link }}
 </div>
