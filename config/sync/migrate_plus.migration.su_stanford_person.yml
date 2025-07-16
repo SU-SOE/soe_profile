@@ -243,15 +243,11 @@ process:
     -
       plugin: skip_on_empty
       method: process
-      source: profile_photo
-    -
-      plugin: skip_on_empty
-      method: process
       source: '@image_file'
     -
       plugin: entity_generate
-      source: display_name
-      value_key: name
+      source: '@image_file'
+      value_key: field_media_image
       bundle_key: bundle
       bundle: image
       entity_type: media
@@ -296,6 +292,9 @@ process:
       source:
         - scholarly_interests_fulltext
         - scholarly_interests_tersetext
+  su_imported:
+    plugin: default_value
+    default_value: 1
 destination:
   plugin: 'entity:node'
   overwrite_properties:
@@ -308,6 +307,7 @@ destination:
     - photo_source
     - revision_timestamp
     - revision_translation_affected
+    - su_imported
     - su_person_academic_appt
     - su_person_admin_appts
     - su_person_education

@@ -81,6 +81,7 @@ third_party_settings:
           extra_classes: ''
           centered: centered-container
           orientation: left
+          force_regions: false
         components:
           42ec0a5c-ba15-4be4-9d66-9fecee9a3912:
             uuid: 42ec0a5c-ba15-4be4-9d66-9fecee9a3912
@@ -308,6 +309,7 @@ hidden:
   links: true
   search_api_excerpt: true
   stanford_intranet__access: true
+  su_imported: true
   su_metatags: true
   su_publication_author_ref: true
   su_publication_citation: true

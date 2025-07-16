@@ -66,7 +66,6 @@ const MobileMenuButton = styled.button`
   font-size: 1.6rem;
 
   &:hover, &:focus {
-    border-bottom: 2px solid #2e2d29;
     background: transparent;
     color: #2e2d29;
     box-shadow: none;
@@ -129,20 +128,58 @@ const SearchContainer = styled.div`
   }
 `
 
+const UtilityNav = styled.ul`
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  background: #2e2d29;
+  padding: 24px 45px;
+  font-size: 18px;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+
+  a {
+    color: #fff;
+    font-size: .9em;
+    font-weight: 400;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+`
+
 export const MainMenu = ({}) => {
   useWebComponentEvents(islandName)
   const [menuItems, setMenuItems] = useState<MenuContentItem[]>(window.drupalSettings?.stanford_basic?.decoupledMenuItems || []);
+  const [utilityNavLinks, setNavLinks] = useState<Array<{href: string, title: string}>>([]);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const navRef = useRef<HTMLElement | null>(null);
   useOutsideClick(navRef, () => setMenuOpen(false));
 
   useEffect(() => {
-    if (menuItems.length) return;
+    const utilityLinkNodes = document.evaluate('//*[contains(@class, \'su-site-header-links\')]//a', document, null, XPathResult.ANY_TYPE, null)
+    let linkNode = null
+    const utilityLinks = []
+    while ((linkNode = utilityLinkNodes.iterateNext())) {
+      utilityLinks.push({
+        href: linkNode.getAttribute('href'),
+        title: linkNode.innerText,
+      })
+    }
+    if (utilityLinks) {
+      setNavLinks(utilityLinks)
+    }
 
+    if (menuItems.length > 0) return;
     fetch(DRUPAL_DOMAIN + '/jsonapi/menu_items/main')
       .then(res => res.json())
-      .then(data => setMenuItems(deserialize(data)))
+      .then(data => setMenuItems(buildMenuTree(deserialize(data)).items || []))
       .catch(err => console.error(err));
   }, [])
 
@@ -155,8 +192,7 @@ export const MainMenu = ({}) => {
 
   useEventListener("keydown", handleEscape);
 
-  const menuTree = useMemo(() => buildMenuTree(menuItems), [menuItems]);
-  if (!menuTree.items || menuTree.items?.length === 0) return;
+  if (menuItems.length === 0) return;
 
   // Remove the default menu.
   const existingMenu = document.getElementsByClassName('su-multi-menu');
@@ -166,6 +202,7 @@ export const MainMenu = ({}) => {
     <nav
       ref={navRef}
       style={{position: "relative"}}
+      className="preact-main-menu"
     >
       <MobileMenuButton
         ref={buttonRef}
@@ -195,8 +232,15 @@ export const MainMenu = ({}) => {
           </form>
 
         </SearchContainer>
+        {utilityNavLinks.length > 0 &&
+          <UtilityNav>
+            {utilityNavLinks.map(link =>
+              <li><a href={link.href}>{link.title}</a></li>
+            )}
+          </UtilityNav>
+        }
         <TopList>
-          {menuTree.items.sort((a, b) => a.weight < b.weight ? -1 : 1).map(item => <MenuItem key={item.id} {...item}/>)}
+          {menuItems.map(item => <MenuItem key={item.id} {...item}/>)}
         </TopList>
       </MenuWrapper>
     </nav>
@@ -242,7 +286,6 @@ const MenuItemContainer = styled.div<{ level?: number }>`
   justify-content: space-between;
   align-items: center;
   margin-right: ${props => props.level === 0 ? "32px" : "0"};
-
   width: 100%;
 
   @media (min-width: 992px) {
@@ -395,7 +438,7 @@ const MenuItem = ({id, title, url, items, expanded, level = 0}: {
           <NoLink>{title}</NoLink>
         }
 
-        {(items && expanded) &&
+        {(items && items.length > 0 && expanded) &&
           <>
             {level === 0 &&
               <MenuItemDivider/>
@@ -417,10 +460,10 @@ const MenuItem = ({id, title, url, items, expanded, level = 0}: {
         }
       </MenuItemContainer>
 
-      {(items && expanded) &&
+      {(items && items.length > 0 && expanded) &&
         <MenuList open={submenuOpen} level={level}>
 
-          {items.sort((a, b) => a.weight < b.weight ? -1 : 1).map(item =>
+          {items.map(item =>
             <MenuItem key={item.id} {...item} level={level + 1}/>
           )}
         </MenuList>

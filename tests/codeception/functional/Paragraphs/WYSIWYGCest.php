@@ -107,7 +107,7 @@ class WYSIWYGCest {
     $I->click('[data-cke-tooltip-text="Link (Ctrl+K)"]');
     $url = $this->faker->url;
     $I->fillField('Link URL', $url);
-    $I->click('[data-cke-tooltip-text="Save"]');
+    $I->click('Insert');
     $I->clickWithLeftButton('.ui-dialog-title');
 
     $I->click('Save', '.ui-dialog-buttonpane');
@@ -115,7 +115,7 @@ class WYSIWYGCest {
     $I->click('Save');
     $I->canSeeLink($url);
 
-    $I->canSeeNumberOfElements('.su-wysiwyg-text td', 15);
+    $I->canSeeNumberOfElements('.su-wysiwyg-text td', 12);
     $I->canSeeNumberOfElements('.su-wysiwyg-text tr', 5);
   }
 

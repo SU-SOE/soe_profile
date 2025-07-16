@@ -1,0 +1,22 @@
+uuid: 03aa870c-7234-4650-800f-3cbda8c52730
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+  theme:
+    - stanford_basic
+id: soe_basic_header_links
+theme: soe_basic
+region: search
+weight: -5
+provider: null
+plugin: config_pages_block
+settings:
+  id: config_pages_block
+  label: 'Site Header Links'
+  label_display: '0'
+  provider: config_pages
+  config_page_type: stanford_basic_site_settings
+  config_page_view_mode: site_settings_header
+visibility: {  }

@@ -120,3 +120,78 @@ function soe_profile_post_update_site_orgs() {
     }
   }
 }
+
+
+/**
+ * Create new header link block for the active theme.
+ */
+function soe_profile_post_update_header_links_block() {
+  $theme = \Drupal::config('system.theme')->get('default');
+  if (in_array($theme, [
+    'stanford_basic',
+    'minimally_branded_subtheme',
+    'stanford_profile_admin_theme',
+    'soe_basic',
+  ])) {
+    return;
+  }
+  \Drupal::entityTypeManager()->getStorage('block')->create([
+    'id' => "{$theme}_header_links",
+    'theme' => $theme,
+    'region' => 'search',
+    'plugin' => 'config_pages_block',
+    'weight' => -6,
+    'provider' => NULL,
+    'settings' => [
+      'id' => 'config_pages_block',
+      'label' => 'Site Header Links',
+      'label_display' => '0',
+      'provider' => 'config_pages',
+      'config_page_type' => 'stanford_basic_site_settings',
+      'config_page_view_mode' => 'site_settings_header',
+    ],
+  ])->save();
+}
+
+/**
+ * Create new header link block for the active theme.
+ */
+function soe_profile_post_update_unpublished_site_banner() {
+  $theme = \Drupal::config('system.theme')->get('default');
+  if (in_array($theme, [
+    'stanford_basic',
+    'soe_basic',
+    'minimally_branded_subtheme',
+    'stanford_profile_admin_theme',
+  ])) {
+    return;
+  }
+  \Drupal::entityTypeManager()->getStorage('block')->create([
+    'id' => "{$theme}_unpublished_site",
+    'theme' => $theme,
+    'region' => 'content',
+    'plugin' => 'simple_block:su_unpublished_site_banner',
+    'weight' => -10,
+    'provider' => NULL,
+    'settings' => [
+      'id' => 'simple_block:su_unpublished_site_banner',
+      'label' => 'Unpublished Site Banner',
+      'label_display' => '0',
+      'provider' => 'simple_block',
+    ],
+    'visibility' => [
+      'config_pages_values_access' => [
+        'id' => 'config_pages_values_access',
+        'negate' => FALSE,
+        'config_page_field' => 'stanford_basic_site_settings|su_site_type|list_string',
+        'operator' => '==',
+        'condition_value' => 'pre_production',
+      ],
+      'request_path' => [
+        'id' => 'request_path',
+        'negate' => TRUE,
+        'pages' => '/user/*',
+      ],
+    ],
+  ])->save();
+}

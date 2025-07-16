@@ -24,7 +24,7 @@
 {# Masthead Section. #}
 {%- block block_header -%}
   {%- if page.header or page.search or page.menu -%}
-    <header class="su-masthead su-masthead--right">
+    <header class="su-masthead su-masthead--right" data-nosnippet>
 
       {% block block_skiplinks %}
         <a href="#main-content" class="visually-hidden focusable su-skipnav su-skipnav--content">
@@ -46,9 +46,21 @@
       {%- endblock -%}
 
       <section class="su-masthead--inner" aria-label="Page logo, menu and search">
-        {{ page.header }}
-        {{ page.search }}
-        {{ page.menu }}
+        {% if page.header %}
+          <div class="region region-header">
+            {{ page.header }}
+          </div>
+        {% endif %}
+        {% if page.search %}
+          <div class="region region-search">
+            {{ page.search }}
+          </div>
+        {% endif %}
+        {% if page.menu %}
+          <div class="region region-menu">
+            {{ page.menu }}
+          </div>
+        {% endif %}
       </section>
     </header>
   {%- endif -%}
@@ -68,7 +80,7 @@
 
 {# Footer Section #}
 {%- block block_footer -%}
-  <footer id="footer">
+  <footer id="footer" data-nosnippet>
     {{ page.footer }}
     {%- include template_global_footer with { modifier_class : global_footer_variant }  -%}
   </footer>

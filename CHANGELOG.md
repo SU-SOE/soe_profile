@@ -4,6 +4,68 @@
 -------------------------------------------------------------------------------
 - SRC-81: Fix lockup work wrapping
 
+11.8.3
+-------------------------------------------------------------------------------
+- Fixed minimally branded theme unpublished banner visibility
+- Update book config
+
+11.8.2
+-------------------------------------------------------------------------------
+- D8CORE-8052 Style social link for "X.com" to match "twitter.com"
+- Upgrade to drupal 10.5
+
+11.8.1
+-------------------------------------------------------------------------------
+- UE-536: adjusting opportunity layout to be in only 2 cols (#956)
+- Wrap page header and page footer in `data-nosnippet` to prevent google snippets from the menus
+- D8CORE-8144: Removed duplication of fields in sidebar on opportunities
+
+11.8.0
+-------------------------------------------------------------------------------
+- D8CORE-8019: Move opportunity fields into a view for better styles (#924)
+- D8CORE-8063 Fix html structure on opportunity list items (#952)
+- D8CORE-8071 Added an "Imported" field populated by importers (#951)
+- D8CORE-8014 Fix hover state on mobile menu hamburger
+- D8CORE-8065 Move opportunity node page "Main content" anchor above page title
+- Adjust opportunity filters to use radio buttons (#950)
+- D8CORE-8036: RSS Feed For News (#936)
+- Added heading level selection for stat card paragraph (#949)
+- D8CORE-8045: Adding spacing to header bottom when there is no navigation menu. (#943)
+- Add fontawesome icon template to hide icon from screen readers
+- D8CORE-7987: Copy the utility links and buttons for the mobile display (#935)
+- D8CORE-8133: Changed sort for the opportunities view (#945)
+- Update stat card color choices
+- Updated editorially settings
+- Require headline in stat card (#940)
+- Added stat card icon
+- D8CORE-8000: Add validation for numeric "Items to display" on list paragraph (#937)
+- D8CORE-7843 D8CORE-8086 Add stat card and section background color options (#932)
+- D8CORE-8042 - External source field for person with page redirect (#933)
+- D8CORE-7736: Add unpublished site banner to all pages (#931)
+- D8CORE-7836: added past and upcoming filter and indicator to "Manage events" page. (#928)
+- D8CORE-8047: Manage Basic Pages content management view (#927)
+- D8CORE-6470: Update Event Importer help text (#929)
+
+11.7.0
+-------------------------------------------------------------------------------
+- D8CORE-8031 Force displaying both regions on opportunity  layout
+- D8CORE-8029: made the contact email a link (#921)
+- Add fallback sorting to graphql views
+- Fixed course card grid to display as a grid, instead of list
+- Exclude external link icon from news teasers due to template implementation
+- D8CORE-8024 Fix order of decoupled menu items (#919)
+- D8CORE-8025 D8CORE-8027: fixed tabing order and spacing on the header and utility nav (#920)
+- D8CORE-8020: Opportunities header items changes for alignment when no icon (#918)
+- Expose entity ids in graphql to allow for view filtering'
+- D8CORE-7927: Utility navigation styles (#911)
+- FEATURE: Opportunities content type enhanced with node display, views and filterable views. (#883)
+- D8CORE-7997: Updated edit form for Site Header Options (#916)
+- D8CORE-7924 Add header utility links to site settings (#900)
+- Remove unwanted fields from search indexing displays
+- Updated decoupled menu to correctly display sub menu items
+- D8CORE-7654: Fixed full width basic page title position (#891)
+- Update trash module config
+
 11.6.2
 -------------------------------------------------------------------------------
 - Fixed logic error in main menu when home page is a node path.
