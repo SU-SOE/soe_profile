@@ -81,4 +81,71 @@ class StanfordCTAListCest {
     $I->canSeeLink('Link Gamma', 'http://google.com');
   }
 
+  /**
+   * Test CTA List border removal functionality.
+   */
+  public function testCtaListBorderRemoval(AcceptanceTester $I) {
+    // Test with border enabled (default)
+    $paragraph_with_border = $I->createEntity([
+      'type' => 'stanford_cta_list',
+      'stanford_cta_list_header' => [
+        'value' => 'Test CTA with Border',
+      ],
+      'stanford_cta_list_links' => [
+        [
+          'uri' => 'http://example.com',
+          'title' => 'Test Link',
+        ],
+      ],
+      'behavior_settings' => [
+        'su_cta_list_styles' => [
+          'top_border' => 'Yes'
+        ]
+      ]
+    ], 'paragraph');
+
+    $node_with_border = $I->createEntity([
+      'type' => 'stanford_page',
+      'title' => 'Test Page with Border',
+      'su_page_components' => [
+        'target_id' => $paragraph_with_border->id(),
+        'entity' => $paragraph_with_border,
+      ],
+    ]);
+
+    $I->amOnPage($node_with_border->toUrl()->toString());
+    $I->dontSeeElement('.su-cta-list--without-border');
+
+    // Test with border disabled
+    $paragraph_without_border = $I->createEntity([
+      'type' => 'stanford_cta_list',
+      'stanford_cta_list_header' => [
+        'value' => 'Test CTA without Border',
+      ],
+      'stanford_cta_list_links' => [
+        [
+          'uri' => 'http://example.com',
+          'title' => 'Test Link',
+        ],
+      ],
+      'behavior_settings' => [
+        'su_cta_list_styles' => [
+          'top_border' => 'No'
+        ]
+      ]
+    ], 'paragraph');
+
+    $node_without_border = $I->createEntity([
+      'type' => 'stanford_page',
+      'title' => 'Test Page without Border',
+      'su_page_components' => [
+        'target_id' => $paragraph_without_border->id(),
+        'entity' => $paragraph_without_border,
+      ],
+    ]);
+
+    $I->amOnPage($node_without_border->toUrl()->toString());
+    $I->seeElement('.su-cta-list--without-border');
+  }
+
 }
