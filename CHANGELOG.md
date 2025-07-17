@@ -4,6 +4,16 @@
 -------------------------------------------------------------------------------
 - SRC-81: Fix lockup work wrapping
 
+11.8.3
+-------------------------------------------------------------------------------
+- Fixed minimally branded theme unpublished banner visibility
+- Update book config
+
+11.8.2
+-------------------------------------------------------------------------------
+- D8CORE-8052 Style social link for "X.com" to match "twitter.com"
+- Upgrade to drupal 10.5
+
 11.8.1
 -------------------------------------------------------------------------------
 - UE-536: adjusting opportunity layout to be in only 2 cols (#956)
