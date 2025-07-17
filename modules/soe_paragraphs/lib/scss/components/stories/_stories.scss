@@ -12,6 +12,10 @@
     }
   }
 
+  .su-heading-lvl {
+    display: none;
+  }
+
   .su-stories-paragraph__photo {
     .stanford-stories-photo-border {
       display: none;
@@ -80,9 +84,14 @@
   }
 
   .su-stories-paragraph__name {
-    @include type-d;
-    font-weight: 800;
-    @include modular-spacing('margin-top', 0);
+    h2,
+    h3,
+    h4 {
+      @include type-d;
+      @include modular-spacing('margin-top', 0);
+      font-weight: 800;
+      margin-bottom: 0;
+    }
   }
 
   .su-stories-paragraph__title {
