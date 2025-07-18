@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.stanford_page_title_banner.su_soe_banner_bg_color
     - field.field.paragraph.stanford_page_title_banner.su_title_banner_image
     - paragraphs.paragraphs_type.stanford_page_title_banner
   module:
     - ds
     - empty_fields
     - field_formatter_class
+    - options
     - stanford_media
 third_party_settings:
   ds:
@@ -38,6 +40,13 @@ targetEntityType: paragraph
 bundle: stanford_page_title_banner
 mode: default
 content:
+  su_soe_banner_bg_color:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
   su_title_banner_image:
     type: media_responsive_image_formatter
     label: hidden

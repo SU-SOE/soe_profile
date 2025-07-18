@@ -3,22 +3,82 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.stanford_page_title_banner.su_soe_banner_bg_color
     - field.field.paragraph.stanford_page_title_banner.su_title_banner_image
     - paragraphs.paragraphs_type.stanford_page_title_banner
   module:
+    - conditional_fields
+    - field_group
     - media_library
+third_party_settings:
+  field_group:
+    group_styles_behaviors:
+      children:
+        - su_background_color
+      label: Styles/Behaviors
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
 id: paragraph.stanford_page_title_banner.default
 targetEntityType: paragraph
 bundle: stanford_page_title_banner
 mode: default
 content:
+  su_soe_banner_bg_color:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        9b30ab51-5994-46c0-915f-51cbbceb6c77:
+          entity_type: paragraph
+          bundle: stanford_page_title_banner
+          dependee: su_title_banner_image
+          settings:
+            state: '!empty'
+            condition: empty
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
   su_title_banner_image:
     type: media_library_widget
     weight: 0
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        c50bd20f-66aa-4f0c-a382-e3a7332b816a:
+          entity_type: paragraph
+          bundle: stanford_page_title_banner
+          dependee: su_soe_banner_bg_color
+          settings:
+            state: required
+            reset: false
+            condition: empty
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
 hidden:
   created: true
   status: true
