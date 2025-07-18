@@ -34,12 +34,18 @@
       display: block;
       width: 100%;
       @include modular-spacing('padding-bottom', 1);
-    };
+    }
 
     .su-link--action {
       display: block;
+      position: relative;
       width: 100%;
       @include modular-spacing('margin-bottom', 1);
+
+      &:after {
+        bottom: 5px;
+        position: absolute;
+      }
     }
 
     .col-1 {
