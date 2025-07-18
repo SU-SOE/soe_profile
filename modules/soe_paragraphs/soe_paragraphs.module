@@ -18,3 +18,19 @@ function soe_paragraphs_page_attachments(array &$page) {
   // See: https://www.drupal.org/node/2274843
   // $page['#attached']['library'][] = 'soe_paragraphs/soe_paragraphs';
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function soe_paragraphs_preprocess_field__stanford_stories_name(&$variables) {
+  $entity = $variables['element']['#object'];
+  $heading_lvl = $entity->get('su_heading_lvl')?->getString() ?: 'h2';
+  if (!str_contains($heading_lvl, '.')) {
+    $heading_lvl .= '.';
+  }
+  // Split the value like div.foo.bar into tag and classes. Then explode the
+  // classes next to build an array.
+  [$tag, $classes] = explode('.', $heading_lvl, 2);
+  $variables['items'][0]['content']['#tag'] = $tag;
+  $variables['items'][0]['content']['#attributes']['class'] = explode('.', $classes);
+}

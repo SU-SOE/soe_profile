@@ -1,14 +1,18 @@
 @charset 'UTF-8';
 
+// Event & News Taxonomy Filter
+.stanford-event-types,
+.news-topics {
+  @include modular-spacing('margin-bottom', 6);
+}
+
 // News List
 .su-news-list {
-
   h2 {
     line-height: 1.5;
   }
 
   .su-news-article {
-
     a {
       h2 {
         font-weight: $su-font-black;
@@ -84,6 +88,10 @@
   }
 
   .su-news-vertical-teaser {
+    .block-views {
+      @include modular-spacing('margin-bottom', 6);
+    }
+
     .su-news-header {
       @include modular-spacing('margin', null 2 2 2);
       display: block;
