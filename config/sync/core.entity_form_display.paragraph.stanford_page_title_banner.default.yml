@@ -6,27 +6,7 @@ dependencies:
     - field.field.paragraph.stanford_page_title_banner.su_title_banner_image
     - paragraphs.paragraphs_type.stanford_page_title_banner
   module:
-    - conditional_fields
-    - field_group
     - media_library
-third_party_settings:
-  field_group:
-    group_styles_behaviors:
-      children:
-        - su_background_color
-      label: Styles/Behaviors
-      region: content
-      parent_name: ''
-      weight: 1
-      format_type: details
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        label_as_html: false
-        open: false
-        description: ''
-        required_fields: true
 id: paragraph.stanford_page_title_banner.default
 targetEntityType: paragraph
 bundle: stanford_page_title_banner
@@ -38,8 +18,7 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings:
-      conditional_fields: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true
