@@ -46,10 +46,15 @@
 
 // Background gradients banner for basic page
 .soe-gradient--solid-purple-green-banner {
-  @include gradient--solid-purple-green;
+  .su-hero__media {
+    @include gradient--solid-purple-green;
+  }
 }
+
 .soe-gradient--solid-purple-lagunita-banner {
-  @include gradient--solid-purple-green;
+  .su-hero__media {
+    @include gradient--solid-purple-green;
+  }
 }
 
 // Background gradients as replacement for the author selected gradients over images. Also has the title colors..section-bgcolor--title,
@@ -152,7 +157,6 @@
 .page-people,
 .page-events,
 .page-publications {
-
   .jumpstart-ui--one-column {
     &.centered-container {
       @include modular-spacing('padding', 6 null 6 null);

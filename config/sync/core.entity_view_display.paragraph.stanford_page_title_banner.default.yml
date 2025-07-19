@@ -3,14 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.stanford_page_title_banner.su_soe_banner_bg_color
     - field.field.paragraph.stanford_page_title_banner.su_title_banner_image
     - paragraphs.paragraphs_type.stanford_page_title_banner
   module:
     - ds
     - empty_fields
     - field_formatter_class
-    - options
     - stanford_media
 third_party_settings:
   ds:
@@ -24,15 +22,15 @@ third_party_settings:
           field_templates: default
           variant: default
     regions:
-      hero_body:
-        - 'dynamic_token_field:paragraph-page_title'
-        - su_title_banner_header
       hero_image:
         - su_title_banner_image
+        - su_soe_banner_bg_color
+      hero_body:
+        - 'dynamic_token_field:paragraph-page_title'
     fields:
       'dynamic_token_field:paragraph-page_title':
         plugin_id: 'dynamic_token_field:paragraph-page_title'
-        weight: 0
+        weight: 2
         label: hidden
         formatter: default
 id: paragraph.stanford_page_title_banner.default
@@ -40,13 +38,6 @@ targetEntityType: paragraph
 bundle: stanford_page_title_banner
 mode: default
 content:
-  su_soe_banner_bg_color:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
   su_title_banner_image:
     type: media_responsive_image_formatter
     label: hidden
@@ -60,7 +51,7 @@ content:
         handler: ''
       field_formatter_class:
         class: ''
-    weight: 2
+    weight: 0
     region: hero_image
 hidden:
   search_api_excerpt: true

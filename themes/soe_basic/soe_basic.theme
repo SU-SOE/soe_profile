@@ -23,6 +23,17 @@ function soe_basic_theme_suggestions_block_alter(array &$suggestions, array $var
 }
 
 /**
+ * Implements hook_preprocess_page_title_banner().
+ */
+function soe_basic_preprocess_page_title_banner(&$variables) {
+
+  $paragraph = $variables['content']['#paragraph'];
+
+  // Add banner variant style class to page title banner wrapper.
+  $variables['attributes']['class'][] = $paragraph->getBehaviorSetting('react_paragraphs:page_title_variant_info', 'banner_style');
+}
+
+/**
  * Implements hook_preprocess_HOOK().
  */
 

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.variant_1
-    - field.field.paragraph.stanford_page_title_banner.su_soe_banner_bg_color
     - field.field.paragraph.stanford_page_title_banner.su_title_banner_image
     - paragraphs.paragraphs_type.stanford_page_title_banner
   module:
@@ -42,4 +41,3 @@ content:
     region: content
 hidden:
   search_api_excerpt: true
-  su_soe_banner_bg_color: true
