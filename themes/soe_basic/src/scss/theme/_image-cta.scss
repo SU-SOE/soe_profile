@@ -57,6 +57,12 @@
         }
       }
     }
+
+    .su-image-cta-paragraph__link:has(.su-link--external) {
+      &::after {
+        display: none;
+      }
+    }
   }
 }
 
