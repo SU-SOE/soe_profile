@@ -49,31 +49,30 @@ class CtaListBehaviorTest extends UnitTestCase {
 
     // Test default configuration.
     $default_config = $behavior->defaultConfiguration();
-    $this->assertEquals('Yes', $default_config['top_border']);
+    $this->assertTrue($default_config['top_border']);
 
     // Test form build with default value.
     $paragraph = $this->createMock(ParagraphInterface::class);
     $paragraph->method('getBehaviorSetting')
-      ->with('su_cta_list_styles', 'top_border')
-      ->willReturn('Yes');
+      ->with('su_cta_list_styles', 'top_border', TRUE)
+      ->willReturn(TRUE);
 
     $form = [];
     $form_state = new FormState();
     $element = $behavior->buildBehaviorForm($paragraph, $form, $form_state);
 
-    $this->assertEquals('Yes', $element['top_border']['#default_value']);
+    $this->assertTrue($element['top_border']['#default_value']);
     $this->assertEquals('Gray line above content', (string) $element['top_border']['#title']);
-    $this->assertArrayHasKey('Yes', $element['top_border']['#options']);
-    $this->assertArrayHasKey('No', $element['top_border']['#options']);
+    $this->assertEquals('checkbox', $element['top_border']['#type']);
 
     // Test form build with non-default value.
     $paragraph = $this->createMock(ParagraphInterface::class);
     $paragraph->method('getBehaviorSetting')
-      ->with('su_cta_list_styles', 'top_border')
-      ->willReturn('No');
+      ->with('su_cta_list_styles', 'top_border', TRUE)
+      ->willReturn(FALSE);
 
     $element = $behavior->buildBehaviorForm($paragraph, $form, $form_state);
-    $this->assertEquals('No', $element['top_border']['#default_value']);
+    $this->assertFalse($element['top_border']['#default_value']);
 
     // Test view() with border enabled (default).
     $display = $this->createMock(EntityViewDisplayInterface::class);
@@ -81,8 +80,8 @@ class CtaListBehaviorTest extends UnitTestCase {
 
     $paragraph = $this->createMock(ParagraphInterface::class);
     $paragraph->method('getBehaviorSetting')
-      ->with('su_cta_list_styles', 'top_border', 'Yes')
-      ->willReturn('Yes');
+      ->with('su_cta_list_styles', 'top_border', TRUE)
+      ->willReturn(TRUE);
 
     $behavior->view($build, $paragraph, $display, 'default');
     $this->assertNotContains('su-cta-list--without-border', $build['#attributes']['class']);
@@ -92,8 +91,8 @@ class CtaListBehaviorTest extends UnitTestCase {
 
     $paragraph = $this->createMock(ParagraphInterface::class);
     $paragraph->method('getBehaviorSetting')
-      ->with('su_cta_list_styles', 'top_border', 'Yes')
-      ->willReturn('No');
+      ->with('su_cta_list_styles', 'top_border', TRUE)
+      ->willReturn(FALSE);
 
     $behavior->view($build, $paragraph, $display, 'default');
     $this->assertContains('su-cta-list--without-border', $build['#attributes']['class']);

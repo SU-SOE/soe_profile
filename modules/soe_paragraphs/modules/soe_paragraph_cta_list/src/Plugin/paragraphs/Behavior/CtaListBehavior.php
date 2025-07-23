@@ -31,7 +31,7 @@ class CtaListBehavior extends ParagraphsBehaviorBase {
    */
   public function defaultConfiguration(): array {
     return [
-      'top_border' => 'Yes',
+      'top_border' => TRUE,
     ];
   }
 
@@ -40,17 +40,30 @@ class CtaListBehavior extends ParagraphsBehaviorBase {
    */
   public function buildBehaviorForm(ParagraphInterface $paragraph, array &$form, FormStateInterface $form_state): array {
     $element = parent::buildBehaviorForm($paragraph, $form, $form_state);
-    // Let's do this with strings, in case we want to add more options later.
     $element['top_border'] = [
-      '#type' => 'select',
+      '#type' => 'checkbox',
       '#title' => $this->t('Gray line above content'),
-      '#options' => [
-        'Yes' => 'Yes',
-        'No' => 'No',
-      ],
-      '#default_value' => (string) $paragraph->getBehaviorSetting('su_cta_list_styles', 'top_border'),
+      '#default_value' => (bool) $paragraph->getBehaviorSetting('su_cta_list_styles', 'top_border', TRUE),
     ];
     return $element;
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  protected function filterBehaviorFormSubmitValues(ParagraphInterface $paragraph, array &$form, FormStateInterface $form_state): array {
+    // Get the form values for this behavior plugin
+    $values = $form_state->getValues();
+    
+    // Instead of using NestedArray::filter() which removes falsy values,
+    // we'll preserve checkbox values by only filtering out NULL and empty strings
+    $filter_callback = function($value) {
+      // Keep all values except NULL and empty strings
+      // This preserves FALSE and 0 from unchecked checkboxes
+      return $value !== NULL && $value !== '';
+    };
+    
+    return \Drupal\Component\Utility\NestedArray::filter($values, $filter_callback);
   }
 
   /**
@@ -59,8 +72,8 @@ class CtaListBehavior extends ParagraphsBehaviorBase {
   public function view(array &$build, ParagraphInterface $paragraph, EntityViewDisplayInterface $display, $view_mode): void {
 
     // Apply top border styling if enabled
-    $top_border = $paragraph->getBehaviorSetting('su_cta_list_styles', 'top_border', 'Yes');
-    if ($top_border === 'No') {
+    $top_border = $paragraph->getBehaviorSetting('su_cta_list_styles', 'top_border', TRUE);
+    if (!$top_border) {
       $build['#attributes']['class'][] = 'su-cta-list--without-border';
     }
   }
