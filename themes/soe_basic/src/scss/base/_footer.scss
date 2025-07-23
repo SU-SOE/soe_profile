@@ -23,7 +23,7 @@
     }
   }
 
-  a {
+  a:not([class^='su-button']) {
     color: $su-color-bright-red;
 
     &::after {
