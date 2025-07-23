@@ -1,0 +1,23 @@
+uuid: 4f12b876-8e9c-4e75-a3fa-6416e017fa0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.su_heading_lvl
+    - paragraphs.paragraphs_type.stanford_stories
+  module:
+    - options
+id: paragraph.stanford_stories.su_heading_lvl
+field_name: su_heading_lvl
+entity_type: paragraph
+bundle: stanford_stories
+label: 'Heading Level'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: h2
+default_value_callback: ''
+settings: {  }
+field_type: list_string

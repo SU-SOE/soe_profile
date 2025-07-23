@@ -32,34 +32,6 @@ third_party_settings:
       -
         layout_id: jumpstart_ui_one_column
         layout_settings:
-          label: ''
-          extra_classes: node-stanford-page-title
-          centered: centered-container
-          columns: default
-        components:
-          af0809fe-fe61-4e78-be4e-4837cd773c26:
-            uuid: af0809fe-fe61-4e78-be4e-4837cd773c26
-            region: main
-            configuration:
-              id: 'field_block:node:stanford_page:title'
-              label: Title
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_title_heading
-                label: hidden
-                settings:
-                  tag: h1
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: jumpstart_ui_one_column
-        layout_settings:
           context_mapping: {  }
           extra_classes: ''
           centered: null
@@ -81,6 +53,35 @@ third_party_settings:
                 label: hidden
                 settings:
                   view_mode: default
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: jumpstart_ui_one_column
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          extra_classes: node-stanford-page-title
+          centered: centered-container
+          columns: default
+        components:
+          af0809fe-fe61-4e78-be4e-4837cd773c26:
+            uuid: af0809fe-fe61-4e78-be4e-4837cd773c26
+            region: main
+            configuration:
+              id: 'field_block:node:stanford_page:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_title_heading
+                label: hidden
+                settings:
+                  tag: h1
                 third_party_settings: {  }
             weight: 0
             additional: {  }

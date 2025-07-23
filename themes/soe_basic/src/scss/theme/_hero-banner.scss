@@ -14,14 +14,12 @@
     left: auto;
     top: auto;
     text-align: center;
-    max-width: unset;
-    width: 75%;
+    max-width: 85rem;
 
     @include grid-media-max('sm') {
       text-align: left;
       width: unset;
     }
-
 
     .su-card__contents {
       color: $su-color-white;
