@@ -12,7 +12,7 @@ entity_type: paragraph
 bundle: stanford_page_title_banner
 label: Image
 description: 'The page title banner background image. Please use hi-resolution images.'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

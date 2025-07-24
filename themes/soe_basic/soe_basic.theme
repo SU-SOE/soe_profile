@@ -5,6 +5,9 @@
  * Preprocess functions for SOE Basic.
  */
 
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Entity\ContentEntityInterface;
+
 /**
  * Prepares variables for the html.html.twig template.
  */
@@ -23,14 +26,28 @@ function soe_basic_theme_suggestions_block_alter(array &$suggestions, array $var
 }
 
 /**
- * Implements hook_preprocess_page_title_banner().
+ * Implements hook_preprocess_ds_entity_view().
  */
-function soe_basic_preprocess_page_title_banner(&$variables) {
-
-  $paragraph = $variables['content']['#paragraph'];
-
-  // Add banner variant style class to page title banner wrapper.
-  $variables['attributes']['class'][] = $paragraph->getBehaviorSetting('react_paragraphs:page_title_variant_info', 'banner_style');
+function soe_basic_preprocess_ds_entity_view(&$variables) {
+  // Check if we have a valid entity.
+  if (empty($variables['content']['#entity']) || !($variables['content']['#entity'] instanceof ContentEntityInterface)) {
+    return;
+  }
+  
+  $entity = $variables['content']['#entity'];
+  
+  // Check if this is a paragraph entity of the stanford_page_title_banner type.
+  if ($entity->getEntityTypeId() !== 'paragraph' || $entity->bundle() !== 'stanford_page_title_banner') {
+    return;
+  }
+  
+  // Get the banner style from the react behaviors.
+  $banner_style = $entity->getBehaviorSetting('react_paragraphs:page_title_variant_info', 'banner_style');
+  
+  // Add the banner style class to the wrapper if it exists.
+  if (!empty($banner_style)) {
+    $variables['attributes']['class'][] = $banner_style;
+  }
 }
 
 /**
