@@ -48,7 +48,6 @@ class CtaListBehavior extends ParagraphsBehaviorBase {
     return $element;
   }
 
-
   /**
    * {@inheritDoc}
    */
@@ -60,6 +59,5 @@ class CtaListBehavior extends ParagraphsBehaviorBase {
       $build['#attributes']['class'][] = 'su-cta-list--without-border';
     }
   }
-
 
 }
