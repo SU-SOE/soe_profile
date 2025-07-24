@@ -101,8 +101,8 @@ class StanfordCTAListCest {
       ],
     ], 'paragraph');
 
-    // Set behavior settings after entity creation
-    $paragraph_without_border->setBehaviorSettings('su_cta_list_styles', ['top_border' => FALSE]);
+    // Set behavior settings after entity creation (checkbox checked = remove border)
+    $paragraph_without_border->setBehaviorSettings('su_cta_list_styles', ['top_border' => TRUE]);
     $paragraph_without_border->save();
 
     $node_without_border = $I->createEntity([
