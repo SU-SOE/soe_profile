@@ -88,7 +88,7 @@
   }
 
   .su-news-vertical-teaser {
-    .block-views {
+    &.su-card {
       @include modular-spacing('margin-bottom', 6);
     }
 
