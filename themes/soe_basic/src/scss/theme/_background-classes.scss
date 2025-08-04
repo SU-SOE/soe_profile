@@ -46,12 +46,16 @@
 
 // Background gradients banner for basic page
 .soe-gradient--solid-purple-green-banner {
+  @include gradient--solid-purple-green;
+
   .su-hero__media {
     @include gradient--solid-purple-green;
   }
 }
 
 .soe-gradient--solid-purple-lagunita-banner {
+  @include gradient--solid-purple-lagunita;
+
   .su-hero__media {
     @include gradient--solid-purple-lagunita;
   }
@@ -61,7 +65,6 @@
 .soe-gradient--solid-purple-lagunita-banner {
   @include modular-spacing('padding', 6 null 6 null);
   @include modular-spacing('margin', null null 5 null);
-  @include gradient--solid-purple-green;
 
   margin-top: 0;
   max-width: 100%;
