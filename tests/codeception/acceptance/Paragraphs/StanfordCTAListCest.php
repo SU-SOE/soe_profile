@@ -4,6 +4,8 @@ use Faker\Factory;
 
 /**
  * Codeception tests on CTA List paragraph type.
+ *
+ * @group stanford_cta_list
  */
 class StanfordCTAListCest {
 
@@ -79,6 +81,44 @@ class StanfordCTAListCest {
     $I->canSeeLink('Link Alpha', 'http://google.com');
     $I->canSeeLink('Link Beta', 'http://google.com');
     $I->canSeeLink('Link Gamma', 'http://google.com');
+  }
+
+  /**
+   * Test CTA List border removal functionality.
+   */
+  public function testCtaListBorderRemoval(AcceptanceTester $I) {
+    // Test with border explicitly disabled using setBehaviorSettings method
+    $paragraph_without_border = $I->createEntity([
+      'type' => 'stanford_cta_list',
+      'stanford_cta_list_header' => [
+        'value' => 'CTA without Border',
+      ],
+      'stanford_cta_list_links' => [
+        [
+          'uri' => 'http://example.com',
+          'title' => 'No Border Link',
+        ],
+      ],
+    ], 'paragraph');
+
+    // Set behavior settings after entity creation (checkbox checked = remove border)
+    $paragraph_without_border->setBehaviorSettings('su_cta_list_styles', ['top_border' => TRUE]);
+    $paragraph_without_border->save();
+
+    $node_without_border = $I->createEntity([
+      'type' => 'stanford_page',
+      'title' => 'CTA No Border Test',
+      'su_page_components' => [
+        'target_id' => $paragraph_without_border->id(),
+        'entity' => $paragraph_without_border,
+      ],
+    ]);
+
+    $I->amOnPage($node_without_border->toUrl()->toString());
+    $I->canSee('CTA without Border');
+
+    // Check that the without-border class is applied
+    $I->seeElement('.su-cta-list--without-border');
   }
 
 }

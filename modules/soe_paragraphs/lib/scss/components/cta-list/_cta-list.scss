@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 .su-cta-list-paragraph {
-
   @include modular-spacing('padding-top', 3);
   @include modular-spacing('padding-left', 2);
   @include modular-spacing('padding-right', 2);
@@ -21,7 +20,7 @@
 
   .su-cta-list-paragraph__description {
     @include big-paragraph;
-    @include modular-spacing('margin-bottom', 3);
+    @include modular-spacing('margin-bottom', 1);
   }
 
   .su-cta-list__links {
@@ -37,10 +36,16 @@
     }
 
     .su-link--action {
+      @include big-paragraph;
+      @include modular-spacing('margin-bottom', -1);
+
       display: block;
       position: relative;
       width: 100%;
-      @include modular-spacing('margin-bottom', 1);
+
+      @include grid-media-between('xs', 'lg') {
+        @include small-paragraph;
+      }
 
       &:after {
         bottom: 5px;
@@ -84,7 +89,7 @@
       @include grid-media-only('xs') {
         display: block;
         width: 100%;
-      };
+      }
     }
 
     .col-2 {
@@ -128,7 +133,11 @@
       @include grid-media-only('xs') {
         display: block;
         width: 100%;
-      };
+      }
     }
   }
+}
+
+.su-cta-list--without-border {
+  border-top: none;
 }
