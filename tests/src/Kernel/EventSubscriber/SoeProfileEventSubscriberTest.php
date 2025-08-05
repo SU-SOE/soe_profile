@@ -12,8 +12,7 @@ use Drupal\file\Entity\File;
 use Drupal\KernelTests\KernelTestBase;
 use Drupal\media\Entity\Media;
 use Drupal\media\Entity\MediaType;
-use Drupal\soe_profile\EventSubscriber\EventSubscriber as StanfordEventSubscriber;
-use Drupal\user\Entity\Role;
+use Drupal\soe_profile\EventSubscriber\SoeProfileEventSubscriber;
 use GuzzleHttp\ClientInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,11 +21,8 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 /**
  * Class EventSubscriberTest.
- *
- * @group soe_profile
- * @coversDefaultClass \Drupal\soe_profile\EventSubscriber\EventSubscriber
  */
-class EventSubscriberTest extends KernelTestBase {
+class SoeProfileEventSubscriberTest extends KernelTestBase {
 
   /**
    * {@inheritdoc}
@@ -51,7 +47,7 @@ class EventSubscriberTest extends KernelTestBase {
   /**
    * Event subscriber object.
    *
-   * @var \Drupal\soe_profile\EventSubscriber\EventSubscriber
+   * @var \Drupal\soe_profile\EventSubscriber\SoeProfileEventSubscriber
    */
   protected $eventSubscriber;
 
@@ -73,7 +69,7 @@ class EventSubscriberTest extends KernelTestBase {
     $messenger = \Drupal::messenger();
     $client = $this->createMock(ClientInterface::class);
 
-    $this->eventSubscriber = new TestStanfordStanfordProfileEventSubscriber($file_system, $client, $logger_factory, $messenger);
+    $this->eventSubscriber = new TestSoeProfileEventSubscriber($file_system, $client, $logger_factory, $messenger);
 
     /** @var \Drupal\media\MediaTypeInterface $media_type */
     $media_type = MediaType::create([
@@ -96,7 +92,7 @@ class EventSubscriberTest extends KernelTestBase {
    * Test the consumer secret is randomized.
    */
   public function testConsumerSecretRandomized() {
-    $this->assertContains('onContentImport', StanfordProfileEventSubscriber::getSubscribedEvents());
+    $this->assertContains('onContentImport', SoeProfileEventSubscriber::getSubscribedEvents());
     $consumer = Consumer::create([
       'client_id' => 'foobar',
       'label' => 'foobar',
@@ -164,7 +160,7 @@ class EventSubscriberTest extends KernelTestBase {
 /**
  * {@inheritDoc}
  */
-class TestStanfordStanfordProfileEventSubscriber extends StanfordProfileEventSubscriber {
+class TestSoeProfileEventSubscriber extends SoeProfileEventSubscriber {
 
   /**
    * {@inheritDoc}
