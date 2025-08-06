@@ -5,9 +5,6 @@
  * soe_profile.install
  */
 
-use Drupal\block\Entity\Block;
-use Drupal\Core\Serialization\Yaml;
-
 /**
  * Implements hook_removed_post_updates().
  */
@@ -33,7 +30,7 @@ function soe_profile_removed_post_updates() {
  */
 function soe_profile_post_update_rabbit_hole_block() {
   $theme = \Drupal::config('system.theme')->get('default');
-  if (in_array($theme, ['stanford_basic', 'minimally_branded_subtheme'])) {
+  if (in_array($theme, ['stanford_basic', 'minimally_branded_subtheme', 'soe_basic'])) {
     return;
   }
   \Drupal::entityTypeManager()->getStorage('block')->create([
