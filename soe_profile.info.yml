@@ -3,7 +3,7 @@ description: 'Jumpstart Website Profile'
 version: 11.5.4
 type: profile
 project: Stanford
-core_version_requirement: ^10 || ^11
+core_version_requirement: ^11
 install:
   - 'address:address'
   - 'admin_toolbar:admin_toolbar'

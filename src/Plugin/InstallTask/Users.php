@@ -14,6 +14,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   id="soe_profile_users"
  * )
  */
+#[InstallTask(id: 'soe_profile_users')]
 class Users extends InstallTaskBase implements ContainerFactoryPluginInterface {
 
   /**

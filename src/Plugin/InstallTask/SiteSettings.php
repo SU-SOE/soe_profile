@@ -22,6 +22,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   id="soe_profile_site_settings"
  * )
  */
+#[InstallTask(id: 'soe_profile_site_settings')]
 class SiteSettings extends InstallTaskBase implements ContainerFactoryPluginInterface {
 
   /**

@@ -14,6 +14,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   id="soe_profile_route_rebuilder"
  * )
  */
+#[InstallTask(id: 'soe_profile_route_rebuilder')]
 class RouteRebuilder extends InstallTaskBase implements ContainerFactoryPluginInterface {
 
   /**
