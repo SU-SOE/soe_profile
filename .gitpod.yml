@@ -37,11 +37,11 @@ tasks:
 
       drush sws:multisite:settings &&
       sed -i "s|uri:.*|uri: $(gp url 8001)|" docroot/sites/default/local.drush.yml &&
-      sed -i "s|stanford_profile|$PROFILE_NAME|" docroot/sites/settings/global.settings.php
 
       cp .gitpod/global.settings.php docroot/sites/settings/global.settings.php &&
       cp .gitpod/default.local.services.yml docroot/sites/local.services.yml &&
 
+      sed -i "s|stanford_profile|$PROFILE_NAME|" docroot/sites/settings/global.settings.php &&
       drush site-install $PROFILE_NAME -v -y &&
       drush cset stage_file_proxy.settings origin 'localhost' -y &&
 
