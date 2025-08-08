@@ -13,7 +13,7 @@
 
       &::after {
         background-color: $su-color-bright-red;
-        
+
         &:hover,
         &:focus {
           background-color: $su-color-black;
@@ -23,22 +23,24 @@
     }
   }
 
-  a:not([class^='su-button']) {
-    color: $su-color-bright-red;
+  .su-local-footer__columns {
+    a:not([class^='su-button']) {
+      color: $su-color-bright-red;
 
-    &::after {
-      background-color: $su-color-bright-red;
+      &::after {
+        background-color: $su-color-bright-red;
+
+        &:hover,
+        &:focus {
+          background-color: $su-color-black;
+          text-decoration: underline;
+        }
+      }
 
       &:hover,
       &:focus {
-        background-color: $su-color-black;
-        text-decoration: underline;
+        color: $su-color-black;
       }
-    }
-
-    &:hover,
-    &:focus {
-      color: $su-color-black;
     }
   }
 
