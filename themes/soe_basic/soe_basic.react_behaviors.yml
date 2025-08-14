@@ -1,0 +1,14 @@
+page_title_variant_info:
+  id: page_title_variant_info
+  label: 'Page Title Paragraph Type'
+  bundles:
+    - paragraphs_type|stanford_page_title_banner
+  config:
+    banner_style:
+      type: select
+      title: 'Page Title Banner style'
+      description: Select the styles for displaying this page title banner.
+      empty_option: Default
+      options:
+        soe-gradient--solid-purple-green-banner: Purple Green Gradient
+        soe-gradient--solid-purple-lagunita-banner: Purple Lagunita Gradient

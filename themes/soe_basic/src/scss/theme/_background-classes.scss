@@ -44,13 +44,72 @@
   @include gradient--transparent-blue-green;
 }
 
-// Background gradients as replacement for the author selected gradients over images. Also has the title colors.
-.section-bgcolor--title,
+// Background gradients banner for basic page
+.soe-gradient--solid-purple-green-banner {
+  @include gradient--solid-purple-green;
+
+  .su-hero__media {
+    @include gradient--solid-purple-green;
+  }
+}
+
+.soe-gradient--solid-purple-lagunita-banner {
+  @include gradient--solid-purple-lagunita;
+
+  .su-hero__media {
+    @include gradient--solid-purple-lagunita;
+  }
+}
+
+.soe-gradient--solid-purple-green-banner,
+.soe-gradient--solid-purple-lagunita-banner {
+  @include modular-spacing('padding', 6 null 6 null);
+  @include modular-spacing('margin', null null 5 null);
+
+  margin-top: 0;
+  max-width: 100%;
+  width: 100%;
+
+  .su-hero,
+  .su-hero__media {
+    min-height: fit-content;
+
+    .image {
+      display: none;
+    }
+  }
+
+  .su-card.su-hero__card,
+  .su-card__contents {
+    position: unset;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  h1 {
+    @include centered-column;
+
+    color: $su-color-white;
+    font-weight: $su-font-black;
+    text-align: left;
+  }
+}
+
+// Background gradients as replacement for the author selected gradients over images. Also has the title colors..section-bgcolor--title,
 .section-event-list--title,
 .section-editorial-content,
 .section-event-series--header,
 .section-event-series--header {
   @include gradient--solid-purple-green;
+}
+
+.section-bgcolor--title,
+.section-event-list--title,
+.section-editorial-content,
+.section-event-series--header,
+.section-event-series--header {
   @include modular-spacing('margin', null null 5 null);
 
   h1,
@@ -100,7 +159,6 @@
   }
 }
 
-
 .section-bgcolor--title {
   &.section-stanford-news-views-header {
     left: 50%;
@@ -137,7 +195,6 @@
 .page-people,
 .page-events,
 .page-publications {
-
   .jumpstart-ui--one-column {
     &.centered-container {
       @include modular-spacing('padding', 6 null 6 null);
