@@ -3,7 +3,7 @@ services:
     class: Drupal\soe_profile\InstallTaskManager
     parent: default_plugin_manager
   soe_profile.event_subscriber:
-    class: '\Drupal\soe_profile\EventSubscriber\EventSubscriber'
+    class: '\Drupal\soe_profile\EventSubscriber\SoeProfileEventSubscriber'
     arguments: ['@file_system', '@http_client', '@logger.factory', '@messenger']
     tags:
       - { name: 'event_subscriber' }
