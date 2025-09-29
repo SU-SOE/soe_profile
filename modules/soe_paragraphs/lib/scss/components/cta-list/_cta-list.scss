@@ -48,8 +48,12 @@
       }
 
       &:after {
-        bottom: 5px;
+        bottom: 10px;
         position: absolute;
+
+        @include grid-media-max('lg') {
+          bottom: 5px;
+        }
       }
     }
 
@@ -97,7 +101,6 @@
       display: flex;
       flex-direction: column;
       flex: 1;
-
 
       a {
         color: $su-color-bright-red;
