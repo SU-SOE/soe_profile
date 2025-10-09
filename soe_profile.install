@@ -57,6 +57,6 @@ function _stanford_profile_update_field_size(string $entityType, string $fieldNa
 /**
  * Increase News Dek field size to 500 characters.
  */
-function stanford_profile_update_11001() {
+function soe_profile_update_11001() {
   _stanford_profile_update_field_size('node', 'su_news_dek', 500);
 }
