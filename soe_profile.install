@@ -4,6 +4,9 @@
  * @file
  * soe_profile.install
  */
+
+use Drupal\field\Entity\FieldStorageConfig;
+
 /**
  * Implements hook_update_last_removed().
  */
