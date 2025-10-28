@@ -115,11 +115,194 @@ class StanfordNewsCest {
     $I->canSeeInField('Headline', $default_news->label());
     $I->canSeeInField('Dek', $default_news->get('su_news_dek')->value);
     $I->canSeeInField('Byline', $default_news->get('su_news_byline')->value);
-    
+
     $I->amOnPage($spotlight_news->toUrl('edit-form')->toString());
     $I->canSeeInField('Headline', $spotlight_news->label());
-    // $I->selectOption('Layout', 'Spotlight'); 
+    // $I->selectOption('Layout', 'Spotlight');
     $I->canSeeInField('Quote / Big Text', $spotlight_news->get('su_news_quote')->value);
     $I->canSeeInField('Subtitle', $spotlight_news->get('su_news_subtitle')->value);
+  }
+
+  /**
+   * Test Related Spotlights view displays when there are 4+ spotlight nodes.
+   */
+  #[CodeceptionAttribute\Group('news_variant')]
+  public function testRelatedSpotlightsViewDisplaysWithFourNodes(FunctionalTester $I) {
+
+    // Create 4 spotlight nodes.
+    $spotlights = [];
+    for ($i = 1; $i <= 4; $i++) {
+      $spotlights[] = $I->createEntity([
+        'title' => 'Test Spotlight ' . $i,
+        'type' => 'stanford_news',
+        'layout_selection' => 'news_spotlight',
+        'status' => 1,
+      ]);
+    }
+
+    // Visit the first spotlight node.
+    $I->amOnPage($spotlights[0]->toUrl()->toString());
+    // Spotlight layout uses a div with class 'title' instead of h1.
+    $I->canSee('Test Spotlight 1', '.title');
+
+    // The Related Spotlights view block should exist on the page.
+    $I->seeElement('.view.stanford-news.related-spotlights');
+  }
+
+  /**
+   * Test Related Spotlights view configuration and existence.
+   */
+  #[CodeceptionAttribute\Group('news_variant')]
+  public function testRelatedSpotlightsViewExists(FunctionalTester $I) {
+    // Log in as administrator to access views admin.
+    $I->logInWithRole('administrator');
+
+    // Verify the view display exists and is configured properly.
+    $I->amOnPage('/admin/structure/views/view/stanford_news/edit/related_spotlights');
+    $I->canSee('Related Spotlights');
+  }
+
+  /**
+   * Test that Related Spotlights view hides when fewer than 4 nodes exist.
+   *
+   * This tests the stanford_news_views_pre_view() hook.
+   */
+  #[CodeceptionAttribute\Group('news_variant')]
+  public function testRelatedSpotlightsHidesWithFewerThanFour(FunctionalTester $I) {
+
+    // Create exactly 3 spotlight nodes.
+    $spotlights = [];
+    for ($i = 1; $i <= 3; $i++) {
+      $spotlights[] = $I->createEntity([
+        'title' => 'Spotlight ' . $i,
+        'type' => 'stanford_news',
+        'layout_selection' => 'news_spotlight',
+        'status' => 1,
+      ]);
+    }
+
+    // Visit the first spotlight node.
+    $I->amOnPage($spotlights[0]->toUrl()->toString());
+    $I->canSee('Spotlight 1', '.title');
+
+    // The view should be hidden because there are only 3 spotlights.
+    $I->dontSeeElement('.view.stanford-news.related-spotlights');
+
+    // Create a 4th spotlight node.
+    $spotlight4 = $I->createEntity([
+      'title' => 'Spotlight 4',
+      'type' => 'stanford_news',
+      'layout_selection' => 'news_spotlight',
+      'status' => 1,
+    ]);
+    $I->runDrush('cache:rebuild');
+
+    // Now the view should appear.
+    $I->amOnPage($spotlights[0]->toUrl()->toString());
+    $I->seeElement('.view.stanford-news.related-spotlights');
+  }
+
+  /**
+   * Test that Related Spotlights filters by matching taxonomy terms.
+   *
+   * This tests the stanford_news_views_query_alter() hook.
+   */
+  #[CodeceptionAttribute\Group('news_variant')]
+  public function testRelatedSpotlightsFiltersByTaxonomy(FunctionalTester $I) {
+
+    // Create taxonomy terms.
+    $term_a = $I->createEntity([
+      'name' => 'Category A',
+      'vid' => 'stanford_news_spotlight_filters',
+    ], 'taxonomy_term');
+
+    $term_b = $I->createEntity([
+      'name' => 'Category B',
+      'vid' => 'stanford_news_spotlight_filters',
+    ], 'taxonomy_term');
+
+    // Create 3 spotlight nodes with term A and 2 with term B.
+    $spotlight_a1 = $I->createEntity([
+      'title' => 'Spotlight A1',
+      'type' => 'stanford_news',
+      'layout_selection' => 'news_spotlight',
+      'su_news_spotlight_filters' => [$term_a->id()],
+      'status' => 1,
+    ]);
+
+    $spotlight_a2 = $I->createEntity([
+      'title' => 'Spotlight A2',
+      'type' => 'stanford_news',
+      'layout_selection' => 'news_spotlight',
+      'su_news_spotlight_filters' => [$term_a->id()],
+      'status' => 1,
+    ]);
+
+    $spotlight_a3 = $I->createEntity([
+      'title' => 'Spotlight A3',
+      'type' => 'stanford_news',
+      'layout_selection' => 'news_spotlight',
+      'su_news_spotlight_filters' => [$term_a->id()],
+      'status' => 1,
+    ]);
+
+    $spotlight_b1 = $I->createEntity([
+      'title' => 'Spotlight B1',
+      'type' => 'stanford_news',
+      'layout_selection' => 'news_spotlight',
+      'su_news_spotlight_filters' => [$term_b->id()],
+      'status' => 1,
+    ]);
+
+    $spotlight_b2 = $I->createEntity([
+      'title' => 'Spotlight B2',
+      'type' => 'stanford_news',
+      'layout_selection' => 'news_spotlight',
+      'su_news_spotlight_filters' => [$term_b->id()],
+      'status' => 1,
+    ]);
+
+    // Visit spotlight A1 - should show other nodes with term A.
+    $I->amOnPage($spotlight_a1->toUrl()->toString());
+    $I->seeElement('.su-news-related-spotlights');
+    $I->seeLink('Spotlight A2');
+    $I->seeLink('Spotlight A3');
+    $I->dontSeeLink('Spotlight B1');
+    $I->dontSeeLink('Spotlight B2');
+  }
+
+  /**
+   * Test that trash module integration excludes deleted nodes.
+   *
+   * This tests the trash module conditional in stanford_news_views_pre_view().
+   */
+  #[CodeceptionAttribute\Group('news_variant')]
+  public function testRelatedSpotlightsExcludesTrashedNodes(FunctionalTester $I) {
+
+    // Create 4 spotlight nodes.
+    $spotlights = [];
+    for ($i = 1; $i <= 4; $i++) {
+      $spotlights[] = $I->createEntity([
+        'title' => 'Trash Test ' . $i,
+        'type' => 'stanford_news',
+        'layout_selection' => 'news_spotlight',
+        'status' => 1,
+      ]);
+    }
+
+    // View should be visible with 4 nodes.
+    $I->amOnPage($spotlights[0]->toUrl()->toString());
+    $I->seeElement('.view.stanford-news.related-spotlights');
+
+    // Use drush to delete one node (trash module moves to trash).
+    $I->logInWithRole('administrator');
+    $I->runDrush('entity:delete node ' . $spotlights[3]->id() . ' -y');
+
+    // Cache clear to ensure the hook sees the updated count.
+    $I->runDrush('cache:rebuild');
+
+    // Now we have only 3 active nodes, so view should be hidden.
+    $I->amOnPage($spotlights[0]->toUrl()->toString());
+    $I->dontSeeElement('.view.stanford-news.related-spotlights');
   }
 }
