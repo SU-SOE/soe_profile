@@ -195,7 +195,6 @@ class StanfordNewsCest {
       'layout_selection' => 'news_spotlight',
       'status' => 1,
     ]);
-    // $I->runDrush('cache:rebuild');
 
     // Now the view should appear.
     $I->amOnPage($spotlight4->toUrl()->toString());
