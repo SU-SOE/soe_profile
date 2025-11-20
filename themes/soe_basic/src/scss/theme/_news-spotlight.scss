@@ -3,8 +3,6 @@
 // Spotlight Node
 .node-page--stanford-news {
   .su-news-spotlight-header {
-    margin: 0;
-
     .node-stanford-news-title .title,
     .su-news-quote {
       @include sans;
@@ -35,5 +33,53 @@
     border-width: 1rem;
     border-style: solid;
     overflow: hidden;
+  }
+}
+
+.ptype-stanford-entity:has(.news-spotlight),
+.stanford-news--list:has(.news-spotlight),
+.stanford-news--cards-spotlight {
+  .su-list-unstyled,
+  .stanford-entity {
+    div,
+    li {
+      &:has(.news-spotlight):nth-child(6n + 1) .field-media-image {
+        border-color: $soe-color-turquoise;
+      }
+
+      &:has(.news-spotlight):nth-child(6n + 2) .field-media-image {
+        border-color: $soe-color-orange;
+      }
+
+      &:has(.news-spotlight):nth-child(6n + 3) .field-media-image {
+        border-color: $soe-color-pink;
+      }
+
+      &:has(.news-spotlight):nth-child(6n + 4) .field-media-image {
+        border-color: $soe-color-orange;
+      }
+
+      &:has(.news-spotlight):nth-child(6n + 5) .field-media-image {
+        border-color: $soe-color-pink;
+      }
+
+      &:has(.news-spotlight):nth-child(6n + 6) .field-media-image {
+        border-color: $soe-color-turquoise;
+      }
+    }
+  }
+}
+
+.node-page--stanford-news {
+  &:nth-child(3n + 1) {
+    border-color: $soe-color-turquoise;
+  }
+
+  &:nth-child(3n + 2) {
+    border-color: $soe-color-orange;
+  }
+
+  &:nth-child(3n + 3) {
+    border-color: $soe-color-pink;
   }
 }
