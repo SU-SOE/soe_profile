@@ -2,6 +2,10 @@
 
 // Spotlight Node
 .node-page--stanford-news {
+  .field-media-image {
+    border-color: $soe-color-orange;
+  }
+
   .su-news-spotlight-header {
     .node-stanford-news-title .title,
     .su-news-quote {
