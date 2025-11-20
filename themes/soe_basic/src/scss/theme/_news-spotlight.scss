@@ -11,6 +11,10 @@
     .su-news-quote {
       @include sans;
     }
+
+    .su-news-spotlight-filters {
+      border-top: 0 solid transparent;
+    }
   }
 }
 
