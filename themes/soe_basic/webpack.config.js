@@ -16,6 +16,7 @@ const config = {
 
 var webpackConfig = {
   entry: {
+    "soe_basic.script": path.resolve("src/js/soe_basic.js"),
     "base":          path.resolve("src/scss/base/index.scss"),
     "components":    path.resolve("src/scss/components/index.scss"),
     "layout":        path.resolve("src/scss/layout/index.scss"),
