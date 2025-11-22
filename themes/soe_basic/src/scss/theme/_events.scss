@@ -37,6 +37,10 @@
 
         a {
           color: $soe-color-black;
+
+          &::after {
+            color: $soe-color-black;
+          }
         }
 
         &:hover,
