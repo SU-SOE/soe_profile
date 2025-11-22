@@ -10,7 +10,7 @@ const autoprefixer = require('autoprefixer')({ grid: true });
 const config = {
   isProd: process.env.NODE_ENV === "production",
   hmrEnabled: process.env.NODE_ENV !== "production" && !process.env.NO_HMR,
-  distFolder: path.resolve(__dirname, "./dist/css"),
+  distFolder: path.resolve(__dirname, "./dist"),
   wdsPort: 3001,
 };
 
@@ -26,7 +26,7 @@ var webpackConfig = {
   },
   output: {
     path: config.distFolder,
-    filename: '[name].js',
+    filename: 'js/[name].js',
     assetModuleFilename: '../assets/[name][ext][query]'
   },
   mode: config.isProd ? "production" : "development",
@@ -91,7 +91,7 @@ var webpackConfig = {
   plugins: [
     new FixStyleOnlyEntriesPlugin(),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: 'css/[name].css',
     }),
     new FileManagerPlugin({
       events: {

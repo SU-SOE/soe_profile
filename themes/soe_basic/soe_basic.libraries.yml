@@ -101,6 +101,6 @@ allpages:
     base:
       dist/css/base.css: { weight: 200 }
   js:
-    dist/css/soe_basic.script.js: {}
+    dist/js/soe_basic.script.js: {}
   dependencies:
     - core/jquery
