@@ -1,8 +1,8 @@
 # SOE Profile
 
-11.5.4
+12.1.1
 -------------------------------------------------------------------------------
-- SRC-81: Fix lockup work wrapping
+- adjust quote and headline font styles; add border radius and color pattern to images
 
 12.1.0
 -------------------------------------------------------------------------------
