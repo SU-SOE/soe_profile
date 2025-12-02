@@ -85,9 +85,9 @@
   }
 }
 
-.stanford-news--cards,
-.stanford-news-vertical-teaser-term,
-.ds-entity--stanford-news {
+.stanford-news--cards:not(:has(.news-spotlight)),
+.stanford-news-vertical-teaser-term:not(.news-spotlight),
+.ds-entity--stanford-news:not(.news-spotlight) {
   h2 {
     line-height: 1.5;
   }
