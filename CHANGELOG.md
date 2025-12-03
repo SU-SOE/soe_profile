@@ -1,5 +1,9 @@
 # SOE Profile
 
+12.1.2
+-------------------------------------------------------------------------------
+- Apply alternating borders to spotlight filtered list cards
+
 12.1.1
 -------------------------------------------------------------------------------
 - adjust quote and headline font styles; add border radius and color pattern to images
