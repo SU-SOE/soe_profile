@@ -1,5 +1,9 @@
 # SOE Profile
 
+12.1.4
+-------------------------------------------------------------------------------
+- Fix border on non-spotlight news
+
 12.1.2
 -------------------------------------------------------------------------------
 - Apply alternating borders to spotlight filtered list cards
