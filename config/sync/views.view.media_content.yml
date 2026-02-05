@@ -29,7 +29,7 @@ dependencies:
     - user
     - views_taxonomy_term_name_depth
 id: media_content
-label: 'Media Content'
+label: 'Audio/Visual Content'
 module: views
 description: ''
 tag: ''
@@ -510,10 +510,8 @@ display:
           click_sort_column: value
           type: time_duration
           settings:
-            style: long
-            units:
-              - hour
-              - min
+            style: short
+            units: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1017,7 +1015,7 @@ display:
           exposed: true
           expose:
             operator_id: su_media_filters_target_id_op
-            label: 'Media Filters'
+            label: 'Audio/Visual Filters'
             description: ''
             use_operator: false
             operator: su_media_filters_target_id_op
@@ -1758,7 +1756,7 @@ display:
           settings:
             view_mode: default
             link: false
-            image_style: large
+            image_style: card_1x_478x318
             remove_alt: false
           group_column: target_id
           group_columns: {  }
