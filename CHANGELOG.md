@@ -1,5 +1,15 @@
 # SOE Profile
 
+12.2.0
+-------------------------------------------------------------------------------
+- Ignore PDFs for Editoria11y so we don't trigger WAF (#1068)
+- Allow anchor link navigation block (#1043)
+- Removed short title from the Person Node (#1062)
+- Fix problem with Courses Mgmt view (#1037)
+- Updating styling for secondary navigation (#1046)
+- Update spotlight title to use h1 and filter tags to list (#1042)
+
+
 12.1.4
 -------------------------------------------------------------------------------
 - Fix border on non-spotlight news
