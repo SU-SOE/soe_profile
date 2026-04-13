@@ -101,7 +101,7 @@
 
   .su-news-vertical-teaser {
     .su-news-header {
-      @include modular-spacing('margin', null 2 2 2);
+      @include modular-spacing('margin', null 2 0 2);
       display: block;
 
       .su-link {
@@ -149,6 +149,7 @@
       .su-news-date,
       .su-news-dek {
         color: $su-color-black;
+        @include modular-spacing('margin-bottom', 0);
       }
     }
   }
