@@ -1,5 +1,13 @@
 # SOE Profile
 
+12.2.3
+-------------------------------------------------------------------------------
+- Created barebones theme Jemison (#1089)
+- D8CORE-8721: Added a comma between fields (#1088)
+- Upgrade drupal core to 11.3 (#1047)
+- Added hit item click event for algolia analytics
+- Exclude items from search indexing if they are in the trash
+
 12.2.0
 -------------------------------------------------------------------------------
 - Ignore PDFs for Editoria11y so we don't trigger WAF (#1068)
