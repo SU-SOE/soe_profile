@@ -30,6 +30,10 @@
 -------------------------------------------------------------------------------
 - adjust quote and headline font styles; add border radius and color pattern to images
 
+12.2.4
+-------------------------------------------------------------------------------
+- Update content_lock settings.
+
 12.2.3
 -------------------------------------------------------------------------------
 - Created barebones theme Jemison (#1089)
