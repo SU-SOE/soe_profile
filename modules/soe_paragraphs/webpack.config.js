@@ -16,9 +16,9 @@ const config = {
 var webpackConfig = {
   entry: {
     "soe_paragraphs.styles": path.resolve("lib/scss/soe_paragraphs.scss"),
-    "cta-list-paragraph.styles": path.resolve("lib/scss/components/cta-list/index.scss"),
-    "image-cta-paragraph.styles": path.resolve("lib/scss/components/image-cta/index.scss"),
-    "stories-paragraph.styles": path.resolve("lib/scss/components/stories/index.scss")
+    "../../components/soe_cta_list/soe_cta_list": path.resolve("components/soe_cta_list/soe_cta_list.scss"),
+    "../../components/soe_image_cta/soe_image_cta": path.resolve("components/soe_image_cta/soe_image_cta.scss"),
+    "../../components/soe_story/soe_story": path.resolve("components/soe_story/soe_story.scss")
   },
   output: {
     path: config.distFolder,
