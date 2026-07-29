@@ -364,12 +364,14 @@ third_party_settings:
         third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories:
+      - 'Audio/Visual Lists (Views)'
       - 'Basic Page Type Lists (Views)'
       - Book
       - 'Changelog (Views)'
       - 'Chaos Tools'
       - 'Config Pages'
       - 'Content fields'
+      - 'Courses Lists (Views)'
       - 'Custom block types'
       - 'Custom blocks'
       - Devel
@@ -395,6 +397,7 @@ third_party_settings:
       - 'Stanford SAML Authentication'
       - System
       - 'Taxonomy Terms (Views)'
+      - 'UI Patterns'
       - User
       - Views
       - core
@@ -437,10 +440,12 @@ third_party_settings:
         core:
           - page_title_block
       restricted_categories:
+        - 'Audio/Visual Lists (Views)'
         - Book
         - 'Changelog (Views)'
         - 'Chaos Tools'
         - 'Config Pages'
+        - 'Courses Lists (Views)'
         - Devel
         - 'Devel PHP'
         - Editoria11y
@@ -455,6 +460,7 @@ third_party_settings:
         - 'Stanford Profile Helper'
         - 'Stanford SAML Authentication'
         - 'Taxonomy Terms (Views)'
+        - 'UI Patterns'
         - User
         - Views
   layout_library:
