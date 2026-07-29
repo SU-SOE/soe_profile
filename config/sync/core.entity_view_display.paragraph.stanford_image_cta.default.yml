@@ -7,26 +7,11 @@ dependencies:
     - field.field.paragraph.stanford_image_cta.stanford_image_cta_link
     - paragraphs.paragraphs_type.stanford_image_cta
   module:
-    - ds
+    - empty_fields
     - field_formatter_class
+    - field_label
     - link
     - stanford_media
-third_party_settings:
-  ds:
-    layout:
-      id: pattern_image-cta-paragraph
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        pattern:
-          field_templates: default
-          variant: default
-    regions:
-      image:
-        - stanford_image_cta_image
-      link:
-        - stanford_image_cta_link
 _core:
   default_config_hash: N8C8SLINs76Viq8HFAM9cUDyNPmLiK_5TvBTlTTMnEI
 id: paragraph.stanford_image_cta.default
@@ -51,10 +36,15 @@ content:
       other:
         view_mode: default
     third_party_settings:
+      empty_fields:
+        handler: ''
       field_formatter_class:
         class: su-image-cta-paragraph__image
+      field_label:
+        label_value: ''
+        label_tag: ''
     weight: 0
-    region: image
+    region: content
   stanford_image_cta_link:
     type: link
     label: hidden
@@ -65,9 +55,14 @@ content:
       rel: '0'
       target: '0'
     third_party_settings:
+      empty_fields:
+        handler: ''
       field_formatter_class:
-        class: 'su-link--action su-image-cta-paragraph__link'
+        class: ''
+      field_label:
+        label_value: ''
+        label_tag: ''
     weight: 1
-    region: link
+    region: content
 hidden:
   search_api_excerpt: true

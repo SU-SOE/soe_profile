@@ -1,0 +1,16 @@
+{% set links = [] %}
+
+{% for link in paragraph.stanford_cta_list_links %}
+  {% set links = links|merge([{url: link.getUrl().toString(), title: link.title}]) %}
+{% endfor %}
+
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {{ include("soe_paragraphs:soe_cta_list", {
+    remove_gray_line: paragraph.getBehaviorSetting("su_cta_list_styles", "top_border", false),
+    header: paragraph.stanford_cta_list_header.value,
+    description: content.stanford_cta_list_deck,
+    links: links
+  }, with_context = false) }}
+  {{ title_suffix }}
+</div>

@@ -3,34 +3,37 @@
 <div{{ attributes }}>
   <div class="su-stories-paragraph__content">
 
-    <div class="su-stories-paragraph__photo border-color-{{ border_color|default("default") }}">
+    <div
+      class="su-stories-paragraph__photo border-color-{{ border_color|default("default") }}">
       {{ image }}
     </div>
 
     <div class="su-stories-paragraph__details">
-      <{{ header_tag }}>
-      {{ name }}
-    </{{ header_tag }}>
+      <div class="su-stories-paragraph__name">
+        <{{ header_tag }}>
+        {{ name }}
+      </{{ header_tag }}>
+    </div>
 
     {% if title %}
-      <div>{{ title }}</div>
-      {% endif %}
+      <div class="su-stories-paragraph__title">{{ title }}</div>
+    {% endif %}
 
-      {%- if quote -%}
-        <div class="su-stories-paragraph__quote">
-          <p>&ldquo;{{ quote }}... &rdquo;</p>
-        </div>
-      {%- endif -%}
+    {%- if quote -%}
+      <div class="su-stories-paragraph__quote">
+        <p>&ldquo;{{ quote }}... &rdquo;</p>
+      </div>
+    {%- endif -%}
 
-      {% if story_link_url and story_link_text %}
-        <a href="{{ story_link_url }}">{{ story_link_text }}</a>
-      {% endif %}
-    </div>
+    {% if story_link_url and story_link_text %}
+      <a href="{{ story_link_url }}">{{ story_link_text }}</a>
+    {% endif %}
   </div>
+</div>
 
-  {%- if cta_link_url and cta_link_title -%}
-    <div class="su-stories-paragraph__cta-region">
-      <a href="{{ cta_link_url }}">{{ cta_link_title }}</a>
-    </div>
-  {%- endif -%}
+{%- if cta_link_url and cta_link_title -%}
+  <div class="su-stories-paragraph__cta-region">
+    <a href="{{ cta_link_url }}">{{ cta_link_title }}</a>
+  </div>
+{%- endif -%}
 </div>

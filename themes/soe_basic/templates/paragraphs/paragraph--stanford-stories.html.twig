@@ -1,0 +1,20 @@
+{% set heading_behavior = paragraph.su_heading_lvl.value|default("h2")|split(".") %}
+
+
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {{ include("soe_paragraphs:soe_story", {
+    header_tag: heading_behavior.0,
+    header_classes: heading_behavior|slice(1)|join(" "),
+    border_color: paragraph.stanford_stories_border.value,
+    name: paragraph.stanford_stories_name.value,
+    title: paragraph.stanford_stories_title.value,
+    quote: paragraph.stanford_stories_quote.processed,
+    story_link_url: paragraph.stanford_stories_node_link.get(0).getUrl().toString(),
+    story_link_text: paragraph.stanford_stories_node_link.title,
+    cta_link_url: paragraph.stanford_stories_cta_link.get(0).getUrl().toString(),
+    cta_link_title: paragraph.stanford_stories_cta_link.title,
+    image: content.stanford_stories_photo
+  }, with_context = false) }}
+  {{ title_suffix }}
+</div>
