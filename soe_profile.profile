@@ -5,8 +5,6 @@
  * soe_profile.profile
  */
 
-use Drupal\stanford_profile\Hook\InstallHooks;
-
 /**
  * Implements hook_install_tasks().
  *

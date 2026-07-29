@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drupal\stanford_profile\Hook;
+namespace Drupal\soe_profile\Hook;
 
 use Drupal\config_pages\ConfigPagesInterface;
 use Drupal\Core\Hook\Attribute\Hook;
