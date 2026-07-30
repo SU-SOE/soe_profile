@@ -16,16 +16,18 @@ props:
       title: Header
       examples: [ ]
     links:
-      type: object
+      type: array
       title: Links
-      mapping:
-        properties:
-          url:
-            type: string
-            title: Link URL
-          title:
-            type: string
-            title: Link Text
+      items:
+        type: object
+        mapping:
+          properties:
+            url:
+              type: string
+              title: Link URL
+            title:
+              type: string
+              title: Link Text
 slots:
   description:
     title: Description

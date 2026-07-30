@@ -18,12 +18,16 @@ props:
       title: Header Classes
       examples: [ ]
     border_color:
-      type: string
+      type: [string, integer]
       title: Border Color
       enum:
         - 1
         - 2
         - 3
+      meta:enum:
+        1: Turquoise
+        2: Pink
+        3: Orange
     name:
       type: string
       title: Name
