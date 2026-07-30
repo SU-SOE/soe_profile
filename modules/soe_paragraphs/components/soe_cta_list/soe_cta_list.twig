@@ -1,0 +1,42 @@
+{%- set attributes = attributes.addClass(['su-cta-list-paragraph', modifier_class]) -%}
+
+{% if remove_gray_line %}
+  {% set attributes = attributes.addClass("su-cta-list--without-border") %}
+{% endif %}
+
+{% set link_count = links|length %}
+
+{%- if link_count % 2 == 0 -%}
+  {%- set col_1_link_count = link_count/2 -%}
+{%- else -%}
+  {%- set col_1_link_count = link_count//2 + 1 -%}
+{%- endif -%}
+
+
+<div{{ attributes }}>
+
+  <h2>{{ header }}</h2>
+
+  {{ description }}
+
+  <div class="su-cta-list__links">
+    {%- if link_count > 1 -%}
+      <div class="col-1">
+        {%- for link_item in links|slice(0, (col_1_link_count)) -%}
+          {{ link(link_item.title, link_item.url, {class: ["su-link--action su-image-cta-paragraph__link"]}) }}
+        {% endfor -%}
+      </div>
+      <div class="col-2">
+        {%- for link_item in links|slice(col_1_link_count, (link_count - 1)) -%}
+          {{ link(link_item.title, link_item.url, {class: ["su-link--action su-image-cta-paragraph__link"]}) }}
+        {% endfor -%}
+      </div>
+    {%- else -%}
+      <div class="col-1">
+        {%- for link_item in links -%}
+          {{ link(link_item.title, link_item.url, {class: ["su-link--action su-image-cta-paragraph__link"]}) }}
+        {% endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>

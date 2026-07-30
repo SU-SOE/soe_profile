@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Image CTA Paragraph
+ *
+ * Template for the Image CTA paragraph type.
+ *
+ * Available variables:
+ *
+ * {{ image }}
+ * {{ link }}
+ *
+ */
+#}
+
+{%- set attributes = attributes.addClass(['su-image-cta-paragraph', modifier_class]) -%}
+<div{{ attributes }}>
+  {% if image and link_url %}
+    {{ link(image, link_url, {'tabindex': '-1', 'aria-hidden': 'true'}) }}
+  {% endif %}
+
+  {% if link_url and link_title %}
+    <div
+      class="su-link--action su-image-cta-paragraph__link paragraph stanford-image-cta stanford-image-cta-link">
+      <a href="{{ link_url }}">{{ link_title }}</a>
+    </div>
+  {% endif %}
+</div>

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Drupal\Tests\stanford_profile\Unit\Hook;
+namespace Drupal\Tests\soe_profile\Unit\Hook;
 
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\Routing\RouteBuilderInterface;
 use Drupal\config_pages\ConfigPagesInterface;
-use Drupal\stanford_profile\Hook\InstallHooks;
-use Drupal\stanford_profile\InstallTaskManager;
+use Drupal\soe_profile\Hook\InstallHooks;
+use Drupal\soe_profile\InstallTaskManager;
 use Drupal\Tests\UnitTestCase;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Group;
@@ -23,7 +23,7 @@ class InstallHooksTest extends UnitTestCase {
   /**
    * The hook class under test.
    *
-   * @var \Drupal\stanford_profile\Hook\InstallHooks
+   * @var \Drupal\soe_profile\Hook\InstallHooks
    */
   protected InstallHooks $hooks;
 

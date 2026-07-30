@@ -1,0 +1,34 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: SOE CTA List
+status: stable
+group: SOE
+props:
+  type: object
+  properties:
+    remove_gray_line:
+      type: boolean
+      title: Remove Top Gray Line
+    link_count:
+      type: number
+      title: Link Count
+    header:
+      type: string
+      title: Header
+      examples: [ ]
+    links:
+      type: array
+      title: Links
+      items:
+        type: object
+        mapping:
+          properties:
+            url:
+              type: string
+              title: Link URL
+            title:
+              type: string
+              title: Link Text
+slots:
+  description:
+    title: Description
+    description: Links

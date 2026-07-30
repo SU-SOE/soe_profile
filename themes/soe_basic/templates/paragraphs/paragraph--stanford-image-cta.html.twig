@@ -1,0 +1,10 @@
+
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {{ include("soe_paragraphs:soe_image_cta", {
+    image: content.stanford_image_cta_image,
+    link_url: paragraph.stanford_image_cta_link.get(0).getUrl().toString(),
+    link_title: paragraph.stanford_image_cta_link.get(0).title
+  }, with_context = false) }}
+  {{ title_suffix }}
+</div>

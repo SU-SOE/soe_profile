@@ -8,28 +8,10 @@ dependencies:
     - field.field.paragraph.stanford_cta_list.stanford_cta_list_links
     - paragraphs.paragraphs_type.stanford_cta_list
   module:
-    - ds
-    - element_class_formatter
+    - empty_fields
     - field_formatter_class
-    - stanford_fields
+    - field_label
     - text
-third_party_settings:
-  ds:
-    layout:
-      id: pattern_cta-list-paragraph
-      library: null
-      disable_css: false
-      entity_classes: no_classes
-      settings:
-        pattern:
-          field_templates: default
-          variant: default
-    regions:
-      paragraph_content:
-        - stanford_cta_list_header
-        - stanford_cta_list_deck
-      links:
-        - stanford_cta_list_links
 _core:
   default_config_hash: xISn3fHI5NABbqI3RBPYtT8Qsdy-0ihpqrcBOK06h0s
 id: paragraph.stanford_cta_list.default
@@ -42,37 +24,25 @@ content:
     label: hidden
     settings: {  }
     third_party_settings:
+      empty_fields:
+        handler: ''
       field_formatter_class:
         class: su-cta-list-paragraph__description
+      field_label:
+        label_value: ''
+        label_tag: ''
     weight: 1
-    region: paragraph_content
+    region: content
   stanford_cta_list_header:
-    type: entity_title_heading
+    type: string
     label: hidden
     settings:
-      tag: h2
-      linked: false
+      link_to_entity: false
     third_party_settings:
       field_formatter_class:
         class: su-cta-list-paragraph__header
     weight: 0
-    region: paragraph_content
-  stanford_cta_list_links:
-    type: link_class
-    label: hidden
-    settings:
-      class: ''
-      trim_length: null
-      url_only: false
-      url_plain: false
-      rel: '0'
-      target: '0'
-    third_party_settings:
-      field_formatter_class:
-        class: 'su-link--action su-image-cta-paragraph__link'
-      ds:
-        ds_limit: ''
-    weight: 2
-    region: links
+    region: content
 hidden:
   search_api_excerpt: true
+  stanford_cta_list_links: true
