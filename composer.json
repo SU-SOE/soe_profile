@@ -218,7 +218,11 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Drupal\\Tests\\soe_profile\\": "tests/src"
+            "Drupal\\Tests\\soe_profile\\": "tests/src",
+            "Drupal\\Tests\\soe_basic\\": "themes/soe_basic/tests/src",
+            "Drupal\\Tests\\soe_jemison\\": "themes/jemison/tests/src",
+            "Drupal\\Tests\\soe_stanford_basic\\": "themes/stanford_basic/tests/src",
+            "Drupal\\Tests\\soe_minimally_branded_subtheme\\": "themes/minimally_branded_subtheme/tests/src"
         }
     },
     "extra": {

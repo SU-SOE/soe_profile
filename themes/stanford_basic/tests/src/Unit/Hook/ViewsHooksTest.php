@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drupal\Tests\stanford_basic\Unit\Hook;
+namespace Drupal\Tests\soe_stanford_basic\Unit\Hook;
 
 use Drupal\stanford_basic\Hook\ViewsHooks;
 use Drupal\Tests\UnitTestCase;

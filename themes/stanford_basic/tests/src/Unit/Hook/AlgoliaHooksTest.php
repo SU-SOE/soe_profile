@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drupal\Tests\stanford_basic\Unit\Hook;
+namespace Drupal\Tests\soe_stanford_basic\Unit\Hook;
 
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\config_pages\ConfigPagesLoaderServiceInterface;

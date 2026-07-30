@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Drupal\Tests\soe_minimally_branded_subtheme\Unit\Hook;
+namespace Drupal\Tests\soe_basic\Unit\Hook;
 
 use Drupal\Core\Extension\ThemeExtensionList;
-use Drupal\minimally_branded_subtheme\Hook\ThemeHooks;
+use Drupal\Core\Extension\ThemeSettingsProvider;
+use Drupal\soe_basic\Hook\ThemeHooks;
 use Drupal\Tests\UnitTestCase;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Group;
@@ -13,16 +14,23 @@ use PHPUnit\Framework\Attributes\Group;
 /**
  * Unit tests for ThemeHooks.
  */
-#[Group('minimally_branded_subtheme')]
+#[Group('soe_basic')]
 #[CoversClass(ThemeHooks::class)]
 class ThemeHooksTest extends UnitTestCase {
 
   /**
    * The hook class under test.
    *
-   * @var \Drupal\minimally_branded_subtheme\Hook\ThemeHooks
+   * @var \Drupal\soe_basic\Hook\ThemeHooks
    */
   protected ThemeHooks $hooks;
+
+  /**
+   * Mocked theme settings provider.
+   *
+   * @var \Drupal\Core\Extension\ThemeSettingsProvider
+   */
+  protected ThemeSettingsProvider $themeSettingsProvider;
 
   /**
    * Mocked theme extension list.
@@ -36,8 +44,9 @@ class ThemeHooksTest extends UnitTestCase {
    */
   protected function setUp(): void {
     parent::setUp();
+    $this->themeSettingsProvider = $this->createMock(ThemeSettingsProvider::class);
     $this->themeExtensionList = $this->createMock(ThemeExtensionList::class);
-    $this->hooks = new ThemeHooks($this->themeExtensionList);
+    $this->hooks = new ThemeHooks($this->themeSettingsProvider, $this->themeExtensionList);
   }
 
   /**
@@ -56,12 +65,12 @@ class ThemeHooksTest extends UnitTestCase {
 
   /**
    * The block__stanford_basic_search suggestion is added when the block
-   * element id matches minimally_branded_subtheme_search.
+   * element id matches soe_basic_search.
    */
   public function testThemeSuggestionsBlockAlterAddsSuggestionForSearchBlock(): void {
     $suggestions = [];
     $variables = [
-      'elements' => ['#id' => 'minimally_branded_subtheme_search'],
+      'elements' => ['#id' => 'soe_basic_search'],
     ];
 
     $this->hooks->themeSuggestionsBlockAlter($suggestions, $variables);

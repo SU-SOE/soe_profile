@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drupal\Tests\jemison\Unit\Hook;
+namespace Drupal\Tests\soe_jemison\Unit\Hook;
 
 use Drupal\Core\Extension\ThemeHandlerInterface;
 use Drupal\jemison\Hook\LibraryHooks;
