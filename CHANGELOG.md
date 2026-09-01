@@ -33,6 +33,10 @@
 -------------------------------------------------------------------------------
 - adjust quote and headline font styles; add border radius and color pattern to images
 
+13.0.2
+-------------------------------------------------------------------------------
+- Adjusted local footer and minimally branded theme.
+
 13.0.0
 -------------------------------------------------------------------------------
 - Refactor display logic to use SDC instead of UI Patterns (#1094)
