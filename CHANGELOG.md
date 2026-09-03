@@ -33,6 +33,10 @@
 -------------------------------------------------------------------------------
 - adjust quote and headline font styles; add border radius and color pattern to images
 
+13.0.5
+-------------------------------------------------------------------------------
+- Adjusted content widths in the local footer
+
 13.0.4
 -------------------------------------------------------------------------------
 - Adjusted card displays for news and AV content types.
