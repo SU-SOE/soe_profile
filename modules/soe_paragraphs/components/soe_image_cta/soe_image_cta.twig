@@ -16,7 +16,9 @@
 {%- set attributes = attributes.addClass(['su-image-cta-paragraph', modifier_class]) -%}
 <div{{ attributes }}>
   {% if image and link_url %}
-    {{ link(image, link_url, {'tabindex': '-1', 'aria-hidden': 'true'}) }}
+    <a href="{{ link_url }}" tabindex="-1" aria-hidden="true">
+      {{ image }}
+    </a>
   {% endif %}
 
   {% if link_url and link_title %}
