@@ -23,18 +23,18 @@
     {%- if link_count > 1 -%}
       <div class="col-1">
         {%- for link_item in links|slice(0, (col_1_link_count)) -%}
-          {{ link(link_item.title, link_item.url, {class: ["su-link--action su-image-cta-paragraph__link"]}) }}
+          <a href="{{ link_item.url }}" class="su-link--action su-image-cta-paragraph__link">{{ link_item.title }}</a>
         {% endfor -%}
       </div>
       <div class="col-2">
         {%- for link_item in links|slice(col_1_link_count, (link_count - 1)) -%}
-          {{ link(link_item.title, link_item.url, {class: ["su-link--action su-image-cta-paragraph__link"]}) }}
+          <a href="{{ link_item.url }}" class="su-link--action su-image-cta-paragraph__link">{{ link_item.title }}</a>
         {% endfor -%}
       </div>
     {%- else -%}
       <div class="col-1">
         {%- for link_item in links -%}
-          {{ link(link_item.title, link_item.url, {class: ["su-link--action su-image-cta-paragraph__link"]}) }}
+          <a href="{{ link_item.url }}" class="su-link--action su-image-cta-paragraph__link">{{ link_item.title }}</a>
         {% endfor -%}
       </div>
     {%- endif -%}
