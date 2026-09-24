@@ -6,12 +6,16 @@ use Drupal\KernelTests\KernelTestBase;
 use Drupal\soe_profile\Plugin\InstallTask\Users;
 use Drupal\user\Entity\Role;
 use Drupal\user\Entity\User;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * Class UsersTest.
  *
  * @coversDefaultClass \Drupal\soe_profile\Plugin\InstallTask\Users
  */
+#[Group('stanford_profile')]
+#[RunTestsInSeparateProcesses]
 class UsersTest extends KernelTestBase {
 
   /**
@@ -25,13 +29,12 @@ class UsersTest extends KernelTestBase {
   /**
    * {@inheritDoc}
    */
-  public function setup(): void {
+  protected function setUp(): void {
     parent::setUp();
     $this->setInstallProfile('soe_profile');
 
     $this->installEntitySchema('user');
     $this->installEntitySchema('user_role');
-    $this->installSchema('system', ['sequences']);
     Role::create(['label' => 'Owner', 'id' => "site_manager"])->save();
   }
 

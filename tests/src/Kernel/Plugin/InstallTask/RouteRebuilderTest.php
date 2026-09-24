@@ -11,6 +11,8 @@ use Drupal\soe_profile\Plugin\InstallTask\RouteRebuilder;
  *
  * @coversDefaultClass \Drupal\soe_profile\Plugin\InstallTask\RouteRebuilder
  */
+#[Group('stanford_profile')]
+#[RunTestsInSeparateProcesses]
 class RouteRebuilderTest extends KernelTestBase {
 
   /**
@@ -25,7 +27,7 @@ class RouteRebuilderTest extends KernelTestBase {
   /**
    * {@inheritDoc}
    */
-  public function setup(): void {
+  protected function setUp(): void {
     parent::setUp();
     $this->setInstallProfile('soe_profile');
     $this->installEntitySchema('user');

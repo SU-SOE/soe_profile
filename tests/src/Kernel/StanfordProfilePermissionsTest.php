@@ -13,6 +13,8 @@ use Drupal\soe_profile\StanfordProfilePermissions;
  * @group soe_profile
  * @coversDefaultClass \Drupal\soe_profile\StanfordProfilePermissions
  */
+#[Group('stanford_profile')]
+#[RunTestsInSeparateProcesses]
 class StanfordProfilePermissionsTest extends KernelTestBase {
 
   /**
@@ -32,7 +34,7 @@ class StanfordProfilePermissionsTest extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setup(): void {
+  protected function setUp(): void {
     parent::setUp();
 
     $this->installEntitySchema('user');

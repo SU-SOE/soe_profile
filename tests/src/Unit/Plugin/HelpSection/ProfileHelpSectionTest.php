@@ -6,6 +6,7 @@ use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\Utility\LinkGeneratorInterface;
 use Drupal\soe_profile\Plugin\HelpSection\ProfileHelpSection;
 use Drupal\Tests\UnitTestCase;
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Class ProfileConnectSectionTest
@@ -13,12 +14,13 @@ use Drupal\Tests\UnitTestCase;
  * @group soe_profile
  * @coversDefaultClass \Drupal\soe_profile\Plugin\HelpSection\ProfileHelpMaintainingSection
  */
+#[Group('stanford_profile')]
 class ProfileHelpSectionTest extends UnitTestCase {
 
   /**
    * {@inheritDoc}
    */
-  public function setup(): void {
+  protected function setUp(): void {
     parent::setUp();
     $container = new ContainerBuilder();
     $container->set('string_translation', $this->getStringTranslationStub());
