@@ -83,7 +83,8 @@ class RolesCest {
     $I->canSee('Access denied (1)');
     $I->runDrush('cache-rebuild');
     $I->amOnPage('/');
-    $I->canSee($test_home->label(), 'h1');
+    $I->canSeeElement('h1.visually-hidden');
+    $I->cantSee($test_home->label());
   }
 
   /**
