@@ -4,6 +4,7 @@ namespace Drupal\soe_profile\Plugin\InstallTask;
 
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Routing\RouteBuilderInterface;
+use Drupal\node\NodeAccessRebuild;
 use Drupal\soe_profile\Attribute\InstallTask;
 use Drupal\soe_profile\InstallTaskBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
