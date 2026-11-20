@@ -17,7 +17,10 @@ jobs:
     with:
       php-versions: '["8.4", "8.5"]'
       codeception-shards: ${{ fromJSON(vars.TEST_SHARDS || '4') }}
-    secrets: inherit
+    # Named, not inherited: "secrets: inherit" doesn't pass secrets to a
+    # workflow in another organization (stanford-caravan is in SU-SWS).
+    secrets:
+      STANFORD_ENCRYPT: ${{ secrets.STANFORD_ENCRYPT }}
 
   # The required status check in the *.x ruleset.
   all-tests-pass:
